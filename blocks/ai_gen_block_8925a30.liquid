@@ -363,6 +363,86 @@
     cursor: pointer;
   }
 
+  .ai-journey-create-{{ ai_gen_id }} {
+    margin-top: 28px;
+    background: {{ block.settings.card_background }};
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: {{ block.settings.card_radius }}px;
+    padding: 18px;
+  }
+
+  .ai-journey-create__title-{{ ai_gen_id }} {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-journey-create__subtitle-{{ ai_gen_id }} {
+    margin: 0 0 14px;
+    font-size: 13px;
+    color: {{ block.settings.meta_color }};
+  }
+
+  .ai-journey-create__form-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 2fr auto;
+    gap: 10px;
+    align-items: end;
+  }
+
+  .ai-journey-create__group-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ai-journey-create__label-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.meta_color }};
+    font-weight: 600;
+  }
+
+  .ai-journey-create__input-{{ ai_gen_id }},
+  .ai-journey-create__textarea-{{ ai_gen_id }} {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: {{ block.settings.text_color }};
+    background: #ffffff;
+  }
+
+  .ai-journey-create__input-file-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-journey-create__textarea-{{ ai_gen_id }} {
+    min-height: 44px;
+    max-height: 140px;
+    resize: vertical;
+  }
+
+  .ai-journey-create__submit-{{ ai_gen_id }} {
+    border: 0;
+    border-radius: 999px;
+    padding: 11px 16px;
+    background: {{ block.settings.accent_color }};
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .ai-journey-create__status-{{ ai_gen_id }} {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: {{ block.settings.meta_color }};
+    min-height: 16px;
+  }
+
   @media screen and (max-width: 1024px) {
     .ai-journey-posts__grid-{{ ai_gen_id }} {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -375,6 +455,10 @@
 
     .ai-journey-modal__media-{{ ai_gen_id }} {
       max-height: 42vh;
+    }
+
+    .ai-journey-create__form-{{ ai_gen_id }} {
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -407,6 +491,15 @@
     .ai-journey-modal__form-{{ ai_gen_id }} {
       grid-template-columns: 1fr;
     }
+
+    .ai-journey-create-{{ ai_gen_id }} {
+      margin-top: 18px;
+      padding: 14px;
+    }
+
+    .ai-journey-create__form-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
   }
 {% endstyle %}
 
@@ -430,7 +523,7 @@
           "title": "Sunrise Push at Ben Nevis",
           "description": "Chased sunrise to the summit and captured one of the clearest ridge views this season.",
           "detail": "We started before 4:00 AM and moved steady through changing weather. The final ascent was icy, but the sky opened just as we reached the top. This trip reminded me that timing, patience, and a strong team make all the difference on hard routes.",
-          "image": "hero-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-1/900/900",
           "likes": 127,
           "isLiked": true,
           "comments": [
@@ -445,7 +538,7 @@
           "title": "Cornwall Coastal Switchbacks",
           "description": "Windy ridge line, rough terrain, and the bluest water I have seen this year.",
           "detail": "The western trail had steep switchbacks and loose stone sections, so poles were essential. We paused often because the cliff views were too good to rush. If you do this route, start early and pack layers for quick weather swings.",
-          "image": "collection-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-2/900/900",
           "likes": 93,
           "isLiked": false,
           "comments": [
@@ -459,7 +552,7 @@
           "title": "Highlands Wild Camp Setup",
           "description": "Three nights off-grid with cold mornings, clear nights, and incredible silence.",
           "detail": "Camped above the tree line with a low profile tent to handle wind exposure. The second night dropped below freezing, but the setup held and we woke up to a full valley cloud inversion. This is the kind of trip that resets your pace.",
-          "image": "detailed-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-3/900/900",
           "likes": 156,
           "isLiked": true,
           "comments": [
@@ -474,7 +567,7 @@
           "title": "Welsh Trail Bike Session",
           "description": "Fast descents, technical corners, and one very muddy finish line.",
           "detail": "The upper section was mostly rock gardens and tight turns, so speed control mattered more than power. We rode three loops and adjusted tire pressure between runs to improve grip. Legs were cooked by the last descent.",
-          "image": "product-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-4/900/900",
           "likes": 104,
           "isLiked": false,
           "comments": [
@@ -488,7 +581,7 @@
           "title": "Windermere Kayak Drift",
           "description": "Glassy water before noon and mountain reflections all day.",
           "detail": "Started from the north shore and kept close to the lee side to avoid crosswind in open water. The lake stayed calm for most of the route, which made photography easy. Ended with a short portage and hot coffee by sunset.",
-          "image": "blog-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-5/900/900",
           "likes": 118,
           "isLiked": true,
           "comments": [
@@ -503,54 +596,11 @@
           "title": "Forest Loop Recovery Hike",
           "description": "Easy pace, long trail chat, and a lot of fern-lined paths.",
           "detail": "After two intense weekends, we planned a recovery day with lighter packs and frequent breaks. The route stayed mostly shaded and had several stream crossings that kept it cool throughout the afternoon. Sometimes slower is exactly right.",
-          "image": "hero-apparel-1",
+          "image_url": "https://picsum.photos/seed/ro-blog-6/900/900",
           "likes": 79,
           "isLiked": false,
           "comments": [
             {"author": "Nico", "text": "Need more low-intensity routes like this.", "date": "Mar 26"}
-          ]
-        },
-        {
-          "author": "Leo Grant",
-          "initials": "LG",
-          "date": "March 27, 2026",
-          "title": "Desert Ridge Overnight",
-          "description": "Dry wind, quiet camp, and the clearest night sky this month.",
-          "detail": "Navigation was straightforward in daylight, but we marked waypoints before dark for the return hike. Night temperature dropped quickly, so thermal layers were non-negotiable. We finished with sunrise photos along the ridgeline.",
-          "image": "collection-apparel-1",
-          "likes": 132,
-          "isLiked": false,
-          "comments": [
-            {"author": "Mia", "text": "That sky is unreal.", "date": "Mar 28"}
-          ]
-        },
-        {
-          "author": "Ivy Santos",
-          "initials": "IS",
-          "date": "March 29, 2026",
-          "title": "Waterfall Route Recon",
-          "description": "Scouted a wet, technical path with ladders and river stones.",
-          "detail": "The lower section was slippery, and the ladder climb near the falls required careful spacing between hikers. We used dry bags for camera gear and kept boots tight for traction. Worth it for the final viewpoint.",
-          "image": "detailed-apparel-1",
-          "likes": 147,
-          "isLiked": true,
-          "comments": [
-            {"author": "Sam", "text": "Great intel on the ladder section.", "date": "Mar 30"},
-            {"author": "Kai", "text": "Going here next weekend.", "date": "Mar 30"}
-          ]
-        },
-        {
-          "author": "Noah Park",
-          "initials": "NP",
-          "date": "March 30, 2026",
-          "title": "Camp Kitchen Test Day",
-          "description": "Ran a full cook setup test before our April multi-day trek.",
-          "detail": "We tested fuel efficiency, meal timing, and cookware cleanup with cold water only. The revised setup saved almost 400 grams versus last season while still handling two hot meals. Gear rehearsal days prevent a lot of trail problems.",
-          "image": "blog-apparel-1",
-          "likes": 88,
-          "isLiked": false,
-          "comments": [
-            {"author": "Jules", "text": "400g saved is huge.", "date": "Mar 30"}
           ]
         }
       ]
@@ -558,61 +608,7 @@
 
     {% assign posts_array = posts | parse_json %}
 
-    <div class="ai-journey-posts__grid-{{ ai_gen_id }}" data-posts-grid>
-      {% for post in posts_array %}
-        <article
-          class="ai-journey-post-{{ ai_gen_id }}"
-          data-post-card
-          data-post-index="{{ forloop.index0 }}"
-          tabindex="0"
-          role="button"
-          aria-label="Open blog details for {{ post.title }}"
-        >
-          <div class="ai-journey-post__header-{{ ai_gen_id }}">
-            <div class="ai-journey-post__avatar-{{ ai_gen_id }}">{{ post.initials }}</div>
-            <div class="ai-journey-post__author-wrap-{{ ai_gen_id }}">
-              <p class="ai-journey-post__author-{{ ai_gen_id }}">{{ post.author }}</p>
-              <p class="ai-journey-post__date-{{ ai_gen_id }}">{{ post.date }}</p>
-            </div>
-          </div>
-
-          <div class="ai-journey-post__image-{{ ai_gen_id }}" data-card-media>
-            {{ post.image | placeholder_svg_tag }}
-          </div>
-
-          <div class="ai-journey-post__body-{{ ai_gen_id }}">
-            <div class="ai-journey-post__actions-{{ ai_gen_id }}">
-              <div class="ai-journey-post__action-list-{{ ai_gen_id }}">
-                <button
-                  type="button"
-                  class="ai-journey-post__action-btn-{{ ai_gen_id }} {% if post.isLiked %}liked{% endif %}"
-                  data-like-btn
-                  data-post-index="{{ forloop.index0 }}"
-                  aria-label="Like {{ post.title }}"
-                  aria-pressed="{% if post.isLiked %}true{% else %}false{% endif %}"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                  <span data-like-count>{{ post.likes }}</span>
-                </button>
-
-                <span class="ai-journey-post__action-btn-{{ ai_gen_id }}" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  <span data-comment-count>{{ post.comments.size }}</span>
-                </span>
-              </div>
-            </div>
-
-            <h3 class="ai-journey-post__title-{{ ai_gen_id }}">{{ post.title }}</h3>
-            <p class="ai-journey-post__caption-{{ ai_gen_id }}">{{ post.description }}</p>
-            <span class="ai-journey-post__open-hint-{{ ai_gen_id }}">Tap to view full story</span>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
+    <div class="ai-journey-posts__grid-{{ ai_gen_id }}" data-posts-grid></div>
 
     <div class="ai-journey-modal-{{ ai_gen_id }}" data-post-modal aria-hidden="true">
       <div class="ai-journey-modal__panel-{{ ai_gen_id }}" role="dialog" aria-modal="true" aria-label="Blog post details">
@@ -663,6 +659,31 @@
       </div>
     </div>
 
+    <section class="ai-journey-create-{{ ai_gen_id }}">
+      <h3 class="ai-journey-create__title-{{ ai_gen_id }}">Add New Blog</h3>
+      <p class="ai-journey-create__subtitle-{{ ai_gen_id }}">Upload image, add title, and write a short description.</p>
+
+      <form class="ai-journey-create__form-{{ ai_gen_id }}" data-create-form>
+        <div class="ai-journey-create__group-{{ ai_gen_id }}">
+          <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-image-{{ ai_gen_id }}">Upload Image</label>
+          <input id="blog-image-{{ ai_gen_id }}" class="ai-journey-create__input-file-{{ ai_gen_id }}" type="file" accept="image/*" data-create-image>
+        </div>
+
+        <div class="ai-journey-create__group-{{ ai_gen_id }}">
+          <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-title-{{ ai_gen_id }}">Title</label>
+          <input id="blog-title-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Enter title" data-create-title required>
+        </div>
+
+        <div class="ai-journey-create__group-{{ ai_gen_id }}">
+          <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-description-{{ ai_gen_id }}">Description</label>
+          <textarea id="blog-description-{{ ai_gen_id }}" class="ai-journey-create__textarea-{{ ai_gen_id }}" placeholder="Enter description" data-create-description required></textarea>
+        </div>
+
+        <button type="submit" class="ai-journey-create__submit-{{ ai_gen_id }}">Add Blog</button>
+      </form>
+      <p class="ai-journey-create__status-{{ ai_gen_id }}" data-create-status></p>
+    </section>
+
     <script type="application/json" data-posts-json>{{ posts_array | json }}</script>
   </div>
 </journey-posts-{{ ai_gen_id }}>
@@ -673,8 +694,9 @@
       constructor() {
         super();
         this.posts = [];
+        this.defaultPosts = [];
         this.activePostIndex = null;
-        this.storageKey = 'journey-posts-{{ ai_gen_id }}';
+        this.storageKey = 'journey-posts-v2-{{ ai_gen_id }}';
       }
 
       connectedCallback() {
@@ -686,7 +708,7 @@
       }
 
       cacheElements() {
-        this.cards = Array.from(this.querySelectorAll('[data-post-card]'));
+        this.grid = this.querySelector('[data-posts-grid]');
         this.modal = this.querySelector('[data-post-modal]');
         this.modalMedia = this.querySelector('[data-modal-media]');
         this.modalAuthor = this.querySelector('[data-modal-author]');
@@ -702,6 +724,11 @@
         this.modalForm = this.querySelector('[data-modal-form]');
         this.modalCommentAuthor = this.querySelector('[data-comment-author]');
         this.modalCommentText = this.querySelector('[data-comment-text]');
+        this.createForm = this.querySelector('[data-create-form]');
+        this.createImageInput = this.querySelector('[data-create-image]');
+        this.createTitleInput = this.querySelector('[data-create-title]');
+        this.createDescriptionInput = this.querySelector('[data-create-description]');
+        this.createStatus = this.querySelector('[data-create-status]');
       }
 
       loadPosts() {
@@ -709,8 +736,11 @@
         if (!jsonEl) return;
 
         try {
-          this.posts = JSON.parse(jsonEl.textContent);
+          const parsed = JSON.parse(jsonEl.textContent);
+          this.defaultPosts = Array.isArray(parsed) ? parsed : [];
+          this.posts = this.defaultPosts;
         } catch (error) {
+          this.defaultPosts = [];
           this.posts = [];
         }
       }
@@ -722,14 +752,7 @@
 
           const parsed = JSON.parse(stored);
           if (!Array.isArray(parsed)) return;
-
-          parsed.forEach((savedPost, index) => {
-            const post = this.posts[index];
-            if (!post) return;
-            post.likes = typeof savedPost.likes === 'number' ? savedPost.likes : post.likes;
-            post.isLiked = Boolean(savedPost.isLiked);
-            post.comments = Array.isArray(savedPost.comments) ? savedPost.comments : post.comments;
-          });
+          this.posts = parsed;
         } catch (error) {
           localStorage.removeItem(this.storageKey);
         }
@@ -744,25 +767,42 @@
       }
 
       bindEvents() {
-        this.cards.forEach((card) => {
-          const index = Number(card.dataset.postIndex);
-          const likeBtn = card.querySelector('[data-like-btn]');
+        if (this.grid) {
+          this.grid.addEventListener('click', (event) => {
+            const likeBtn = event.target.closest('[data-like-btn]');
+            const card = event.target.closest('[data-post-card]');
+            if (!card) return;
 
-          if (likeBtn) {
-            likeBtn.addEventListener('click', (event) => {
-              event.stopPropagation();
+            const index = Number(card.dataset.postIndex);
+            if (Number.isNaN(index)) return;
+
+            if (likeBtn) {
               this.toggleLike(index);
-            });
-          }
+              return;
+            }
 
-          card.addEventListener('click', () => this.openModal(index));
-          card.addEventListener('keydown', (event) => {
+            this.openModal(index);
+          });
+
+          this.grid.addEventListener('keydown', (event) => {
+            const card = event.target.closest('[data-post-card]');
+            if (!card) return;
             if (event.key === 'Enter' || event.key === ' ') {
               event.preventDefault();
-              this.openModal(index);
+              const index = Number(card.dataset.postIndex);
+              if (!Number.isNaN(index)) {
+                this.openModal(index);
+              }
             }
           });
-        });
+        }
+
+        if (this.createForm) {
+          this.createForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            this.handleCreatePost();
+          });
+        }
 
         const closeBtn = this.querySelector('[data-modal-close]');
         if (closeBtn) {
@@ -794,12 +834,77 @@
         };
       }
 
+      escapeHtml(value) {
+        return String(value || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      fallbackImage(index) {
+        return 'https://picsum.photos/seed/ro-blog-fallback-' + (index + 1) + '/900/900';
+      }
+
+      renderCards() {
+        if (!this.grid) return;
+
+        this.grid.innerHTML = this.posts.map((post, index) => {
+          const title = this.escapeHtml(post.title);
+          const author = this.escapeHtml(post.author || 'Community Member');
+          const initials = this.escapeHtml(post.initials || 'CM');
+          const date = this.escapeHtml(post.date || '');
+          const description = this.escapeHtml(post.description || '');
+          const imageUrl = this.escapeHtml(post.image_url || this.fallbackImage(index));
+          const isLiked = Boolean(post.isLiked);
+          const likes = Number(post.likes || 0);
+          const commentsCount = Array.isArray(post.comments) ? post.comments.length : 0;
+
+          return `
+            <article class="ai-journey-post-{{ ai_gen_id }}" data-post-card data-post-index="${index}" tabindex="0" role="button" aria-label="Open blog details for ${title}">
+              <div class="ai-journey-post__header-{{ ai_gen_id }}">
+                <div class="ai-journey-post__avatar-{{ ai_gen_id }}">${initials}</div>
+                <div class="ai-journey-post__author-wrap-{{ ai_gen_id }}">
+                  <p class="ai-journey-post__author-{{ ai_gen_id }}">${author}</p>
+                  <p class="ai-journey-post__date-{{ ai_gen_id }}">${date}</p>
+                </div>
+              </div>
+              <div class="ai-journey-post__image-{{ ai_gen_id }}" data-card-media>
+                <img src="${imageUrl}" alt="${title}" loading="lazy">
+              </div>
+              <div class="ai-journey-post__body-{{ ai_gen_id }}">
+                <div class="ai-journey-post__actions-{{ ai_gen_id }}">
+                  <div class="ai-journey-post__action-list-{{ ai_gen_id }}">
+                    <button type="button" class="ai-journey-post__action-btn-{{ ai_gen_id }} ${isLiked ? 'liked' : ''}" data-like-btn aria-label="Like ${title}" aria-pressed="${isLiked}">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                      </svg>
+                      <span data-like-count>${likes}</span>
+                    </button>
+                    <span class="ai-journey-post__action-btn-{{ ai_gen_id }}" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                      <span data-comment-count>${commentsCount}</span>
+                    </span>
+                  </div>
+                </div>
+                <h3 class="ai-journey-post__title-{{ ai_gen_id }}">${title}</h3>
+                <p class="ai-journey-post__caption-{{ ai_gen_id }}">${description}</p>
+                <span class="ai-journey-post__open-hint-{{ ai_gen_id }}">Tap to view full story</span>
+              </div>
+            </article>
+          `;
+        });
+      }
+
       toggleLike(index) {
         const post = this.posts[index];
         if (!post) return;
 
         post.isLiked = !post.isLiked;
-        post.likes = post.isLiked ? post.likes + 1 : Math.max(0, post.likes - 1);
+        post.likes = post.isLiked ? Number(post.likes || 0) + 1 : Math.max(0, Number(post.likes || 0) - 1);
 
         this.renderCards();
         if (this.activePostIndex === index) {
@@ -809,28 +914,10 @@
         this.saveState();
       }
 
-      addComment() {
-        if (this.activePostIndex === null) return;
-
-        const post = this.posts[this.activePostIndex];
-        const author = this.modalCommentAuthor.value.trim();
-        const text = this.modalCommentText.value.trim();
-
-        if (!author || !text || !post) return;
-
-        post.comments.push({
-          author: author,
-          text: text,
-          date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
-        });
-
-        this.modalCommentText.value = '';
-        this.renderCards();
-        this.renderModal(this.activePostIndex);
-        this.saveState();
-      }
-
       openModal(index) {
+        const post = this.posts[index];
+        if (!post) return;
+
         this.activePostIndex = index;
         this.renderModal(index);
         this.modal.classList.add('active');
@@ -847,45 +934,20 @@
         document.removeEventListener('keydown', this.onEscape);
       }
 
-      renderCards() {
-        this.cards.forEach((card) => {
-          const index = Number(card.dataset.postIndex);
-          const post = this.posts[index];
-          if (!post) return;
-
-          const likeBtn = card.querySelector('[data-like-btn]');
-          const likeCount = card.querySelector('[data-like-count]');
-          const commentCount = card.querySelector('[data-comment-count]');
-
-          likeCount.textContent = post.likes;
-          commentCount.textContent = post.comments.length;
-
-          if (post.isLiked) {
-            likeBtn.classList.add('liked');
-            likeBtn.setAttribute('aria-pressed', 'true');
-          } else {
-            likeBtn.classList.remove('liked');
-            likeBtn.setAttribute('aria-pressed', 'false');
-          }
-        });
-      }
-
       renderModal(index) {
         const post = this.posts[index];
-        const card = this.cards[index];
-        if (!post || !card) return;
+        if (!post) return;
 
-        const media = card.querySelector('[data-card-media]');
-
-        this.modalMedia.innerHTML = media ? media.innerHTML : '';
-        this.modalAuthor.textContent = post.author;
-        this.modalDate.textContent = post.date;
-        this.modalTitle.textContent = post.title;
-        this.modalDescription.textContent = post.description;
-        this.modalDetail.textContent = post.detail;
-
-        this.modalLikeCount.textContent = post.likes;
-        this.modalCommentCount.textContent = post.comments.length;
+        const imageUrl = this.escapeHtml(post.image_url || this.fallbackImage(index));
+        const title = this.escapeHtml(post.title || 'Blog post');
+        this.modalMedia.innerHTML = '<img src="' + imageUrl + '" alt="' + title + '">';
+        this.modalAuthor.textContent = post.author || 'Community Member';
+        this.modalDate.textContent = post.date || '';
+        this.modalTitle.textContent = post.title || '';
+        this.modalDescription.textContent = post.description || '';
+        this.modalDetail.textContent = post.detail || post.description || '';
+        this.modalLikeCount.textContent = Number(post.likes || 0);
+        this.modalCommentCount.textContent = Array.isArray(post.comments) ? post.comments.length : 0;
 
         if (post.isLiked) {
           this.modalLikeBtn.classList.add('liked');
@@ -895,7 +957,7 @@
           this.modalLikeBtn.setAttribute('aria-pressed', 'false');
         }
 
-        this.renderModalComments(post.comments);
+        this.renderModalComments(Array.isArray(post.comments) ? post.comments : []);
       }
 
       renderModalComments(comments) {
@@ -932,6 +994,88 @@
           wrapper.appendChild(head);
           wrapper.appendChild(text);
           this.modalComments.appendChild(wrapper);
+        });
+      }
+
+      addComment() {
+        if (this.activePostIndex === null) return;
+
+        const post = this.posts[this.activePostIndex];
+        const author = this.modalCommentAuthor.value.trim();
+        const text = this.modalCommentText.value.trim();
+
+        if (!author || !text || !post) return;
+
+        if (!Array.isArray(post.comments)) {
+          post.comments = [];
+        }
+
+        post.comments.push({
+          author: author,
+          text: text,
+          date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+        });
+
+        this.modalCommentText.value = '';
+        this.renderCards();
+        this.renderModal(this.activePostIndex);
+        this.saveState();
+      }
+
+      async handleCreatePost() {
+        const title = this.createTitleInput.value.trim();
+        const description = this.createDescriptionInput.value.trim();
+        const file = this.createImageInput.files && this.createImageInput.files[0] ? this.createImageInput.files[0] : null;
+
+        if (!title || !description) {
+          if (this.createStatus) {
+            this.createStatus.textContent = 'Please enter title and description.';
+          }
+          return;
+        }
+
+        let imageUrl = '';
+        if (file) {
+          try {
+            imageUrl = await this.fileToDataUrl(file);
+          } catch (error) {
+            imageUrl = '';
+          }
+        }
+        if (!imageUrl) {
+          imageUrl = this.fallbackImage(this.posts.length + 10);
+        }
+
+        const words = title.split(' ').filter(Boolean);
+        const initials = ((words[0] ? words[0][0] : 'N') + (words[1] ? words[1][0] : 'B')).toUpperCase();
+
+        this.posts.unshift({
+          author: 'Community Member',
+          initials: initials,
+          date: new Date().toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' }),
+          title: title,
+          description: description,
+          detail: description,
+          image_url: imageUrl,
+          likes: 0,
+          isLiked: false,
+          comments: []
+        });
+
+        this.renderCards();
+        this.saveState();
+        this.createForm.reset();
+        if (this.createStatus) {
+          this.createStatus.textContent = 'Blog added successfully.';
+        }
+      }
+
+      fileToDataUrl(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(new Error('Failed to read file'));
+          reader.readAsDataURL(file);
         });
       }
     }
