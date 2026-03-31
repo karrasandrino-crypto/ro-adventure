@@ -1,0 +1,991 @@
+{% doc %}
+  @prompt
+    create this blog page . this should be able to comment into a blog post. can able to heart as well and people should have able to upload photos of there memory journey. when click the image of the memory journey can able to see the image big and can also like and comment. 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-blog-interactive-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-blog-post-header-{{ ai_gen_id }} {
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-post-title-{{ ai_gen_id }} {
+    font-size: 32px;
+    font-weight: 700;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 15px;
+  }
+
+  .ai-blog-post-meta-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: {{ block.settings.meta_color }};
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .ai-blog-post-content-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-actions-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid {{ block.settings.border_color }};
+    border-bottom: 1px solid {{ block.settings.border_color }};
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-like-btn-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: {{ block.settings.button_radius }}px;
+    transition: all 0.3s ease;
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+  }
+
+  .ai-blog-like-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg }};
+  }
+
+  .ai-blog-like-btn-{{ ai_gen_id }}.liked {
+    color: {{ block.settings.like_color }};
+  }
+
+  .ai-blog-like-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-blog-like-btn-{{ ai_gen_id }}.liked .ai-blog-like-icon-{{ ai_gen_id }} {
+    transform: scale(1.2);
+  }
+
+  .ai-blog-section-title-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 20px;
+  }
+
+  .ai-blog-memory-gallery-{{ ai_gen_id }} {
+    margin-bottom: 40px;
+  }
+
+  .ai-blog-upload-area-{{ ai_gen_id }} {
+    border: 2px dashed {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-blog-upload-area-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.button_color }};
+    background-color: {{ block.settings.button_hover_bg }};
+  }
+
+  .ai-blog-upload-icon-{{ ai_gen_id }} {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 15px;
+    color: {{ block.settings.meta_color }};
+  }
+
+  .ai-blog-upload-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .ai-blog-upload-subtext-{{ ai_gen_id }} {
+    color: {{ block.settings.meta_color }};
+    font-size: 14px;
+  }
+
+  .ai-blog-gallery-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-gallery-item-{{ ai_gen_id }} {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: {{ block.settings.image_radius }}px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-blog-gallery-item-{{ ai_gen_id }}:hover {
+    transform: scale(1.05);
+  }
+
+  .ai-blog-gallery-img-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-blog-gallery-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+  }
+
+  .ai-blog-lightbox-{{ ai_gen_id }} {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .ai-blog-lightbox-{{ ai_gen_id }}.active {
+    display: flex;
+  }
+
+  .ai-blog-lightbox-content-{{ ai_gen_id }} {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .ai-blog-lightbox-image-wrapper-{{ ai_gen_id }} {
+    flex: 1;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-blog-lightbox-img-{{ ai_gen_id }} {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: {{ block.settings.image_radius }}px;
+  }
+
+  .ai-blog-lightbox-sidebar-{{ ai_gen_id }} {
+    width: 350px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .ai-blog-lightbox-actions-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+    margin-bottom: 15px;
+  }
+
+  .ai-blog-lightbox-like-btn-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+  }
+
+  .ai-blog-lightbox-like-btn-{{ ai_gen_id }}.liked {
+    color: {{ block.settings.like_color }};
+  }
+
+  .ai-blog-lightbox-close-{{ ai_gen_id }} {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .ai-blog-comments-section-{{ ai_gen_id }} {
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-comment-form-{{ ai_gen_id }} {
+    margin-bottom: 30px;
+  }
+
+  .ai-blog-form-group-{{ ai_gen_id }} {
+    margin-bottom: 15px;
+  }
+
+  .ai-blog-form-label-{{ ai_gen_id }} {
+    display: block;
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .ai-blog-form-input-{{ ai_gen_id }},
+  .ai-blog-form-textarea-{{ ai_gen_id }} {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.input_radius }}px;
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    background-color: {{ block.settings.input_bg }};
+  }
+
+  .ai-blog-form-textarea-{{ ai_gen_id }} {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .ai-blog-submit-btn-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 12px 24px;
+    border-radius: {{ block.settings.button_radius }}px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .ai-blog-submit-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-blog-comments-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-blog-comment-{{ ai_gen_id }} {
+    padding: 20px;
+    background-color: {{ block.settings.comment_bg }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-blog-comment-header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .ai-blog-comment-author-{{ ai_gen_id }} {
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+  }
+
+  .ai-blog-comment-date-{{ ai_gen_id }} {
+    color: {{ block.settings.meta_color }};
+    font-size: 12px;
+  }
+
+  .ai-blog-comment-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .ai-blog-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px;
+    color: {{ block.settings.meta_color }};
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-blog-lightbox-content-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-blog-lightbox-sidebar-{{ ai_gen_id }} {
+      width: 100%;
+      max-height: 300px;
+    }
+
+    .ai-blog-gallery-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .ai-blog-post-title-{{ ai_gen_id }} {
+      font-size: 24px;
+    }
+  }
+{% endstyle %}
+
+<blog-interactive-{{ ai_gen_id }}
+  class="ai-blog-interactive-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-blog-post-header-{{ ai_gen_id }}">
+    <h1 class="ai-blog-post-title-{{ ai_gen_id }}">{{ block.settings.post_title }}</h1>
+    <div class="ai-blog-post-meta-{{ ai_gen_id }}">
+      <span>{{ block.settings.post_author }}</span>
+      <span>•</span>
+      <span>{{ block.settings.post_date }}</span>
+    </div>
+  </div>
+
+  <div class="ai-blog-post-content-{{ ai_gen_id }}">
+    {{ block.settings.post_content }}
+  </div>
+
+  <div class="ai-blog-actions-{{ ai_gen_id }}">
+    <button class="ai-blog-like-btn-{{ ai_gen_id }}" data-action="like-post">
+      <svg class="ai-blog-like-icon-{{ ai_gen_id }}" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      <span class="ai-blog-like-count-{{ ai_gen_id }}">0</span>
+    </button>
+  </div>
+
+  <div class="ai-blog-memory-gallery-{{ ai_gen_id }}">
+    <h2 class="ai-blog-section-title-{{ ai_gen_id }}">{{ block.settings.gallery_title }}</h2>
+    
+    <div class="ai-blog-upload-area-{{ ai_gen_id }}" data-action="upload-trigger">
+      <svg class="ai-blog-upload-icon-{{ ai_gen_id }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+      </svg>
+      <div class="ai-blog-upload-text-{{ ai_gen_id }}">{{ block.settings.upload_text }}</div>
+      <div class="ai-blog-upload-subtext-{{ ai_gen_id }}">{{ block.settings.upload_subtext }}</div>
+    </div>
+
+    <div class="ai-blog-gallery-grid-{{ ai_gen_id }}" data-gallery-grid>
+      {% if block.settings.sample_image_1 %}
+        <div class="ai-blog-gallery-item-{{ ai_gen_id }}" data-gallery-item data-image-index="0">
+          <img src="{{ block.settings.sample_image_1 | image_url: width: 400 }}" alt="Memory 1" class="ai-blog-gallery-img-{{ ai_gen_id }}">
+          <div class="ai-blog-gallery-overlay-{{ ai_gen_id }}">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span data-like-count>0</span>
+          </div>
+        </div>
+      {% endif %}
+      {% if block.settings.sample_image_2 %}
+        <div class="ai-blog-gallery-item-{{ ai_gen_id }}" data-gallery-item data-image-index="1">
+          <img src="{{ block.settings.sample_image_2 | image_url: width: 400 }}" alt="Memory 2" class="ai-blog-gallery-img-{{ ai_gen_id }}">
+          <div class="ai-blog-gallery-overlay-{{ ai_gen_id }}">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span data-like-count>0</span>
+          </div>
+        </div>
+      {% endif %}
+      {% if block.settings.sample_image_3 %}
+        <div class="ai-blog-gallery-item-{{ ai_gen_id }}" data-gallery-item data-image-index="2">
+          <img src="{{ block.settings.sample_image_3 | image_url: width: 400 }}" alt="Memory 3" class="ai-blog-gallery-img-{{ ai_gen_id }}">
+          <div class="ai-blog-gallery-overlay-{{ ai_gen_id }}">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span data-like-count>0</span>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-blog-comments-section-{{ ai_gen_id }}">
+    <h2 class="ai-blog-section-title-{{ ai_gen_id }}">{{ block.settings.comments_title }}</h2>
+    
+    <form class="ai-blog-comment-form-{{ ai_gen_id }}" data-comment-form>
+      <div class="ai-blog-form-group-{{ ai_gen_id }}">
+        <label class="ai-blog-form-label-{{ ai_gen_id }}">Name</label>
+        <input type="text" class="ai-blog-form-input-{{ ai_gen_id }}" data-input="name" required>
+      </div>
+      <div class="ai-blog-form-group-{{ ai_gen_id }}">
+        <label class="ai-blog-form-label-{{ ai_gen_id }}">Comment</label>
+        <textarea class="ai-blog-form-textarea-{{ ai_gen_id }}" data-input="comment" required></textarea>
+      </div>
+      <button type="submit" class="ai-blog-submit-btn-{{ ai_gen_id }}">{{ block.settings.submit_button_text }}</button>
+    </form>
+
+    <div class="ai-blog-comments-list-{{ ai_gen_id }}" data-comments-list>
+      <div class="ai-blog-empty-state-{{ ai_gen_id }}">{{ block.settings.no_comments_text }}</div>
+    </div>
+  </div>
+
+  <div class="ai-blog-lightbox-{{ ai_gen_id }}" data-lightbox>
+    <button class="ai-blog-lightbox-close-{{ ai_gen_id }}" data-action="close-lightbox">&times;</button>
+    <div class="ai-blog-lightbox-content-{{ ai_gen_id }}">
+      <div class="ai-blog-lightbox-image-wrapper-{{ ai_gen_id }}">
+        <img src="" alt="" class="ai-blog-lightbox-img-{{ ai_gen_id }}" data-lightbox-img>
+      </div>
+      <div class="ai-blog-lightbox-sidebar-{{ ai_gen_id }}">
+        <div class="ai-blog-lightbox-actions-{{ ai_gen_id }}">
+          <button class="ai-blog-lightbox-like-btn-{{ ai_gen_id }}" data-action="like-image">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span data-lightbox-like-count>0</span>
+          </button>
+        </div>
+        <h3 class="ai-blog-section-title-{{ ai_gen_id }}">Comments</h3>
+        <form class="ai-blog-comment-form-{{ ai_gen_id }}" data-image-comment-form>
+          <div class="ai-blog-form-group-{{ ai_gen_id }}">
+            <label class="ai-blog-form-label-{{ ai_gen_id }}">Name</label>
+            <input type="text" class="ai-blog-form-input-{{ ai_gen_id }}" data-input="image-name" required>
+          </div>
+          <div class="ai-blog-form-group-{{ ai_gen_id }}">
+            <label class="ai-blog-form-label-{{ ai_gen_id }}">Comment</label>
+            <textarea class="ai-blog-form-textarea-{{ ai_gen_id }}" data-input="image-comment" required></textarea>
+          </div>
+          <button type="submit" class="ai-blog-submit-btn-{{ ai_gen_id }}">Post Comment</button>
+        </form>
+        <div class="ai-blog-comments-list-{{ ai_gen_id }}" data-image-comments-list>
+          <div class="ai-blog-empty-state-{{ ai_gen_id }}">No comments yet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</blog-interactive-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class BlogInteractive{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.postLikes = 0;
+        this.postLiked = false;
+        this.comments = [];
+        this.galleryImages = [];
+        this.currentImageIndex = null;
+      }
+
+      connectedCallback() {
+        this.initializeElements();
+        this.setupEventListeners();
+        this.loadFromStorage();
+      }
+
+      initializeElements() {
+        this.likeBtn = this.querySelector('[data-action="like-post"]');
+        this.likeCount = this.querySelector('.ai-blog-like-count-{{ ai_gen_id }}');
+        this.commentForm = this.querySelector('[data-comment-form]');
+        this.commentsList = this.querySelector('[data-comments-list]');
+        this.galleryGrid = this.querySelector('[data-gallery-grid]');
+        this.lightbox = this.querySelector('[data-lightbox]');
+        this.lightboxImg = this.querySelector('[data-lightbox-img]');
+        this.lightboxLikeBtn = this.querySelector('[data-action="like-image"]');
+        this.lightboxLikeCount = this.querySelector('[data-lightbox-like-count]');
+        this.imageCommentForm = this.querySelector('[data-image-comment-form]');
+        this.imageCommentsList = this.querySelector('[data-image-comments-list]');
+        this.uploadArea = this.querySelector('[data-action="upload-trigger"]');
+        
+        const galleryItems = this.querySelectorAll('[data-gallery-item]');
+        galleryItems.forEach((item, index) => {
+          const img = item.querySelector('img');
+          this.galleryImages.push({
+            src: img.src,
+            alt: img.alt,
+            likes: 0,
+            liked: false,
+            comments: []
+          });
+        });
+      }
+
+      setupEventListeners() {
+        this.likeBtn.addEventListener('click', () => this.togglePostLike());
+        this.commentForm.addEventListener('submit', (e) => this.handleCommentSubmit(e));
+        
+        this.querySelectorAll('[data-gallery-item]').forEach((item) => {
+          item.addEventListener('click', () => {
+            const index = parseInt(item.dataset.imageIndex);
+            this.openLightbox(index);
+          });
+        });
+
+        this.querySelector('[data-action="close-lightbox"]').addEventListener('click', () => {
+          this.closeLightbox();
+        });
+
+        this.lightbox.addEventListener('click', (e) => {
+          if (e.target === this.lightbox) {
+            this.closeLightbox();
+          }
+        });
+
+        this.lightboxLikeBtn.addEventListener('click', () => this.toggleImageLike());
+        this.imageCommentForm.addEventListener('submit', (e) => this.handleImageCommentSubmit(e));
+
+        this.uploadArea.addEventListener('click', () => {
+          alert('Photo upload functionality would connect to your backend system. This is a demo showing the UI.');
+        });
+      }
+
+      togglePostLike() {
+        this.postLiked = !this.postLiked;
+        if (this.postLiked) {
+          this.postLikes++;
+          this.likeBtn.classList.add('liked');
+        } else {
+          this.postLikes--;
+          this.likeBtn.classList.remove('liked');
+        }
+        this.likeCount.textContent = this.postLikes;
+        this.saveToStorage();
+      }
+
+      handleCommentSubmit(e) {
+        e.preventDefault();
+        const nameInput = this.querySelector('[data-input="name"]');
+        const commentInput = this.querySelector('[data-input="comment"]');
+        
+        const comment = {
+          author: nameInput.value,
+          text: commentInput.value,
+          date: new Date().toLocaleDateString()
+        };
+
+        this.comments.push(comment);
+        this.renderComments();
+        nameInput.value = '';
+        commentInput.value = '';
+        this.saveToStorage();
+      }
+
+      renderComments() {
+        if (this.comments.length === 0) {
+          this.commentsList.innerHTML = '<div class="ai-blog-empty-state-{{ ai_gen_id }}">{{ block.settings.no_comments_text }}</div>';
+          return;
+        }
+
+        this.commentsList.innerHTML = this.comments.map(comment => `
+          <div class="ai-blog-comment-{{ ai_gen_id }}">
+            <div class="ai-blog-comment-header-{{ ai_gen_id }}">
+              <span class="ai-blog-comment-author-{{ ai_gen_id }}">${comment.author}</span>
+              <span class="ai-blog-comment-date-{{ ai_gen_id }}">${comment.date}</span>
+            </div>
+            <div class="ai-blog-comment-text-{{ ai_gen_id }}">${comment.text}</div>
+          </div>
+        `).join('');
+      }
+
+      openLightbox(index) {
+        this.currentImageIndex = index;
+        const image = this.galleryImages[index];
+        
+        this.lightboxImg.src = image.src;
+        this.lightboxImg.alt = image.alt;
+        this.lightbox.classList.add('active');
+        
+        this.updateLightboxLike();
+        this.renderImageComments();
+        document.body.style.overflow = 'hidden';
+      }
+
+      closeLightbox() {
+        this.lightbox.classList.remove('active');
+        this.currentImageIndex = null;
+        document.body.style.overflow = '';
+      }
+
+      toggleImageLike() {
+        if (this.currentImageIndex === null) return;
+        
+        const image = this.galleryImages[this.currentImageIndex];
+        image.liked = !image.liked;
+        
+        if (image.liked) {
+          image.likes++;
+        } else {
+          image.likes--;
+        }
+
+        this.updateLightboxLike();
+        this.updateGalleryLikes();
+        this.saveToStorage();
+      }
+
+      updateLightboxLike() {
+        const image = this.galleryImages[this.currentImageIndex];
+        this.lightboxLikeCount.textContent = image.likes;
+        
+        if (image.liked) {
+          this.lightboxLikeBtn.classList.add('liked');
+        } else {
+          this.lightboxLikeBtn.classList.remove('liked');
+        }
+      }
+
+      updateGalleryLikes() {
+        const galleryItems = this.querySelectorAll('[data-gallery-item]');
+        galleryItems.forEach((item, index) => {
+          const likeCount = item.querySelector('[data-like-count]');
+          if (likeCount) {
+            likeCount.textContent = this.galleryImages[index].likes;
+          }
+        });
+      }
+
+      handleImageCommentSubmit(e) {
+        e.preventDefault();
+        if (this.currentImageIndex === null) return;
+
+        const nameInput = this.querySelector('[data-input="image-name"]');
+        const commentInput = this.querySelector('[data-input="image-comment"]');
+        
+        const comment = {
+          author: nameInput.value,
+          text: commentInput.value,
+          date: new Date().toLocaleDateString()
+        };
+
+        this.galleryImages[this.currentImageIndex].comments.push(comment);
+        this.renderImageComments();
+        nameInput.value = '';
+        commentInput.value = '';
+        this.saveToStorage();
+      }
+
+      renderImageComments() {
+        if (this.currentImageIndex === null) return;
+        
+        const comments = this.galleryImages[this.currentImageIndex].comments;
+        
+        if (comments.length === 0) {
+          this.imageCommentsList.innerHTML = '<div class="ai-blog-empty-state-{{ ai_gen_id }}">No comments yet</div>';
+          return;
+        }
+
+        this.imageCommentsList.innerHTML = comments.map(comment => `
+          <div class="ai-blog-comment-{{ ai_gen_id }}">
+            <div class="ai-blog-comment-header-{{ ai_gen_id }}">
+              <span class="ai-blog-comment-author-{{ ai_gen_id }}">${comment.author}</span>
+              <span class="ai-blog-comment-date-{{ ai_gen_id }}">${comment.date}</span>
+            </div>
+            <div class="ai-blog-comment-text-{{ ai_gen_id }}">${comment.text}</div>
+          </div>
+        `).join('');
+      }
+
+      saveToStorage() {
+        const data = {
+          postLikes: this.postLikes,
+          postLiked: this.postLiked,
+          comments: this.comments,
+          galleryImages: this.galleryImages
+        };
+        localStorage.setItem('blog-interactive-{{ ai_gen_id }}', JSON.stringify(data));
+      }
+
+      loadFromStorage() {
+        const stored = localStorage.getItem('blog-interactive-{{ ai_gen_id }}');
+        if (stored) {
+          const data = JSON.parse(stored);
+          this.postLikes = data.postLikes || 0;
+          this.postLiked = data.postLiked || false;
+          this.comments = data.comments || [];
+          
+          if (data.galleryImages) {
+            data.galleryImages.forEach((img, index) => {
+              if (this.galleryImages[index]) {
+                this.galleryImages[index].likes = img.likes || 0;
+                this.galleryImages[index].liked = img.liked || false;
+                this.galleryImages[index].comments = img.comments || [];
+              }
+            });
+          }
+
+          this.likeCount.textContent = this.postLikes;
+          if (this.postLiked) {
+            this.likeBtn.classList.add('liked');
+          }
+          this.renderComments();
+          this.updateGalleryLikes();
+        }
+      }
+    }
+
+    customElements.define('blog-interactive-{{ ai_gen_id }}', BlogInteractive{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Interactive blog post",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Blog post"
+    },
+    {
+      "type": "text",
+      "id": "post_title",
+      "label": "Post title",
+      "default": "My Adventure Journey"
+    },
+    {
+      "type": "text",
+      "id": "post_author",
+      "label": "Author name",
+      "default": "Adventure Seeker"
+    },
+    {
+      "type": "text",
+      "id": "post_date",
+      "label": "Post date",
+      "default": "March 30, 2026"
+    },
+    {
+      "type": "richtext",
+      "id": "post_content",
+      "label": "Post content",
+      "default": "<p>Share your incredible adventure story here. Tell us about the places you've been, the challenges you've overcome, and the memories you've made along the way.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Memory gallery"
+    },
+    {
+      "type": "text",
+      "id": "gallery_title",
+      "label": "Gallery title",
+      "default": "Memory Journey Gallery"
+    },
+    {
+      "type": "text",
+      "id": "upload_text",
+      "label": "Upload text",
+      "default": "Share Your Adventure Photos"
+    },
+    {
+      "type": "text",
+      "id": "upload_subtext",
+      "label": "Upload subtext",
+      "default": "Click to upload your memory journey photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "sample_image_1",
+      "label": "Sample image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "sample_image_2",
+      "label": "Sample image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "sample_image_3",
+      "label": "Sample image 3"
+    },
+    {
+      "type": "header",
+      "content": "Comments"
+    },
+    {
+      "type": "text",
+      "id": "comments_title",
+      "label": "Comments title",
+      "default": "Comments"
+    },
+    {
+      "type": "text",
+      "id": "submit_button_text",
+      "label": "Submit button text",
+      "default": "Post Comment"
+    },
+    {
+      "type": "text",
+      "id": "no_comments_text",
+      "label": "No comments text",
+      "default": "Be the first to comment!"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f9f6ef"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "meta_color",
+      "label": "Meta text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button",
+      "default": "#375937"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover",
+      "default": "#2a4429"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Button hover background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "like_color",
+      "label": "Like color",
+      "default": "#e74c3c"
+    },
+    {
+      "type": "color",
+      "id": "comment_bg",
+      "label": "Comment background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_bg",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "input_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Input radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Interactive blog post"
+    }
+  ]
+}
+{% endschema %}

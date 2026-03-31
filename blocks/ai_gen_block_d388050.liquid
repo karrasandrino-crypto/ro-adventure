@@ -1,0 +1,252 @@
+{% doc %}
+  @prompt
+    div with background image
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-background-div-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: {{ block.settings.min_height }}px;
+    background-size: 100% 100%; /* shows full image */
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 150px;
+     transform: scaleX(-1); /* Flips horizontally */
+    background-image: url('{{ "bg-brush.png" | asset_url }}');
+  }
+
+  .ai-background-div-content-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-background-div-placeholder-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: {{ block.settings.min_height }}px;
+    background-color: {{ block.settings.fallback_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    position: relative;
+  }
+
+  .ai-background-div-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    opacity: 0.3;
+  }
+
+  .ai-background-div-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-background-div-{{ ai_gen_id }} {
+      min-height: {{ block.settings.min_height | times: 0.7 }}px;
+      padding: {{ block.settings.padding | times: 0.7 }}px;
+    }
+
+    .ai-background-div-placeholder-{{ ai_gen_id }} {
+      min-height: {{ block.settings.min_height | times: 0.7 }}px;
+    }
+
+    .ai-background-div-{{ ai_gen_id }} {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      height: 60px;
+      background-image: url('{{ "bg-brush.png" | asset_url }}');
+    }
+
+  }
+{% endstyle %}
+
+<div {{ block.shopify_attributes }}>
+  {% if block.settings.background_image %}
+    <div class="ai-background-div-{{ ai_gen_id }}">
+      <div class="ai-background-div-content-{{ ai_gen_id }}">
+        {% if block.settings.content != blank %}
+          {{ block.settings.content }}
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="ai-background-div-placeholder-{{ ai_gen_id }}">
+      {{ 'image' | placeholder_svg_tag }}
+      <div class="ai-background-div-empty-state-{{ ai_gen_id }}">
+        Add a background image to get started
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Background image div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "background_size",
+      "label": "Background size",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "select",
+      "id": "background_position",
+      "label": "Background position",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "fallback_color",
+      "label": "Fallback background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Minimum height",
+      "min": 100,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Background image div"
+    }
+  ]
+}
+{% endschema %}

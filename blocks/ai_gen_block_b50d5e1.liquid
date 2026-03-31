@@ -1,0 +1,410 @@
+{% doc %}
+  @prompt
+    A mission statement that highlights as the user scrolls over it, Header font should be Achivo Bold and the body text should be Quicksand
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-mission-statement-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-mission-statement-content-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-mission-statement-heading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-mission-statement-text-{{ ai_gen_id }} {
+    font-family: {{ block.settings.body_font.family }}, {{ block.settings.body_font.fallback_families }};
+    font-weight: {{ block.settings.body_font.weight }};
+    font-style: {{ block.settings.body_font.style }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: {{ block.settings.line_height }};
+    color: {{ block.settings.text_color }};
+    text-align: {{ block.settings.text_alignment }};
+    margin: 0;
+  }
+
+  .ai-mission-statement-text-{{ ai_gen_id }} .ai-mission-word-{{ ai_gen_id }} {
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .ai-mission-statement-text-{{ ai_gen_id }} .ai-mission-word-{{ ai_gen_id }}.highlighted {
+    color: {{ block.settings.highlight_color }};
+    font-weight: {{ block.settings.highlight_weight }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-mission-statement-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_vertical | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px;
+    }
+
+    .ai-mission-statement-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .ai-mission-statement-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<mission-statement-{{ ai_gen_id }}
+  class="ai-mission-statement-{{ ai_gen_id }}"
+  data-highlight-mode="{{ block.settings.highlight_mode }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-mission-statement-content-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-mission-statement-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.mission_text != blank %}
+      <div class="ai-mission-statement-text-{{ ai_gen_id }}" data-mission-text>
+        {{ block.settings.mission_text }}
+      </div>
+    {% else %}
+      <div class="ai-mission-statement-text-{{ ai_gen_id }}" data-mission-text>
+        <p>Add your mission statement here to inspire your visitors.</p>
+      </div>
+    {% endif %}
+  </div>
+</mission-statement-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class MissionStatement{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.textContainer = null;
+        this.words = [];
+        this.highlightMode = 'word';
+        this.observer = null;
+      }
+
+      connectedCallback() {
+        this.textContainer = this.querySelector('[data-mission-text]');
+        this.highlightMode = this.dataset.highlightMode || 'word';
+        
+        if (this.textContainer) {
+          this.wrapWords();
+          this.setupScrollObserver();
+        }
+      }
+
+      wrapWords() {
+        const originalHTML = this.textContainer.innerHTML;
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalHTML;
+
+        this.processNode(tempDiv);
+        this.textContainer.innerHTML = tempDiv.innerHTML;
+        this.words = this.textContainer.querySelectorAll('.ai-mission-word-{{ ai_gen_id }}');
+      }
+
+      processNode(node) {
+        const childNodes = Array.from(node.childNodes);
+        
+        childNodes.forEach(child => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const text = child.textContent;
+            if (text.trim()) {
+              const wrappedText = this.wrapTextContent(text);
+              const span = document.createElement('span');
+              span.innerHTML = wrappedText;
+              child.replaceWith(span);
+            }
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            this.processNode(child);
+          }
+        });
+      }
+
+      wrapTextContent(text) {
+        const words = text.split(/(\s+)/);
+        return words.map(word => {
+          if (word.trim()) {
+            return `<span class="ai-mission-word-{{ ai_gen_id }}">${word}</span>`;
+          }
+          return word;
+        }).join('');
+      }
+
+      setupScrollObserver() {
+        const options = {
+          root: null,
+          rootMargin: '-20% 0px -20% 0px',
+          threshold: 0
+        };
+
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('highlighted');
+            } else {
+              if (this.highlightMode === 'word') {
+                entry.target.classList.remove('highlighted');
+              }
+            }
+          });
+        }, options);
+
+        this.words.forEach(word => {
+          this.observer.observe(word);
+        });
+      }
+
+      disconnectedCallback() {
+        if (this.observer) {
+          this.observer.disconnect();
+        }
+      }
+    }
+
+    customElements.define('mission-statement-{{ ai_gen_id }}', MissionStatement{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Mission statement",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our mission"
+    },
+    {
+      "type": "richtext",
+      "id": "mission_text",
+      "label": "Mission statement",
+      "default": "<p>We believe in creating sustainable products that empower adventurers to explore the world while protecting it for future generations.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Highlight effect"
+    },
+    {
+      "type": "select",
+      "id": "highlight_mode",
+      "label": "Highlight mode",
+      "options": [
+        {
+          "value": "word",
+          "label": "Word by word"
+        },
+        {
+          "value": "persistent",
+          "label": "Persistent"
+        }
+      ],
+      "default": "word",
+      "info": "Word by word removes highlight after scrolling past. Persistent keeps all highlighted words."
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight color",
+      "default": "#edb21c"
+    },
+    {
+      "type": "select",
+      "id": "highlight_weight",
+      "label": "Highlight weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "archivo_black_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading spacing",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "quicksand_n4"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "label": "Line height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "default": 1.6
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f9f6ef"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mission statement"
+    }
+  ]
+}
+{% endschema %}

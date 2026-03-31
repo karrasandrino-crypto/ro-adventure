@@ -1,0 +1,388 @@
+{% doc %}
+  @prompt
+    create div section with background image and 4 sentence inside the div
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-content-section-{{ ai_gen_id }} {
+    display: block;
+    position: relative;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    min-height: {{ block.settings.min_height }}px;
+    background-size: cover;
+    background-position: {{ block.settings.image_position }};
+    background-repeat: no-repeat;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-content-section-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    z-index: 1;
+  }
+
+  .ai-content-section-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 2;
+    max-width: {{ block.settings.content_max_width }}px;
+    margin: 0 auto;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-content-section-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+    margin-bottom: {{ block.settings.text_spacing }}px;
+  }
+
+  .ai-content-section-text-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-content-section-placeholder-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    min-height: {{ block.settings.min_height }}px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-content-section-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-content-section-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .main-title{
+    font-size: 6rem;
+    line-height: 7rem;
+    width: 40%;
+  }
+
+  .min-sub{
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .recycle-text{
+     font-size: 4rem;
+     width: 60%;
+     margin: 0px;
+     padding: 0px;
+  }
+
+
+  .button-mission{
+    display: block;
+    background-image: url('{{ "our_mission.png" | asset_url }}');
+    background-size: 100% 100%;
+    width: 160px;
+    height: 80px;
+    background-position: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .r-icon{
+    background-image: url('{{ "recycle.png" | asset_url }}');
+    background-size: 100% 100%;
+    width: 120px;
+    height: 110px;
+  }
+
+  .recycle-container{
+    width: 100%;
+    background:rgba(55, 89, 55, 0.62);
+    padding: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+  }
+
+  .r-wapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-content-section-{{ ai_gen_id }} {
+      min-height: {{ block.settings.min_height | times: 0.7 }}px;
+      padding: {{ block.settings.padding_vertical | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px;
+    }
+
+    .bg-mobile{
+      
+    }
+
+    .ai-content-section-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-content-section-{{ ai_gen_id }} bg-mobile" {{ block.shopify_attributes }} {% if block.settings.background_image %}style="background-image: url('{{ block.settings.background_image | image_url: width: 2000 }}');"{% endif %}>
+  {% if block.settings.background_image == blank %}
+    <div class="ai-content-section-placeholder-{{ ai_gen_id }}">
+      {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      <div class="ai-content-section-empty-state-{{ ai_gen_id }}">
+        Next, add a background image
+      </div>
+    </div>
+  {% endif %}
+  
+  <div class="ai-content-section-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.sentence_1 != blank %}
+      <h2 class="ai-content-section-text-{{ ai_gen_id }} main-title">{{ block.settings.sentence_1 }}</h2>
+    {% endif %}
+    
+    {% if block.settings.sentence_2 != blank %}
+      <p class="ai-content-section-text-{{ ai_gen_id }} min-sub">{{ block.settings.sentence_2 }}</p>
+    {% endif %}
+    
+     <a href="#" class="button-mission">.</a>    
+  </div>
+   <div class="recycle-container">
+      <div class="r-wapper">
+         {% if block.settings.sentence_4 != blank %}
+            <h4 class="ai-content-section-text-{{ ai_gen_id }} recycle-text">{{ block.settings.sentence_4 }}</h4>
+          {% endif %}
+
+          <div class="r-icon">.</div>
+      </div>
+     </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content with background",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "sentence_1",
+      "label": "Sentence 1",
+      "default": "Discover the adventure that awaits you."
+    },
+    {
+      "type": "textarea",
+      "id": "sentence_2",
+      "label": "Sentence 2",
+      "default": "Explore new horizons with confidence and style."
+    },
+    {
+      "type": "textarea",
+      "id": "sentence_3",
+      "label": "Sentence 3",
+      "default": "Gear designed for the modern explorer."
+    },
+    {
+      "type": "textarea",
+      "id": "sentence_4",
+      "label": "Sentence 4",
+      "default": "Your journey begins here."
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Text size",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing between sentences",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Minimum height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content with background"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
