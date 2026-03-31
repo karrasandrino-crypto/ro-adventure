@@ -40,7 +40,17 @@
   .ai-journey-posts__grid-{{ ai_gen_id }} {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
+    align-items: start;
     gap: 22px;
+  }
+
+  .ai-journey-posts__grid-{{ ai_gen_id }} > .ai-journey-post-{{ ai_gen_id }} {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    justify-self: stretch;
+    align-self: start;
   }
 
   .ai-journey-post-{{ ai_gen_id }} {
@@ -862,7 +872,7 @@
           const commentsCount = Array.isArray(post.comments) ? post.comments.length : 0;
 
           return `
-            <article class="ai-journey-post-{{ ai_gen_id }}" data-post-card data-post-index="${index}" tabindex="0" role="button" aria-label="Open blog details for ${title}">
+            <div class="ai-journey-post-{{ ai_gen_id }}" data-post-card data-post-index="${index}" tabindex="0" role="button" aria-label="Open blog details for ${title}">
               <div class="ai-journey-post__header-{{ ai_gen_id }}">
                 <div class="ai-journey-post__avatar-{{ ai_gen_id }}">${initials}</div>
                 <div class="ai-journey-post__author-wrap-{{ ai_gen_id }}">
@@ -894,7 +904,7 @@
                 <p class="ai-journey-post__caption-{{ ai_gen_id }}">${description}</p>
                 <span class="ai-journey-post__open-hint-{{ ai_gen_id }}">Tap to view full story</span>
               </div>
-            </article>
+            </div>
           `;
         });
       }
