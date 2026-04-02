@@ -71,18 +71,60 @@
         "padding_bottom": 8
       }
     },
+    "announcement_bar_tCYKkm": {
+      "type": "announcement-bar",
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-1",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "17751416921b07b29a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1446bd6_KKd3CK": {
+          "type": "ai_gen_block_1446bd6",
+          "settings": {
+            "title": "From Our Instagram",
+            "description": "<p>Catch our most recent journeys, stories, and outdoor moments straight from Instagram. Tap any post to dive deeper into the experience.</p>",
+            "text_alignment": "center",
+            "content_max_width": 800,
+            "desktop_width_percent": 100,
+            "spacing_between": 20,
+            "title_size": 32,
+            "title_color": "#ffffff",
+            "description_size": 16,
+            "description_color": "#ffffff",
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_horizontal": 20,
+            "background_color": "#375937"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1446bd6_KKd3CK"
+      ],
+      "settings": {}
+    },
     "1775140872a6e42b87": {
       "type": "apps",
       "blocks": {
         "instafeed_app_block_JyhQy8": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "Our Latest Adventures",
+            "title": "",
             "title_color": "",
             "title_size_v2": 0,
             "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
+            "instafeed_margin_top": 21,
+            "instafeed_margin_bottom": 100,
             "instafeed_margin_sides": 0,
             "show_instagram_link": false,
             "link_alignment": "left",
@@ -106,6 +148,8 @@
     "header",
     "177323905288e19fc9",
     "custom_liquid_FaNXEF",
+    "announcement_bar_tCYKkm",
+    "17751416921b07b29a",
     "1775140872a6e42b87"
   ]
 }
