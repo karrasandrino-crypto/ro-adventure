@@ -9,75 +9,6 @@
  */
 {
   "sections": {
-    "blocks_rVQqzp": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_1446bd6_md6BHA": {
-          "type": "ai_gen_block_1446bd6",
-          "settings": {
-            "title": "From Our Instagram",
-            "description": "<p>Catch our most recent journeys, stories, and outdoor moments straight from Instagram. Tap any post to dive deeper into the experience.</p>",
-            "text_alignment": "center",
-            "content_max_width": 800,
-            "desktop_width_percent": 100,
-            "spacing_between": 20,
-            "title_size": 32,
-            "title_color": "#ffffff",
-            "description_size": 16,
-            "description_color": "#ffffff",
-            "padding_top": 40,
-            "padding_bottom": 40,
-            "padding_horizontal": 20,
-            "background_color": "#375937"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_1446bd6_md6BHA"
-      ],
-      "name": "Title and description",
-      "settings": {}
-    },
-    "17751455785491f0e4": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_XdXh4V": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 26,
-            "instafeed_margin_bottom": 100,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_XdXh4V"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "custom_liquid_zh78Bi": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -114,9 +45,6 @@
     }
   },
   "order": [
-    "blocks_rVQqzp",
-    "17751455785491f0e4",
-    "custom_liquid_zh78Bi",
     "main",
     "slideshow_FPNwiX",
     "rich_text_RR9bLV"
