@@ -57,32 +57,22 @@
         "padding_bottom": 0
       }
     },
-    "177323905288e19fc9": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "custom_liquid_FaNXEF": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div id=\"instafeed\"></div>\n<script src=\"{{ 'instafeed.min.js' | asset_url }}\"></script>\n<script>\nvar userFeed = new Instafeed({\n  target: 'instafeed',\n  resolution: 'standard_resolution',\n  get: 'user',\n  sortBy: 'most-recent',\n  limit: 12,\n  links: true,\n  template: '<a href=\"{{link}}\" target=\"_blank\"><img title=\"{{caption}}\" src=\"{{image}}\" /></a>'\n});\nuserFeed.run();\n</script>\n<style>\n  #instafeed {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n    gap: 16px;\n    padding: 20px 0;\n  }\n  \n  #instafeed a {\n    display: block;\n    overflow: hidden;\n    border-radius: 8px;\n  }\n  \n  #instafeed img {\n    width: 100%;\n    height: auto;\n    display: block;\n    transition: transform 0.3s ease;\n  }\n  \n  #instafeed a:hover img {\n    transform: scale(1.05);\n  }\n  \n  @media (max-width: 768px) {\n    #instafeed {\n      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n      gap: 12px;\n    }\n  }\n</style>",
-        "color_scheme": "scheme-2",
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
     "announcement_bar_tCYKkm": {
       "type": "announcement-bar",
       "name": "t:sections.announcement-bar.presets.name",
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
+    },
+    "177323905288e19fc9": {
+      "type": "_blocks",
+      "settings": {}
     },
     "17751416921b07b29a": {
       "type": "_blocks",
@@ -98,9 +88,8 @@
   "order": [
     "announcement_bar_HkK9aa",
     "header",
-    "177323905288e19fc9",
-    "custom_liquid_FaNXEF",
     "announcement_bar_tCYKkm",
+    "177323905288e19fc9",
     "17751416921b07b29a",
     "1775140872a6e42b87"
   ]
