@@ -847,7 +847,7 @@
         this.pendingLikeIds = new Set();
         this.pendingCommentPostIds = new Set();
         this.isCreatingPost = false;
-        this.apiBaseUrl = this.normalizeApiBaseUrl({{ block.settings.api_base_url | default: 'http://localhost:4000/api' | json }});
+        this.apiBaseUrl = this.normalizeApiBaseUrl({{ block.settings.api_base_url | default: 'https://ro-adventure-backend-production-5546.up.railway.app/api' | json }});
         this.apiOrigin = this.resolveApiOrigin(this.apiBaseUrl);
       }
 
@@ -985,7 +985,7 @@
       }
 
       normalizeApiBaseUrl(value) {
-        const fallback = 'http://localhost:4000/api';
+        const fallback = 'https://ro-adventure-backend-production-5546.up.railway.app/api';
         const raw = typeof value === 'string' && value.trim() ? value.trim() : fallback;
         const withProtocol = /^https?:\/\//i.test(raw) ? raw : 'https://' + raw;
         try {
@@ -1522,7 +1522,7 @@
       "type": "text",
       "id": "api_base_url",
       "label": "API base URL",
-      "default": "http://localhost:4000/api"
+      "default": "https://ro-adventure-backend-production-5546.up.railway.app/api"
     },
     {
       "type": "range",
