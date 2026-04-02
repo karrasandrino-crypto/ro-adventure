@@ -773,8 +773,8 @@
             <p class="ai-journey-modal__empty-{{ ai_gen_id }}" data-modal-empty>No comments yet.</p>
 
             <form class="ai-journey-modal__form-{{ ai_gen_id }}" data-modal-form>
-              <input type="text" class="ai-journey-modal__input-{{ ai_gen_id }}" data-comment-author placeholder="Your name" required>
-              <input type="text" class="ai-journey-modal__input-{{ ai_gen_id }}" data-comment-text placeholder="Write a comment" required>
+              <input type="text" class="ai-journey-modal__input-{{ ai_gen_id }}" data-comment-author placeholder="Your name" maxlength="80" required>
+              <input type="text" class="ai-journey-modal__input-{{ ai_gen_id }}" data-comment-text placeholder="Write a comment" maxlength="500" required>
               <button type="submit" class="ai-journey-modal__submit-{{ ai_gen_id }}">Post</button>
             </form>
           </div>
@@ -813,17 +813,17 @@
 
           <div class="ai-journey-create__group-{{ ai_gen_id }}">
             <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-author-{{ ai_gen_id }}">Author Name</label>
-            <input id="blog-author-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Your name" data-create-author required>
+            <input id="blog-author-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Your name" maxlength="80" data-create-author required>
           </div>
 
           <div class="ai-journey-create__group-{{ ai_gen_id }}">
             <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-title-{{ ai_gen_id }}">Title</label>
-            <input id="blog-title-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Enter title" data-create-title required>
+            <input id="blog-title-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Enter title" maxlength="120" data-create-title required>
           </div>
 
           <div class="ai-journey-create__group-{{ ai_gen_id }}">
             <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-description-{{ ai_gen_id }}">Description</label>
-            <textarea id="blog-description-{{ ai_gen_id }}" class="ai-journey-create__textarea-{{ ai_gen_id }}" placeholder="Enter description" data-create-description required></textarea>
+            <textarea id="blog-description-{{ ai_gen_id }}" class="ai-journey-create__textarea-{{ ai_gen_id }}" placeholder="Enter description" maxlength="500" data-create-description required></textarea>
           </div>
 
           <button type="submit" class="ai-journey-create__submit-{{ ai_gen_id }}">Add Blog</button>
@@ -844,15 +844,19 @@
         this.posts = [];
         this.defaultPosts = [];
         this.activePostIndex = null;
-        this.storageKey = 'journey-posts-v2-{{ ai_gen_id }}';
+        this.pendingLikeIds = new Set();
+        this.pendingCommentPostIds = new Set();
+        this.isCreatingPost = false;
+        this.apiBaseUrl = this.normalizeApiBaseUrl({{ block.settings.api_base_url | default: 'http://localhost:4000/api' | json }});
+        this.apiOrigin = this.resolveApiOrigin(this.apiBaseUrl);
       }
 
       connectedCallback() {
         this.cacheElements();
         this.loadPosts();
-        this.restoreState();
         this.bindEvents();
         this.renderCards();
+        this.hydrateFromApi();
       }
 
       cacheElements() {
@@ -878,6 +882,10 @@
         this.createTitleInput = this.querySelector('[data-create-title]');
         this.createDescriptionInput = this.querySelector('[data-create-description]');
         this.createStatus = this.querySelector('[data-create-status]');
+        this.modalSubmitBtn = this.modalForm ? this.modalForm.querySelector('button[type="submit"]') : null;
+        this.createSubmitBtn = this.createForm ? this.createForm.querySelector('button[type="submit"]') : null;
+        this.modalSubmitDefaultLabel = this.modalSubmitBtn ? this.modalSubmitBtn.textContent : 'Post';
+        this.createSubmitDefaultLabel = this.createSubmitBtn ? this.createSubmitBtn.textContent : 'Add Blog';
       }
 
       loadPosts() {
@@ -887,31 +895,10 @@
         try {
           const parsed = JSON.parse(jsonEl.textContent);
           this.defaultPosts = Array.isArray(parsed) ? parsed : [];
-          this.posts = this.defaultPosts;
+          this.posts = this.defaultPosts.map((post, index) => this.normalizePost(post, index));
         } catch (error) {
           this.defaultPosts = [];
           this.posts = [];
-        }
-      }
-
-      restoreState() {
-        try {
-          const stored = localStorage.getItem(this.storageKey);
-          if (!stored) return;
-
-          const parsed = JSON.parse(stored);
-          if (!Array.isArray(parsed)) return;
-          this.posts = parsed;
-        } catch (error) {
-          localStorage.removeItem(this.storageKey);
-        }
-      }
-
-      saveState() {
-        try {
-          localStorage.setItem(this.storageKey, JSON.stringify(this.posts));
-        } catch (error) {
-          // Ignore storage failures.
         }
       }
 
@@ -976,20 +963,209 @@
           });
         }
 
-        this.modalLikeBtn.addEventListener('click', () => {
-          if (this.activePostIndex === null) return;
-          this.toggleLike(this.activePostIndex);
-        });
+        if (this.modalLikeBtn) {
+          this.modalLikeBtn.addEventListener('click', () => {
+            if (this.activePostIndex === null) return;
+            this.toggleLike(this.activePostIndex);
+          });
+        }
 
-        this.modalForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          this.addComment();
-        });
+        if (this.modalForm) {
+          this.modalForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            this.addComment();
+          });
+        }
 
         this.onEscape = (event) => {
           if (event.key === 'Escape') {
             this.closeModal();
           }
+        };
+      }
+
+      normalizeApiBaseUrl(value) {
+        const fallback = 'http://localhost:4000/api';
+        const raw = typeof value === 'string' && value.trim() ? value.trim() : fallback;
+        const withProtocol = /^https?:\/\//i.test(raw) ? raw : 'https://' + raw;
+        try {
+          const parsed = new URL(withProtocol);
+          if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+            return fallback;
+          }
+
+          const path = parsed.pathname.replace(/\/+$/, '');
+          parsed.pathname = path && path !== '/' ? path : '/api';
+          return parsed.toString().replace(/\/+$/, '');
+        } catch (error) {
+          return fallback;
+        }
+      }
+
+      resolveApiOrigin(value) {
+        try {
+          return new URL(value).origin;
+        } catch (error) {
+          return window.location.origin;
+        }
+      }
+
+      buildApiUrl(path) {
+        const normalizedPath = path.startsWith('/') ? path : '/' + path;
+        return this.apiBaseUrl + normalizedPath;
+      }
+
+      async apiRequest(path, options) {
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), 15000);
+        let response;
+
+        try {
+          response = await fetch(this.buildApiUrl(path), Object.assign({}, options || {}, {
+            signal: controller.signal
+          }));
+        } catch (error) {
+          if (error && error.name === 'AbortError') {
+            throw new Error('Request timed out. Please try again.');
+          }
+          throw new Error('Network request failed. Please try again.');
+        } finally {
+          window.clearTimeout(timeoutId);
+        }
+
+        let payload = null;
+
+        try {
+          payload = await response.json();
+        } catch (error) {
+          payload = null;
+        }
+
+        if (!response.ok || (payload && payload.ok === false)) {
+          const message = payload && payload.message ? payload.message : 'Request failed';
+          throw new Error(message);
+        }
+
+        return payload || {};
+      }
+
+      async hydrateFromApi() {
+        try {
+          const payload = await this.apiRequest('/posts');
+          const apiPosts = Array.isArray(payload.posts) ? payload.posts : [];
+          this.posts = apiPosts.map((post, index) => this.normalizePost(post, index));
+          this.renderCards();
+          this.clearCreateStatus();
+        } catch (error) {
+          this.setCreateStatus('Showing sample posts. API is currently unreachable.', true);
+        }
+      }
+
+      setCreateStatus(message, isError) {
+        if (!this.createStatus) return;
+        this.createStatus.textContent = message || '';
+        this.createStatus.style.color = isError ? '#b42318' : '';
+      }
+
+      setCreateSubmitting(isBusy) {
+        this.isCreatingPost = Boolean(isBusy);
+        if (!this.createSubmitBtn) return;
+        this.createSubmitBtn.disabled = this.isCreatingPost;
+        this.createSubmitBtn.textContent = this.isCreatingPost ? 'Publishing...' : this.createSubmitDefaultLabel;
+      }
+
+      setCommentSubmitting(isBusy) {
+        const busy = Boolean(isBusy);
+        if (this.modalSubmitBtn) {
+          this.modalSubmitBtn.disabled = busy;
+          this.modalSubmitBtn.textContent = busy ? 'Posting...' : this.modalSubmitDefaultLabel;
+        }
+        if (this.modalCommentAuthor) {
+          this.modalCommentAuthor.disabled = busy;
+        }
+        if (this.modalCommentText) {
+          this.modalCommentText.disabled = busy;
+        }
+      }
+
+      clearCreateStatus() {
+        if (!this.createStatus) return;
+        this.createStatus.textContent = '';
+        this.createStatus.style.color = '';
+      }
+
+      limitText(value, maxLength) {
+        return String(value || '').trim().slice(0, maxLength);
+      }
+
+      getPostId(post) {
+        const parsed = Number(post && post.id);
+        return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+      }
+
+      getInitials(value) {
+        const words = String(value || '')
+          .split(' ')
+          .map((item) => item.trim())
+          .filter(Boolean);
+        const first = words[0] ? words[0][0] : 'C';
+        const second = words[1] ? words[1][0] : 'M';
+        return (first + second).toUpperCase();
+      }
+
+      resolveImageUrl(value, index) {
+        const raw = String(value || '').trim();
+        if (!raw) {
+          return this.fallbackImage(index);
+        }
+
+        if (/^https?:\/\//i.test(raw)) {
+          try {
+            const parsed = new URL(raw);
+            if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+              return parsed.toString();
+            }
+          } catch (error) {
+            return this.fallbackImage(index);
+          }
+        }
+
+        if (raw.startsWith('/uploads/')) {
+          return this.apiOrigin + raw;
+        }
+
+        return this.fallbackImage(index);
+      }
+
+      normalizeComment(comment, index) {
+        const source = comment && typeof comment === 'object' ? comment : {};
+        return {
+          id: Number.isFinite(Number(source.id)) ? Number(source.id) : index + 1,
+          author: source.author || 'Guest',
+          text: source.text || '',
+          date: source.date || ''
+        };
+      }
+
+      normalizePost(post, index) {
+        const source = post && typeof post === 'object' ? post : {};
+        const author = source.author || 'Community Member';
+        const comments = Array.isArray(source.comments)
+          ? source.comments.map((comment, commentIndex) => this.normalizeComment(comment, commentIndex))
+          : [];
+
+        return {
+          id: Number.isFinite(Number(source.id)) ? Number(source.id) : null,
+          author: author,
+          initials: source.initials || this.getInitials(author),
+          date: source.date || '',
+          title: source.title || '',
+          description: source.description || '',
+          detail: source.detail || source.description || '',
+          image_url: this.resolveImageUrl(source.image_url, index),
+          likes: Math.max(0, Number(source.likes) || 0),
+          isLiked: Boolean(source.isLiked),
+          comments: comments
         };
       }
 
@@ -1019,6 +1195,8 @@
           const isLiked = Boolean(post.isLiked);
           const likes = Number(post.likes || 0);
           const commentsCount = Array.isArray(post.comments) ? post.comments.length : 0;
+          const postId = this.getPostId(post);
+          const isLikePending = Boolean(postId && this.pendingLikeIds.has(postId));
 
           return `
             <div class="ai-journey-post-{{ ai_gen_id }}" data-post-card data-post-index="${index}" tabindex="0" role="button" aria-label="Open blog details for ${title}">
@@ -1035,7 +1213,7 @@
               <div class="ai-journey-post__body-{{ ai_gen_id }}">
                 <div class="ai-journey-post__actions-{{ ai_gen_id }}">
                   <div class="ai-journey-post__action-list-{{ ai_gen_id }}">
-                    <button type="button" class="ai-journey-post__action-btn-{{ ai_gen_id }} ${isLiked ? 'liked' : ''}" data-like-btn aria-label="Like ${title}" aria-pressed="${isLiked}">
+                    <button type="button" class="ai-journey-post__action-btn-{{ ai_gen_id }} ${isLiked ? 'liked' : ''}" data-like-btn aria-label="Like ${title}" aria-pressed="${isLiked}" ${isLikePending ? 'disabled aria-busy="true"' : ''}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                       </svg>
@@ -1058,19 +1236,62 @@
         }).join('');
       }
 
-      toggleLike(index) {
+      async toggleLike(index) {
         const post = this.posts[index];
         if (!post) return;
+        const postId = this.getPostId(post);
+        if (postId && this.pendingLikeIds.has(postId)) return;
 
-        post.isLiked = !post.isLiked;
-        post.likes = post.isLiked ? Number(post.likes || 0) + 1 : Math.max(0, Number(post.likes || 0) - 1);
+        const previousLiked = Boolean(post.isLiked);
+        const previousLikes = Math.max(0, Number(post.likes) || 0);
+        const nextLiked = !previousLiked;
+        if (postId) {
+          this.pendingLikeIds.add(postId);
+        }
+
+        post.isLiked = nextLiked;
+        post.likes = nextLiked ? previousLikes + 1 : Math.max(0, previousLikes - 1);
 
         this.renderCards();
         if (this.activePostIndex === index) {
           this.renderModal(index);
         }
 
-        this.saveState();
+        if (!postId) return;
+
+        try {
+          const payload = await this.apiRequest('/posts/' + postId + '/like', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ liked: nextLiked })
+          });
+
+          post.likes = Math.max(0, Number(payload.likes) || 0);
+          post.isLiked = nextLiked;
+          this.renderCards();
+          if (this.activePostIndex === index) {
+            this.renderModal(index);
+          }
+          this.clearCreateStatus();
+        } catch (error) {
+          post.isLiked = previousLiked;
+          post.likes = previousLikes;
+          this.renderCards();
+          if (this.activePostIndex === index) {
+            this.renderModal(index);
+          }
+          this.setCreateStatus(error.message || 'Unable to update like.', true);
+        } finally {
+          if (postId) {
+            this.pendingLikeIds.delete(postId);
+            this.renderCards();
+            if (this.activePostIndex === index) {
+              this.renderModal(index);
+            }
+          }
+        }
       }
 
       openModal(index) {
@@ -1107,6 +1328,9 @@
         this.modalDetail.textContent = post.detail || post.description || '';
         this.modalLikeCount.textContent = Number(post.likes || 0);
         this.modalCommentCount.textContent = Array.isArray(post.comments) ? post.comments.length : 0;
+        const postId = this.getPostId(post);
+        const isLikePending = Boolean(postId && this.pendingLikeIds.has(postId));
+        const isCommentPending = Boolean(postId && this.pendingCommentPostIds.has(postId));
 
         if (post.isLiked) {
           this.modalLikeBtn.classList.add('liked');
@@ -1115,6 +1339,13 @@
           this.modalLikeBtn.classList.remove('liked');
           this.modalLikeBtn.setAttribute('aria-pressed', 'false');
         }
+        this.modalLikeBtn.disabled = isLikePending;
+        if (isLikePending) {
+          this.modalLikeBtn.setAttribute('aria-busy', 'true');
+        } else {
+          this.modalLikeBtn.removeAttribute('aria-busy');
+        }
+        this.setCommentSubmitting(isCommentPending);
 
         this.renderModalComments(Array.isArray(post.comments) ? post.comments : []);
       }
@@ -1156,89 +1387,108 @@
         });
       }
 
-      addComment() {
+      async addComment() {
         if (this.activePostIndex === null) return;
 
         const post = this.posts[this.activePostIndex];
-        const author = this.modalCommentAuthor.value.trim();
-        const text = this.modalCommentText.value.trim();
+        const author = this.limitText(this.modalCommentAuthor.value, 80);
+        const text = this.limitText(this.modalCommentText.value, 500);
+        const postId = this.getPostId(post);
 
         if (!author || !text || !post) return;
+        if (postId && this.pendingCommentPostIds.has(postId)) return;
 
         if (!Array.isArray(post.comments)) {
           post.comments = [];
         }
 
-        post.comments.push({
-          author: author,
-          text: text,
-          date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
-        });
+        if (postId) {
+          this.pendingCommentPostIds.add(postId);
+          this.renderModal(this.activePostIndex);
+          try {
+            const payload = await this.apiRequest('/posts/' + postId + '/comments', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                author: author,
+                text: text
+              })
+            });
+
+            post.comments.push(this.normalizeComment(payload.comment || {}, post.comments.length));
+            this.clearCreateStatus();
+          } catch (error) {
+            this.setCreateStatus(error.message || 'Unable to add comment.', true);
+            return;
+          } finally {
+            this.pendingCommentPostIds.delete(postId);
+            if (this.activePostIndex !== null) {
+              this.renderModal(this.activePostIndex);
+            }
+          }
+        } else {
+          post.comments.push({
+            id: post.comments.length + 1,
+            author: author,
+            text: text,
+            date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
+          });
+        }
 
         this.modalCommentText.value = '';
         this.renderCards();
         this.renderModal(this.activePostIndex);
-        this.saveState();
       }
 
       async handleCreatePost() {
-        const author = this.createAuthorInput ? this.createAuthorInput.value.trim() : '';
-        const title = this.createTitleInput.value.trim();
-        const description = this.createDescriptionInput.value.trim();
+        if (this.isCreatingPost) return;
+
+        const author = this.createAuthorInput ? this.limitText(this.createAuthorInput.value, 80) : '';
+        const title = this.limitText(this.createTitleInput.value, 120);
+        const description = this.limitText(this.createDescriptionInput.value, 500);
         const file = this.createImageInput.files && this.createImageInput.files[0] ? this.createImageInput.files[0] : null;
 
-        if (!author || !title || !description) {
-          if (this.createStatus) {
-            this.createStatus.textContent = 'Please fill in all fields.';
-          }
+        if (!title || !description) {
+          this.setCreateStatus('Please fill in title and description.', true);
           return;
         }
 
-        let imageUrl = '';
+        const formData = new FormData();
+        formData.append('author', author || 'Community Member');
+        formData.append('title', title);
+        formData.append('description', description);
+        formData.append('detail', description);
         if (file) {
-          try {
-            imageUrl = await this.fileToDataUrl(file);
-          } catch (error) {
-            imageUrl = '';
+          formData.append('image', file);
+        }
+
+        this.setCreateSubmitting(true);
+        this.setCreateStatus('Publishing post...', false);
+
+        try {
+          const payload = await this.apiRequest('/posts', {
+            method: 'POST',
+            body: formData
+          });
+
+          if (payload.post) {
+            this.posts.unshift(this.normalizePost(payload.post, this.posts.length));
+            this.renderCards();
+          } else {
+            await this.hydrateFromApi();
           }
+
+          this.createForm.reset();
+          const uploadLabelEl = this.querySelector('[data-upload-label]');
+          if (uploadLabelEl) uploadLabelEl.textContent = 'Choose file';
+          this.setCreateStatus('Blog added successfully.', false);
+        } catch (error) {
+          this.setCreateStatus(error.message || 'Unable to publish blog.', true);
+        } finally {
+          this.setCreateSubmitting(false);
         }
-        if (!imageUrl) {
-          imageUrl = this.fallbackImage(this.posts.length + 10);
-        }
-
-        const words = author.split(' ').filter(Boolean);
-        const initials = ((words[0] ? words[0][0] : 'A') + (words[1] ? words[1][0] : '')).toUpperCase();
-
-        this.posts.unshift({
-          author: author,
-          initials: initials,
-          date: new Date().toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' }),
-          title: title,
-          description: description,
-          detail: description,
-          image_url: imageUrl,
-          likes: 0,
-          isLiked: false,
-          comments: []
-        });
-
-        this.renderCards();
-        this.saveState();
-        this.createForm.reset();
-        const uploadLabelEl = this.querySelector('[data-upload-label]');
-        if (uploadLabelEl) uploadLabelEl.textContent = 'Choose file';
-        if (this.createStatus) {
-          this.createStatus.textContent = 'Blog added successfully.';
-        }
-      }
-
-      fileToDataUrl(file) {
-        return new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result);
-          reader.onerror = () => reject(new Error('Failed to read file'));
-          reader.readAsDataURL(file);
-        });
       }
     }
 
@@ -1267,6 +1517,12 @@
       "id": "section_subtitle",
       "label": "Subtitle",
       "default": "Share your journey with fellow adventurers"
+    },
+    {
+      "type": "text",
+      "id": "api_base_url",
+      "label": "API base URL",
+      "default": "http://localhost:4000/api"
     },
     {
       "type": "range",
