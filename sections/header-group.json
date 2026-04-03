@@ -1,1 +1,154 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement_bar_HkK9aa":{"type":"announcement-bar","blocks":{"announcement_4YMQ8x":{"type":"announcement","settings":{"text":"RŌ Adventure - World Launch - June 2026","link":""}}},"block_order":["announcement_4YMQ8x"],"disabled":true,"name":"t:sections.announcement-bar.presets.name","settings":{"auto_rotate":false,"change_slides_speed":5,"color_scheme":"scheme-2","show_line_separator":true,"show_social":false,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","custom_css":[],"settings":{"logo_position":"top-left","mobile_logo_position":"center","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":false,"color_scheme":"scheme-5","menu_color_scheme":"scheme-2","enable_country_selector":false,"enable_language_selector":true,"enable_customer_avatar":true,"margin_bottom":0,"padding_top":0,"padding_bottom":0}},"177323905288e19fc9":{"type":"_blocks","settings":{}},"custom_liquid_FaNXEF":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"","color_scheme":"scheme-2","padding_top":8,"padding_bottom":8}}},"order":["announcement_bar_HkK9aa","header","177323905288e19fc9","custom_liquid_FaNXEF"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_HkK9aa": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_4YMQ8x": {
+          "type": "announcement",
+          "settings": {
+            "text": "RŌ Adventure - World Launch - June 2026",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_4YMQ8x"
+      ],
+      "disabled": true,
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-2",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [],
+      "settings": {
+        "logo_position": "top-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "scheme-5",
+        "menu_color_scheme": "scheme-2",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "177323905288e19fc9": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "custom_liquid_FaNXEF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "blocks_9chkhy": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b50d5e1_dmKcK7": {
+          "type": "ai_gen_block_b50d5e1",
+          "settings": {
+            "heading": "From Our Instagram",
+            "mission_text": "<p>Catch our most recent journeys, stories, and outdoor moments straight from Instagram. Tap any post to dive deeper into the experience.</p>",
+            "text_alignment": "center",
+            "max_width": 800,
+            "desktop_width_percent": 100,
+            "highlight_mode": "word",
+            "highlight_color": "#ffffff",
+            "highlight_weight": "700",
+            "heading_font": "archivo_black_n4",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "body_font": "quicksand_n4",
+            "text_size": 20,
+            "line_height": 1.6,
+            "background_color": "#375937",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "padding_vertical": 60,
+            "padding_horizontal": 40,
+            "border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b50d5e1_dmKcK7"
+      ],
+      "name": "Mission statement",
+      "settings": {}
+    },
+    "1775216882bea5cad0": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_ryBwzy": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 96,
+            "instafeed_margin_sides": 92,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_ryBwzy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "blocks_FKxAQi": {
+      "type": "_blocks",
+      "name": "Mission statement",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_HkK9aa",
+    "header",
+    "177323905288e19fc9",
+    "custom_liquid_FaNXEF",
+    "blocks_9chkhy",
+    "1775216882bea5cad0",
+    "blocks_FKxAQi"
+  ]
+}
