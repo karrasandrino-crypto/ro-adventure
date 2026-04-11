@@ -843,6 +843,7 @@
         super();
         this.posts = [];
         this.defaultPosts = [];
+        this.readOnlyMode = true;
         this.activePostIndex = null;
         this.pendingLikeIds = new Set();
         this.pendingCommentPostIds = new Set();
@@ -853,10 +854,25 @@
 
       connectedCallback() {
         this.cacheElements();
+        this.applyReadOnlyMode();
         this.loadPosts();
         this.bindEvents();
         this.renderCards();
         this.hydrateFromApi();
+      }
+
+      applyReadOnlyMode() {
+        if (!this.readOnlyMode) return;
+
+        if (this.createForm) {
+          this.createForm.style.display = 'none';
+        }
+
+        if (this.modalForm) {
+          this.modalForm.style.display = 'none';
+        }
+
+        this.setCreateStatus('Storefront is read-only. Post creation and interactions are available in Shopify admin.', false);
       }
 
       cacheElements() {
@@ -913,7 +929,9 @@
             if (Number.isNaN(index)) return;
 
             if (likeBtn) {
-              this.toggleLike(index);
+              if (!this.readOnlyMode) {
+                this.toggleLike(index);
+              }
               return;
             }
 
@@ -946,6 +964,7 @@
         if (this.createForm) {
           this.createForm.addEventListener('submit', (event) => {
             event.preventDefault();
+            if (this.readOnlyMode) return;
             this.handleCreatePost();
           });
         }
@@ -966,6 +985,7 @@
         if (this.modalLikeBtn) {
           this.modalLikeBtn.addEventListener('click', () => {
             if (this.activePostIndex === null) return;
+            if (this.readOnlyMode) return;
             this.toggleLike(this.activePostIndex);
           });
         }
@@ -973,6 +993,7 @@
         if (this.modalForm) {
           this.modalForm.addEventListener('submit', (event) => {
             event.preventDefault();
+            if (this.readOnlyMode) return;
             this.addComment();
           });
         }
@@ -1197,6 +1218,7 @@
           const commentsCount = Array.isArray(post.comments) ? post.comments.length : 0;
           const postId = this.getPostId(post);
           const isLikePending = Boolean(postId && this.pendingLikeIds.has(postId));
+          const isLikeDisabled = this.readOnlyMode || isLikePending;
 
           return `
             <div class="ai-journey-post-{{ ai_gen_id }}" data-post-card data-post-index="${index}" tabindex="0" role="button" aria-label="Open blog details for ${title}">
@@ -1213,7 +1235,7 @@
               <div class="ai-journey-post__body-{{ ai_gen_id }}">
                 <div class="ai-journey-post__actions-{{ ai_gen_id }}">
                   <div class="ai-journey-post__action-list-{{ ai_gen_id }}">
-                    <button type="button" class="ai-journey-post__action-btn-{{ ai_gen_id }} ${isLiked ? 'liked' : ''}" data-like-btn aria-label="Like ${title}" aria-pressed="${isLiked}" ${isLikePending ? 'disabled aria-busy="true"' : ''}>
+                    <button type="button" class="ai-journey-post__action-btn-{{ ai_gen_id }} ${isLiked ? 'liked' : ''}" data-like-btn aria-label="Like ${title}" aria-pressed="${isLiked}" ${isLikeDisabled ? 'disabled' : ''} ${isLikePending ? 'aria-busy="true"' : ''}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                       </svg>
@@ -1237,6 +1259,7 @@
       }
 
       async toggleLike(index) {
+        if (this.readOnlyMode) return;
         const post = this.posts[index];
         if (!post) return;
         const postId = this.getPostId(post);
@@ -1339,13 +1362,13 @@
           this.modalLikeBtn.classList.remove('liked');
           this.modalLikeBtn.setAttribute('aria-pressed', 'false');
         }
-        this.modalLikeBtn.disabled = isLikePending;
+        this.modalLikeBtn.disabled = this.readOnlyMode || isLikePending;
         if (isLikePending) {
           this.modalLikeBtn.setAttribute('aria-busy', 'true');
         } else {
           this.modalLikeBtn.removeAttribute('aria-busy');
         }
-        this.setCommentSubmitting(isCommentPending);
+        this.setCommentSubmitting(this.readOnlyMode || isCommentPending);
 
         this.renderModalComments(Array.isArray(post.comments) ? post.comments : []);
       }
@@ -1388,6 +1411,7 @@
       }
 
       async addComment() {
+        if (this.readOnlyMode) return;
         if (this.activePostIndex === null) return;
 
         const post = this.posts[this.activePostIndex];
@@ -1443,6 +1467,7 @@
       }
 
       async handleCreatePost() {
+        if (this.readOnlyMode) return;
         if (this.isCreatingPost) return;
 
         const author = this.createAuthorInput ? this.limitText(this.createAuthorInput.value, 80) : '';
