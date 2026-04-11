@@ -374,26 +374,26 @@
   }
 
   .ai-journey-create-{{ ai_gen_id }} {
-    margin-top: 36px;
-    background: {{ block.settings.card_background }};
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: {{ block.settings.card_radius }}px;
+    margin-top: 40px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f5 100%);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: {{ block.settings.card_radius | plus: 4 }}px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 14px 40px rgba(18, 24, 14, 0.09);
   }
 
   .ai-journey-create__header-{{ ai_gen_id }} {
-    padding: 20px 24px 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
 
   .ai-journey-create__icon-{{ ai_gen_id }} {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     background: {{ block.settings.accent_color }};
     display: inline-flex;
     align-items: center;
@@ -402,8 +402,8 @@
   }
 
   .ai-journey-create__icon-{{ ai_gen_id }} svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     color: #ffffff;
     stroke: #ffffff;
   }
@@ -414,38 +414,59 @@
 
   .ai-journey-create__title-{{ ai_gen_id }} {
     margin: 0 0 2px;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     color: {{ block.settings.text_color }};
-    line-height: 1.2;
+    line-height: 1.08;
   }
 
   .ai-journey-create__subtitle-{{ ai_gen_id }} {
     margin: 0;
-    font-size: 13px;
+    font-size: 15px;
     color: {{ block.settings.meta_color }};
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .ai-journey-create__body-{{ ai_gen_id }} {
-    padding: 20px 24px 22px;
+    padding: 24px 28px 28px;
   }
 
   .ai-journey-create__form-{{ ai_gen_id }} {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1.6fr auto;
-    gap: 14px;
-    align-items: end;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 18px 22px;
+    align-items: start;
   }
 
   .ai-journey-create__group-{{ ai_gen_id }} {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+  }
+
+  .ai-journey-create__upload-group-{{ ai_gen_id }} {
+    grid-column: 1;
+    background: #f1f3ee;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 14px;
+    height: 100%;
+  }
+
+  .ai-journey-create__fields-{{ ai_gen_id }} {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .ai-journey-create__group-{{ ai_gen_id }}.is-description-{{ ai_gen_id }} {
+    grid-column: 1 / -1;
   }
 
   .ai-journey-create__label-{{ ai_gen_id }} {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: {{ block.settings.meta_color }};
@@ -456,11 +477,11 @@
   .ai-journey-create__textarea-{{ ai_gen_id }} {
     width: 100%;
     border: 1.5px solid rgba(0, 0, 0, 0.13);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 13.5px;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
     color: {{ block.settings.text_color }};
-    background: #fafafa;
+    background: #ffffff;
     outline: none;
     transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   }
@@ -482,13 +503,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
     border: 1.5px dashed rgba(0, 0, 0, 0.18);
-    border-radius: 10px;
-    padding: 12px 16px;
-    background: #fafafa;
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
     cursor: pointer;
-    min-width: 110px;
+    min-height: 152px;
     transition: border-color 0.18s ease, background 0.18s ease;
   }
 
@@ -498,18 +519,20 @@
   }
 
   .ai-journey-create__upload-zone-{{ ai_gen_id }} svg {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     color: {{ block.settings.meta_color }};
     stroke: {{ block.settings.meta_color }};
     flex-shrink: 0;
   }
 
   .ai-journey-create__upload-label-text-{{ ai_gen_id }} {
-    font-size: 11.5px;
+    font-size: 13px;
     font-weight: 600;
     color: {{ block.settings.meta_color }};
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
   }
 
   .ai-journey-create__input-file-{{ ai_gen_id }} {
@@ -521,18 +544,26 @@
   }
 
   .ai-journey-create__textarea-{{ ai_gen_id }} {
-    min-height: 44px;
+    min-height: 88px;
     max-height: 140px;
     resize: vertical;
+  }
+
+  .ai-journey-create__actions-{{ ai_gen_id }} {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
   }
 
   .ai-journey-create__submit-{{ ai_gen_id }} {
     border: 0;
     border-radius: 999px;
-    padding: 11px 22px;
+    padding: 12px 24px;
     background: {{ block.settings.accent_color }};
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
@@ -553,10 +584,12 @@
   }
 
   .ai-journey-create__status-{{ ai_gen_id }} {
-    margin: 12px 0 0;
+    margin: 0;
     font-size: 12px;
     color: {{ block.settings.meta_color }};
-    min-height: 16px;
+    min-height: 18px;
+    text-align: right;
+    max-width: 380px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -574,7 +607,18 @@
     }
 
     .ai-journey-create__form-{{ ai_gen_id }} {
-      grid-template-columns: auto 1fr 1fr;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .ai-journey-create__upload-group-{{ ai_gen_id }},
+    .ai-journey-create__fields-{{ ai_gen_id }},
+    .ai-journey-create__actions-{{ ai_gen_id }} {
+      grid-column: 1;
+    }
+
+    .ai-journey-create__fields-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -622,6 +666,25 @@
 
     .ai-journey-create__form-{{ ai_gen_id }} {
       grid-template-columns: 1fr;
+    }
+
+    .ai-journey-create__title-{{ ai_gen_id }} {
+      font-size: 26px;
+    }
+
+    .ai-journey-create__actions-{{ ai_gen_id }} {
+      justify-content: stretch;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ai-journey-create__submit-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-journey-create__status-{{ ai_gen_id }} {
+      text-align: left;
+      max-width: none;
     }
   }
 {% endstyle %}
@@ -798,7 +861,7 @@
 
       <div class="ai-journey-create__body-{{ ai_gen_id }}">
         <form class="ai-journey-create__form-{{ ai_gen_id }}" data-create-form>
-          <div class="ai-journey-create__group-{{ ai_gen_id }}">
+          <div class="ai-journey-create__group-{{ ai_gen_id }} ai-journey-create__upload-group-{{ ai_gen_id }}">
             <label class="ai-journey-create__label-{{ ai_gen_id }}">Upload Image</label>
             <label class="ai-journey-create__upload-zone-{{ ai_gen_id }}" for="blog-image-{{ ai_gen_id }}">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -811,24 +874,28 @@
             <input id="blog-image-{{ ai_gen_id }}" class="ai-journey-create__input-file-{{ ai_gen_id }}" type="file" accept="image/*" data-create-image>
           </div>
 
-          <div class="ai-journey-create__group-{{ ai_gen_id }}">
-            <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-author-{{ ai_gen_id }}">Author Name</label>
-            <input id="blog-author-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Your name" maxlength="80" data-create-author required>
+          <div class="ai-journey-create__fields-{{ ai_gen_id }}">
+            <div class="ai-journey-create__group-{{ ai_gen_id }}">
+              <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-author-{{ ai_gen_id }}">Author Name</label>
+              <input id="blog-author-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Your name" maxlength="80" data-create-author required>
+            </div>
+
+            <div class="ai-journey-create__group-{{ ai_gen_id }}">
+              <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-title-{{ ai_gen_id }}">Title</label>
+              <input id="blog-title-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Enter title" maxlength="120" data-create-title required>
+            </div>
+
+            <div class="ai-journey-create__group-{{ ai_gen_id }} is-description-{{ ai_gen_id }}">
+              <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-description-{{ ai_gen_id }}">Description</label>
+              <textarea id="blog-description-{{ ai_gen_id }}" class="ai-journey-create__textarea-{{ ai_gen_id }}" placeholder="Write a short post summary..." maxlength="500" data-create-description required></textarea>
+            </div>
           </div>
 
-          <div class="ai-journey-create__group-{{ ai_gen_id }}">
-            <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-title-{{ ai_gen_id }}">Title</label>
-            <input id="blog-title-{{ ai_gen_id }}" class="ai-journey-create__input-{{ ai_gen_id }}" type="text" placeholder="Enter title" maxlength="120" data-create-title required>
+          <div class="ai-journey-create__actions-{{ ai_gen_id }}">
+            <p class="ai-journey-create__status-{{ ai_gen_id }}" data-create-status></p>
+            <button type="submit" class="ai-journey-create__submit-{{ ai_gen_id }}">Publish Post</button>
           </div>
-
-          <div class="ai-journey-create__group-{{ ai_gen_id }}">
-            <label class="ai-journey-create__label-{{ ai_gen_id }}" for="blog-description-{{ ai_gen_id }}">Description</label>
-            <textarea id="blog-description-{{ ai_gen_id }}" class="ai-journey-create__textarea-{{ ai_gen_id }}" placeholder="Enter description" maxlength="500" data-create-description required></textarea>
-          </div>
-
-          <button type="submit" class="ai-journey-create__submit-{{ ai_gen_id }}">Add Blog</button>
         </form>
-        <p class="ai-journey-create__status-{{ ai_gen_id }}" data-create-status></p>
       </div>
     </section>
 
