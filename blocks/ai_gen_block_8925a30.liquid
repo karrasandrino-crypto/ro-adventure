@@ -843,7 +843,7 @@
         super();
         this.posts = [];
         this.defaultPosts = [];
-        this.readOnlyMode = true;
+        this.readOnlyMode = false;
         this.activePostIndex = null;
         this.pendingLikeIds = new Set();
         this.pendingCommentPostIds = new Set();
@@ -864,15 +864,9 @@
       applyReadOnlyMode() {
         if (!this.readOnlyMode) return;
 
-        if (this.createForm) {
-          this.createForm.style.display = 'none';
-        }
-
-        if (this.modalForm) {
-          this.modalForm.style.display = 'none';
-        }
-
-        this.setCreateStatus('Storefront is read-only. Post creation and interactions are available in Shopify admin.', false);
+        if (this.createForm) this.createForm.style.display = '';
+        if (this.modalForm) this.modalForm.style.display = '';
+        this.clearCreateStatus();
       }
 
       cacheElements() {
