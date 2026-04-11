@@ -848,7 +848,7 @@
         this.pendingLikeIds = new Set();
         this.pendingCommentPostIds = new Set();
         this.isCreatingPost = false;
-        this.apiBaseUrl = this.normalizeApiBaseUrl({{ block.settings.api_base_url | default: 'https://ro-adventure-backend-production-5546.up.railway.app/api' | json }});
+        this.apiBaseUrl = this.normalizeApiBaseUrl({{ block.settings.api_base_url | default: '/apps/ro-adventure-community' | json }});
         this.apiOrigin = this.resolveApiOrigin(this.apiBaseUrl);
       }
 
@@ -1000,8 +1000,13 @@
       }
 
       normalizeApiBaseUrl(value) {
-        const fallback = 'https://ro-adventure-backend-production-5546.up.railway.app/api';
+        const fallback = window.location.origin + '/apps/ro-adventure-community';
         const raw = typeof value === 'string' && value.trim() ? value.trim() : fallback;
+
+        if (raw.startsWith('/')) {
+          return (window.location.origin + raw).replace(/\/+$/, '');
+        }
+
         const withProtocol = /^https?:\/\//i.test(raw) ? raw : 'https://' + raw;
         try {
           const parsed = new URL(withProtocol);
@@ -1010,7 +1015,7 @@
           }
 
           const path = parsed.pathname.replace(/\/+$/, '');
-          parsed.pathname = path && path !== '/' ? path : '/api';
+          parsed.pathname = path && path !== '/' ? path : '/apps/ro-adventure-community';
           return parsed.toString().replace(/\/+$/, '');
         } catch (error) {
           return fallback;
@@ -1540,8 +1545,8 @@
     {
       "type": "text",
       "id": "api_base_url",
-      "label": "API base URL",
-      "default": "https://ro-adventure-backend-production-5546.up.railway.app/api"
+      "label": "API base URL or app proxy path",
+      "default": "/apps/ro-adventure-community"
     },
     {
       "type": "range",
