@@ -1413,8 +1413,10 @@
         this.modalAuthor.textContent = post.author || 'Community Member';
         this.modalDate.textContent = post.date || '';
         this.modalTitle.textContent = post.title || '';
-        this.modalDescription.textContent = post.description || '';
-        this.modalDetail.textContent = post.detail || post.description || '';
+        const detail = post.detail || post.description || '';
+        const description = post.description || '';
+        this.modalDescription.textContent = detail === description ? '' : description;
+        this.modalDetail.textContent = detail;
         this.modalLikeCount.textContent = Number(post.likes || 0);
         this.modalCommentCount.textContent = Array.isArray(post.comments) ? post.comments.length : 0;
         const postId = this.getPostId(post);
