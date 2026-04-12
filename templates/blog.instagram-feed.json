@@ -54,7 +54,7 @@
           "settings": {
             "section_title": "Explore. Share. Inspire.",
             "section_subtitle": "Welcome to the RŌ Community Hub — a space built for those who live and breathe the outdoors. Here, adventurers from all walks of life come together to share stories, experiences, and insights from their journeys, whether it’s a remote mountain trek, a coastal escape, or a simple moment in nature. This is more than just a blog; it’s a growing community driven by a shared respect for the environments we explore and a passion for getting outside. Discover new ideas, learn from others, and contribute your own adventures as we inspire each other to explore responsibly and make the most of the world around us.",
-            "api_base_url": "https://ro-adventure-backend-production.up.railway.app/api",
+            "api_base_url": "https://ro-adventure-backend-production-db50.up.railway.app/api",
             "desktop_width_percent": 100,
             "title_size": 36,
             "subtitle_size": 16,
