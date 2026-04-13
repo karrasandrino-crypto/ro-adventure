@@ -9,6 +9,55 @@
  */
 {
   "sections": {
+    "image_banner_czGWPy": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_wRkKHY": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_wnqkAh": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_hmTziX": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wRkKHY",
+        "text_wnqkAh",
+        "buttons_hmTziX"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/DUNE_Range.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -16,6 +65,35 @@
       "settings": {
         "padding_top": 28,
         "padding_bottom": 0
+      }
+    },
+    "featured_collection_C3Cpdc": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "dune-coastal-lifestyle-range",
+        "products_to_show": 4,
+        "title": "Coastal Ready, Adventure Proven",
+        "heading_size": "h1",
+        "description": "<p>The <strong>RŌ DUNE </strong>Range brings a softer side to adventure without compromising on performance. Made from recycled materials and built to the same premium standard as the core range, it features subtle, beach-inspired tones designed to blend effortlessly into life on or around the water. It’s refined, durable gear that looks at home by the coast — and performs wherever the day takes you.<br/><br/></p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_YRjJUb": {
@@ -60,66 +138,12 @@
         "padding_top": 40,
         "padding_bottom": 0
       }
-    },
-    "rich_text_KicVat": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_WfkYiE": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_GWtt3M": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><strong>Warranty Coverage</strong></h2><p>All RŌ products are covered by a <strong>3-year limited warranty</strong> from the date of purchase.</p><ul><li>This warranty covers <strong>defects in materials and workmanship</strong> under normal use.</li><li>Individual <strong>components and accessories</strong> are covered for a period of <strong>1 year</strong> from the date of purchase.</li></ul><h2><strong>What is Covered</strong></h2><p>This warranty applies to:</p><ul><li>Manufacturing defects in materials</li><li>Faulty construction or workmanship</li></ul><h2><strong>What is Not Covered</strong></h2><p>This warranty does not cover:</p><ul><li>Normal wear and tear</li><li>Cosmetic damage (scratches, fading, stains, etc.)</li><li>Damage caused by misuse, neglect, accidents, or improper care</li><li>Unauthorized repairs or modifications</li></ul><h2><strong>Making a Warranty Claim</strong></h2><p>To submit a warranty claim, you must provide:</p><ul><li>Proof of purchase</li><li>Clear photographs of the defect</li><li>A detailed description of the issue</li></ul><p>RŌ reserves the right to request additional information where necessary.</p><h2><strong>Product Inspection</strong></h2><p>In certain circumstances, RŌ may require the product to be <strong>returned for inspection</strong> before a claim can be processed. Instructions will be provided if this is required.</p><h2><strong>Retailer & Distributor Purchases</strong></h2><p>If your product was purchased through a <strong>retailer or distributor</strong>, all warranty claims must be made <strong>directly with the original place of purchase</strong>. They will handle the claim in accordance with RŌ’s warranty policy.</p><h2><strong>Resolution</strong></h2><p>If a defect is confirmed and covered under this warranty, RŌ will, at its discretion:</p><ul><li>Repair the product, or</li><li>Replace the product with the same or comparable item</li></ul><p>This warranty gives you specific legal rights, and you may also have other rights which vary by region.</p><p>For further assistance, please contact RŌ customer support.</p>"
-          }
-        },
-        "button_YUGzqA": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_WfkYiE",
-        "text_GWtt3M",
-        "button_YUGzqA"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 4,
-        "padding_bottom": 52
-      }
-    },
-    "contact_form_D4FY3A": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "MAKE A CLAIM",
-        "heading_size": "h1",
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
+    "image_banner_czGWPy",
     "main",
-    "rich_text_YRjJUb",
-    "rich_text_KicVat",
-    "contact_form_D4FY3A"
+    "featured_collection_C3Cpdc",
+    "rich_text_YRjJUb"
   ]
 }
