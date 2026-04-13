@@ -17,82 +17,6 @@
         "padding_bottom": 0
       }
     },
-    "image_banner_zaDmaj": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_gG63YJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "RŌ - The Meaningss",
-            "heading_size": "h2"
-          }
-        },
-        "text_M8pUMe": {
-          "type": "text",
-          "settings": {
-            "text": "The name <strong>RŌ</strong> is inspired by a remarkable native New Zealand stick insect, a master of adaptation that blends seamlessly into its environment. Almost invisible in plain sight, it survives by working with nature rather than against it—much like our approach to design. Even more extraordinary is the female’s ability to reproduce without a male, creating new life without introducing anything new. For us, that becomes a powerful analogy: RŌ products are created without relying on new raw materials, instead giving existing resources a second adventure. It’s a reminder that innovation doesn’t always mean more—it can mean making something better from what’s already there.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_gG63YJ",
-        "text_M8pUMe"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/RO_-_About_Us_Graphic.png",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
-    "image_with_text_AfzzUR": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_3ygrMx": {
-          "type": "heading",
-          "settings": {
-            "heading": "About RŌ",
-            "heading_size": "h2"
-          }
-        },
-        "text_BPGqjN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Founded by Nick and Cheri, and inspired by the arrival of their son, Jude, in 2023, RŌ began as a desire to build something that truly stood on good principles. They wanted to create a brand that not only respected the environment, but also helped shape the values their son would grow up with — a deep respect for nature, responsibility for our impact, and an understanding that better choices matter. Built for life outdoors and inspired by the places that keep calling us back, we create thoughtfully designed adventure essentials — <em>gear for your next adventure, made from yesterday’s waste.</em></p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_3ygrMx",
-        "text_BPGqjN"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/RO_Founders_Nick_Cheri.png",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-3",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "slideshow_FPNwiX": {
       "type": "slideshow",
       "name": "t:sections.slideshow.presets.name",
@@ -106,6 +30,42 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "blocks_Uq7r6h": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b50d5e1_GXxrbb": {
+          "type": "ai_gen_block_b50d5e1",
+          "settings": {
+            "heading": "Our mission",
+            "mission_text": "<p>We believe in creating sustainable products that empower adventurers to explore the world while protecting it for future generations.</p>",
+            "text_alignment": "center",
+            "max_width": 800,
+            "desktop_width_percent": 100,
+            "highlight_mode": "word",
+            "highlight_color": "#edb21c",
+            "highlight_weight": "700",
+            "heading_font": "archivo_black_n4",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "body_font": "quicksand_n4",
+            "text_size": 20,
+            "line_height": 1.6,
+            "background_color": "#f9f6ef",
+            "heading_color": "#121212",
+            "text_color": "#121212",
+            "padding_vertical": 60,
+            "padding_horizontal": 40,
+            "border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b50d5e1_GXxrbb"
+      ],
+      "name": "Mission statement",
+      "settings": {}
     },
     "rich_text_RR9bLV": {
       "type": "rich-text",
@@ -141,9 +101,8 @@
   },
   "order": [
     "main",
-    "image_banner_zaDmaj",
-    "image_with_text_AfzzUR",
     "slideshow_FPNwiX",
+    "blocks_Uq7r6h",
     "rich_text_RR9bLV"
   ]
 }
