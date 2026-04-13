@@ -65,7 +65,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<style>\n  #shopify-section-sections--29532613509459__header {\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n  }\n</style>",
         "color_scheme": "scheme-2",
         "padding_top": 8,
         "padding_bottom": 8
