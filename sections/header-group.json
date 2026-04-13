@@ -70,68 +70,12 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
-    },
-    "blocks_mbgbGc": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_b50d5e1_P4RUPp": {
-          "type": "ai_gen_block_b50d5e1",
-          "settings": {
-            "heading": "Follow us on Our Instagram",
-            "mission_text": "<p>Stay connected and explore our latest adventures, outdoor tips, and exclusive moments captured in the wild.</p>",
-            "text_alignment": "center",
-            "max_width": 800,
-            "desktop_width_percent": 100,
-            "highlight_mode": "word",
-            "highlight_color": "#ffffff",
-            "highlight_weight": "700",
-            "heading_font": "archivo_black_n4",
-            "heading_size": 32,
-            "heading_spacing": 20,
-            "body_font": "quicksand_n4",
-            "text_size": 20,
-            "line_height": 1.6,
-            "background_color": "#375937",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "padding_vertical": 60,
-            "padding_horizontal": 40,
-            "border_radius": 4
-          },
-          "blocks": {}
-        },
-        "instafeed_app_block_dXLTTN": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 82,
-            "instafeed_margin_sides": 88,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "ai_gen_block_b50d5e1_P4RUPp",
-        "instafeed_app_block_dXLTTN"
-      ],
-      "name": "Mission statement",
-      "settings": {}
     }
   },
   "order": [
     "announcement_bar_HkK9aa",
     "header",
     "177323905288e19fc9",
-    "custom_liquid_FaNXEF",
-    "blocks_mbgbGc"
+    "custom_liquid_FaNXEF"
   ]
 }
