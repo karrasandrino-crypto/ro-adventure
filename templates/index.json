@@ -9,73 +9,61 @@
  */
 {
   "sections": {
-    "1768155519f0fb022d": {
-      "type": "_blocks",
+    "image_banner_G6h6r6": {
+      "type": "image-banner",
       "blocks": {
-        "ai_gen_block_dd16d0d_9wkVKj": {
-          "type": "ai_gen_block_dd16d0d",
+        "heading_ntahtJ": {
+          "type": "heading",
           "settings": {
-            "image_border_radius": 8,
-            "heading": "GEAR FOR YOUR",
-            "subheading": "Gear for every journey",
-            "text": "<p>Explore our collection of premium outdoor gear designed for adventurers who demand quality and performance.</p>",
-            "heading_size": 60,
-            "subheading_size": 40,
-            "text_size": 16,
-            "text_spacing": 20,
-            "button_text": "Shop now",
-            "button_link": "shopify://pages/ro-adventure-gear",
-            "button_bg_color": "#edb21c",
-            "button_text_color": "#ffffff",
-            "button_hover_bg_color": "#375937",
-            "button_hover_text_color": "#ffffff",
-            "button_border_radius": 4,
-            "secondary_button_text": "Learn more",
-            "secondary_button_link": "shopify://pages/about-ro-adventure",
-            "secondary_button_text_color": "#375937",
-            "secondary_button_border_color": "#375937",
-            "secondary_button_hover_bg_color": "#375937",
-            "secondary_button_hover_text_color": "#ffffff",
-            "max_width": 1200,
-            "content_gap": 50,
-            "section_padding": 100,
-            "background_color": "#f9f6ef",
-            "heading_color": "#121212",
-            "text_color": "#121212"
-          },
-          "blocks": {}
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_ntDdGm": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_XLDhUE": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "ai_gen_block_dd16d0d_9wkVKj"
+        "heading_ntahtJ",
+        "text_ntDdGm",
+        "buttons_XLDhUE"
       ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_23_2026_10_14_23_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "1768155519f0fb022d": {
+      "type": "_blocks",
       "settings": {}
     },
     "17724327786bc6883a": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_e59fab0_GRfKhE": {
-          "type": "ai_gen_block_e59fab0",
-          "settings": {
-            "background_image": "shopify://shop_images/brush-r.png",
-            "background_size": "contain",
-            "background_position": "center",
-            "fallback_color": "#f4f4f4",
-            "heading": "",
-            "text": "",
-            "text_color": "#ffffff",
-            "text_alignment": "center",
-            "min_height": 100,
-            "padding": 0,
-            "border_radius": 0,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_e59fab0_GRfKhE"
-      ],
       "settings": {}
     },
     "featured_collection_GhqB8Y": {
@@ -177,8 +165,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/join_community.png",
-            "title": "<a href=\"/blogs/news\" title=\"News\">Join the RŌ Community</a>",
-            "text": "<p>RŌ Community Blog - Coming Soon</p>",
+            "title": "<a href=\"/pages/blog\" title=\"Community Hub\">Join the RŌ Community</a>",
+            "text": "<p>RŌ Community Blog</p>",
             "link_label": "",
             "link": ""
           }
@@ -275,6 +263,7 @@
     }
   },
   "order": [
+    "image_banner_G6h6r6",
     "1768155519f0fb022d",
     "17724327786bc6883a",
     "featured_collection_GhqB8Y",
