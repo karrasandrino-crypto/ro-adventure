@@ -71,7 +71,7 @@
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "frontpage",
-        "products_to_show": 4,
+        "products_to_show": 6,
         "title": "",
         "heading_size": "h2",
         "description": "",
@@ -95,28 +95,22 @@
         "padding_bottom": 16
       }
     },
-    "rich_text_kBa3t3": {
-      "type": "rich-text",
+    "image_banner_QajnLE": {
+      "type": "image-banner",
       "blocks": {
-        "heading_agbRGH": {
+        "heading_D6pdUR": {
           "type": "heading",
           "settings": {
-            "heading": "EXPLORE OUR GEAR",
-            "heading_size": "h2"
+            "heading": "",
+            "heading_size": "h1"
           }
         },
-        "text_kyQ4xR": {
-          "type": "text",
+        "buttons_zt7c8w": {
+          "type": "buttons",
           "settings": {
-            "text": "<p>Explore our complete range of adventure gear — made from recycled materials and ready for wherever the trail takes you.</p>"
-          }
-        },
-        "button_LREheR": {
-          "type": "button",
-          "settings": {
-            "button_label": "View RŌ Adventure Gear",
-            "button_link": "/pages/ro-adventure-gear",
-            "button_style_secondary": false,
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -124,19 +118,27 @@
         }
       },
       "block_order": [
-        "heading_agbRGH",
-        "text_kyQ4xR",
-        "button_LREheR"
+        "heading_D6pdUR",
+        "buttons_zt7c8w"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_04_16_12_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
+    },
+    "1777044087ea68658a": {
+      "type": "_blocks",
+      "settings": {}
     },
     "multicolumn_67x47c": {
       "type": "multicolumn",
@@ -192,7 +194,36 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_YfBG4j": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "dune-coastal-lifestyle-range",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-e32ebb40-ec0d-4c7f-a118-e9df9b2a894c",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "image_banner_t8qP7X": {
@@ -201,7 +232,7 @@
         "buttons_eT68ct": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Learn More",
+            "button_label_1": "ABOUT RŌ ADVENTURE",
             "button_link_1": "shopify://pages/about-ro-adventure",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -251,8 +282,10 @@
     "1768155519f0fb022d",
     "17724327786bc6883a",
     "featured_collection_GhqB8Y",
-    "rich_text_kBa3t3",
+    "image_banner_QajnLE",
+    "1777044087ea68658a",
     "multicolumn_67x47c",
+    "featured_collection_YfBG4j",
     "image_banner_t8qP7X",
     "blocks_Dthnq3",
     "1772434666e115fbf1",

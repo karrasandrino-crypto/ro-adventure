@@ -14,7 +14,7 @@
     "favicon": "shopify://shop_images/RO_Favicon_1.png",
     "type_header_font": "archivo_black_n4",
     "heading_scale": 100,
-    "type_body_font": "quicksand_n4",
+    "type_body_font": "archivo_black_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -22,9 +22,9 @@
     "spacing_grid_vertical": 16,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
-    "buttons_border_thickness": 1,
+    "buttons_border_thickness": 0,
     "buttons_border_opacity": 100,
-    "buttons_radius": 4,
+    "buttons_radius": 2,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
@@ -46,7 +46,7 @@
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "center",
-    "card_color_scheme": "scheme-2",
+    "card_color_scheme": "scheme-yellow-button",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 16,
@@ -108,7 +108,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p>Gear for you next adventure, made from yesterday's waste.</p>",
+    "brand_description": "",
     "brand_image": "shopify://shop_images/f9f6ef_419fcde9-fd78-4279-a54d-7d967bebb1cc.png",
     "brand_image_width": 125,
     "social_facebook_link": "",
@@ -158,7 +158,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#edb21c",
-          "button_label": "#121212",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -169,7 +169,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#f9f6ef",
-          "button_label": "#121212",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -180,7 +180,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#edb21c",
-          "button_label": "#121212",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -191,7 +191,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#121212",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -202,7 +202,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#375937",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -213,7 +213,7 @@
           "background_gradient": "",
           "text": "#f9f6ef",
           "button": "#fce477",
-          "button_label": "#fce477",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -224,7 +224,7 @@
           "background_gradient": "",
           "text": "#242833",
           "button": "#ffeb3b",
-          "button_label": "#edb21c",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -235,7 +235,7 @@
           "background_gradient": "",
           "text": "#242833",
           "button": "#edb21c",
-          "button_label": "#121212",
+          "button_label": "#f9f6ef",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
