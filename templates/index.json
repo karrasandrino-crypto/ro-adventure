@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Apr_23_2026_10_14_23_PM.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_03_04_15_PM.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -198,45 +198,29 @@
     "image_banner_t8qP7X": {
       "type": "image-banner",
       "blocks": {
-        "heading_DkqiHi": {
-          "type": "heading",
-          "settings": {
-            "heading": "ADVENTURE GEAR THAT DOESN'T COST THE EARTH",
-            "heading_size": "h2"
-          }
-        },
-        "text_Bh4iar": {
-          "type": "text",
-          "settings": {
-            "text": "RŌ products don’t cost the earth — literally. We take materials that have already lived a life and give them a second adventure, turning yesterday’s waste into tough, premium gear built for adventurers. Gear that leaves stories behind, not footprints.",
-            "text_style": "body"
-          }
-        },
         "buttons_eT68ct": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Learn More",
             "button_link_1": "shopify://pages/about-ro-adventure",
             "button_style_secondary_1": false,
-            "button_label_2": "Instagram",
+            "button_label_2": "",
             "button_link_2": "https://www.instagram.com/ro__adventure/",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading_DkqiHi",
-        "text_Bh4iar",
         "buttons_eT68ct"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Graphic.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_03_26_51_PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "middle-right",
+        "desktop_content_alignment": "right",
         "show_text_box": false,
         "color_scheme": "",
         "stack_images_on_mobile": true,
