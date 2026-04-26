@@ -45,9 +45,9 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DUNE_Range.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_26_2026_08_54_57_PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
