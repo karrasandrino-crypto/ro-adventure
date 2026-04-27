@@ -9,21 +9,29 @@
  */
 {
   "sections": {
-    "image_banner_hPbBxR": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "collage_tCfUhC": {
+      "type": "collage",
+      "blocks": {
+        "image_KDMGL8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Apr_27_2026_04_54_46_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_KDMGL8"
+      ],
+      "name": "t:sections.collage.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Copy_of_RO_Community_Hub_Blog.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "main": {
@@ -53,7 +61,7 @@
           "type": "ai_gen_block_8925a30",
           "settings": {
             "section_title": "Explore. Share. Inspire.",
-            "section_subtitle": "Welcome to the RŌ Community Hub — a space built for those who live and breathe the outdoors. Here, adventurers from all walks of life come together to share stories, experiences, and insights from their journeys, whether it’s a remote mountain trek, a coastal escape, or a simple moment in nature. This is more than just a blog; it’s a growing community driven by a shared respect for the environments we explore and a passion for getting outside. Discover new ideas, learn from others, and contribute your own adventures as we inspire each other to explore responsibly and make the most of the world around us.",
+            "section_subtitle": "Welcome to the RŌ Community Hub — a space for those who live and breathe the outdoors. Here, adventurers share stories, insights, and experiences from mountain treks to coastal escapes and everyday moments in nature. More than a blog, it’s a community built on respect for the environments we explore and a passion for getting outside. Discover ideas, learn from others, and share your own adventures as we inspire each other to explore responsibly.",
             "api_base_url": "/apps/ro-adventure-community",
             "desktop_width_percent": 100,
             "title_size": 36,
@@ -76,7 +84,7 @@
     }
   },
   "order": [
-    "image_banner_hPbBxR",
+    "collage_tCfUhC",
     "main",
     "1774862956456ebbf8",
     "17748626775f5c8fb9"
