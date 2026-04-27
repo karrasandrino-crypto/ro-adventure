@@ -23,14 +23,14 @@
         "heading_gG63YJ": {
           "type": "heading",
           "settings": {
-            "heading": "RŌ - The Meaning",
+            "heading": "",
             "heading_size": "h2"
           }
         },
         "text_M8pUMe": {
           "type": "text",
           "settings": {
-            "text": "The name <strong>RŌ</strong> is inspired by a remarkable native New Zealand stick insect, a master of adaptation that blends seamlessly into its environment. Almost invisible in plain sight, it survives by working with nature rather than against it—much like our approach to design. Even more extraordinary is the female’s ability to reproduce without a male, creating new life without introducing anything new. For us, that becomes a powerful analogy: RŌ products are created without relying on new raw materials, instead giving existing resources a second adventure. It’s a reminder that innovation doesn’t always mean more—it can mean making something better from what’s already there.",
+            "text": "",
             "text_style": "body"
           }
         }
@@ -41,17 +41,60 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/RO_-_About_Us_Graphic.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_27_2026_04_01_45_PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "show_text_box": false,
         "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
+      }
+    },
+    "rich_text_z6WCqN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rKgGWD": {
+          "type": "heading",
+          "settings": {
+            "heading": "RŌ - The Meaning",
+            "heading_size": "h1"
+          }
+        },
+        "text_LNaFNL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The name <strong>RŌ</strong> is inspired by a remarkable native New Zealand stick insect, a master of adaptation that blends seamlessly into its environment. Almost invisible in plain sight, it survives by working with nature rather than against it—much like our approach to design. Even more extraordinary is the female’s ability to reproduce without a male, creating new life without introducing anything new. For us, that becomes a powerful analogy: RŌ products are created without relying on new raw materials, instead giving existing resources a second adventure. It’s a reminder that innovation doesn’t always mean more—it can mean making something better from what’s already there.<br/><br/></p>"
+          }
+        },
+        "button_NmDbqT": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rKgGWD",
+        "text_LNaFNL",
+        "button_NmDbqT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     },
     "image_with_text_AfzzUR": {
@@ -142,6 +185,7 @@
   "order": [
     "main",
     "image_banner_zaDmaj",
+    "rich_text_z6WCqN",
     "image_with_text_AfzzUR",
     "slideshow_FPNwiX",
     "rich_text_RR9bLV"
