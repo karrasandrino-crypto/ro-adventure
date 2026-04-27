@@ -93,7 +93,7 @@
         "text_fkVCiG": {
           "type": "text",
           "settings": {
-            "text": "<p>We’re always happy to hear from fellow adventurers.</p><p>Whether it’s product support, an order query, wholesale enquiries, or collaboration ideas, drop us a message and we’ll get back to you as soon as we can.</p><p><strong>General Subjects</strong><br/>📧 Please use form below<br/></p><p><strong>Wholesale & Partnerships</strong><br/>📧 nick@ro-adventure.com</p>"
+            "text": "<p>We’re always happy to hear from fellow adventurers.</p><p>Whether it’s product support, an order query, wholesale enquiries, or collaboration ideas, drop us a message and we’ll get back to you as soon as we can.</p><p><strong>General Subjects</strong><br/>📧 Please use form below<br/></p><p><strong>Share Your Adventure Story</strong><br/><a href=\"/pages/blog\" title=\"Community Hub\">📧</a> Head to our Community Hub</p><p><strong>Wholesale & Partnerships</strong><br/>📧 nick@ro-adventure.com</p>"
           }
         }
       },
