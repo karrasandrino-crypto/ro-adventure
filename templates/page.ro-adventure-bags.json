@@ -33,7 +33,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Apr_26_2026_09_26_52_PM.png",
+        "image": "shopify://shop_images/Bag_Header.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
