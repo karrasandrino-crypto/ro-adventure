@@ -29,9 +29,57 @@
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 16,
+        "color_scheme": "scheme-2",
+        "padding_top": 4,
         "padding_bottom": 16
+      }
+    },
+    "image_with_text_bGj6U4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QLBVeY": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_bQL8HP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to the RŌ Community Hub — a space for those who live and breathe the outdoors. Here, adventurers share stories, insights, and experiences from mountain treks to coastal escapes and everyday moments in nature. </p><p><br/>Each month, one standout post wins a fresh RŌ Summit Beanie 🧢🔥 — this could be based on the most likes, the best adventure, or the most interesting photo.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_4bPPGx": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QLBVeY",
+        "text_bQL8HP",
+        "button_4bPPGx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_Apr_29_2026_03_42_43_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e32ebb40-ec0d-4c7f-a118-e9df9b2a894c",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "main": {
@@ -61,7 +109,7 @@
           "type": "ai_gen_block_8925a30",
           "settings": {
             "section_title": "Explore. Share. Inspire.",
-            "section_subtitle": "Welcome to the RŌ Community Hub — a space for those who live and breathe the outdoors. Here, adventurers share stories, insights, and experiences from mountain treks to coastal escapes and everyday moments in nature. More than a blog, it’s a community built on respect for the environments we explore and a passion for getting outside. Discover ideas, learn from others, and share your own adventures as we inspire each other to explore responsibly.",
+            "section_subtitle": "",
             "api_base_url": "/apps/ro-adventure-community",
             "desktop_width_percent": 100,
             "title_size": 36,
@@ -85,6 +133,7 @@
   },
   "order": [
     "collage_tCfUhC",
+    "image_with_text_bGj6U4",
     "main",
     "1774862956456ebbf8",
     "17748626775f5c8fb9"
