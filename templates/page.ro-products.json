@@ -74,7 +74,7 @@
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "all-ro-products",
-        "products_to_show": 10,
+        "products_to_show": 25,
         "title": "",
         "heading_size": "h2",
         "description": "",
