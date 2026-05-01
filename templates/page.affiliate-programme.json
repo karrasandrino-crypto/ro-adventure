@@ -134,12 +134,6 @@
             "heading_size": "h1"
           }
         },
-        "text_aQ6xBm": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
         "button_wVRGYg": {
           "type": "button",
           "settings": {
@@ -150,12 +144,18 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "text_aQ6xBm": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
         }
       },
       "block_order": [
         "heading_pgWQgi",
-        "text_aQ6xBm",
-        "button_wVRGYg"
+        "button_wVRGYg",
+        "text_aQ6xBm"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
