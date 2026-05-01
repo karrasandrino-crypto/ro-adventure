@@ -1,1 +1,47 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"brand-information":{"type":"brand_information","settings":{"show_social":false}}},"block_order":["brand-information"],"settings":{"color_scheme":"scheme-4","newsletter_enable":true,"newsletter_heading":"No crap, just exciting news, great promotions and unmissable offers.","enable_follow_on_shop":false,"show_social":false,"enable_country_selector":false,"enable_language_selector":true,"payment_enable":false,"show_policy":true,"margin_top":0,"padding_top":24,"padding_bottom":16}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_B8WKwq": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>Ambassador Affiliate Scheme</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_B8WKwq"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": true,
+        "newsletter_heading": "No crap, just exciting news, great promotions and unmissable offers.",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
