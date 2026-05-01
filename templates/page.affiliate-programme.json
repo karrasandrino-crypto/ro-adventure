@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Apr_26_2026_08_54_57_PM.png",
+        "image": "shopify://shop_images/Ambassador_Affiliate_Programme_Graphic.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -67,33 +67,61 @@
         "padding_bottom": 0
       }
     },
-    "featured_collection_C3Cpdc": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "rich_text_xAp99V": {
+      "type": "rich-text",
+      "blocks": {
+        "text_49aQNB": {
+          "type": "text",
+          "settings": {
+            "text": "<h1><strong>Ambassador </strong>Affiliate<strong> Programme</strong></h1><h3><em>Turn your network into long-term value</em></h3><h2><strong>Your Role</strong></h2><p>As a <strong>RŌ Ambassador</strong>, you represent the brand on the ground:</p><ul><li>Introducing RŌ to retailers, outfitters, and partners</li><li>Opening doors in your local market</li><li>Supporting the growth of a responsible outdoor brand</li></ul><h2><strong>Earnings Structure</strong></h2><h3><strong>Retail Introduction Commission</strong></h3><p>Earn <strong>up to 2.5% on all net sales</strong> generated from retail partners you introduce.</p><h3><strong>Tiered Model</strong></h3><h3>Tier Criteria Commission </h3><ul><li>Explorer First successful partner <strong>1.5%</strong></li><li>Pathfinder2–4 active partners <strong>2.0%</strong></li><li>Trailblazer 5+ partners or £50k+ annual sales <strong>2.5%</strong></li></ul><h2><strong>What Qualifies as an Introduction</strong></h2><p>An introduction is considered successful when:</p><ul><li>You connect RŌ directly with a retail partner</li><li>The partner opens an account</li><li>The partner places their first order within 90 days</li></ul><h2><strong>Commission Terms</strong></h2><ul><li>Paid on <strong>net invoiced sales</strong> (excluding VAT and returns)</li><li>Paid <strong>quarterly</strong></li><li>Valid for <strong>up to 36 months</strong> from first order</li></ul><h2><strong>Performance Incentives</strong></h2><ul><li>First partner onboarded → <strong>£100 bonus</strong></li><li>Three partners onboarded → <strong>£250 bonus</strong></li><li>Five or more partners → <strong>£500 bonus</strong></li></ul><h2><strong>Beyond Commission</strong></h2><p>Being a <strong>RŌ Ambassador</strong> is about more than earning:</p><ul><li>Free Product</li><li>Early access to new releases</li><li>Exclusive ambassador-only product</li><li>Features across RŌ channels</li><li>Opportunities to support or lead brand adventures</li><li>Direct involvement in shaping the brand’s future</li></ul><h1><strong>Affiliate Programme</strong></h1><h3><em>For digital reach and content creators</em></h3><ul><li>Personal referral link + code</li><li><strong>5-10% commission</strong> on direct online sales</li><li>30-day tracking window</li></ul><h1><strong>Principles</strong></h1><p>To protect the brand and community:</p><ul><li><strong>First introduction wins</strong> (relationship ownership)</li><li>Retail partners must align with RŌ values</li><li>Consistent pricing must be respected across all channels</li></ul><h1><strong>Positioning</strong></h1><p>This isn’t a typical ambassador scheme.</p><p><strong>It’s a way to build something with RŌ—and share in its growth.</strong></p><h1><strong>Example</strong></h1><p>Introduce 3 retail partners:</p><ul><li>Each order £40,000 annually</li><li>Total = £120,000</li><li>At 2.5% → <strong>£3,000 per year</strong> (for up to 36 months)</li></ul><h1><strong>Getting Started</strong></h1><ol><li>Apply</li><li>Get approved</li><li>Receive your RŌ Ambassador Toolkit and sample product</li><li>Start making introductions</li></ol><h2><strong>RŌ Adventure</strong></h2><p><em>Gear for your next adventure. Built from yesterday’s waste.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_49aQNB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "collection": "dune-coastal-lifestyle-range",
-        "products_to_show": 4,
-        "title": "Coastal Ready, Adventure Proven",
-        "heading_size": "h1",
-        "description": "<p>The <strong>RŌ DUNE </strong>Range brings a softer side to adventure without compromising on performance. Made from recycled materials and built to the same premium standard as the core range, it features subtle, beach-inspired tones designed to blend effortlessly into life on or around the water. It’s refined, durable gear that looks at home by the coast — and performs wherever the day takes you.<br/><br/></p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_ULcjNw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zVhE4h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Register Your Interest",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zVhE4h"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_D9yBba": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"affiliate-contact-form\" style=\"max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <form method=\"POST\" action=\"#\" class=\"contact-form\">\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"name\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Name *</label>\n      <input type=\"text\" id=\"name\" name=\"name\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Your full name\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"email\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Email Address *</label>\n      <input type=\"email\" id=\"email\" name=\"email\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"your.email@example.com\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"instagram\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Instagram Handle</label>\n      <input type=\"text\" id=\"instagram\" name=\"instagram\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"@yourusername\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"tiktok\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">TikTok Handle</label>\n      <input type=\"text\" id=\"tiktok\" name=\"tiktok\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"@yourusername\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"youtube\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">YouTube Channel</label>\n      <input type=\"text\" id=\"youtube\" name=\"youtube\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Your channel name or URL\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"other_social\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Other Social Media</label>\n      <input type=\"text\" id=\"other_social\" name=\"other_social\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Twitter, Facebook, LinkedIn, etc.\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"message\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Message *</label>\n      <textarea id=\"message\" name=\"message\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box; font-family: inherit; min-height: 150px;\" placeholder=\"Tell us about your affiliate interest and how you'd like to collaborate...\"></textarea>\n    </div>\n\n    <button type=\"submit\" style=\"background-color: #edb21c; color: #f9f6ef; padding: 14px 32px; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity 0.3s ease;\">Send Application</button>\n  </form>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_YRjJUb": {
@@ -143,7 +171,9 @@
   "order": [
     "image_banner_czGWPy",
     "main",
-    "featured_collection_C3Cpdc",
+    "rich_text_xAp99V",
+    "rich_text_ULcjNw",
+    "custom_liquid_D9yBba",
     "rich_text_YRjJUb"
   ]
 }
