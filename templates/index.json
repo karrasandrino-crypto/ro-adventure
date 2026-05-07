@@ -201,6 +201,16 @@
       "type": "_blocks",
       "settings": {}
     },
+    "custom_liquid_83x4FW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  #shopify-section-sections--29532613509459__header {\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_YfBG4j": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -289,16 +299,6 @@
     "1775388179769f1010": {
       "type": "_blocks",
       "settings": {}
-    },
-    "custom_liquid_83x4FW": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<style>\n  #shopify-section-sections--29532613509459__header {\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n  }\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [

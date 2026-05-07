@@ -220,7 +220,7 @@
       },
       "scheme-yellow-button": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#f9f6ef",
           "background_gradient": "",
           "text": "#242833",
           "button": "#ffeb3b",
