@@ -3663,3 +3663,11 @@ details-disclosure > details {
   }
 }
 
+@media screen and (max-width: 749px) {
+  #shopify-section-template--29532615770451__image_banner_QajnLE .button,
+  #shopify-section-template--29532615770451__image_banner_QajnLE .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    max-width: 80%;
+  }
+}
