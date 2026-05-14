@@ -167,7 +167,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/join_community.png",
-            "title": "<a href=\"/pages/blog\" title=\"Community Hub\">Join the RŌ Community</a>",
+            "title": "<a href=\"/blogs/blog\" title=\"Community Hub\">Join the RŌ Community</a>",
             "text": "<p>RŌ Community Blog</p>",
             "link_label": "",
             "link": ""
