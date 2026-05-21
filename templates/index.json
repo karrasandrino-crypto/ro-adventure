@@ -147,7 +147,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/eco_friendly.png",
-            "title": "<a href=\"/collections/all\" title=\"All products\">Recycled Adventure Gear</a>",
+            "title": "<a href=\"/pages/ro-adventure-gear\" title=\"RŌ Adventure Gear\">Recycled Adventure Gear</a>",
             "text": "<p>Premium outdoor gear crafted from recycled materials</p>",
             "link_label": "",
             "link": "shopify://collections/all"
