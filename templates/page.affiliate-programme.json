@@ -114,16 +114,6 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_D9yBba": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"affiliate-contact-form\" style=\"max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <form method=\"POST\" action=\"#\" class=\"contact-form\">\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"name\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Name *</label>\n      <input type=\"text\" id=\"name\" name=\"name\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Your full name\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"email\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Email Address *</label>\n      <input type=\"email\" id=\"email\" name=\"email\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"your.email@example.com\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"instagram\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Instagram Handle</label>\n      <input type=\"text\" id=\"instagram\" name=\"instagram\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"@yourusername\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"tiktok\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">TikTok Handle</label>\n      <input type=\"text\" id=\"tiktok\" name=\"tiktok\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"@yourusername\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"youtube\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">YouTube Channel</label>\n      <input type=\"text\" id=\"youtube\" name=\"youtube\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Your channel name or URL\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"other_social\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Other Social Media</label>\n      <input type=\"text\" id=\"other_social\" name=\"other_social\" style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box;\" placeholder=\"Twitter, Facebook, LinkedIn, etc.\">\n    </div>\n\n    <div style=\"margin-bottom: 20px;\">\n      <label for=\"message\" style=\"display: block; margin-bottom: 8px; font-weight: 600;\">Message *</label>\n      <textarea id=\"message\" name=\"message\" required style=\"width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box; font-family: inherit; min-height: 150px;\" placeholder=\"Tell us about your affiliate interest and how you'd like to collaborate...\"></textarea>\n    </div>\n\n    <button type=\"submit\" style=\"background-color: #edb21c; color: #f9f6ef; padding: 14px 32px; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity 0.3s ease;\">Send Application</button>\n  </form>\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_YRjJUb": {
       "type": "rich-text",
       "blocks": {
@@ -166,6 +156,34 @@
         "padding_top": 40,
         "padding_bottom": 0
       }
+    },
+    "177936850355f8ef36": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_tGVNFQ": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_tGVNFQ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -173,7 +191,7 @@
     "main",
     "rich_text_xAp99V",
     "rich_text_ULcjNw",
-    "custom_liquid_D9yBba",
-    "rich_text_YRjJUb"
+    "rich_text_YRjJUb",
+    "177936850355f8ef36"
   ]
 }
