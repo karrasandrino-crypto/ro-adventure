@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_4YMQ8x": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "RŌ Adventure - World Launch - June 2026",
             "link": ""
