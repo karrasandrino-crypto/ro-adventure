@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Beanies_Web_Banner_f03afbf2-102a-4d74-be34-46c9deaddea3.png",
+        "image": "shopify://shop_images/Towel_website_banner_dff9e532-904f-4fd1-9250-56d81d19d5b3.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -71,11 +71,11 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "ro-beanie-collection",
+        "collection": "ro-adventure-towel-collection",
         "products_to_show": 25,
         "title": "",
         "heading_size": "h2",
-        "description": "<p>The RŌ Beanie Collection is built for cold mornings and everyday adventure. Designed for comfort and warmth with a clean outdoor aesthetic, each beanie delivers soft feel, reliable fit, and effortless style—whether trails, coast, or city.</p>",
+        "description": "<p>The RŌ Towel Collection is built for beach days, van adventures, travel, and life outdoors. Lightweight, versatile, and quick-drying, each towel works as a towel, wrap, or blanket wherever the day takes you. Designed to shake off sand easily and pack down small, they’re made for adventure without the bulk.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
