@@ -11,10 +11,60 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
+      }
+    },
+    "image_banner_cmPMY3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fGfhYy": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_TWWYtL": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_zEbH4m": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fGfhYy",
+        "text_TWWYtL",
+        "buttons_zEbH4m"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Caps_Banner_-_Website.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     },
     "product-grid": {
@@ -36,10 +86,55 @@
         "padding_top": 12,
         "padding_bottom": 36
       }
+    },
+    "rich_text_94iapV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xAtifa": {
+          "type": "heading",
+          "settings": {
+            "heading": "RŌ Headwear",
+            "heading_size": "h1"
+          }
+        },
+        "text_gWWwpK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the RŌ headwear collection — four adventure-ready caps and bucket hats designed for life outdoors. Lightweight, breathable, and made using recycled materials, each piece is built for trail runs, hikes, beach days, travel, and everyday wear. Combining technical comfort with laid-back outdoor style, the RŌ collection is gear for your next adventure, made from yesterday’s waste.<br/></p>"
+          }
+        },
+        "button_X7bnpp": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xAtifa",
+        "text_gWWwpK",
+        "button_X7bnpp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "image_banner_cmPMY3",
+    "product-grid",
+    "rich_text_94iapV"
   ]
 }
