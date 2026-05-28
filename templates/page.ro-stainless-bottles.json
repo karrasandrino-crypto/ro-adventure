@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Beanies_Web_Banner_f03afbf2-102a-4d74-be34-46c9deaddea3.png",
+        "image": "shopify://shop_images/Bottles_Website_Banner_82a848eb-94f9-427c-9ca9-6d6881fe43fd.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -71,11 +71,11 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "ro-beanie-collection",
+        "collection": "ro-stainless-steel-drinks-bottles",
         "products_to_show": 25,
         "title": "",
         "heading_size": "h2",
-        "description": "<p>The RŌ Beanie Collection is built for cold mornings and everyday adventure. Designed for comfort and warmth with a clean outdoor aesthetic, each beanie delivers soft feel, reliable fit, and effortless style—whether trails, coast, or city.</p>",
+        "description": "<p>The RŌ Stainless Steel Bottle Collection is built for adventure. Made from recycled stainless steel with durable thermal insulation, each bottle keeps drinks colder for longer. Available in straw and funnel-style lids, the collection blends performance with natural, understated style.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
