@@ -27,7 +27,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "No crap, just exciting news, great promotions and unmissable offers.",
         "enable_follow_on_shop": false,
         "show_social": false,
