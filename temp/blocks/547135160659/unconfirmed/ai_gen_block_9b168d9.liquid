@@ -1,6 +1,370 @@
+{% doc %}
+  @prompt
+    Add next/previous page pagination to the custom page template for the RO Adventure Gear page, so customers can navigate between pages of products displayed in the featured collection section. The pagination should match the existing theme style with clean, minimal controls.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-pagination-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-pagination-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: {{ block.settings.spacing }}px;
+    padding: {{ block.settings.padding_vertical }}px 0;
+  }
+
+  .ai-pagination-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    border: {{ block.settings.button_border_thickness }}px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ai-pagination-button-{{ ai_gen_id }}:hover:not(.ai-pagination-button-disabled-{{ ai_gen_id }}) {
+    background-color: {{ block.settings.button_hover_background }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  .ai-pagination-button-disabled-{{ ai_gen_id }} {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .ai-pagination-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-pagination-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+  }
+
+  .ai-pagination-info-{{ ai_gen_id }} {
+    color: {{ block.settings.info_text_color }};
+    font-size: {{ block.settings.info_font_size }}px;
+    padding: 0 {{ block.settings.spacing }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-pagination-wrapper-{{ ai_gen_id }} {
+      gap: {{ block.settings.spacing | times: 0.75 }}px;
+    }
+
+    .ai-pagination-button-{{ ai_gen_id }} {
+      padding: {{ block.settings.button_padding_vertical | times: 0.8 }}px {{ block.settings.button_padding_horizontal | times: 0.8 }}px;
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+
+    .ai-pagination-info-{{ ai_gen_id }} {
+      font-size: {{ block.settings.info_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-pagination-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if paginate %}
+    <div class="ai-pagination-wrapper-{{ ai_gen_id }}">
+      {% if paginate.previous %}
+        <a
+          href="{{ paginate.previous.url }}"
+          class="ai-pagination-button-{{ ai_gen_id }}"
+          aria-label="Previous page"
+        >
+          {% if block.settings.show_icons %}
+            <span class="ai-pagination-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </span>
+          {% endif %}
+          {{ block.settings.previous_text }}
+        </a>
+      {% else %}
+        <span class="ai-pagination-button-{{ ai_gen_id }} ai-pagination-button-disabled-{{ ai_gen_id }}">
+          {% if block.settings.show_icons %}
+            <span class="ai-pagination-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </span>
+          {% endif %}
+          {{ block.settings.previous_text }}
+        </span>
+      {% endif %}
+
+      {% if block.settings.show_page_info %}
+        <span class="ai-pagination-info-{{ ai_gen_id }}">
+          {{ block.settings.page_info_text | replace: '[current]', paginate.current_page | replace: '[total]', paginate.pages }}
+        </span>
+      {% endif %}
+
+      {% if paginate.next %}
+        <a
+          href="{{ paginate.next.url }}"
+          class="ai-pagination-button-{{ ai_gen_id }}"
+          aria-label="Next page"
+        >
+          {{ block.settings.next_text }}
+          {% if block.settings.show_icons %}
+            <span class="ai-pagination-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
+          {% endif %}
+        </a>
+      {% else %}
+        <span class="ai-pagination-button-{{ ai_gen_id }} ai-pagination-button-disabled-{{ ai_gen_id }}">
+          {{ block.settings.next_text }}
+          {% if block.settings.show_icons %}
+            <span class="ai-pagination-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
+          {% endif %}
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Page pagination",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button text"
+    },
+    {
+      "type": "text",
+      "id": "previous_text",
+      "label": "Previous button text",
+      "default": "Previous"
+    },
+    {
+      "type": "text",
+      "id": "next_text",
+      "label": "Next button text",
+      "default": "Next"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icons",
+      "label": "Show arrow icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Page information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_page_info",
+      "label": "Show page information",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "page_info_text",
+      "label": "Page info format",
+      "default": "Page [current] of [total]",
+      "info": "Use [current] and [total] as placeholders"
+    },
+    {
+      "type": "range",
+      "id": "info_font_size",
+      "label": "Info text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "info_text_color",
+      "label": "Info text color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Background",
+      "default": "#edb21c"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#edb21c"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Hover background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_border_thickness",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Spacing between elements",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page pagination"
+    }
+  ]
+}
 {% endschema %}
