@@ -28,6 +28,7 @@
         },
         "buttons_hmTziX": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "",
             "button_link_1": "",
@@ -45,7 +46,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_May_7_2026_08_22_42_PM.png",
+        "image": "shopify://shop_images/VersaStick_-_Web_Banner.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -71,11 +72,11 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dune-coastal-lifestyle-range",
+        "collection": "ro-versastick",
         "products_to_show": 25,
         "title": "",
         "heading_size": "h2",
-        "description": "<p><br/>The RŌ DUNE Range blends relaxed, beach-inspired style with premium performance. Made from recycled materials and built to the same high standard as the core range, it’s refined, durable gear designed for life on and around the water.<br/><br/></p>",
+        "description": "<p>The <strong>RŌ VersaStick™</strong> is a lightweight, adjustable trekking pole designed to do far more than support you on the trail. Featuring a unique integrated mounting system, it transforms into a versatile adventure platform compatible with a range of RŌ accessories, including the <strong>Trailbeam Light</strong>, <strong>Phone Mount</strong>, and <strong>Action Camera Mount</strong>. Whether you're hiking remote trails, capturing content, navigating after dark, or setting up camp, the VersaStick adapts to every adventure — giving you one pole with endless possibilities.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -83,7 +84,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
