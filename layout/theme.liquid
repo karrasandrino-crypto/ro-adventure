@@ -406,7 +406,11 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-      <!-- <div id="pageLoadModal" class="custom-modal"> -->
+      {% if false %}
+<div id="pageLoadModal" class="custom-modal" style="display:none;">
+...
+</div>
+{% endif %}
       <div class="custom-modal-content">
         <span class="close-modal">&times;</span>
           <div class="modal-ads">
