@@ -405,69 +405,10 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+  
 
-      {% if false %}
-<div id="pageLoadModal" class="custom-modal" style="display:none;">
-...
-</div>
-{% endif %}
-      <div class="custom-modal-content">
-        <span class="close-modal">&times;</span>
-          <div class="modal-ads">
-            {% comment %} <h4>Launching at the OTS in June </h4>
-            <p>Be the first in the know, we might even give you a treat!</p> {% endcomment %}
-            {% form 'customer' %}
-              <input type="hidden" name="contact[tags]" value="newsletter">
+   
 
-              <input
-                type="email"
-                name="contact[email]"
-                placeholder="Enter your email"
-                required
-                class="newsletter-input"
-              >
 
-              <button type="submit" class="button subscribe-btn">
-                Subscribe Now
-              </button>
-            {% endform %}
-            {% comment %} <a href="/pages/ro-adventure-bags" class="button">Shop Now</a> {% endcomment %}
-          </div>
-      </div>
-    <!-- </div> -->
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-    const modal = document.getElementById("pageLoadModal");
-    const closeBtn = document.querySelector(".close-modal");
-
-    if (!modal) return;
-
-    // show modal only once per session
-    if (!sessionStorage.getItem("modalShown")) {
-      setTimeout(function () {
-        modal.style.display = "flex";
-      }, 500);
-
-      sessionStorage.setItem("modalShown", "true");
-    }
-
-    // close button
-    if (closeBtn) {
-      closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-      });
-    }
-
-    // close when clicking outside
-    window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-
-  });
-</script>
   </body>
 </html>
