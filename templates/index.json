@@ -64,8 +64,11 @@
         "ai_gen_block_0a36add_awanwt": {
           "type": "ai_gen_block_0a36add",
           "settings": {
-            "link_1": "",
+            "image_1": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_08_27_00_PM.png",
+            "link_1": "shopify://pages/ro-beanie-collection",
+            "image_2": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_08_29_51_PM.png",
             "link_2": "",
+            "image_3": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_08_32_02_PM.png",
             "link_3": "",
             "desktop_width_percent": 100,
             "columns_mobile": "2",
