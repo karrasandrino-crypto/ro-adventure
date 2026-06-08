@@ -165,6 +165,7 @@
         "heading_D6pdUR",
         "buttons_zt7c8w"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_04_16_12_PM.png",
