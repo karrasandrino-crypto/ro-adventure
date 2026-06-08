@@ -58,6 +58,28 @@
         "show_text_below": false
       }
     },
+    "17809476626b0ac813": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0a36add_awanwt": {
+          "type": "ai_gen_block_0a36add",
+          "settings": {
+            "link_1": "",
+            "link_2": "",
+            "link_3": "",
+            "desktop_width_percent": 100,
+            "columns_mobile": "2",
+            "gap": 16,
+            "border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0a36add_awanwt"
+      ],
+      "settings": {}
+    },
     "featured_blog_XCibgg": {
       "type": "featured-blog",
       "disabled": true,
@@ -350,6 +372,7 @@
   },
   "order": [
     "image_banner_G6h6r6",
+    "17809476626b0ac813",
     "featured_blog_XCibgg",
     "1768155519f0fb022d",
     "17724327786bc6883a",
