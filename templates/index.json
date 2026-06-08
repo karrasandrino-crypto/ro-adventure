@@ -60,6 +60,7 @@
     },
     "featured_blog_XCibgg": {
       "type": "featured-blog",
+      "disabled": true,
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "homepage-news",
