@@ -247,6 +247,23 @@
       "type": "_blocks",
       "settings": {}
     },
+    "178094891129394b35": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ee41894_qLR8AX": {
+          "type": "ai_gen_block_ee41894",
+          "settings": {
+            "line_color": "#00ff00",
+            "line_thickness": 2
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ee41894_qLR8AX"
+      ],
+      "settings": {}
+    },
     "featured_collection_YfBG4j": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -277,6 +294,16 @@
       }
     },
     "custom_liquid_V67DEi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>#shopify-section-template--29532615770451__featured_collection_YfBG4j .title-wrapper { text-align: center; }</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_XC87jK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -385,8 +412,10 @@
     "1777044087ea68658a",
     "multicolumn_67x47c",
     "1778179396c0d7c756",
+    "178094891129394b35",
     "featured_collection_YfBG4j",
     "custom_liquid_V67DEi",
+    "custom_liquid_XC87jK",
     "image_banner_t8qP7X",
     "blocks_Dthnq3",
     "1772434666e115fbf1",
