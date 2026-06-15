@@ -168,7 +168,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#edb21c",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -179,7 +179,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#f9f6ef",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -190,7 +190,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#edb21c",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -201,7 +201,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -212,7 +212,7 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -223,7 +223,7 @@
           "background_gradient": "",
           "text": "#f9f6ef",
           "button": "#fce477",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -234,7 +234,7 @@
           "background_gradient": "",
           "text": "#242833",
           "button": "#ffeb3b",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#edb21c",
           "shadow": "#121212"
         }
@@ -245,7 +245,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#edb21c",
-          "button_label": "#f9f6ef",
+          "button_label": "#fafafa",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
