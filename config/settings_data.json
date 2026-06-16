@@ -128,7 +128,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "ro-beanie-collection",
-    "cart_color_scheme": "scheme-3",
+    "cart_color_scheme": "scheme-e32ebb40-ec0d-4c7f-a118-e9df9b2a894c",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
