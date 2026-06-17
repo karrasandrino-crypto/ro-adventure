@@ -66,7 +66,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\n  #shopify-section-sections--29532613509459__header {\n    background-repeat: no-repeat !important;\n    background-size: cover !important;\n  }\n</style>",
+        "custom_liquid": "<style>\n  /* Cart item count badge styling */\n  .cart-icon-bubble,\n  [data-cart-icon-bubble],\n  .header__icon--cart .badge,\n  .cart-count-badge,\n  .header .cart-icon .bubble,\n  .header .cart-icon [data-bubble],\n  .header__cart-count,\n  .header__cart-icon-count {\n    background-color: #ffffff !important;\n    color: #375937 !important;\n  }\n  \n  /* Alternative selectors for different theme implementations */\n  .header__icon--cart::after,\n  .cart-icon::after,\n  [data-cart-count]::after {\n    background-color: #ffffff !important;\n    color: #375937 !important;\n  }\n  \n  /* Ensure text is visible */\n  .header__icon--cart .badge *,\n  .cart-icon-bubble *,\n  [data-cart-icon-bubble] * {\n    color: #375937 !important;\n  }\n</style>",
         "color_scheme": "scheme-2",
         "padding_top": 8,
         "padding_bottom": 8
