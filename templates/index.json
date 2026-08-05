@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_03_04_15_PM.png",
+        "image": "shopify://shop_images/RO_Adventure_Outdoor_Gear.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -333,7 +333,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Apr_24_2026_03_26_51_PM.png",
+        "image": "shopify://shop_images/Sustainable_Adventure_Gear_from_RO..png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
