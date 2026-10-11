@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Gear_for_Your_Next_Adventure.png",
+        "image": "shopify://shop_images/Gear_for_Your_Next_Adventure_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
