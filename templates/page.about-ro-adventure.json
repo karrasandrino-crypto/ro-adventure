@@ -180,6 +180,21 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "video_cKA4D9": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "RO Adventure Podcast",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=vJD4V2QQ1rY",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -188,6 +203,7 @@
     "rich_text_z6WCqN",
     "image_with_text_AfzzUR",
     "slideshow_FPNwiX",
-    "rich_text_RR9bLV"
+    "rich_text_RR9bLV",
+    "video_cKA4D9"
   ]
 }
