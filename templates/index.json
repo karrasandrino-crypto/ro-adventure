@@ -278,7 +278,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "ro-bag-collection",
+        "collection": "all-ro-products",
         "products_to_show": 4,
         "title": "",
         "heading_size": "h2",
@@ -288,7 +288,7 @@
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "scheme-3",
         "image_ratio": "square",
@@ -298,7 +298,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 12,
         "padding_bottom": 12
       }
