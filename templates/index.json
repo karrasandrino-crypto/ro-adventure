@@ -289,7 +289,7 @@
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "outline",
         "color_scheme": "scheme-3",
         "image_ratio": "square",
         "image_shape": "default",
