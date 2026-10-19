@@ -46,7 +46,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/VersaStick_-_Web_Banner.png",
+        "image": "shopify://shop_images/Frisbee_Plate_Page_banner.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -72,11 +72,11 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "ro-versastick",
+        "collection": "ro-frisbee-plate",
         "products_to_show": 25,
         "title": "",
         "heading_size": "h2",
-        "description": "<p>The <strong>RŌ VersaStick™</strong> is a lightweight, adjustable trekking pole designed to do far more than support you on the trail. Featuring a unique integrated mounting system, it transforms into a versatile adventure platform compatible with a range of RŌ accessories, including the <strong>Trailbeam Light</strong>, <strong>Phone Mount</strong>, and <strong>Action Camera Mount</strong>. Whether you're hiking remote trails, capturing content, navigating after dark, or setting up camp, the VersaStick adapts to every adventure — giving you one pole with endless possibilities.</p>",
+        "description": "<p>More than just a flying disc, the RO THROW & SERVE™ transforms from outdoor fun into a practical serving plate, making it the perfect companion for beach days, camping trips, picnics and adventures with friends. Made from 100% recycled plastic, it combines playful design with everyday versatility. What truly sets it apart? <strong>Its food-contact certification — a unique selling point that sets it apart from conventional frisbees.</strong> Food safe, microwave safe and built for fun, it’s one clever product with two great purposes. Throw it, catch it, serve it — and give waste a second adventure.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
