@@ -1160,10 +1160,146 @@
       "local_pickup": {
         "pickup_unavailable_banner_body": {
           "search_elsewhere_standalone": "Maghanap sa iba pang lugar",
-          "ship_items_or_search_elsewhere": "%{ship_items} o %{search_elsewhere}"
+          "ship_items_or_search_elsewhere": "%{ship_items} o %{search_elsewhere}",
+          "try_different_location": "Subukan ang ibang lokasyon",
+          "ship_to_address": "ipadala sa address",
+          "there_are_no_stores": "Walang tindahan malapit sa address mo, o hindi available para sa pickup ang iyong mga item.",
+          "ship_items": "Ipadala ang iyong mga gamit",
+          "search_elsewhere": "maghanap sa iba"
         },
         "geolocation": {
           "permission_not_allowed": "Pahintulutan ang pagbabahagi ng lokasyon o maghanap na lang."
+        },
+        "title": "Lokasyon",
+        "unavailable_item_count": {
+          "one": "%{count} item ang hindi available",
+          "other": "%{count} na aytem ang hindi available"
+        },
+        "ship_separately_notice": {
+          "one": "%{count} item ang ipapadala nang hiwalay",
+          "other": "%{count} na item ang ipapadala nang hiwalay"
+        },
+        "stock_details": {
+          "out_of_stock": "Walang stock",
+          "in_stock": "May stock",
+          "ship_separately": {
+            "one": "Ipadadala nang hiwalay ang item.",
+            "other": "Ang mga aytem ay ipapadala nang magkakahiwalay."
+          },
+          "remove_items": {
+            "one": "Aalisin ang item sa iyong order",
+            "other": "Aalisin ang mga item sa iyong order"
+          }
+        },
+        "location_address_search_label": "Tirahan",
+        "location_address_search_placeholder": "%{postal_code_label} o address",
+        "location_closest": "Pinakamalapit na lokasyon kung saan naroon ang iyong item",
+        "location_closest_one_item": "Pinakamalapit na lokasyon kung saan naroon ang iyong item",
+        "location_closest_other_items": "Pinakamalapit na lokasyon na mayroon ng iyong mga item",
+        "location_selected": "Ang napili mong lokasyon",
+        "location_information": {
+          "one": "Mayroong %{count} lokasyon na may stock malapit sa iyo",
+          "other": "Mayroong %{count} na lokasyon na may stock malapit sa iyo"
+        },
+        "location_information_far_away": {
+          "one": "Mayroong %{count} lokasyon ang iyong item",
+          "other": "Mayroong %{count} na lokasyon ang iyong item"
+        },
+        "location_information_far_away_one_item": {
+          "one": "Mayroong %{count} lokasyon ang iyong item",
+          "other": "Mayroong %{count} na lokasyon ang iyong item"
+        },
+        "location_information_far_away_other_items": {
+          "one": "Mayroong %{count} lokasyon na may iyong mga item",
+          "other": "Mayroon kang mga item sa %{count} lokasyon"
+        },
+        "location_nearby": {
+          "one": "Mayroong %{count} na lokasyong malapit sa iyo na may dala ng iyong item",
+          "other": "Mayroong %{count} na kalapit na lokasyon na mayroong iyong item"
+        },
+        "location_nearby_one_item": {
+          "one": "Mayroong %{count} na lokasyong malapit sa iyo na may dala ng iyong item",
+          "other": "Mayroong %{count} na kalapit na lokasyon na mayroong iyong item"
+        },
+        "location_nearby_other_items": {
+          "one": "Mayroon %{count} kalapit na lokasyon kung nasaan ang iyong mga item",
+          "other": "Mayroong %{count} kalapit na lokasyon na may mga item mo"
+        },
+        "location_nearby_short": {
+          "one": "%{count} malapit na lokasyon para sa iyong item",
+          "other": "%{count} na kalapit na lokasyon na mayroong iyong item"
+        },
+        "location_nearby_short_one_item": {
+          "one": "%{count} malapit na lokasyon para sa iyong item",
+          "other": "%{count} na kalapit na lokasyon na mayroong iyong item"
+        },
+        "location_nearby_short_other_items": {
+          "one": "%{count} kalapit na lokasyon na may iyong mga item",
+          "other": "%{count} kalapit na lokasyon na may mga item mo"
+        },
+        "location_far_away": {
+          "one": "%{count} lokasyon na may iyong item",
+          "other": "%{count} na lokasyon na mayroong iyong item"
+        },
+        "location_far_away_one_item": {
+          "one": "%{count} lokasyon na may iyong item",
+          "other": "%{count} na lokasyon na mayroong iyong item"
+        },
+        "location_far_away_other_items": {
+          "one": "%{count} lokasyon na may mga item mo",
+          "other": "%{count} lokasyon ng iyong mga item"
+        },
+        "toggle_location": "Baguhin ang lokasyon",
+        "toggle_more_locations": {
+          "one": "%{count} pang lokasyon",
+          "other": "%{count} pang lokasyon"
+        },
+        "toggle_multiple_locations": "%{count}+ pang mga lokasyon",
+        "pick_up_location": "Lugar ng pagsundo",
+        "or": "O",
+        "cancel": "Kanselahin",
+        "your_location": "iyong lokasyon",
+        "search_button": "Maghanap ng mga tindahan",
+        "no_stores_found": "Walang nahanap na mga tindahan",
+        "all_stores_far_away": {
+          "title": "Ang pinakamalapit na mga lokasyon ay higit sa %{distance} ang layo",
+          "title_with_item": {
+            "one": "Ang pinakamalapit na lokasyon para sa iyong item ay higit sa %{distance} ang layo mula sa %{location}",
+            "other": "Ang pinakamalapit na lokasyon na mayroon ng iyong mga item ay higit sa %{distance} mula sa %{location}"
+          },
+          "title_with_location": "Ang pinakamalapit na lokasyon ay higit sa %{distance} mula sa %{location}",
+          "title_with_specific_location": "Ang pinakamalapit na lokasyon na mayroon ng iyong item ay higit sa %{distance} ang layo mula sa %{location}",
+          "description": "Pumili ng lokasyon o %{ship_to_address_link}",
+          "description_with_location": "%{change_location_link} o %{ship_to_address_link}",
+          "ship_to_address_link": "ipadala sa address",
+          "change_location_link": "Baguhin ang iyong lokasyon"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "Ang dati mong piniling lokasyon ay hindi na available.",
+          "description": "Napili namin ang pinakamalapit na lokasyon na mayroon ng iyong mga item sa stock"
+        },
+        "could_not_resolve_address": "Hindi matagpuan ang iyong address. Subukan muli o gumamit ng ibang address.",
+        "paginator": {
+          "accessibility_label": "Pagpapahinang lokal na pagkuha",
+          "previous": "Sinundang pahina",
+          "next": "Susunod na pahina",
+          "label": {
+            "one": "%{first} - %{last} ng %{count} na tindahan",
+            "other": "%{first} - %{last} ng %{count} na tindahan"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Ipakita ang %{count} pang lokasyon",
+          "other": "Ipakita ang %{count} pang lokasyon"
+        },
+        "no_pickup_locations_found": "Walang nahanap na lokasyon ng pickup",
+        "pickup_unavailable_banner_title": {
+          "one": "Walang lokasyon para sa iyong item",
+          "other": "Walang lokasyon para sa iyong mga item"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Walang lokasyon sa %{country} para sa iyong item",
+          "other": "Walang lokasyon sa %{country} para sa iyong mga item"
         }
       },
       "split_delivery": {
@@ -2514,7 +2650,20 @@
         "payment_method_not_available_with_review_requirement": "Hindi na magagamit ang paraan ng pagbabayad na pinili mo dahil kailangan itong bayaran kapag nakumpirma na ang iyong order.",
         "contact_information": {
           "title": "Hindi wasto ang impormasyon sa pakikipag-ugnayan",
-          "header": "Para i-update ang iyong impormasyon, {{emailLink}}."
+          "header": "Para i-update ang iyong impormasyon, {{emailLink}}.",
+          "email_link": "makipag-ugnayan sa amin"
+        },
+        "validation_errors_banner": {
+          "heading": {
+            "one": "May {{count}} error:",
+            "other": "Mayroong {{count}} error:"
+          },
+          "section_label": {
+            "delivery": "Paghahatid",
+            "contact": "Makipag-ugnayan",
+            "payment": "Pagbabayad",
+            "billing": "Pagsingil"
+          }
         }
       },
       "embed": {
@@ -2893,6 +3042,27 @@
           "tax_credential_co": "Cedula/VAT",
           "tax_credential_type_co": "Uri ng Sedula"
         }
+      },
+      "review_address_modal": {
+        "title": "Suriin ang address",
+        "subtitle": {
+          "one": "Ang order na ito ay ipapadala sa address na ibinigay ni {{merchant}}.",
+          "other": "Ang order na ito ay ipapadala sa isang address na ibinigay ng {{merchant}}. Pumili ng shipping address."
+        },
+        "subtitle_no_match": "Hindi tugma ang address na ito sa alinman sa iyong mga naka-save na address.",
+        "subtitle_must_use": "Iapadala ang iyong order sa address na ito.",
+        "continue": "Magpatuloy gamit ang address na ito",
+        "use_saved_address": "Gumamit ng ibang address",
+        "return_to_cart": "Bumalik sa cart"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Pagsusuri",
+          "link_label": "{{partnerDisplayName}} Mga Tuntunin at Kundisyon"
+        }
+      },
+      "online_store_chat": {
+        "title": "May mga tanong? Makipag-chat sa amin"
       }
     },
     "pagination": {
