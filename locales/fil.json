@@ -1833,6 +1833,39 @@
         },
         "shipping_address": {
           "heading": "Address sa pagpapadala"
+        },
+        "confirm": {
+          "label": "Kumpirmahing napili",
+          "success_title": "Kumpirmado ang napili",
+          "success_message": "Handa na ang mga detalye ng napiling wallet. Hindi pa ito naibabalik ng prototype sa partner app.",
+          "retryable_error_title": "Hindi naibahagi ang pinili",
+          "retryable_error_message": "Subukang kumpirmahing muli ang napili mong wallet.",
+          "terminal_error_title": "Natapos ang koneksyon ng wallet",
+          "terminal_error_message": "Bumalik ka at buksan muli ang Shop Pay."
+        },
+        "cancelled": {
+          "title": "Nakansela ang pinili",
+          "message": "Walang detalye ng wallet na ibinahagi at walang pagbili na ginawa."
+        },
+        "empty": {
+          "title": "Walang naka-save na card",
+          "message": "Walang nakasave na card sa Shop Pay wallet na ito."
+        },
+        "ineligible": {
+          "title": "Walang kuwalipikadong card",
+          "message": "Walang card na na-save ang magagamit para sa pagbiling ito."
+        },
+        "expired": {
+          "title": "Nag-expire na ang session na ito ng wallet",
+          "message": "Bumalik sa partner app at simulan ulit ang pagbili."
+        },
+        "revoked": {
+          "title": "Hindi na nakakonekta ang Shop Pay",
+          "message": "I-ugnay muli ang Shop Pay sa partner app bago magpatuloy."
+        },
+        "error": {
+          "title": "Hindi ma-load ang iyong Shop Pay wallet",
+          "message": "Bumalik sa Hatch at subukang buksan ulit ang Shop Pay."
         }
       },
       "remote_merchandise_only": {
@@ -2087,6 +2120,129 @@
         "address_generic_error": "Maling field",
         "credit_card_name_blank": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card",
         "credit_card_name_invalid": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card"
+      },
+      "order_errors": {
+        "creation_failure": "Nagkaroon ng problema sa paggawa ng iyong order. Subukang muli, o makipag-ugnayan sa amin para sa karagdagang detalye.",
+        "network_failure": "Hindi naisumite ang iyong order dahil sa error sa network. Suriin ang iyong koneksyon at subukan muli.",
+        "inventory_reservation_failure": "Ang ilang mga item ay hindi na available."
+      },
+      "session_errors": {
+        "session_not_unique": "Nagkaroon ng problema sa pagproseso ng iyong order. I-refresh ang page na ito upang bumalik sa tindahan.",
+        "session_already_finished": "Ang order na ito ay naisumite na. Maaari kang bumalik sa tindahan upang magsimula ng bagong order."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Nagkaroon ng problema sa pagproseso ng iyong order. Subukan muli pagkalipas ng ilang minuto."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Sarado",
+        "business_hours": "Mga oras ng pagbubukas",
+        "no_business_hours": "Walang available na oras ng pagbubukas",
+        "open_twenty_four_hours": "Bukás 24/7",
+        "title": "Lugar ng pagkuha",
+        "or": "o",
+        "search_button": "Maghanap",
+        "address_label": "Tirahan",
+        "selector_tabs": "Tagapili ng pickup point",
+        "selector_tab_map": "Mapa",
+        "selector_tab_list": "Listahan",
+        "could_not_resolve_address": "Hindi matagpuan ang iyong address. Subukan muli o gumamit ng ibang address.",
+        "no_pickup_points_near_you": "Walang nakitang pickup point malapit sa napiling address",
+        "no_pickup_points_near_location": "Walang nakitang pickup point malapit sa iyong lokasyon",
+        "pickup_unavailable_banner_title": {
+          "one": "Walang available na pickup point para sa iyong item",
+          "other": "Walang available na pickup point para sa iyong mga item"
+        },
+        "no_pickup_points_found": "Walang nahanap na pickup point",
+        "paginator": {
+          "next_accessibility_label": "Susunod na pahina",
+          "previous_accessibility_label": "Sinundang pahina",
+          "header": {
+            "one": "Ipinapakita ang %{first} - %{last} ng %{count} na punto",
+            "other": "Ipinapakita ang %{first} - %{last} ng %{count} na puntos"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} ng %{count} na punto",
+            "other": "%{pickup_point_index} ng %{count} na mga punto"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} ng %{count} na punto",
+            "other": "%{first} - %{last} ng %{count} puntos"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} pickup point na malapit sa iyong lokasyon",
+          "other": "%{count} na pickup point malapit sa iyong lokasyon"
+        },
+        "change": "Baguhin ang lokasyon",
+        "waiting_on_pickup_point_location_notice": "Naghahanap ng mga pickup point...",
+        "geolocation": {
+          "shared_location_button": "Gamitin ang aking lokasyon",
+          "errors": {
+            "unsuported_by_browser": "Hindi suportado ng iyong browser ang pagkuha ng geolocation. Subukan muli o gumamit ng ibang browser.",
+            "permission_not_allowed": "Payagan ang pagbabahagi ng iyong lokasyon.",
+            "permission_denied": "Hindi makuha ang iyong lokasyon. Subukan muli."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Nagkaroon ng problema sa aming checkout.",
+          "message": "I-refresh ang pahinang ito o subukan muli pagkalipas ng ilang minuto",
+          "action": {
+            "cta": "I-refresh ang Pahina"
+          },
+          "request_id": "Request ID: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "Ang shop na ito ay protektado ng password.",
+          "customer_account_required": "Kailangan ng account ng customer upang makumpleto ang checkout.",
+          "cart_completed": "Ang checkout na ito ay natapos na.",
+          "invalid_cart": "Hindi na balido ang cart.",
+          "not_authorized": "Nabigo ang authentication sa checkout. I-verify ang iyong mga application credential.",
+          "killswitch_enabled": "Hindi muna magagamit ang checkout sa ngayon.",
+          "policy_violation": "Hindi makumpleto ang checkout dahil sa mga paghihigpit sa configuration ng patakaran",
+          "unrecoverable_failure": "Hindi ma-load ang checkout. Subukan muli"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Bumalik sa cart",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} para i-update ang mga dami",
+        "subscription_changed": "Nagbago ang isa sa iyong mga subscription.",
+        "company_location_changed": "Na-update na ang iyong cart. Suriin ang iyong order bago ito isumite.",
+        "company_location_changed_product_removed": "Na-update ang iyong cart dahil may mga produktong hindi available sa lokasyong ito. Suriin ang iyong order bago ito isumite.",
+        "violations_title": "{{violation}} ay nawawala o hindi balido",
+        "individual_violations_title": {
+          "DeliveryViolations": "Address sa pagpapadala",
+          "PaymentViolations": "Address sa pagsingil",
+          "OtherViolations": "Impormasyon ng Order",
+          "UnhandledViolations": "Impormasyon ng Order"
+        },
+        "all_violations_content": "Tumawag o {{emailLink}} sa amin para i-update ang impormasyong ito at kumpletuhin ang iyong order:",
+        "all_violations_email_link": "email",
+        "editable_shipping_address_violations_message_title": "Idagdag ang impormasyong ito upang makumpleto ang iyong order:",
+        "editable_shipping_address_violations_message_footer": "Upang permanenteng i-update ang address para sa lokasyong ito, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "makipag-ugnayan sa amin",
+        "delivery_address_validation_errors_banner": {
+          "title": "Invalid ang address ng pinagpapadalhan",
+          "text_html": "%{contact_us} upang i-edit ang iyong address",
+          "contact_us": "Makipag-ugnayan sa amin",
+          "use_different_address": "Gamitin ang ibang *shipping address*"
+        },
+        "shipping_address_incomplete_title": "Hindi kumpleto ang shipping address",
+        "calculating_shipping": "Kasalukuyan pang kinakalkula ang shipping. Pakisubukan muli makalipas ang ilang segundo. Hindi ka pa siningil.",
+        "calculating_taxes": "Kasalukuyan pang kinakalkula ang mga buwis. Subukan muli pagkalipas ng ilang segundo. Hindi ka pa siningil.",
+        "generic_processing_error": {
+          "title": "Nagkaroon ng problema sa pagproseso ng iyong order",
+          "body": "Hindi ka pa nababawasan. Subukan muli o gumamit ng ibang paraan ng pagbabayad."
+        },
+        "payment_method_not_available_with_payment_terms": "Ang paraan ng pagbabayad na iyong pinili ay hindi na available dahil ang bayad para sa order na ito ay nakabase na ngayon sa {{paymentTerms}} na mga termino",
+        "payment_method_not_available_with_fulfillment_terms": "Hindi na magagamit ang paraan ng pagbabayad na pinili mo dahil kailangan nang bayaran ang order na ito sa oras ng fulfillment.",
+        "payment_method_not_available_with_fixed_terms": "Hindi na magagamit ang napili mong paraan ng pagbabayad dahil sa susunod pa ang takdang panahon ng pagbabayad para sa order na ito.",
+        "payment_method_not_available_with_review_requirement": "Hindi na magagamit ang paraan ng pagbabayad na pinili mo dahil kailangan itong bayaran kapag nakumpirma na ang iyong order.",
+        "contact_information": {
+          "title": "Hindi wasto ang impormasyon sa pakikipag-ugnayan",
+          "header": "Para i-update ang iyong impormasyon, {{emailLink}}."
+        }
       }
     },
     "pagination": {
