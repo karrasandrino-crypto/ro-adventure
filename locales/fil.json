@@ -2493,6 +2493,132 @@
           "processing": "Pinoproseso…",
           "submit": "Isumite"
         }
+      },
+      "shipping": {
+        "subscription_delivery_description": {
+          "initial_order_discounted": "Unang bayad sa shipping ay %{discounted_shipping_cost}, pagkatapos ay %{frequency_description}",
+          "prepaid_initial_order_discounted": "Unang bayad sa pagpapadala %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Unang bayad sa pagpapadala %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Unang shipping cost %{discounted_shipping_price} %{prepaid_delivery_frequency}, pagkatapos ay %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Unang bayad sa pag-ship ay %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), pagkatapos ay %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Kasama",
+          "recurring_order_shipping_price": "sinundan ng %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Kasama ang unang order, na susundan ng %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} bawat delivery), na susundan ng %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Libre ang unang order",
+            "other": "Libre ang unang %{count} na order"
+          },
+          "free_for_first_n_order": {
+            "one": "Para sa unang order",
+            "other": "Para sa unang %{count} na order"
+          }
+        },
+        "one_time_purchase_shipping": "Isang beses na pagpapadala",
+        "duties_and_taxes_title": "Mga tungkulin at buwis",
+        "shipping_information_required_notice": "Kailangan ang impormasyon sa pagpapadala. {{link}}.",
+        "shipping_information_redirect_link": "Ilagay ang iyong impormasyon dito",
+        "loading_progressive_rates": "Naghahanap ng higit pang mga rate…",
+        "no_other_methods_available": "Walang ibang paraang magagamit",
+        "duties_and_taxes_options": {
+          "ddu_title": "Magbayad pagkadating",
+          "ddu_caption": "Maaaring may karagdagang bayad",
+          "ddp_title": "Magbayad na",
+          "ddp_caption": "Walang dagdag na bayad sa delivery"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} at %{current}"
+        },
+        "shipping_used_as_billing_notice": "Gagamitin din ito bilang iyong billing address para sa order na ito.",
+        "address_update": "I-update ang address",
+        "shipping_address_title": "Ipadala sa",
+        "shipping_address_rollup_accessibility_label": "Mga opsyon sa pagpapadala sa address",
+        "third_party_address_timeout": "Hindi ma-load ang mga address. Subukan muli o gumamit ng ibang address.",
+        "third_party_address_error": "Nagkaroon ng error habang nilo-load ang pagpili ng address. Ilagay ang iyong address nang manu-mano sa ibaba.",
+        "third_party_payment_timeout": "Hindi maikarga ang mga paraan ng pagbabayad. Subukang muli o gumamit ng ibang paraan ng pagbabayad.",
+        "third_party_payment_error": "Nagkaroon ng error habang naglo-load ng pagpipiliang pambayad. Gumamit ng ibang paraan ng pagbabayad.",
+        "add_address": "Gumamit ng ibang address",
+        "add_delivery_instructions": "Magdagdag ng mga instruksyon sa pag-deliver",
+        "edit": "I-edit",
+        "delete": "Burahin",
+        "back": "Bumalik",
+        "address_more": "Higit pang mga aksyon para sa address na ito",
+        "address_edit": "I-edit ang address",
+        "address_delete": "Burahin ang address",
+        "address_confirm": "Sigurado ka bang gusto mong burahin ang address na ito mula sa iyong account?",
+        "address_default": "Itakda bilang default",
+        "address_form": {
+          "add_address": "Idagdag ang address",
+          "save": "I-save",
+          "cancel": "Kanselahin",
+          "edit": "I-edit ang address",
+          "update": "I-save ang mga pagbabago",
+          "generic_error": "Nagkaroon ng problema sa pag-save ng iyong address. Subukan muli.",
+          "one_time_address_subtitle": "Gumamit ng one-time address para sa order na ito"
+        },
+        "different_shipping_method_summary": "Maglagay ng ibang shipping address upang makita ang mga available na paraan ng pagpapadala",
+        "invalid_shipping_method_summary": "Maglagay ng wastong shipping address upang makita ang mga available na paraan ng pagpapadala",
+        "invalid_shipping_method_summary_selected": "Pumili ng ibang shipping address upang makita ang mga available na paraan ng pagpapadala",
+        "method_summary": {
+          "incomplete_address_entered": "Ilagay ang kumpletong address ng pagpapadala upang makita ang mga available na paraan ng pagpapadala",
+          "incomplete_address_selected": "Pumili ng kumpletong address ng pagpapadala upang makita ang mga available na paraan ng pagpapadala"
+        },
+        "local_pickup": {
+          "search_address": "Maghanap ng address",
+          "rollup_title": "Lugar ng pagsundo",
+          "rollup_accessibility_label": "Mga pagpipilian sa lokasyon ng pagkuha"
+        },
+        "missing_shipping_address": "Wala ang shipping address",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} na aytem",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} pa",
+        "split_shipping_merchandise_shipment_number": "Kargamento %{number} ng %{total}",
+        "pre_order_ships_now": "Ipinapadala na ngayon",
+        "pre_order_ships_later": "Ipapadala mamaya",
+        "pre_order_ships_date": "Ipinapadala sa %{date}",
+        "split_shipping_shipped_by_shop": "Ipinadala ng %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Maramihang kargamento",
+        "split_shipping_shipping_label": "Pamamaraan",
+        "split_shipping_shipment_notice": "Darating ang iyong order sa %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "Darating ang iyong unang order sa %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} na kargamento",
+        "split_shipping_multiple_shipment_notice": "Ang iyong order ay darating sa pamamagitan ng maraming shipment.",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Ang iyong order ay darating sa %{quantity} na padala",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "Darating ang order mo sa %{count} pagpapadala",
+          "other": "Ang iyong order ay darating sa %{count} na padala"
+        },
+        "split_shipping_arrives_in_shipments": {
+          "one": "Darating sa %{count} shipment",
+          "other": "Darating sa %{count} na padala"
+        },
+        "includes_recurring_items": "Kasama ang mga paulit-ulit na item",
+        "split_shipping_more_shipping_options": "Higit pang mga opsyon sa pagpapadala",
+        "split_shipping_shipment_number": "Kargamento %{number}",
+        "split_shipping_option_free": "Libreng pagpapadala",
+        "split_shipping_option_lowest_price": "Pinakamababang presyo",
+        "split_shipping_option_fastest": "Pinakamabilis",
+        "split_shipping_option_recommended": "Inirerekomenda",
+        "split_shipping_option_custom": "Pasadya",
+        "add_shipping_address": "Idagdag ang shipping address",
+        "add_new_delivery_address": "Magdagdag ng bagong address ng paghahatid",
+        "choose_new_address": "Pumili ng bagong address"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Karagdagang impormasyon",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "Personal Customs Code",
+          "shipping_credential_cn": "Numero ng Resident ID",
+          "tax_credential_it": "Codice Fiscale (opsyonal)",
+          "tax_email_it": "PEC (opsyonal)",
+          "tax_credential_cl": "RUT",
+          "shipping_credential_cl": "RUT",
+          "tax_credential_co": "Cedula/VAT",
+          "tax_credential_type_co": "Uri ng Sedula"
+        }
       }
     },
     "pagination": {
