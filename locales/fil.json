@@ -280,6 +280,34 @@
               "tracking_after_payment": "Makakatanggap ka ng impormasyon sa pagsubaybay sa pagpapadala sa loob ng isang araw ng negosyo pagkatapos ng pagbabayad."
             },
             "barcode_alt": "OXXO voucher barcode para sa reference number na %{reference_number}"
+          },
+          "apple_wallet": {
+            "badge_alt": "Idagdag sa Apple Wallet",
+            "pass": {
+              "description": "Payment voucher ng %{shop_name}",
+              "logo_text": "Katibayan ng Pagbabayad",
+              "store_label": "Tindahan",
+              "expiry_date_label": "Petsa ng pag-expire",
+              "payment_due_label": "Dapat nang bayaran",
+              "reference_number_label": "Numero ng sanggunian",
+              "ordered_on_label": "Inorder noong"
+            }
+          },
+          "due_notice": "Ang iyong bayad na %{amount_due} ay dapat bayaran sa %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Ang iyong bayad na %{amount_due} ay dapat nang bayaran.",
+            "instruction_html": "Magbayad sa Multibanco o online gamit ang mga detalye sa ibaba. Para sa mga katanungan o para i-update ang mga detalye ng pagbabayad, %{contact_us}.",
+            "entity": "Entidad",
+            "reference": "Sanggunian",
+            "amount": "Halaga",
+            "find_nearest_atm": "Hanapin ang pinakamalapit na ATM",
+            "label": "Multibanco",
+            "pay": "Magbayad ng %{amount}",
+            "expiry_date_time": "%{date} nang %{time}",
+            "expires_at": "Mag-e-expire sa %{date}",
+            "expired": "Nag-expire noong %{date}",
+            "expired_title": "Nag-expire na ang reference ng bayad",
+            "labelled_code": "%{label}: %{code}"
           }
         },
         "update_payment_method": "I-update ang paraan ng pagbabayad",
@@ -396,7 +424,125 @@
         "order_edit_banner_single_item_removed": "Inalis",
         "order_edit_banner_multiple_items_removed": "Inalis ang {{amount}}",
         "order_edit_banner_single_item_returned": "Ibinalik",
-        "order_edit_banner_multiple_items_returned": "Isinoli ang {{amount}}"
+        "order_edit_banner_multiple_items_returned": "Isinoli ang {{amount}}",
+        "usdc_cashback_additional_info": "Magbayad gamit ang USDC sa Base at makakuha ng %{incentive_percentage}% pabalik sa iyong wallet sa loob ng 30 araw.",
+        "usdc_cashback_terms": "May mga tuntunin at limitasyon na naaangkop",
+        "purchase_options_card_update_agreement_label_html": "Sa pag-update ng iyong paraan ng pagbabayad, binibigyan mo ng pahintulot ang mga pagbabayad para sa anumang pabalik-balik o ipinagpalibang pagbili ayon sa <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">patakaran sa pagkansela</a> ng tindahang ito.",
+        "subscription_card_update_agreement_label": "Ang pagbabago ng paraan ng pagbabayad ay mag-a-update sa iyong subscription at sa mga susunod na paulit-ulit na bayad.",
+        "subscription_agreement_label": "Ang isa o higit pang item sa iyong cart ay isang deferred o subscription purchase. Sa pagpapatuloy ng iyong pagbabayad, sumasang-ayon ka na ang iyong paraan ng pagbabayad ay awtomatikong sisingilin sa presyo at dalas na nakalista sa pahinang ito hanggang sa matapos ito o ikaw ay magkansela. Ang lahat ng pagkansela ay napapailalim sa %{cancelled}.",
+        "subscription_agreement_cancelled": "patakaran sa pagkansela",
+        "subscription_heading": "Kasunduan sa subskripsyon",
+        "subscription_agreement_label_html": "Naiintindihan ko na sumasang-ayon ako sa isang subscription. Magre-renew ito sa presyo at dalas na nakalista hanggang matapos o\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">makansela</a>.\n",
+        "purchase_options_agreement_label": "Ang isa o higit pang item sa iyong cart ay isang ipinagpaliban o umuulit na pagbili. Sa pagpapatuloy ng iyong pagbabayad, sumasang-ayon ka na awtomatikong sisingilin ang iyong paraan ng pagbabayad sa presyo at dalas na nakalista sa pahinang ito hanggang sa matapos o ikansela mo ito. Ang lahat ng pagkansela ay napapailalim sa %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Naiintindihan ko na isa o higit pang item sa aking cart ay isang deferred o umuulit na pagbili. Sa pagpapatuloy, sumasang-ayon ako sa\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">patakaran sa pagkansela</a>\nat pinapahintulutan kang singilin ang paraan ng aking pagbabayad sa mga presyo, dalas, at mga petsang nakalista sa pahinang ito hanggang\nsa matupad ang aking order o kanselahin ko, kung pinahihintulutan.\n",
+        "purchase_options_agreement_label_wallets": "Sa pagpapatuloy ng iyong bayad, sumasang-ayon ka sa mga singil sa hinaharap na nakalista sa pahinang ito at sa %{cancellation_policy_label}.",
+        "purchase_options_subscription_confirmation_title": "Kumpirmahin ang iyong subscription",
+        "purchase_options_subscription_agreement_label": "Naglalaman ang iyong cart ng awtomatikong nagre-renew na subscription. Sa pag-click sa \"%{button_label},\" %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_agreement_label_wallets": "Ang iyong cart ay naglalaman ng subscription na awtomatikong nagre-renew. Sa paggamit ng express checkout, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "malinaw at tiyak mong sinasang-ayunan na awtomatiko kang sisingilin ng paulit-ulit na halaga/mga halagang ipinapakita sa iyong cart (pati na ang shipping at mga buwis) hanggang sa matapos ang (mga) subscription o hanggang sa mag-cancel ka.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Pakitingnan ang %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Maaari kang mag-cancel anumang oras sa pamamagitan ng pagpunta sa iyong account o pakikipag-ugnayan sa tindahan.",
+        "change_currency_section_description": "Pumili ng opsyon ng currency",
+        "no_real_orders_dev_store": "Hindi tumatanggap ang tindahang ito ng mga totoong order o totoong bayad.",
+        "loading": "Naglo-load ng bayad...",
+        "waiting_on_payment_methods": "Kinukuha ang mga available na paraan ng pagbabayad...",
+        "apple_pay_payment_error": "Hindi natapos ang iyong pagbabayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+        "taxes_not_included": "Hindi kasama ang buwis",
+        "no_taxes_banner_content": "Walang ipapataw na buwis sa order na ito. Kapag nakakolekta ka na ng bayad, hindi na maaaring dagdagan ang buwis.",
+        "paypal": {
+          "connect": "I-click upang ikonekta ang iyong PayPal account"
+        },
+        "apple": {
+          "connect": "I-click para ikonekta ang iyong Apple Pay account",
+          "not_available": "Hindi available ang Apple Pay sa browser na ito. Para ikonekta ang iyong Apple Pay account, kailangan mong gamitin ang Safari sa isang Apple device."
+        },
+        "google": {
+          "connect": "I-click upang kumonekta sa iyong Google Pay account",
+          "error_authorizing": "Mali sa pag-aawtorisa ng bayad"
+        },
+        "account_connected": "Konektado na ang account.",
+        "mor_disclaimer_html": "Sa pag-click sa ibaba at pagkumpleto ng iyong order, sumasang-ayon ka na bilhin ang iyong (mga) item mula sa Global-e bilang merchant of record\npara sa transaksyong ito, sa <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Mga Tuntunin at Kondisyon</a>\nat <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Patakaran sa Pagkapribado</a> ng Global-e. Ang Global-e ay isang internasyonal\nna tagapagbigay ng serbisyo sa pagtupad sa %{shop_name}\n",
+        "lpm": {
+          "multibanco": {
+            "voucher": {
+              "label": "Multibanco",
+              "codes": {
+                "entity": "Entidad",
+                "reference_number": "Sanggunian"
+              },
+              "steps": {
+                "pay_at_atm_or_online": "Magbayad sa Multibanco ATM o sa pamamagitan ng iyong online banking gamit ang mga detalye sa ibaba."
+              }
+            }
+          },
+          "konbini": {
+            "voucher": {
+              "label": "Tindahan",
+              "outlets": {
+                "familymart": "FamilyMart",
+                "lawson": "Lawson",
+                "ministop": "Ministop",
+                "seicomart": "Seicomart"
+              },
+              "codes": {
+                "reference_number": "Payment code",
+                "confirmation_number": "Confirmation code"
+              },
+              "steps": {
+                "familymart": {
+                  "1": "Sa multi-copy machine, piliin ang 代金支払い／チャージ (\"Payment / Charge\")",
+                  "2": "Ilagay ang iyong payment code at pindutin ang OK",
+                  "3": "Ilagay ang iyong confirmation code at pindutin ang OK",
+                  "4": "Suriin ang mga detalye at pindutin ang 確認 (\"Confirm\") upang i-print ang iyong slip",
+                  "5": "Dalhin ang slip sa register sa loob ng 30 minuto at magbayad gamit ang cash o FamiPay"
+                },
+                "lawson": {
+                  "1": "Sa Loppi terminal, piliin ang 各種番号をお持ちの方 (\"Mayroon akong numero\")",
+                  "2": "Ilagay ang iyong payment code at pindutin ang 次へ (\"Next\")",
+                  "3": "Ilagay ang iyong confirmation code at pindutin ang 次へ",
+                  "4": "Suriin ang mga detalye at pindutin ang はい (\"Oo\") upang i-print ang iyong slip",
+                  "5": "Dalhin ang slip sa rehistro sa loob ng 30 minuto at magbayad nang cash."
+                },
+                "ministop": {
+                  "1": "Sa Loppi terminal, piliin ang 各種番号をお持ちの方 (\"Mayroon akong numero\")",
+                  "2": "Ilagay ang iyong payment code at pindutin ang 次へ (\"Next\")",
+                  "3": "Ilagay ang iyong confirmation code at pindutin ang 次へ",
+                  "4": "Suriin ang mga detalye at pindutin ang はい (\"Oo\") upang i-print ang iyong slip",
+                  "5": "Dalhin ang slip sa rehistro sa loob ng 30 minuto at magbayad nang cash."
+                },
+                "seicomart": {
+                  "1": "Sa counter, sabihin sa cashier na \"internet payment.\"",
+                  "2": "Ipasok ang iyong payment code sa customer screen at piliin ang 登録 (\"Enter\")",
+                  "3": "Ilagay ang iyong confirmation code at piliin ang 登録",
+                  "4": "Suriin ang mga detalye at piliin ang OK",
+                  "5": "Magbayad nang cash"
+                },
+                "1": "Dalhin ang payment code at confirmation code sa terminal o register ng tindahan at magbayad ng cash bago ma-expire ang voucher."
+              },
+              "pay": "Magbayad ng %{amount}",
+              "choose_outlet": "Pumili ng Konbini para makita ang iyong mga code at kung paano magbayad",
+              "expires_at": "Mag-e-expire sa %{date}",
+              "expiry_date_time": "%{date} nang %{time} JST",
+              "expired_title": "Nag-expire na ang payment code",
+              "expired": "Nag-expire noong %{date}",
+              "copy_code": "Kopyahin ang %{label}",
+              "code_copied": "Kinopya",
+              "keep_receipt": "Itago ang iyong resibo bilang patunay ng pagbabayad",
+              "view_instructions": "Tingnan ang mga tagubilin sa pagbabayad",
+              "view_instructions_accessibility_label": "Tingnan ang mga instruksyon sa pagbabayad (bubukas sa bagong tab)"
+            }
+          },
+          "oxxo": {
+            "voucher": {
+              "label": "OXXO",
+              "number": "Numero ng sanggunian",
+              "steps": {
+                "scan_barcode_at_oxxo": "I-scan ang barcode sa iyong pinakamalapit na OXXO."
+              },
+              "barcode_alt": "OXXO voucher barcode para sa reference number na %{reference_number}"
+            }
+          }
+        }
       },
       "processing": {
         "wait": {
