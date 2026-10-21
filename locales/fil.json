@@ -3920,8 +3920,142 @@
         "list": "Listahan"
       },
       "grouped_view_components": {
-        "expand_line_items": "Ipakita ang {{count}} (na) aytem"
-      }
+        "expand_line_items": "Ipakita ang {{count}} (na) aytem",
+        "collapse_line_items": "Itago ang {{count}} (na) aytem",
+        "line_item_summary_list_accessibility_label": "Mga item sa bundle na {{productTitle}}"
+      },
+      "discount": "Diskwento",
+      "discount_order_stacking": {
+        "one": "Diskwento sa order",
+        "other": "Mga diskwento sa order"
+      },
+      "price_before_discount_accessibility_label": "Orihinal na presyo",
+      "price_after_discount_accessibility_label": "May diskwentong presyo",
+      "compare_at_sale": "Benta ({{saleAmount}})",
+      "hide_items": "Itago ang mga item",
+      "loading": "Inilulunsad ang mga detalye ng order",
+      "loading_finished_accessibility_message": "Na-load na ang mga detalye ng order",
+      "location": "Lokasyon",
+      "image_gallery": {
+        "next": "Ipakita ang mga susunod na item",
+        "previous": "Ipakita ang mga naunang item",
+        "load_more_items": {
+          "one": "Ipakita ang {{count}} pang item",
+          "other": "Ipakita ang {{count}} pang item"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Ipakita ang buod ng order",
+        "closed": "Itago ang buod ng order"
+      },
+      "no_data": "Wala",
+      "no_data_provided_accessibility_label": "{{fieldName}} ay walang laman",
+      "not_applicable": "Wala",
+      "paid_amount": "Bayad",
+      "partially_refunded_label": "BAHAGYANG NAIBALIK ANG BAYAD",
+      "payment_confirmation": {
+        "payment_received": "Salamat! Natanggap na ang iyong bayad na {{amount}}.",
+        "full_payment_received": "Salamat! Ang bayad mong {{amount}} ay natanggap, at ang order na ito ay bayad na.",
+        "payment_authorized": "Salamat! Maa-update ang balanse kapag natanggap na ang bayad.",
+        "dismiss_label": "Ipagpaliban ang pagkumpirma ng bayad"
+      },
+      "payment": {
+        "status_in_review": "Babayaran pagkatapos suriin",
+        "status_unpaid": "Kabayaran dahil sa {{date}}",
+        "title": "Pagbabayad",
+        "payment_type": {
+          "gift_card": "Gift card",
+          "store_credit": "Credit sa tindahan",
+          "money_order": "Money Order",
+          "cash_on_delivery": "Bayad sa Paghahatid (COD)",
+          "bank_deposit": "Deposito sa bangko",
+          "manual": "Manwal"
+        },
+        "shop_pay_installments": {
+          "summary": "Bumili nang hulugan",
+          "view_schedule": "Tingnan ang iskedyul"
+        },
+        "transactions": {
+          "show_all": "Ipakita ang lahat",
+          "show_less": "Ipakita nang mas kaunti",
+          "details": "Mga detalye",
+          "payment_details": "Mga Detalye ng Pagbabayad"
+        },
+        "emv_details": {
+          "auth": "PAGPAPATOTOO:",
+          "aid": "TULONG:",
+          "source": "PINAGMULAN:"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "title": "Mga paalala sa pagbabayad para sa Shop Pay Installments",
+        "paid_with_shop_pay_installments": "Binayaran gamit ang Shop Pay Installments",
+        "description": "Manatiling updated sa iyong schedule ng pagbabayad gamit ang mga paalala sa Shop app.",
+        "payment_reminders_button": "Makatanggap ng mga paalala sa pagbabayad",
+        "desktop_qr_code_content": {
+          "title": "Maghanap ng mga paalala",
+          "description": "Makakuha ng mga paalala para sa iyong mga installment gamit ang Shop."
+        }
+      },
+      "refunded_amount": "Naibalik na ang bayad",
+      "request_return_failed": "Nagkaroon ng problema sa pagproseso ng iyong kahilingan. Pakisubukang muli.",
+      "login_card": {
+        "title": "I-access ang mga detalye ng order",
+        "resend_link_and_login": "Upang makita ang mga detalye ng iyong order, mag-sign in o magpadala ng bagong link sa email o numero ng telepono na ginamit sa checkout.",
+        "resend_link_only": "Para makita ang mga detalye ng iyong order, magpadala ng bagong link sa email o numero ng telepono na ginamit sa checkout.",
+        "log_in": "Mag-sign in",
+        "resend_link": "Magpadala ng bagong link",
+        "link_expired": "Nag-expire na ang link"
+      },
+      "remaining_amount": "Natitira",
+      "marketing_section_title": "Mga balita at alok",
+      "marketing_checkbox_label": "I-email sa akin ang mga balita at alok",
+      "marketing_checkmark_label": "Naka-subscribe ka para makatanggap ng mga email na balita at alok",
+      "marketing_pending_confirmation": "I-click ang link sa iyong email upang kumpirmahin.",
+      "marketing_resend_email": "Ipadala muli ang email",
+      "marketing_resend_email_success": "Naipadala na ang link",
+      "returns": {
+        "expand_events_label": "Ipakita ang mga detalye",
+        "hide_events_label": "Itago ang mga detalye",
+        "ineligible_return_message": "Walang anumang item sa order na ito ang maaaring isauli.",
+        "ineligible_return_message_when_returned": "Wala nang ibang item sa order na ito ang maaari pang isauli.",
+        "print_shipping_label": "I-print ang shipping label",
+        "return_and_refund_modal_header": "Patakaran sa pagbabalik ng bayad",
+        "tracking_number": "Tracking number:",
+        "exchange_header": "Pagpalitin ang mga item",
+        "exchange_subheader": "Ang mga ipalit na item ay idadagdag sa order kapag tapos na ang proseso ng pagbabalik."
+      },
+      "shipping": {
+        "address": "Address sa pagpapadala",
+        "address_map_marker": "Address sa pagpapadala",
+        "method": "Paraan ng pagpapadala",
+        "method_short": "Pamamaraan",
+        "ship_to": "Ipadala sa",
+        "summary": "Pagpapadala",
+        "free": "Libre",
+        "free_shipping_discount": "Libreng Pagpapadala",
+        "one_time": "Isang beses na pagpapadala",
+        "subscription": "Pagpapadala ng subscription"
+      },
+      "pickup": {
+        "pickup": "Pagkuha",
+        "pickup_location": "Lugar ng pagsundo",
+        "pickup_point": "Lugar ng pagkuha"
+      },
+      "show_items": "Ipakita ang mga item",
+      "total_savings": "Kabuuang ipon",
+      "show_order_summary": "Ipakita ang buod ng order",
+      "hide_order_summary": "Itago ang buod ng order",
+      "subtitle": "Nakumpirma noong {{date}}",
+      "subtotal": "Kabuuan (Subtotal)",
+      "subtotal_label_with_quantity": {
+        "one": "Kabuuan (Subtotal)",
+        "other": "Kabuuang Presyo · {{count}} (na) item"
+      },
+      "summary_list_title_accessibility_label": "I-order ang mga item",
+      "summary_title": "Buod ng order",
+      "summary_totals_title_accessibility_label": "Kabuuan ng order",
+      "shop_marketplace_attribution": "Mga order na nabenta sa pamamagitan ng Shop marketplace"
     },
     "addresses": {
       "add_button": "Idagdag ang address",
