@@ -2563,7 +2563,82 @@
       "invalid": "ay hindi balido",
       "bad_domain": "naglalaman ng maling domain name",
       "taken": "ay nakuha na",
-      "contains_html_tags": "hindi maaaring maglaman ng mga HTML tag"
+      "contains_html_tags": "hindi maaaring maglaman ng mga HTML tag",
+      "too_short": "ay masyadong maikli (ang minimum ay %{count} na karakter)",
+      "too_long": "ay masyadong mahaba (ang maximum ay %{count} na karakter)",
+      "password_mismatch": "dapat tumugma sa ibinigay na password",
+      "contains_spaces": " nagsisimula o nagtatapos sa mga espasyo.",
+      "invalid_for_country": "ay hindi balido para sa %{country}",
+      "invalid_for_country_and_province": "ay hindi balido para sa %{province} at %{country}",
+      "invalid_province_in_country": "ay hindi isang wastong lalawigan sa %{country}",
+      "invalid_state_in_country": "ay hindi wastong estado sa %{country}",
+      "invalid_region_in_country": "ay hindi isang balidong rehiyon sa %{country}",
+      "less_than_or_equal_to": "dapat ay mas mababa sa o katumbas ng %{count}",
+      "not_supported": "ay hindi suportado",
+      "full_name_required": "Ilagay ang pangalan at apelyido",
+      "invalid_for_card_type": "ay hindi balido",
+      "invalid_type": "paumanhin, hindi kami tumatanggap ng ganitong uri ng card",
+      "invalid_format": "hindi balido ang format",
+      "expired": "ay paso na",
+      "invalid_start_date_or_issue_number_for_debit": "kailangan ng wastong petsa ng pagsisimula o numero ng isyu",
+      "invalid_expiry_year": "ay hindi wastong taon ng expiration",
+      "reset_password_html": "Ang email address na ito ay may kaugnayan na sa isang account. Kung sa iyo ang account na ito, maaari mong <a href=\"/account/login#recover\">i-reset ang iyong password</a>",
+      "verify_email": "Nagpadala kami ng email sa %{customer_email}, pakiklik ang link na kasama nito para i-verify ang iyong email address.",
+      "product_not_available": "Ang produkto ay hindi naka-publish para sa customer na ito.",
+      "shop_404": {
+        "title": "Gumawa ng Ecommerce Website at Magbenta Online! Ecommerce Software mula sa Shopify",
+        "title_unavailable": "Hindi magagamit ang tindahan",
+        "heros": {
+          "store_will_be_right_back": "Babalik agad ang tindahan na ito",
+          "store_unavailable": "Kasalukuyang sarado ang tindahang ito.",
+          "store_not_exist": "Hindi umiiral ang tindahang ito.",
+          "no_storefront": "Wala pang website ang tindahang ito."
+        },
+        "subtitles": {
+          "store_will_be_right_back": "Pinagsisikapan ng Shopify na maibalik ito online sa lalong madaling panahon."
+        },
+        "links": {
+          "refresh_page": "I-refresh ang pahina",
+          "explore_other_stores": "Maghanap sa ibang tindahan",
+          "start_free_trial": "Magsimula ng libreng trial"
+        },
+        "status_card": {
+          "eyebrow": "Tulong para sa mga may-ari ng tindahan",
+          "header": "Tingnan ang status ng Shopify",
+          "caption": "Alamin kung may outage na nakakaapekto sa higit pa sa store na ito sa Shopify.",
+          "link_text": "Tingnan ang status ng mga system ng Shopify"
+        },
+        "owner_ctas": {
+          "header": "Ikaw ba ang may-ari ng tindahan?",
+          "fix_domain": "Tapusin ang pag-set up ng iyong bagong web address, pumunta sa %{domain_settings_link}. I-click ang “Connect domain” at ilagay ang: %{domain}.<br>Kung nahihirapan kang makapasok sa iyong store, subukan ang page na %{forgot_your_store_link}.",
+          "fix_domain_link_text": "iyong mga setting ng domain",
+          "forgot_your_store_link_text": "nakalimutan ko ang tindahan mo",
+          "add_storefront": "Maaari mong i-set up ang iyong website sa pamamagitan ng pagdaragdag ng channel na Online Store sa iyong %{admin_link}. Kung nahihirapan kang makapasok sa iyong tindahan, subukan ang %{forgot_your_store_link} na pahina.",
+          "admin_link_text": "tagapangasiwa"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Magbenta nang personal",
+            "caption": "Makuha ang mga feature na kailangan mo para patakbuhin ang iyong retail store, nagsisimula ka man o nagpapalawak.",
+            "link_text": "Simulan ang libreng trial"
+          },
+          "open_a_store": {
+            "header": "Magbukas ng bagong Shopify store",
+            "caption": "Magsimula ng 3-araw na libreng trial, at magpatuloy sa halagang $1/buwan sa susunod na 3 buwan.",
+            "link_text": "Mag-sign up na ngayon"
+          },
+          "editions": {
+            "header": "Tignan ang Shopify Editions",
+            "caption": "Sa mahigit 100 update sa produkto, mas magiging produktibo, malikhain, at mahusay ka sa komersyo nang higit pa sa iyong inaakala.",
+            "link_text": "Tuklasin ang mga pinakabagong Edisyon"
+          },
+          "store_owner": {
+            "header": "Ikaw ba ang may-ari ng tindahan?",
+            "caption": "Nahihirapan ka bang mag-log in sa iyong store? Subukan ang %{forgot_your_store_link} na feature. Kung nais mong i-reactivate ang iyong store, makipag-ugnayan sa %{shopify_support_link}.",
+            "shopify_support_link_text": "Suporta ng Shopify"
+          }
+        }
+      }
     },
     "notices": {
       "cart": {
@@ -2605,7 +2680,9 @@
         "merchandise_line_transformers": {
           "run_error": "Nagkaroon ng error sa iyong cart."
         },
-        "merchandise_not_applicable": "Hindi maaaring bilhin ang item sa kasalukuyang configuration nito."
+        "merchandise_not_applicable": "Hindi maaaring bilhin ang item sa kasalukuyang configuration nito.",
+        "not_found": "Hindi mahanap ang cart",
+        "only_n_items_available": "Maaari ka lamang magdagdag ng %{count} %{name} sa cart."
       },
       "storefront": {
         "invalid_password": "Mali ang password, pakisubukan muli."
@@ -2615,6 +2692,69 @@
         "add_products": "Limitahan ang seleksyon sa mga produktong tumutugma sa tag na %{tag}",
         "remove_articles": "Palawakin ang paghahanap sa mga artikulong walang tag na %{tag}",
         "remove_products": "Alisin ang tag %{tag}"
+      },
+      "customer": {
+        "password_reset_error": "Maling pag-reset ng password",
+        "subscribe_error": "Error sa pag-subscribe",
+        "unsubscribe_error": "Maling pag-unsubscribe",
+        "open_tracking_error": "Error sa pagsubaybay ng pagbukas",
+        "no_account_found": "Walang nakitang account sa email na iyon.",
+        "invalid_credentials": "Mali ang email o password.",
+        "denylisted_reset_password": "Hindi ma-access ang iyong account dahil hindi secure ang kasalukuyang password. Makakatanggap ka ng email para i-update ang iyong password.",
+        "signup_disabled": "Hindi na pinapayagan ang paggawa ng account ng customer."
+      },
+      "address": {
+        "updated": "Matagumpay na na-update ang address.",
+        "error_updating": "Error sa pag-update ng address",
+        "created": "Matagumpay na nagawa ang address",
+        "error_creating": "Mali sa paglikha ng address.",
+        "deleted": "Matagumpay na na-delete ang address",
+        "error_deleting": "Mali sa pagbura ng address."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "Idinagdag ang %{delta}",
+          "increment_item": "Idinagdag ang %{delta}",
+          "decrement_item": "Inalis ang %{delta} mula sa %{total}",
+          "decrement_fulfilled_line_item": "Naibalik ang %{delta} mula sa %{total}",
+          "decrement_return_line_item": "Inalis ang %{delta} mula sa return"
+        }
+      },
+      "order": {
+        "not_available": "Hindi available ang order na ito",
+        "financial_status": {
+          "authorized": "Awtorisado",
+          "pending": "Nakabinbin",
+          "paid": "Bayad",
+          "unpaid": "Hindi bayad",
+          "voided": "Walang bisa",
+          "partially_paid": "Bahagyang nabayaran",
+          "partially_refunded": "Bahagyang na-refund",
+          "refunded": "Naibalik na ang bayad",
+          "expired": "Nag-expire na"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Natupad",
+          "complete": "Tapos na",
+          "partial": "Bahagya",
+          "unfulfilled": "Hindi natupad",
+          "restocked": "Muling na-stock"
+        },
+        "transaction_status": {
+          "success": "Tagumpay",
+          "pending": "Nakabinbin",
+          "failure": "Pagkabigo",
+          "error": "Mali"
+        },
+        "cancel_reason": {
+          "declined": "Hindi tinanggap ang bayad",
+          "inventory": "Hindi available ang mga item",
+          "fraud": "Peke na order",
+          "customer": "Binago/kinansela ng customer ang order",
+          "staff": "Pagkakamali ng kawani",
+          "other": "Iba pa"
+        },
+        "cash_on_delivery": "Bayad sa Paghahatid (COD)"
       }
     },
     "email_marketing": {
@@ -3156,7 +3296,33 @@
       "adjusted_total": "Na-adjust na kabuuan",
       "due_on_date": "Takdang Petsa {{date}}",
       "due_on_fulfillment": "Bayaran pagkatapos maipadala",
-      "due_on_receipt": "Bayad sa pagtanggap"
+      "due_on_receipt": "Bayad sa pagtanggap",
+      "addresses_section_title": "Pagsingil at pagpapadala",
+      "order_details": "Mga detalye ng order",
+      "order_details_skeleton_accessibility_label": "Mag-sign in upang tingnan ang lahat ng detalye ng order.",
+      "billing_address": "Address sa pagsingil",
+      "card_ending_with": "nagtatapos sa {{lastDigits}}",
+      "contact": "Makipag-ugnayan",
+      "company": "Kumpanya",
+      "fully_refunded_label": "IBINALIK NA ANG BAYAD",
+      "fulfillment_images": {
+        "one_products_accessibility_label": "Kasama sa katuparan ang {{lineItemName1}} dami {{lineItemQuantity1}}",
+        "two_products_accessibility_label": "Kasama sa fulfillment ang {{lineItemName1}} dami {{lineItemQuantity1}}, {{lineItemName2}} dami {{lineItemQuantity2}}",
+        "three_products_accessibility_label": "Kasama sa fulfillment ang {{lineItemName1}} dami na {{lineItemQuantity1}}, {{lineItemName2}} dami na {{lineItemQuantity2}}, {{lineItemName3}} dami na {{lineItemQuantity3}}",
+        "four_products_accessibility_label": "Kabilang sa pagsasakatuparan ang {{lineItemName1}} dami {{lineItemQuantity1}}, {{lineItemName2}} dami {{lineItemQuantity2}}, {{lineItemName3}} dami {{lineItemQuantity3}}, {{lineItemName4}} dami {{lineItemQuantity4}}",
+        "five_products_accessibility_label": "Ang katuparan ay kasama ang {{lineItemName1}} dami {{lineItemQuantity1}}, {{lineItemName2}} dami {{lineItemQuantity2}}, {{lineItemName3}} dami {{lineItemQuantity3}}, {{lineItemName4}} dami {{lineItemQuantity4}}, {{lineItemName5}} dami {{lineItemQuantity5}}",
+        "six_products_accessibility_label": "Kasama sa katuparan ang {{lineItemName1}} dami {{lineItemQuantity1}}, {{lineItemName2}} dami {{lineItemQuantity2}}, {{lineItemName3}} dami {{lineItemQuantity3}}, {{lineItemName4}} dami {{lineItemQuantity4}}, {{lineItemName5}} dami {{lineItemQuantity5}}, {{lineItemName6}} dami {{lineItemQuantity6}}",
+        "six_and_more_products_accessibility_label": "Kasama sa fulfillment ang {{lineItemName1}} dami {{lineItemQuantity1}}, {{lineItemName2}} dami {{lineItemQuantity2}}, {{lineItemName3}} dami {{lineItemQuantity3}}, {{lineItemName4}} dami {{lineItemQuantity4}}, {{lineItemName5}} dami {{lineItemQuantity5}}, {{lineItemName6}} dami {{lineItemQuantity6}} at marami pa"
+      },
+      "group_title_label": "Bahagi ng: {{groupTitle}}",
+      "group_title_label_with_parent": "Para sa: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "Gallery",
+        "list": "Listahan"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "Ipakita ang {{count}} (na) aytem"
+      }
     },
     "addresses": {
       "add_button": "Idagdag ang address",
@@ -3344,6 +3510,114 @@
           "show_less_orders_in_review": "Ipakita ang mas kaunting mga order na nasa pagsusuri"
         }
       }
+    },
+    "orders": {
+      "order_status": {
+        "delivered": "Naipadala {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Logo ng Amazon Buy with Prime",
+        "in_review_label": "Kasalukuyang sinusuri",
+        "in_review_title": "Kasalukuyang sinusuri ang iyong order.",
+        "last_updated": "Huling in-update {{date}}",
+        "multiple_shipments_label": "Maramihang kargamento",
+        "multiple_statuses_label": "Maramihang katayuan ng order",
+        "tracking_number": {
+          "one": "Tracking number",
+          "other": "Mga tracking number"
+        },
+        "on_its_way_label": "Papunta na",
+        "out_for_delivery_label": "Ihahatid na",
+        "resume_tracking": "Ipagpatuloy ang pag-track",
+        "submitted_label": "Naipadala na",
+        "submitted_description": "Suriin ang mga detalye ng order at pagbabayad.",
+        "there_was_a_problem_label": "Nagkaroon ng problema",
+        "track_shipment": "I-track ang shipment",
+        "request_return": "Humiling ng pagbabalik",
+        "view_order_for_details": "Tingnan ang order para sa mga detalye",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Pamahalaan sa Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Pamahalaan gamit ang Amazon",
+            "new_window_disclaimer": "(magbubukas ng bagong window)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Garantisadong maihahatid sa petsang",
+            "external_promise_brand_label": "Ihahatid sa pamamagitan ng",
+            "not_delivered_by_label": "Delivered after {{date}}",
+            "delivery_guarantee_expired_label": "Lumampas na ang garantiya ng paghahatid",
+            "modal_accessibility_button_label": "Mga detalye ng pangako sa paghahatid",
+            "download_shop_app_button_label": "I-download ang Shop para mag-track",
+            "track_with_shop_button_label": "I-track gamit ang Shop",
+            "claim_shop_cash_button_label": "Kunin ang Shop Cash"
+          },
+          "details_modal": {
+            "title": "Garantisadong paghahatid",
+            "active_delivery_guarantee_label": "Paghahatid sa {{date}}",
+            "expired_shop_promise_guarantee_description": "Ang garantiya ng Shop Promise para sa order na ito ay paso na.",
+            "expired_badge_label": "Nag-expire na",
+            "order_includes_guarantees_label": "Kasama sa iyong order ang {{deliveryAgreementsCount}} na garantiya",
+            "order_includes_guarantees_description": "Ginagarantiya ng Shop Promise ang mabilis at maaasahang paghahatid. I-claim ang Shop Cash kung dumating ang iyong order pagkatapos ng {{date}}.",
+            "delivered_after_label": "Delivered after {{date}}",
+            "delivered_after_description": "Dahil nahuli ang dating ng iyong order, eligible kang mag-claim ng {{amount}} Shop Cash.",
+            "claimed_shop_cash_description": "Dahil dumating nang late ang order na ito, naka-claim ka ng {{amount}} Shop Cash.",
+            "eligible_to_claim_shop_cash_description": "Dahil nahuli ang dating ng iyong order, eligible kang mag-claim ng {{amount}} Shop Cash.",
+            "learn_more_button_label": "Matuto pa",
+            "claim_shop_cash_button_label": "Kunin ang Shop Cash",
+            "view_balance_in_shop_button_label": "Tingnan ang balanse sa Shop",
+            "scan_to_claim_shop_cash_label": "I-scan para i-claim ang {{amount}} Shop Cash"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Paghahatid na sinusuportahan ng",
+            "mixed_brands_label": "Garantisadong paghahatid",
+            "not_delivered_by_label": "Hindi naihatid pagsapit ng {{date}}",
+            "modal_accessibility_button_label": "Mga detalye ng pangako sa paghahatid"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Kunin ang iyong Shop Cash",
+            "no_shop_app_label": "{{appDownloadLink}} para makuha ang Shop Cash",
+            "download_shop_app_label": "I-download ang Shop"
+          },
+          "details_modal": {
+            "title": "Paghahatid na sinusuportahan ng",
+            "modal_accessiblity_label": "Mga detalye ng pangako sa paghahatid",
+            "delivery_guarantee_label": "Garantisadong paghahatid",
+            "delivery_by_label": "Paghahatid sa {{date}}",
+            "delivery_guaranteed_by_label": "Gagarantiyahan ang paghahatid sa {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Ginagarantiya ng Shop Promise ang mabilis at maaasahang paghahatid. Mag-claim ng Shop Cash kung huli ang dating ng iyong order.",
+              "may_be_eligible_not_authorized_label": "Maaari kang maging kwalipikadong mag-claim ng Shop Cash dahil late na dumating ang order na ito. Mag-sign in para tingnan ang mga detalye.",
+              "redeemed_label": "Na-claim mo na ang Shop Cash dahil dumating nang huli ang order na ito.",
+              "no_shop_cash_label": "Ang order na ito ay hindi kwalipikado para sa late delivery claim dahil hindi ito binayaran gamit ang Shop Pay.",
+              "no_longer_guaranteed_label": "Ang mga item na ito ay wala nang garantiya ng paghahatid.",
+              "claim_shop_cash_title": "I-scan para i-claim ang {{amount}} sa Shop Cash",
+              "claim_shop_cash_description": "Maaari mong gamitin ang iyong Shop Cash sa mga susunod na pagbili sa Shop app."
+            }
+          }
+        },
+        "arrives": "Darating {{date}}",
+        "arrives_today": "Darating ngayong araw",
+        "arrives_tomorrow": "Darating bukas",
+        "delivery_estimate_backed_by": "Sa suporta ng",
+        "delivery_estimate_delayed_description": "Mas mabagal kaysa karaniwan ang paghahatid sa iyong lugar. Maaaring mahuli ang iyong order.",
+        "delivery_estimate_delayed_title": "Naantala",
+        "delivery_exception_shop_promise_delivered_late_description": "Ang order mo ay suportado ng Shop Promise. Dahil ito ay dumating nang huli, mag-claim ng {{amount}} sa Shop Cash.",
+        "pickup_address_map_link_accessibility_label": "Tingnan ang lokasyon ng pickup sa {{address}} sa isang mapa (magbubukas sa bagong window)",
+        "pickup_location_label": "Lugar ng pagkuha:",
+        "predicted_by_shop": "Inihula ng Shop"
+      },
+      "status_mark_as_delivered": "Markahan bilang naipadala",
+      "fulfillment_status_title": "Katayuan ng pagkumpleto: {{status}}",
+      "buy_again": "Bili ulit",
+      "buy_again_accessibility_label": "Bumili muli para sa order {{orderId}}",
+      "manage": "Pamahalaan",
+      "manage_accessiblity_label": "Pamahalaan ang order {{orderId}}",
+      "group_title_label": "Bahagi ng: {{groupTitle}}",
+      "group_title_label_with_parent": "Para sa: {{groupTitle}}"
     }
   },
   "general": {
