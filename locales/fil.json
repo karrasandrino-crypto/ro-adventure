@@ -3668,8 +3668,23 @@
         "two_hours": "Kadalasan ay handa na sa loob ng 2 oras",
         "four_hours": "Karaniwang handa sa loob ng 4 na oras",
         "twenty_four_hours": "Karaniwang handa sa loob ng 24 oras",
-        "two_to_four_days": "Karaniwang handa sa loob ng 2-4 na araw"
+        "two_to_four_days": "Karaniwang handa sa loob ng 2-4 na araw",
+        "five_or_more_days": "Karaniwang handa sa loob ng 5+ araw",
+        "zero_to_two_hours": "Kadalasan ay handa na sa loob ng 2 oras",
+        "two_to_four_hours": "Karaniwang handa sa loob ng 4 na oras",
+        "immediately": "Handa na para kunin ngayon",
+        "next_day": "Handa na para kunin sa susunod na araw"
       }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Ang item na ito ay isang paulit-ulit o naantalang pagbili. Sa pagpapatuloy, sumasang-ayon ako sa %{cancellationPolicyLink} at pinahihintulutan ko kayong singilin ang aking paraan ng pagbabayad sa mga presyo, dalas, at petsang nakalista sa pahinang ito hanggang sa matupad ang aking order o hanggang sa magkansela ako, kung pinahihintulutan.",
+      "buyer_consent_cart": "Ang isa o higit pa sa mga item sa iyong cart ay isang pabalik-balik o naka-defer na pagbili. Sa pagpapatuloy, sumasang-ayon ako sa %{cancellationPolicyLink} at pinahihintulutan ko kayong singilin ang aking paraan ng pagbabayad sa mga presyo, dalas, at petsang nakalista sa pahinang ito hanggang sa maipadala ang aking order o hanggang sa magkansela ako, kung pinapayagan.",
+      "cancellation_policy": "patakaran sa pagkansela"
+    },
+    "managed_markets": {
+      "buyer_consent": "Sa paglalagay ng iyong order, sumasang-ayon kang bumili mula sa Global-e bilang merchant of record, alinsunod sa %{termsAndConditionsLink} at %{privacyPolicyLink} ng Global-e, at ibahagi ang iyong impormasyon sa %{shopName}.",
+      "terms_and_conditions": "Mga Tuntunin at Kundisyon",
+      "privacy_policy": "Patakaran sa Pagkapribado"
     }
   },
   "customer": {
@@ -4749,6 +4764,125 @@
         "show_order_actions_accessibility_label": "Ipakita ang mga aksyon para sa order na {{name}}",
         "view_order": "Tingnan ang order",
         "view_order_accessibility_label": "Tingnan ang order {{orderName}}"
+      }
+    },
+    "callback": {
+      "try_again": "Subukan muli"
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "one": "{{count}} minuto ang nakalipas",
+          "other": "{{count}} minuto ang nakalipas"
+        },
+        "lessThanOneMinuteAgo": "Ngayon lang",
+        "yesterday": "Kahapon nang {{time}}",
+        "today": "Ngayon sa {{time}}",
+        "tomorrow": "Bukas ng {{time}}"
+      }
+    },
+    "enable_javascript": "Upang makita ang iyong account, paganahin ang JavaScript sa mga setting ng iyong browser o mag-sign in gamit ang ibang browser.",
+    "order_receipt_document": {
+      "placeholder_title": "Placeholder ng resibo",
+      "placeholder": "Placeholder: Ang order na %{name} sa halagang %{total} ay hindi pa handang i-render."
+    },
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Itago ang menu ng Account",
+        "show_accessibility_label": "Ipakita ang menu ng Account",
+        "nav_accessibility_label": "Nabigasyon ng account",
+        "open_menu_accessibility_label": "Buksan ang nabigasyon ng account",
+        "close_menu_accessibility_label": "Isara ang nabigasyon ng account",
+        "label": "Account",
+        "loading_message": "Naglo-load ng nabigasyon ng account"
+      },
+      "action_menu_accessibility_label": "Higit pang mga aksyon",
+      "back_button_accessibility_label": "Bumalik",
+      "go_to_store_link": "Pumunta sa tindahan",
+      "orders_link_label": "Mga Order",
+      "subscriptions_link_label": "Mga subscription",
+      "close_menu_accessibility_label": "Isara ang pangunahing nabigasyon",
+      "contact_email_subject": "Contact mula sa online store na {{shopName}}",
+      "contact_link": "Impormasyon sa pakikipag-ugnayan",
+      "delete_confirmation": {
+        "cancel": "Kanselahin",
+        "delete": "Burahin"
+      },
+      "dismiss_toast": "Ibasura",
+      "document_title": "{{sectionName}} - {{shopName}} - Account",
+      "loading_message": "Naglo-load",
+      "loading_policy_content_accessibility_label": "Ikinakarga ang nilalaman ng polisiya",
+      "loading_section_accessibility_label": "Naglo-load ang {{sectionName}}",
+      "policy_load_error": "Hindi ma-load ang {{policyName}}",
+      "policy_try_again": "Subukan muli",
+      "log_out_link": "Mag-sign out",
+      "logout_overlay_label": "Nag-o-out na...",
+      "nav_label_accessibility_label": "Pangunahing nabigasyon",
+      "navigation_accessibility_message": "Nag-navigate ka sa {{sectionName}}",
+      "open_menu_accessibility_label": "Buksan ang pangunahing nabigasyon",
+      "shop_logo_accessibility_label": "{{shopName}} na logo",
+      "store_credit_accessibility_label": "{{formattedBalance}} store credit",
+      "store_credit_balances_list_accessibility_label": "Balanseng credit ng tindahan",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} at {{count}} pang currency store credit",
+        "other": "{{formattedBalance}} at {{count}} higit pang mga credit sa tindahan ng pera"
+      },
+      "settings_link": "Mga Setting",
+      "country_switcher_toast_message": "Lumipat ang bansa sa {{countryName}}",
+      "switch_country": "Palitan ang bansa",
+      "no_countries_found": "Walang nahanap na mga bansa",
+      "location_switcher_toast_message": "Ang lokasyon ay inilipat sa {{locationName}}",
+      "switch_location": "Lipat ng lokasyon",
+      "no_locations_found": "Walang nahanap na lokasyon",
+      "try_new_search": "Subukan ang bagong paghahanap",
+      "view_details": "Tingnan ang mga detalye",
+      "company_location": "Lokasyon ng kumpanya",
+      "search": "Maghanap",
+      "skip_to_content": "Laktawan ang nilalaman"
+    },
+    "announcement_bar": {
+      "expand_label": "Palawakin ang announcement bar",
+      "collapse_label": "I-collapse ang announcement bar",
+      "close_label": "Isara ang announcement bar"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Ikinakarga ang impormasyon ng account",
+      "loading_finished_accessibility_message": "Nai-load na ang impormasyon ng account",
+      "profile_card": {
+        "cancel": "Kanselahin",
+        "cancel_accessibility_label": "Kanselahin ang pag-edit ng profile",
+        "edit": "I-edit",
+        "edit_accessibility_label": "I-edit ang profile",
+        "email_help_text": "Hindi na maaaring baguhin ang email.",
+        "editable_email_help_text": "Ang email na ito ay ginagamit para sa pag-sign in at mga update sa order.",
+        "first_name": "Pangalan",
+        "last_name": "Apelyido",
+        "email": "Email",
+        "no_name_provided_accessibility_label": "Walang idinagdag na pangalan",
+        "phone_number_help_text": "Hindi na maaaring palitan ang numero ng telepono.",
+        "save": "I-save",
+        "save_accessibility_label": "I-save ang profile",
+        "title": "Propayl",
+        "errors": {
+          "name_too_long": "{{fieldName}} ay masyadong mahaba (ang maximum ay 255 na karakter)",
+          "name_cannot_contain_url": "{{fieldName}} ay hindi maaaring maglaman ng URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} hindi maaaring maglaman ng mga HTML tag",
+          "email_cant_be_blank": "Hindi maaaring blangko ang email",
+          "invalid_email_format": "Maglagay ng valid na email"
+        }
+      },
+      "verify_current_email_modal": {
+        "cancel_button": "Kanselahin",
+        "cancel_button_accessibility_label": "Kanselahin ang pag-edit ng profile",
+        "description": "Ilagay ang 6-digit na code na ipinadala sa iyong orihinal na email:",
+        "email_resend_button_accessibility_label": "Ipadala muli ang verification code",
+        "title": "Kumpirmahing ikaw 'yan",
+        "verify_button": "Susunod",
+        "verify_button_accessibility_label": "I-verify ang iyong kasalukuyang email"
+      },
+      "verify_new_email_modal": {
+        "title": "I-verify ang iyong bagong email",
+        "description": "Ngayon, ilagay ang 6-digit na code na ipinadala sa iyong bagong email:"
       }
     }
   },
