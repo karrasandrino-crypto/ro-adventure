@@ -4461,7 +4461,94 @@
         "delivery_exception_shop_promise_delivered_late_description": "Ang order mo ay suportado ng Shop Promise. Dahil ito ay dumating nang huli, mag-claim ng {{amount}} sa Shop Cash.",
         "pickup_address_map_link_accessibility_label": "Tingnan ang lokasyon ng pickup sa {{address}} sa isang mapa (magbubukas sa bagong window)",
         "pickup_location_label": "Lugar ng pagkuha:",
-        "predicted_by_shop": "Inihula ng Shop"
+        "predicted_by_shop": "Inihula ng Shop",
+        "fulfillment_tracking": {
+          "attempted_delivery_banner": "I-check ang {{carrier}} para sa impormasyon ng pagpapadala o para mag-iskedyul ng bagong delivery",
+          "buyer_action_required_banner": "I-check ang {{carrier}} o makipag-ugnayan sa amin para sa karagdagang impormasyon",
+          "carrier_banner_link_accessibility_label": "Tingnan ang mga detalye ng pag-track ng {{carrier}} (magbubukas ng bagong window)",
+          "carrier_link_accessibility_label": "I-track ang {{carrier}} shipment (magbubukas ng bagong window)",
+          "completed_gift_card": "Nakumpleto noong {{date}}",
+          "delivered_on": "Naipadala {{date}}",
+          "delivery_progress_heading": "Progress ng paghahatid",
+          "gift_card_sent_to_recipient": {
+            "one": "Naipadala na ang gift card sa tatanggap.",
+            "other": "Naipadala na ang mga gift card sa mga tatanggap nito."
+          },
+          "in_store_purchase": "Pagbili sa tindahan",
+          "picked_up_on": "Kinuha noong {{date}}",
+          "pickup_details_banner": "Suriin ang {{carrier}} para sa mga detalye ng pickup",
+          "pickup_details_link_accessibility_label": "Tingnan ang mga detalye ng pickup ng {{carrier}} (magbubukas sa bagong window)",
+          "status": {
+            "attempted_delivery": "Sinubukang i-deliver",
+            "buyer_action_required": "Kinakailangan ng aksyon",
+            "carrier_picked_up": "Kinuha ng carrier",
+            "confirmed": "Kinumpirma",
+            "delayed": "Naantala",
+            "delivered": "Naihatid",
+            "exception": "Isyu sa paghahatid",
+            "failure": "Isyu sa paghahatid",
+            "in_transit": "Papunta na",
+            "label_printed": "Nakalimbag ang label",
+            "label_purchased": "Label na binili",
+            "out_for_delivery": "Ihahatid na",
+            "picked_up": "Nakuha",
+            "ready_for_pickup": "Handa na para sa pickup ng courier",
+            "ready_for_recipient_pickup": "Handa na para kunin",
+            "returning_to_sender": "Ibabalik sa nagpadala"
+          },
+          "delivery_progress_for_shipment_accessibility_label": "Progreso ng pagpapadala para sa shipment {{position}}",
+          "tracking_link_accessibility_label": "I-track ang shipment na {{carrier}} na {{trackingNumber}} (magbubukas sa bagong window)",
+          "unknown_carrier_banner": "Makipag-ugnayan sa amin para sa karagdagang impormasyon"
+        },
+        "attempted_delivery_label": "Sinubukang i-deliver",
+        "attempted_to_deliver_label": "Sinubukang ihatid",
+        "preparing_for_shipping_label": "Inihahanda na para i-ship",
+        "ready_for_pickup_label": "Handa na para kunin",
+        "ready_for_pickup_description": "Handa na para sa pickup ang mga item na ito. Pakidala ang iyong order confirmation pagdating mo para kunin ang iyong order.",
+        "picked_up_label": "Nakuha",
+        "canceled_label": "Kinansela",
+        "canceled_title": "Kinansela na ang iyong order",
+        "come_back": "Bumalik sa pahinang ito para sa mga update sa status ng iyong padala.",
+        "company_tracking_number": "{{company}} tracking number:",
+        "confirmed_label": "Kinumpirma",
+        "confirmed_title": "Kumpirmado na ang iyong order",
+        "confirmed_description_pickup": "Inihahanda namin ang mga bagay na ito para sa pickup.",
+        "confirmed_description_shipping": "Inihahanda namin ang mga bagay na ito para sa pagpapadala.",
+        "confirmed_description_digital": "Makakatanggap ka ng email kapag handa na ang iyong order.",
+        "confirmed_description_gift_card_text": "Makakatanggap ka ng text kapag handa na ang iyong order.",
+        "complete_label": "Tapos na",
+        "delivered_label": "Naihatid",
+        "delivered_description_gift_card": {
+          "one": "Ang gift card ay ipinadala sa pamamagitan ng email.",
+          "other": "Ipinadala ang mga gift card sa pamamagitan ng email."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "Naipadala na ang gift card sa pamamagitan ng text.",
+          "other": "Ipinadala ang mga gift card sa pamamagitan ng text."
+        },
+        "gift_card_resend_button": {
+          "one": "Ipadala muli ang gift card",
+          "other": "Ipadala muli ang mga gift card"
+        },
+        "gift_resend_success": {
+          "one": "Ipinadala muli ang gift card",
+          "other": "Ipinadala muli ang mga gift card"
+        },
+        "gift_resend_failure": {
+          "one": "Nagkaroon ng problema sa muling pagpapadala ng iyong gift card. Subukan muli o makipag-ugnayan sa amin.",
+          "other": "Nagkaroon ng problema sa muling pagpapadala ng iyong mga gift card. Subukan muli o makipag-ugnayan sa amin."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "Ang gift card ay ipapadala sa isang hiwalay na email.",
+          "other": "Ang bawat gift card ay ipapadala sa magkakahiwalay na email."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Ipapadala ang gift card sa magkahiwalay na text.",
+          "other": "Ang bawat gift card ay ipapadala sa magkakahiwalay na text."
+        },
+        "status_timestamp": "Na-update noong {{date}}",
+        "estimated_delivery": "Inaasahan {{date}}",
+        "was_expected_by": "Inaasahan sa {{date}}"
       },
       "status_mark_as_delivered": "Markahan bilang naipadala",
       "fulfillment_status_title": "Katayuan ng pagkumpleto: {{status}}",
@@ -4470,7 +4557,62 @@
       "manage": "Pamahalaan",
       "manage_accessiblity_label": "Pamahalaan ang order {{orderId}}",
       "group_title_label": "Bahagi ng: {{groupTitle}}",
-      "group_title_label_with_parent": "Para sa: {{groupTitle}}"
+      "group_title_label_with_parent": "Para sa: {{groupTitle}}",
+      "order_list": {
+        "payment_status": {
+          "list_view": {
+            "pay_to_confirm": "Magbayad para kumpirmahin",
+            "payment_not_due": "Hindi pa takdang panahon"
+          }
+        },
+        "sort_by": "Ayusin ayon sa: {{option}}",
+        "sort_options_accessibility_label": "Mga opsyon sa pag-uri-uri para sa mga nakumpirmang order",
+        "sort_hide_options_accessibility_label": "Itago ang mga opsyon sa pag-aayos para sa mga kumpirmadong order.",
+        "sort_show_options_accessibility_label": "Ipakita ang mga opsyon sa pag-aayos para sa mga kumpirmadong order.",
+        "sort_currently_sorted_by_accessibility_label": "Kasalukuyang nakaayos ayon sa: {{option}}",
+        "sort": {
+          "date": {
+            "newest": "Pinakabago hanggang pinakaluma",
+            "oldest": "Pinakaluma hanggang pinakabago"
+          },
+          "location": {
+            "ascending": "Lokasyon (A-Z)",
+            "descending": "Lokasyon (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Numero ng order (mababa hanggang mataas)",
+            "descending": "Numero ng order (mula sa pinakamataas hanggang sa pinakamababa)"
+          },
+          "order_total": {
+            "ascending": "Kabuuan ng order (mababa hanggang mataas)",
+            "descending": "Kabuuan ng order (mula sa pinakamataas hanggang pinakamababa)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Lahat ng lokasyon",
+          "current_location": "Kasalukuyang lokasyon",
+          "switch_view": "Palitan ang view"
+        },
+        "filter": {
+          "clear_section": "Linisin ang seksyon",
+          "apply": "Mag-apply",
+          "date_section_accessibility_label": "Salain ayon sa {{sectionTitle}}",
+          "date": {
+            "start_date": "Petsa ng pagsisimula",
+            "end_date": "Petsa ng pagtatapos",
+            "title": "Petsa ng order",
+            "today": "Ngayong araw",
+            "last_7_days": "Huling 7 araw",
+            "last_30_days": "Nakaraang 30 araw",
+            "last_90_days": "Nakaraang 90 araw",
+            "last_365_days": "Nakaraang 12 buwan",
+            "custom": "Pasadya"
+          }
+        },
+        "show_order_actions_accessibility_label": "Ipakita ang mga aksyon para sa order na {{name}}",
+        "view_order": "Tingnan ang order",
+        "view_order_accessibility_label": "Tingnan ang order {{orderName}}"
+      }
     }
   },
   "general": {
