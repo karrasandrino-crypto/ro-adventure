@@ -1634,7 +1634,23 @@
         "product_disclosures": {
           "title": "Mga pagbubunyag ng produkto"
         },
-        "group_title_label": "Bahagi ng \"%{group_title}\""
+        "group_title_label": "Bahagi ng \"%{group_title}\"",
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "Kumpirmahin ang kabuuang halaga sa CNY sa WeChat app",
+            "checkout_disclosure_with_alternative_payment_currency": "Ipoproseso ng %{shop_name} ang bayad na ito bilang %{amount_due} %{processing_currency}, na iko-convert ng WeChat sa CNY",
+            "checkout_disclosure_charged_in_cny": "Ipoproproseso ng %{shop_name} ang bayad na ito bilang %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Tingnan ang kabuuang halaga ng CNY sa WeChat"
+          },
+          "alipay": {
+            "checkout_disclosure": "Kumpirmahin ang kabuuang CNY sa Alipay app",
+            "checkout_disclosure_with_alternative_payment_currency": "Ipino-proseso ng %{shop_name} ang bayad na ito bilang %{amount_due} %{processing_currency}, na iko-convert ng Alipay sa CNY",
+            "checkout_disclosure_charged_in_cny": "Ipoproproseso ng %{shop_name} ang bayad na ito bilang %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "Tingnan ang kabuuang CNY sa Alipay"
+          }
+        },
+        "pay_merchant_label": "Magbayad sa %{merchant_name}",
+        "discount_applies_to_subscription_items_only": "Ang diskwentong ito ay para lamang sa mga naka-subscribe na item."
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -2512,7 +2528,76 @@
           "free_for_first_n_order": {
             "one": "Para sa unang order",
             "other": "Para sa unang %{count} na order"
-          }
+          },
+          "free_shipping_cycles": {
+            "one": "Libreng shipping para sa %{count} na delivery pa",
+            "other": "Libreng shipping para sa susunod na %{count} na delivery"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Libreng shipping para sa %{count} na delivery",
+            "other": "Libreng shipping para sa %{count} na delivery"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Libreng shipping para sa %{count} pang delivery, pagkatapos ay %{recurring_order_shipping_price}",
+            "other": "Libreng shipping para sa %{count} pang delivery, pagkatapos ay %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Libreng shipping para sa %{count} na delivery, pagkatapos ay %{recurring_order_shipping_price}",
+            "other": "Libreng shipping para sa %{count} na delivery, pagkatapos ay %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} pang delivery para sa %{shipping_price}",
+            "other": "%{count} pang delivery sa halagang %{shipping_price} bawat isa"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} na delivery sa halagang %{shipping_price}",
+            "other": "%{count} pang delivery sa halagang %{shipping_price} bawat isa"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Libreng shipping para sa unang %{cycle}, na susundan ng %{recurring_order_shipping_price}",
+            "other": "Libreng shipping para sa unang %{cycle}, na susundan ng %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} para sa %{count} pang delivery",
+            "other": "%{shipping_price} para sa %{count} pang delivery (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} para sa %{count} na delivery",
+            "other": "%{shipping_price} para sa %{count} na delivery (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} para sa %{count} pang delivery, na susundan ng %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} para sa %{count} pang deliveries (%{per_delivery_cost}), na susundan ng %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} para sa %{count} na delivery, na susundan ng %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} para sa %{count} na delivery (%{per_delivery_cost}), na susundan ng %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "Libreng shipping %{delivery_frequency}",
+          "prepaid_delivery_frequency": {
+            "one": "para sa %{count} na delivery",
+            "other": "para sa %{count} na mga delivery"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "araw-araw",
+              "other": "tuwing %{count} na araw"
+            },
+            "week": {
+              "one": "linggo-linggo",
+              "other": "tuwing %{count} na linggo"
+            },
+            "month": {
+              "one": "kada buwan",
+              "other": "tuwing %{count} na buwan"
+            },
+            "year": {
+              "one": "taon-taon",
+              "other": "tuwing %{count} na taon"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} bawat delivery",
+          "prepaid_shipping_price_label": "%{shipping_price} bawat delivery x %{delivery_interval_count}"
         },
         "one_time_purchase_shipping": "Isang beses na pagpapadala",
         "duties_and_taxes_title": "Mga tungkulin at buwis",
@@ -2603,7 +2688,76 @@
         "split_shipping_option_custom": "Pasadya",
         "add_shipping_address": "Idagdag ang shipping address",
         "add_new_delivery_address": "Magdagdag ng bagong address ng paghahatid",
-        "choose_new_address": "Pumili ng bagong address"
+        "choose_new_address": "Pumili ng bagong address",
+        "title": "Pagpapadala",
+        "delivery_title": "Paghahatid",
+        "shipping_method_title": "Paraan ng pagpapadala",
+        "shipping_method_rollup_accessibility_label": "Mga opsyon sa paraan ng pagpapadala",
+        "shipping_method_one_time_purchase_group_title": "Isang beses na pagbili",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Unang kargamento",
+          "other": "Mga unang kargamento"
+        },
+        "shipping_method_subscription_group_title": "Subskripsyon",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Pabalik-balik na kargamento",
+          "other": "Paulit-ulit na mga padala"
+        },
+        "subscription_shipping": "Pagpapadala ng subscription",
+        "subscription_local_delivery": "Lokal na paghahatid ng suskrisyon",
+        "subscription_pickup": "Pagkuha ng subscription",
+        "waiting_on_rate_notice": "Kinukuha ang mga available na shipping rate…",
+        "waiting_on_pickup_location_notice": "Kinukuha ang mga available na lokasyon para sa pick up…",
+        "no_rates_for_cart_or_destination_notice": "Walang magagamit na paraan ng pagpapadala para sa iyong cart o address",
+        "no_pickup_location_notice": "Hindi bababa sa isa sa iyong mga produkto ang hindi maaaring kunin (pick up).",
+        "no_rates_for_country_notice": "Walang nahanap na shipping rate para sa address na ito.",
+        "no_rates_contact_notice": "Makipag-ugnayan sa amin para sa karagdagang impormasyon",
+        "free_rate_label": "Libre",
+        "cheapest_rate_label": "Pinakamura",
+        "estimated_delivery_date": {
+          "one": "%{count} araw ng negosyo",
+          "other": "%{count} na araw ng negosyo"
+        },
+        "estimated_delivery_date_range": "%{minimum} hanggang %{maximum} na araw ng negosyo",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "estimated_delivery_time": "Tinatayang pagdating %{time}",
+        "estimated_delivery_time_range": "Inaasahang petsa ng pagdating %{min_time}–%{max_time}",
+        "delivery_today": "Same-day delivery %{time}",
+        "delivery_tomorrow": "Paghahatid sa susunod na araw %{time}",
+        "two_day_delivery": "2-araw na delivery %{time}",
+        "delivery": "Paghahatid %{time}",
+        "delivery_to": "Ipadala sa",
+        "arrives_time": "Dumarating sa %{time}",
+        "arrives_time_range": "Dumarating sa %{min_time}–%{max_time}",
+        "estimated_time": "Tinatayang %{time}",
+        "estimated_time_range": "Tinatayang %{min_time}–%{max_time}",
+        "default_description": "Ipinapadala sa loob ng 1 araw ng negosyo",
+        "unbranded_default_description": "Handa nang ipadala",
+        "unbranded_description_same_day": "Ipinapadala sa loob ng parehong araw ng negosyo",
+        "unbranded_description_with_fulfillment_days": {
+          "one": "Ipadadala sa susunod na araw ng negosyo",
+          "other": "Ipadadala sa loob ng %{count} na araw ng negosyo"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Ipadadala sa loob ng %{count} linggo",
+          "other": "Ipapadala sa loob ng %{count} na linggo"
+        },
+        "shipping_line_phone_label": "Numero ng mobile phone (kinakailangan)",
+        "shipping_line_phone": "Maaaring gamitin ng iyong courier ang numerong ito para tawagan ka.",
+        "shipping_line_delivery_phone_label": "Numero ng mobile phone",
+        "shipping_line_delivery_phone": "Maaari kang makatanggap ng mga update tungkol sa iyong delivery.",
+        "optional_shipping_line_delivery_instructions_label": "Mga tagubilin sa pagdedeliber (opsyonal)",
+        "shipping_line_delivery_instructions": "Ilagay ang mga kinakailangang impormasyon gaya ng mga door code o instruksyon sa pag-drop off.",
+        "other_method": {
+          "zero": "Walang ibang paraang magagamit",
+          "one": "%{count} pang ibang paraan na available sa",
+          "other": "%{count} iba pang paraan na available simula sa"
+        },
+        "shipping_rate_discounted_amount": "Dati: %{original_amount}. Ngayon: %{amount}",
+        "local_delivery": "Lokal na paghahatid",
+        "prime_not_available": {
+          "default": "Hindi available ang Prime delivery para sa iyong order. Na-update na ang iyong mga shipping option."
+        }
       },
       "localized_fields": {
         "additional_information": {
