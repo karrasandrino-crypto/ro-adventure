@@ -2870,7 +2870,21 @@
       "cancel": "Kanselahin",
       "edit": "I-edit",
       "delete": "Burahin",
-      "delete_confirm": "Sigurado ka bang nais mong burahin ang address na ito?"
+      "delete_confirm": "Sigurado ka bang nais mong burahin ang address na ito?",
+      "title": "Mga address",
+      "default": "Default",
+      "add_new": "Magdagdag ng bagong address",
+      "edit_address": "I-edit ang address",
+      "first_name": "Pangalan",
+      "last_name": "Apelyido",
+      "company": "Kumpanya",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "Lungsod",
+      "country": "Bansa/rehiyon",
+      "province": "Lalawigan",
+      "zip": "Postal/ZIP code",
+      "phone": "Telepono"
     },
     "log_in": "Mag-log in",
     "log_out": "Mag-log out",
@@ -2942,6 +2956,21 @@
       "password": "Password",
       "password_confirm": "I-kumpirma ang password",
       "submit": "I-reset ang password"
+    },
+    "account": {
+      "title": "Account",
+      "details": "Mga detalye ng account",
+      "view_addresses": "Tingnan ang mga address",
+      "return": "Bumalik sa mga detalye ng account"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "I-activate ang account",
+      "subtext": "Gumawa ng iyong password para ma-activate ang iyong account.",
+      "password": "Password",
+      "password_confirm": "I-kumpirma ang password",
+      "submit": "I-activate ang account",
+      "cancel": "Tanggihan ang paanyaya"
     }
   },
   "gift_cards": {
@@ -3760,8 +3789,117 @@
         "refresh": "I-refresh"
       },
       "price": {
-        "from_price_html": "Mula {{ price }}"
-      }
+        "from_price_html": "Mula {{ price }}",
+        "regular_price": "Regular na presyo",
+        "sale_price": "Presyong benta",
+        "unit_price": "Presyong yunit"
+      },
+      "share": "Ibahagi ang produktong ito",
+      "sold_out": "Mag-pre-order na ngayon - Delivery sa Enero 2027",
+      "unavailable": "Hindi available",
+      "vendor": "Tagapagtustos",
+      "value_unavailable": "{{ option_value }} - Hindi Available",
+      "variant_sold_out_or_unavailable": "Ang variant ay sold out o hindi available",
+      "video_exit_message": "{{ title }} ay nagbubukas ng buong screen na video sa parehong window.",
+      "view_full_details": "Tingnan ang buong detalye",
+      "xr_button": "Tingnan sa iyong espasyo",
+      "xr_button_label": "Tingnan sa iyong espasyo, nagkakarga ng item sa augmented reality window",
+      "taxes_included": "Kasama na ang buwis.",
+      "duties_included": "Kasama ang mga tungkulin.",
+      "duties_and_taxes_included": "Kasama na ang mga buwis at bayarin.",
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">Pagpapadala</a> kinakalkula sa checkout."
+    },
+    "modal": {
+      "label": "Gallery ng media"
+    },
+    "facets": {
+      "filter_and_operator_subtitle": "Itugma ang lahat",
+      "apply": "Mag-apply",
+      "clear": "Malinaw",
+      "clear_all": "Alisin lahat",
+      "from": "Mula sa",
+      "filter_and_sort": "Salain at ayusin",
+      "filter_by_label": "Salain:",
+      "filter_button": "Salain",
+      "filters_selected": {
+        "one": "{{ count }} napili",
+        "other": "{{ count }} napili"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} napiling filter)",
+      "show_more": "Ipakita ang higit pa",
+      "show_less": "Ipakita nang mas kaunti",
+      "max_price": "Ang pinakamataas na presyo ay {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} sa {{ count }} produkto",
+        "other": "{{ product_count }} sa {{ count }} produkto"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} produkto",
+        "other": "{{ count }} produkto"
+      },
+      "reset": "I-reset",
+      "sort_button": "I-sort",
+      "sort_by_label": "I-sort ayon sa:",
+      "to": "Para sa",
+      "clear_filter": "Alisin ang filter"
     }
+  },
+  "templates": {
+    "search": {
+      "no_results": "Walang nakitang resulta para sa “{{ terms }}.” Pakisuri ang spelling o gumamit ng ibang salita o parirala.",
+      "page": "Pahina",
+      "products": "Mga Produkto",
+      "results_pages_with_count": {
+        "one": "{{ count }} pahina",
+        "other": "{{ count }} pahina"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suhestiyon",
+        "other": "{{ count }} suhestiyon"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} produkto",
+        "other": "{{ count }} produkto"
+      },
+      "results_with_count": {
+        "one": "{{ count }} resulta",
+        "other": "{{ count }} resulta"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} resulta ang natagpuan para sa “{{ terms }}”",
+        "other": "{{ count }} na resulta ang natagpuan para sa “{{ terms }}”"
+      },
+      "title": "Mga resulta ng paghahanap",
+      "search_for": "Maghanap ng “{{ terms }}”",
+      "suggestions": "Mga mungkahi",
+      "pages": "Mga Pahina"
+    },
+    "cart": {
+      "cart": "Cart"
+    },
+    "contact": {
+      "form": {
+        "title": "Form ng pakikipag-ugnayan",
+        "name": "Pangalan",
+        "email": "Email",
+        "phone": "Numero ng telepono",
+        "comment": "Mag-komento",
+        "send": "Ipadala",
+        "post_success": "Salamat sa pakikipag-ugnayan sa amin. Babalikan ka namin sa lalong madaling panahon.",
+        "error_heading": "Paki-adjust ang sumusunod:"
+      }
+    },
+    "404": {
+      "title": "Hindi nahanap ang pahina"
+    }
+  },
+  "localization": {
+    "country_label": "Bansa/rehiyon",
+    "language_label": "Wika",
+    "update_language": "I-update ang wika",
+    "update_country": "I-update ang bansa/rehiyon",
+    "search": "Maghanap",
+    "popular_countries_regions": "Mga sikat na bansa/rehiyon",
+    "country_results_count": "{{ count }} bansa/rehiyon ang natagpuan"
   }
 }
