@@ -632,7 +632,9 @@
         "subscription_policy": "Mga pagkansela",
         "purchase_options_policy": "Patakaran sa mga opsyon sa pagbili",
         "contact_information": "Makipag-ugnayan",
-        "purchase_options_cancellation_policy": "Mga pagkansela"
+        "purchase_options_cancellation_policy": "Mga pagkansela",
+        "cookie_preferences": "Kukis",
+        "terms_and_policies": "Mga tuntunin at patakaran"
       },
       "local_pickup": {
         "pickup_unavailable_banner_body": {
@@ -944,7 +946,17 @@
         "sign_in_link_label": "Mag-sign in",
         "sign_out_link_label": "Mag-sign out",
         "save_my_information_label": "I-save ang impormasyong ito para sa susunod.",
-        "invalid_address": "Hindi wasto ang napiling address. %{update_address_link} o pumili ng ibang address."
+        "invalid_address": "Hindi wasto ang napiling address. %{update_address_link} o pumili ng ibang address.",
+        "incomplete_address": "Ang napiling address ay hindi kumpleto. %{update_address_link} o pumili ng ibang address.",
+        "rollup_label": "Account",
+        "rollup_accessibility_label": "Mga opsyon sa account",
+        "invalid_shipping_method_summary": "Pumili ng wastong shipping address upang makita ang mga available na paraan ng pagpapadala",
+        "saved_address_option_description": {
+          "one": "Mayroon kang {{count}} naka-save na address.",
+          "other": "Mayroon kang {{count}} nai-save na adres."
+        },
+        "saved_address_option_link": "Gamitin ang naka-save na address",
+        "saved_address_modal_title": "Gamitin ang aking naka-save na address"
       },
       "order_summary": {
         "total_label": "Kabuuan",
@@ -1188,7 +1200,12 @@
         "price_before_discount_aria_text": "Orihinal na presyo",
         "price_after_discount_aria_text": "May diskwentong presyo",
         "discount_code_aria_text": "Discount code",
-        "total_savings": "Kabuuang ipon"
+        "total_savings": "Kabuuang ipon",
+        "title": "Buod ng order",
+        "product_disclosures": {
+          "title": "Mga pagbubunyag ng produkto"
+        },
+        "group_title_label": "Bahagi ng \"%{group_title}\""
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -1353,6 +1370,329 @@
       },
       "address_management": {
         "saved_with_store": "Naka-save sa tindahang ito"
+      },
+      "remote_policies": {
+        "unavailable_policy": "Walang ibinigay na %{policy_name} para sa tindahang ito. Para sa karagdagang impormasyon, direktang makipag-ugnayan sa %{shop_name}."
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Mga Tuntunin at Kundisyon ng Merchant of Record",
+        "privacy_policy": "Patakaran sa Privacy ng Merchant of Record"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Suriin ang iyong impormasyon sa pakikipag-ugnayan bago tapusin ang pagbabayad"
+      },
+      "notifications": {
+        "title": "Mga Notipikasyon"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Halagang dapat bayaran para sa order na %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Idinagdag",
+            "other": "Nagdagdag ng %{count}"
+          },
+          "removed": "Inalis",
+          "subtracted": "Inalis ang %{count}",
+          "returned": "Ibinalik ang %{count}",
+          "return_line_item_removed": "Inalis ang %{count} mula sa return"
+        },
+        "additional_payment_requested": "Kailangan ang bayad na %{total_outstanding}",
+        "checkout_review_and_pay": "Na-update ang iyong order na %{order_name}. Suriin ang mga pagbabagong ito, pagkatapos ay magbayad upang kumpirmahin ang iyong order.",
+        "order_updated_on": "Ang iyong order ay na-update noong %{last_edited_at}.",
+        "order_review_and_pay": "Na-update ang iyong order. Suriin at magbayad para kumpirmahin ang iyong order.",
+        "pay_now": "Magbayad na"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Sisingilin ang iyong credit card ng %{amount}",
+        "payment_total_label": "Kabuuang bayad",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Palitan sa %{currency_name}",
+        "card_provider_fx_charges_warning": "Maaaring maningil ng bayad ang iyong card provider para sa mga transaksyong %{currency_code}.",
+        "currency_not_supported_by_shop": "Hindi na available ang napili mong currency. Ang lahat ng presyo ay nasa %{currency_code} na ngayon."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Na-update ang iyong cart batay sa bansa ng iyong pagpapadala.",
+        "cart_and_currency_updated_based_on_country": "Na-update na ang iyong cart at currency base sa iyong bansang pagpapadalahan.",
+        "currency_updated_for_country": "Na-update na ang currency para sa %{country}"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Ang iyong bansa/rehiyon ay na-update na. Ilagay ang iyong shipping address upang magpatuloy sa checkout."
+      },
+      "tips": {
+        "title": "Magdagdag ng tip",
+        "description": "Ipakita ang iyong suporta para sa team ng %{shop_name}",
+        "presets_description": "Pumili ng porsyento ng tip",
+        "custom_label": "Pasadyang tip",
+        "add_tip": "Magdagdag ng tip",
+        "update_tip": "Tip sa pag-update",
+        "message": "Salamat, pinapahalagahan namin ito.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Wala",
+        "not_available_with_spi": "Hindi available sa Shop Pay Installments"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Bumili ng %{product_name}",
+          "one": "Bilhin ang %{product_name} at %{count} pang item",
+          "other": "Bilhin ang %{product_name} at %{count} iba pang item"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "araw",
+            "other": "%{count} na araw"
+          },
+          "week": {
+            "one": "linggo",
+            "other": "%{count} na linggo"
+          },
+          "month": {
+            "one": "buwan",
+            "other": "%{count} buwan"
+          },
+          "year": {
+            "one": "taon",
+            "other": "%{count} na taon"
+          }
+        },
+        "recurring_totals": "%{total_price} tuwing %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Unang bayad %{total_price_with_discount}, pagkatapos ay %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Unang bayad %{total_price}",
+            "other": "Unang %{count} na bayad na %{total_price} bawat isa"
+          },
+          "following_cycles": ", pagkatapos ay %{total_price} kada %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", pagkatapos ay %{count} na pagbabayad sa halagang %{total_price}",
+            "other": ", pagkatapos ay %{count} na bayad sa halagang %{total_price} bawat isa"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Mga paraan ng pagbabayad",
+        "title": "Mga paraan ng pagbabayad",
+        "update_card_button_label": "I-update ang card",
+        "delete_customer_mandate": {
+          "generic_error": "Nagkaroon ng problema sa pagproseso ng iyong kahilingan.",
+          "success_message": "Matagumpay nang naalis ang iyong paraan ng pagbabayad."
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Masyado nang maraming pagsubok",
+          "description": "Subukan muli pagkalipas ng ilang minuto"
+        },
+        "line_to_check_out": "Nasa pila ka para magbayad",
+        "cart_summary_heading": "Ang iyong cart",
+        "merchandise": {
+          "available": "Magagamit",
+          "sold_out": "Ubós na"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Ang bahagi ng iyong cart ay sold out na at hindi na maaaring bilhin sa checkout.",
+          "sold_out": {
+            "heading": "Naubos na ang laman ng iyong cart",
+            "storefront_body": "Bumalik ka sa tindahan para magpatuloy sa pamimili",
+            "no_storefront_body": "Ikinalulungkot namin, ngunit ang item na nais mong bilhin ay wala na sa stock.",
+            "link": "Balik sa tindahan"
+          }
+        },
+        "title": "Pila",
+        "time_to_checkout_title": "Oras na para mag-check out - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Kinakalkula ang tinantyang oras ng paghihintay",
+          "less_than_one": "Inaasahang oras ng paghihintay: Wala pang isang minuto",
+          "one": "Estimated wait time: {{count}} minuto",
+          "other": "Tinatayang oras ng paghihintay: {{count}} minuto"
+        },
+        "last_checked": "(Huling sinuri: {{time}})",
+        "footer": {
+          "heading": "Huwag i-refresh ang pahinang ito, kusa itong mag-a-update.",
+          "body": "Ang mga item sa iyong cart ay hindi nakareserba hangga't hindi mo natatapos ang checkout."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Nagkaroon ng problema sa pagproseso ng iyong request. Makipag-ugnayan sa may-ari ng tindahan."
+      },
+      "no_address_location": {
+        "title": "Lokasyon na walang address",
+        "header": "Wala kang shipping address para sa lokasyong ito.",
+        "alt_header": "Kulang na shipping address",
+        "message": "Makipag-ugnayan sa amin upang magdagdag ng address para sa lokasyong ito para makumpleto ang checkout.",
+        "email_us_button_label": "Mag-email sa amin"
+      },
+      "shop_wallet": {
+        "title": "Shop Pay wallet",
+        "description": "Piliin kung ano ang gusto mong gamitin para sa pagbiling ito.",
+        "loading": "Naglo-load ang iyong Shop Pay wallet…",
+        "ready_status": "Handa na ang iyong Shop Pay wallet. Pumili ng paraan ng pagbabayad.",
+        "cancel": "Kanselahin",
+        "retry": "Subukan muli",
+        "return_to_hatch": "Bumalik sa Hatch",
+        "choose_again": "Pumili ulit",
+        "payment_method": {
+          "heading": "Paraan ng pagbabayad",
+          "expiry": "Mag-e-expire sa {{expiry}}"
+        },
+        "shipping_address": {
+          "heading": "Address sa pagpapadala"
+        }
+      },
+      "remote_merchandise_only": {
+        "title": "Tapusin ang iyong pagbili",
+        "remote_only_notice": "Ang mga item na ito ay ibinebenta at ipinapadala ng ibang mga tindahan. Mag-checkout sa bawat tindahan upang tapusin ang iyong pagbili.",
+        "return_to_store_label": "Ibalik sa tindahan",
+        "detail_item_label": {
+          "one": "{{count}} item",
+          "other": "{{count}} (na) aytem"
+        },
+        "checkout_on_shop_label": "Mag-checkout sa %{shop_name}",
+        "single_shop_transition": "Inireredirek ka namin sa %{advertiser} upang tapusin ang iyong pagbili."
+      },
+      "stock": {
+        "page_title": "Mga isyu sa imbentaryo",
+        "title": "Walang stock",
+        "items_unavailable_notice": "Ang ilang mga item ay hindi na available.",
+        "product_column_header": "Mga Produkto",
+        "quantity_column_header": "Dami",
+        "price_column_header": "Presyo",
+        "status_column_header": "Katayuan",
+        "removed_from_cart_notice": "Inalis sa cart",
+        "sold_out_label": "Wala na pong stock",
+        "reduced_label": "Binawasan",
+        "reduced_with_quantity_label": "%{quantity_available} na lamang ang natitira",
+        "remove_from_cart_button_label": "Alisin sa cart",
+        "continue_shopping_button_label": "Magpatuloy",
+        "go_back_to_cart_button_label": "Bumalik sa aking cart",
+        "remove": "Alisin",
+        "return_to_store_label": "Ibalik sa tindahan",
+        "continue_cta_label": "Magpatuloy sa pag-checkout",
+        "item_label": {
+          "one": "{{count}} item",
+          "other": "{{count}} (na) aytem"
+        },
+        "empty_cart_label": "Walang laman ang iyong cart",
+        "quantity_update": {
+          "page_title": "Pagbabago ng dami",
+          "title": "Pagbabago ng dami",
+          "description": "Nagbago ang dami ng mga item na ito at na-update na ang mga ito sa iyong cart."
+        },
+        "unpurchasable_product": {
+          "title": "Hindi mabibiling produkto",
+          "header": "May mga item na inalis mula sa iyong cart",
+          "message": "Ang mga item na ito ay hindi magagamit para sa mga order na B2B.",
+          "status_column_header": "Hindi available"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Hindi mabibiling produkto",
+          "header": "May mga item na inalis mula sa iyong cart",
+          "message": "Hindi available ang mga item na ito.",
+          "status_column_header": "Hindi available"
+        },
+        "unfulfillable_product": {
+          "title": "Hindi available ang delivery",
+          "message": {
+            "one": "Hindi na magagamit ang %{delivery_method} para sa item na ito.",
+            "other": "Hindi na magagamit ang %{delivery_method} para sa mga item na ito."
+          },
+          "default_message": {
+            "one": "Hindi na magagamit ang napiling paraan ng paghahatid para sa item na ito.",
+            "other": "Hindi na available ang napiling paraan ng pagpapadala para sa mga item na ito."
+          }
+        },
+        "unshippable_product": {
+          "title": "Walang available na delivery",
+          "header": {
+            "one": "Walang delivery para sa %{count} na item",
+            "other": "Walang available na delivery para sa %{count} na item"
+          },
+          "message": {
+            "one": "Aalisin ang item na ito sa iyong cart dahil walang available na paraan ng pag-deliver para sa iyong address.",
+            "other": "Aalisin ang mga item na ito sa iyong cart dahil walang available na paraan ng pagpapadala para sa iyong address."
+          },
+          "status_column_header": "Walang delivery"
+        },
+        "price_update": {
+          "title": "Pagbabago sa presyo",
+          "description": "Nagbago na ang presyo ng mga item na ito at na-update na sa iyong cart.",
+          "updated_price": "Binagong presyo"
+        },
+        "price_and_quantity_update": {
+          "title": "Pag-update ng presyo at dami",
+          "description": "Nagbago na ang presyo at dami ng mga item na ito at na-update na sa iyong cart."
+        },
+        "out_of_stock": {
+          "description": "Hindi na available ang mga item na ito at aalisin sa iyong cart.",
+          "items_unavailable": "Hindi na available ang ilang item at aalisin sa iyong cart.",
+          "missing_items": {
+            "title": {
+              "one": "{{count}} item na hindi na available",
+              "other": "{{count}} na item ang hindi na available"
+            },
+            "some_available_notice": {
+              "one": "Ang mga natitirang item ay available pa rin para sa checkout. Ang item na hindi available ay aalisin sa cart.",
+              "other": "Ang mga natitirang item ay available pa rin para i-checkout. Tatanggalin sa cart ang mga item na hindi na available."
+            },
+            "none_available_notice": {
+              "one": "Hindi na available ang item na ito at inalis na sa iyong cart.",
+              "other": "Ang mga item na ito ay hindi na available at inalis na sa iyong cart."
+            },
+            "mixed_issues_title": "Ang ilang item ay wala na."
+          }
+        },
+        "out_of_stock_in_context_label": "Ang produktong ito ay hindi available sa iyong bansa/rehiyon."
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Produktong hindi magagamit",
+          "other": "Mga produktong hindi available"
+        },
+        "products_not_available": {
+          "one": "Ang produktong ito ay aalisin sa iyong cart dahil hindi ito available sa iyong bansa/rehiyon.",
+          "other": "Aalisin ang mga produktong ito sa iyong cart dahil hindi ang mga ito available sa iyong bansa/rehiyon."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Ang produktong ito ay hindi available sa iyong bansa/rehiyon.",
+          "other": "Ang mga produktong ito ay hindi available sa iyong bansa/rehiyon."
+        },
+        "unavailable_label": "Hindi available"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Ang produktong ito ay hindi maaaring i-deliver sa %{location_name}.",
+          "some_products_other": "Ang mga produktong ito ay hindi maaaring i-deliver sa %{location_name}.",
+          "all_products_one": "Ang produkto sa iyong cart ay hindi maaaring i-deliver sa %{location_name}.",
+          "all_products_other": "Ang mga produkto sa iyong cart ay hindi maaaring i-deliver sa %{location_name}."
+        },
+        "missing_country_fallback": "iyong bansa",
+        "indeterminate_location_fallback": "iyong lokasyon",
+        "cart_updated": "Na-update na ang iyong cart.",
+        "change_address_only": "Baguhin ang address ng paghahatid para magpatuloy.",
+        "change_address_or_remove": "Baguhin ang address ng paghahatid o %{remove_action}.",
+        "remove_items_action": {
+          "one": "alisin ang hindi available na item",
+          "other": "alisin ang mga hindi available na item"
+        },
+        "empty_cart_action": "linisin ang cart at bumalik sa tindahan",
+        "unavailable_line_item": "%{product_name} / %{variant_label}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Walang delivery para sa %{count} na item",
+            "other": "Walang available na delivery para sa %{count} na item"
+          },
+          "message": {
+            "one": "Aalisin ang item na ito sa iyong cart dahil walang available na paraan ng pag-deliver para sa iyong address.",
+            "other": "Aalisin ang mga item na ito sa iyong cart dahil walang available na paraan ng pagpapadala para sa iyong address."
+          },
+          "label": "Walang delivery"
+        }
       }
     },
     "pagination": {
