@@ -694,8 +694,44 @@
             "billing_zone": "Ilagay ang wastong estado / probinsya ng billing address",
             "emirate": "Maglagay ng wastong emirate",
             "postal_code": "Maglagay ng valid na ZIP / postal code",
-            "phone": "Maglagay ng wastong numero ng telepono"
-          }
+            "phone": "Maglagay ng wastong numero ng telepono",
+            "billing_phone": "Maglagay ng valid na numero ng telepono para sa billing address",
+            "reduction_code": "Maglagay ng valid na discount code o gift card",
+            "billing_must_match_shipping": "Dapat tumugma sa shipping address",
+            "billing_zip": "Maglagay ng valid na ZIP / postal code ng billing address"
+          },
+          "missing": {
+            "first_name": "Ilagay ang unang pangalan",
+            "billing_first_name": "Ilagay ang pangalan sa billing address",
+            "last_name": "Ilagay ang apelyido",
+            "address1": "Maglagay ng address",
+            "billing_address1": "Maglagay ng billing address",
+            "address2": "Pumasok sa isang apartment, suite, atbp.",
+            "billing_address2": "Ilagay ang billing address (apartment, suite, atbp.)",
+            "city": "Maglagay ng lungsod",
+            "billing_city": "Ilagay ang lungsod ng billing address",
+            "province": "Pumili ng estado / lalawigan",
+            "billing_province": "Pumili ng estado / lalawigan para sa billing address",
+            "country": "Pumili ng bansa/rehiyon",
+            "zip": "Ilagay ang ZIP / postal code",
+            "billing_zip": "Ipasok ang ZIP / postal code ng billing address",
+            "phone": "Ilagay ang numero ng telepono",
+            "contact_info": "Ilagay ang impormasyon sa pakikipag-ugnayan"
+          },
+          "formatting": {
+            "name_contains_emojis": "Alisin ang emoji sa iyong pangalan",
+            "postal_code_contains_emoji": "Alisin ang emoji sa iyong postal code",
+            "first_name_too_long": "Masyadong marami ang letra sa pangalan.",
+            "last_name_too_long": "Masyadong marami ang letra sa apelyido",
+            "address_too_long": "Masyadong mahaba ang address line."
+          },
+          "select_different_shipping_address_to_resolve_errors": "Hindi wasto ang iyong shipping address. Pumili ng ibang address o gumamit ng bago.",
+          "processing_error_checkout_as_guest": "May problema sa pagproseso ng iyong bayad. Subukan muli o {{checkout_as_guest_link}}."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "Magpatuloy sa pagbili sa window ng {{walletName}}",
+          "and_return_to_checkout": "at bumalik sa Checkout",
+          "cancel": "Kanselahin"
         }
       },
       "contact": {
@@ -927,6 +963,116 @@
         },
         "alternative_payment_currency_total": "Siningil ng %{amount_due}",
         "alternative_payment_currency_chinese_yuan": "Kumpirmahin ang kabuuang halaga ng CNY sa %{wallet} app."
+      },
+      "note": {
+        "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
+      },
+      "offsite_payment_failed": {
+        "title": "Hindi natuloy ang offsite payment",
+        "payment_not_processed_title": "Nabigo ang pagbabayad",
+        "payment_not_processed_text": "Subukan mong i-scan ulit ang QR code. Kung hindi pa rin ito gumagana, ipaalam sa aming staff at gumamit ng ibang paraan ng pagbabayad.",
+        "payment_link_expired_title": "Nag-expire na ang link ng bayad",
+        "payment_link_expired_text": "Subukan mong i-scan muli ang QR code."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Ang halaga ng gift card ay dapat higit sa 0.",
+            "gift_card_price_must_not_exceed_limit": "Ang presyo ng gift card ay hindi dapat lumampas sa %{gift_card_limit}.",
+            "subtotal_limit_reached": "Naabot na ang maximum na halaga ng mga line item.",
+            "signature_mismatch": "Hindi tugma ang lagda ng merchandise para sa linyang %{stable_id}."
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Ang checkout ay naglalaman lamang ng mga remote merchandise. Kinakailangan ang pag-redirect sa remote shop upang makumpleto ang checkout.",
+          "currency_mismatch": "Hindi maidaragdag ang item na ito sa iyong cart dahil galing ito sa isang tindahan na gumagamit ng ibang currency.",
+          "currency_mismatch_removal": "Inalis ang isang item sa iyong cart dahil galing ito sa isang tindahan na gumagamit ng ibang currency.",
+          "max_remote_shops_exceeded": "Hindi maidadagdag ang produktong ito dahil nasa maximum na ang iyong cart mula sa ibang mga tindahan."
+        }
+      },
+      "units": {
+        "milligram": "mg",
+        "kilogram": "kg",
+        "milliliter": "ML",
+        "centiliter": "cl",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "sentimetro",
+        "square_meter": "m²",
+        "ounce": "onsa",
+        "pound": "libras",
+        "fluid_ounce": "fluid ounce",
+        "pint": "pt",
+        "quart": "cute",
+        "gallon": "babae",
+        "inch": "sa",
+        "foot": "feat.",
+        "yard": "kahapon",
+        "square_foot": "piye kuwadrado",
+        "item": "aytem"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "Hindi suportado ang address para sa kasalukuyang membership.",
+        "items_split_across_locations_unsupported": "Hindi available ang Prime delivery para sa iyong order. Na-update na ang iyong mga shipping option."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Pumunta sa Online Store"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Higit pang impormasyon tungkol sa %{context}",
+        "additional_payment_methods": "Mga karagdagang paraan ng pagbabayad"
+      },
+      "too_many_requests": {
+        "title": "Masyadong maraming pagtatangkang mag-checkout",
+        "body": "Mangyaring maghintay ng ilang minuto at subukang muli mula sa iyong cart.",
+        "body_no_cart": "Mangyaring maghintay ng ilang minuto at subukan muli.",
+        "return_to_cart": "Bumalik sa cart"
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Kinakailangan ang pakikipag-ugnayan sa extension upang makumpleto ang pag-checkout."
+        }
+      },
+      "taxes": {
+        "tax_details": "Karagdagang detalye sa buwis",
+        "vat_number": {
+          "field": {
+            "label": "VAT number (opsyonal)",
+            "tooltip": "Pinapatunayan ang VAT number at awtomatikong inilalapat ang reverse charge sa mga order kapag kwalipikado."
+          },
+          "add": "Magdagdag ng VAT number",
+          "vaulted": "VAT number: %{number}",
+          "badge": "VAT number: %{number}",
+          "domestic_order": "Ang exemption sa reverse charge ay para lamang sa mga cross-border na order sa loob ng EU. Ang standard na VAT ang ipinapataw para sa mga lokal na order.",
+          "status": {
+            "invalid_format": {
+              "at": "Ang mga VAT number ng Austria ay binubuo ng AT at 9 na karakter.",
+              "be": "Ang mga VAT number ng Belgium ay binubuo ng BE at 10 karakter.",
+              "bg": "Ang mga VAT number ng Bulgaria ay binubuo ng BG at 9-10 karakter.",
+              "hr": "Ang mga VAT number ng Croatia ay binubuo ng HR at 11 karakter.",
+              "cy": "Ang mga numero ng VAT sa Cyprus ay binubuo ng CY at 9 na karakter.",
+              "cz": "Ang mga VAT number ng Czech Republic ay binubuo ng CZ at 8-10 na karakter.",
+              "dk": "Ang mga VAT number ng Denmark ay binubuo ng DK at 8 karakter.",
+              "ee": "Ang mga numero ng VAT ng Estonia ay binubuo ng EE at 9 na karakter.",
+              "fi": "Ang mga VAT number ng Finland ay binubuo ng FI at 8 karakter.",
+              "fr": "Ang mga VAT number ng France ay naglalaman ng FR at 11 na karakter.",
+              "de": "Ang mga VAT number ng Germany ay binubuo ng DE at 9 na karakter.",
+              "gr": "Ang mga VAT number ng Greece ay binubuo ng EL at 9 na karakter.",
+              "hu": "Ang mga numero ng VAT ng Hungary ay binubuo ng HU at 8 karakter.",
+              "ie": "Ang mga VAT number ng Ireland ay naglalaman ng IE at 8-9 na mga karakter.",
+              "it": "Ang mga VAT number sa Italya ay naglalaman ng IT at 11 karakter.",
+              "lv": "Ang mga VAT number ng Latvia ay binubuo ng LV at 11 karakter.",
+              "lt": "Ang mga VAT number ng Lithuania ay naglalaman ng LT at 9-12 karakter.",
+              "lu": "Ang mga VAT number ng Luxembourg ay binubuo ng LU at 8 karakter.",
+              "mt": "Ang mga numero ng VAT sa Malta ay binubuo ng MT at 8 karakter.",
+              "nl": "Ang mga VAT number ng Netherlands ay binubuo ng NL at 12 karakter."
+            }
+          }
+        }
       }
     }
   },
@@ -1042,6 +1188,144 @@
       "max_characters": "{{ max_chars }} char. max.",
       "send_on": "Taon-Buwan-Araw",
       "send_on_label": "Ipadala (opsyonal)"
+    }
+  },
+  "customer_accounts": {
+    "ui_components": {
+      "saturdayAbbreviation": "To",
+      "sundayAbbreviation": "Su",
+      "showNextMonth": "Ipakita ang susunod na buwan, {{month}} {{year}}",
+      "showPreviousMonth": "Ipakita ang nakaraang buwan, {{month}} {{year}}",
+      "rangeStart": "Simula ng saklaw",
+      "inRange": "Abot-tanaw",
+      "rangeEnd": "Hangganan ng saklaw",
+      "autocompleteOptionsAvailable": {
+        "one": "{{count}} available na item",
+        "other": "{{count}} na item ang available"
+      },
+      "removeItem": "Alisin ang {{label}}",
+      "removeTag": "Alisin ang tag",
+      "mapClusterTitle": {
+        "one": "Kumpol ng {{number}} marker",
+        "other": "Kumpol ng {{number}} marker"
+      },
+      "expandSheet": "Palawakin",
+      "qrCode": "QR code",
+      "addFile": "Magdagdag ng file",
+      "dropzoneInvalidFileType": "Hindi suportado ang uri ng file",
+      "dropzoneDraggedOver": "I-drop ang file para i-upload",
+      "external": "Nagbubukas ng panlabas na website.",
+      "externalNewWindow": "Nagbubukas ng panlabas na website sa bagong window.",
+      "loading": "Naglo-load…",
+      "moneyLinesHeaderItem": "Aytem",
+      "moneyLinesHeaderValue": "Halaga",
+      "newWindow": "Nagbubukas sa bagong window.",
+      "productThumbnailQuantityLabel": "Dami",
+      "removeChip": "Alisin ang item",
+      "reviewItemHeaderChangeValue": "Baguhin ang halaga",
+      "reviewItemHeaderSection": "Seksyon",
+      "reviewItemHeaderValue": "Halaga"
+    },
+    "profile_preview_bar": {
+      "badge_active": "Aktibo",
+      "badge_draft": "Burador",
+      "badge_launches": "Inilunsad noong {{date}}",
+      "badge_paused": "Naka-pause",
+      "badge_scheduled": "Nakatakda",
+      "badge_traffic": "{{percentage}} ng trapiko",
+      "edit": "I-edit",
+      "exit_preview": "Lumabas sa preview",
+      "hide_bar_action": "Itago ang bar",
+      "rollout_label": "Pagpapakilala",
+      "customize_button": "I-customize",
+      "hide_bar": "Itago ang Bar",
+      "navigate_to_admin": "Mag-navigate sa admin",
+      "close_preview": "Isara ang preview",
+      "previewing": "Ipinapakita mo ang preview ng:",
+      "saved_at": "Nai-save noong {{date}} sa {{time}}",
+      "viewing": "Pinapanood mo ang:",
+      "not_available": "Hindi available ang data ng profile",
+      "actions_button": "Mga kilos"
+    },
+    "active_inspector": {
+      "extension": {
+        "select": "Piliin ang extension na pinangalanang {{extensionName}}",
+        "unselect": "Alisin ang pagkakapili sa extension na pinangalanang {{extensionName}}",
+        "move_down": "Ilipat ang extension sa susunod na posisyon",
+        "move_up": "Ilipat ang extension sa nakaraang posisyon",
+        "remove": "Alisin ang extension",
+        "move_down_tooltip": "Lumipat sa susunod na posisyon",
+        "move_up_tooltip": "Lumipat sa nakaraang posisyon",
+        "remove_tooltip": "Alisin"
+      }
+    },
+    "editor": {
+      "link_new_tab_confirmation": "Hindi mabubuksan ang link na ito sa loob ng editor. Bubuksan ito sa isang bagong window ({{resolved_to_link}}). I-click ang OK para magpatuloy."
+    },
+    "settings": {
+      "title": "Mga Setting",
+      "loading_accessibility_message": "I-lo-load ang pahina ng mga setting",
+      "log_out_everywhere": {
+        "title": "Mag-sign out sa lahat ng device",
+        "description": "Kung nawala mo ang iyong device o may mga alalahanin sa seguridad, mag-log out sa lahat ng lokasyon upang matiyak ang seguridad ng iyong account.",
+        "button": "Mag-sign out sa lahat ng device",
+        "warning_message": "Maa-sign out ka rin sa device na ito."
+      }
+    },
+    "shop_ads": {
+      "title": "Iba pang mga produkto na maaaring magustuhan mo",
+      "subtitle": "Available for a limited time",
+      "button": "Mag-explore sa Shop",
+      "previous_button": "Nakaraan",
+      "next_button": "Susunod"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "Maaaring mag-request at mag-manage ang mga customer ng kanilang mga return sa sarili nilang customer account.",
+        "disabled": "Hindi available ang self-serve returns sa mga account ng customer para sa tindahang ito. Maaari pa ring tanggapin ang mga return. Tingnan ang return policy o website ng tindahan para malaman kung paano ito sisimulan, o makipag-ugnayan sa tindahan."
+      }
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Palitan ang paraan ng pagbabayad",
+        "loading": "Naglo-load ng mga paraan ng pagbabayad",
+        "no_payment_methods_available": "Walang available na paraan ng pagbabayad",
+        "select_new_payment_method": "Pumili ng bagong paraan ng pagbabayad",
+        "current_method": "Kasalukuyan",
+        "cancel": "Kanselahin",
+        "save": "I-save",
+        "success": "Na-update na ang paraan ng pagbabayad",
+        "use_new_payment_method": "+ Gumamit ng bagong paraan ng pagbabayad"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Numero ng card",
+        "title": "Palitan ang paraan ng pagbabayad",
+        "replace_with": "Palitan ng",
+        "add_new_payment_method": "Magdagdag ng bago",
+        "save_button": "I-save",
+        "close_button": "Isara",
+        "loading": "Ipinoproseso ang modal para sa pagpapalit ng paraan ng pagbabayad",
+        "success": "Na-update na ang paraan ng pagbabayad",
+        "invalid_subscription_contract": "Hindi mahanap ang subscription",
+        "expiry_date": "Bisa hanggang {{expiryDate}}",
+        "edit_current_payment_method": "I-edit ang kasalukuyang paraan ng pagbabayad",
+        "edit_selected_payment_method": "I-edit ang napiling paraan ng pagbabayad"
+      }
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "Logo ng %{shop_name}",
+      "processing": "Pinoproseso…",
+      "step_one": {
+        "page_title": "Mag-sign in - %{shop_name}",
+        "heading": "Mag-sign in",
+        "subheading": "Ipasok ang iyong email at magpapadala kami sa iyo ng verification code",
+        "subheading_with_sign_in_options": "Mag-sign in o gumawa ng account",
+        "input_field_label": "Email",
+        "button": "Magpatuloy",
+        "or": "o"
+      }
     }
   }
 }
