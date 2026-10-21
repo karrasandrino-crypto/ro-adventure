@@ -962,7 +962,127 @@
           }
         },
         "alternative_payment_currency_total": "Siningil ng %{amount_due}",
-        "alternative_payment_currency_chinese_yuan": "Kumpirmahin ang kabuuang halaga ng CNY sa %{wallet} app."
+        "alternative_payment_currency_chinese_yuan": "Kumpirmahin ang kabuuang halaga ng CNY sa %{wallet} app.",
+        "for_add_on": "Para sa: %{group_title}",
+        "from_shop_heading": "Mula sa %{shop_name}",
+        "from_other_stores_heading": "Mula sa ibang tindahan",
+        "from_multiple_stores_heading": "Mula sa iba't ibang tindahan",
+        "number_items": {
+          "one": "%{count} na aytem",
+          "other": "%{count} na aytem"
+        },
+        "view_all_items": {
+          "one": "Tingnan ang %{count} na aytem",
+          "other": "Tingnan ang lahat ng %{count} aytem"
+        },
+        "more_items_modal": {
+          "search_item": "Maghanap",
+          "clear_search": "I-clear ang paghahanap",
+          "empty_results": "Walang nakitang resulta para sa \"%{searchText}\". Pakisuri ang baybay o gumamit ng ibang salita o parirala.",
+          "number_items_shown": "%{shownNumber} ng %{totalNumber} na aytem"
+        },
+        "order_name_label": "Umorder ng %{name}",
+        "shopping_cart_label": "Shopping cart",
+        "discount_title": "Diskwento",
+        "item_discounts_label": "Mga Diskwento sa Item",
+        "discount_title_with_position": "Diskuwento %{position}",
+        "discount_title_stacking": {
+          "one": "Diskwento",
+          "other": "Mga diskwento"
+        },
+        "discount_order_stacking": {
+          "one": "Diskwento sa order",
+          "other": "Mga diskwento sa order"
+        },
+        "discount_label": "Discount code",
+        "discount_not_found": "Hindi mahanap ang wastong diskwento na tumutugma sa ipinasok na code",
+        "discount_placeholder": "Discount code",
+        "discount_code_applied": "Nailapat na ang discount code",
+        "discount_code_applied_with_code": "Nailapat na ang discount code na %{code}",
+        "discount_code_removed": "Inalis na ang discount code na %{code}",
+        "discount_code_replaced": "Inalis na ang discount code na %{old_code} at nailapat na ang %{code}",
+        "discount_code_replaced_multiple": "Inalis ang maraming discount code at inilapat ang %{code}",
+        "discount_code_allocations_mismatch": "Ang iyong <strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay nagbago. Suriin ang iyong cart at subukan muli.",
+        "order_discounts_apply_to_local_shop": "Ang mga diskwento sa order ay para lamang sa mga item mula sa %{shop_name}",
+        "gift_card_applied": "Nailapat na ang gift card",
+        "enter_shipping_address": "Ilagay ang shipping address",
+        "gift_card_title": "Gift card",
+        "gift_card_label": "Gift card",
+        "gift_card_placeholder": "Gift card",
+        "gift_card_and_discount_title": "Discount code o gift card",
+        "gift_card_and_discount_label": "Discount code o gift card",
+        "gift_card_and_discount_placeholder": "Discount code o gift card",
+        "gift_cards_apply_to_local_shop": "Ang mga gift card ay magagamit lamang para sa mga item mula sa %{shop_name}",
+        "add_discount_or_gift_card": "Maglagay ng discount code o gift card",
+        "remove_gift_card_label": "Malinaw na gift card",
+        "remove_discount_label": "Alisin ang diskwento",
+        "return_restocking_fee_label": "Bayad sa pag-aayos muli ng paninda",
+        "return_shipping_fee_label": "Pagbabalik ng padala",
+        "free_shipping_discount_label": "Libreng pagpapadala",
+        "applied_free_shipping_discount_label": "Nag-apply",
+        "apply_discount_button_label": "Mag-apply",
+        "applied_discount_message": "%{amount} bawas sa kabuuang halaga ng order",
+        "discount_has_been_applied": "Nailapat na ang diskwento",
+        "discount_has_been_removed": "Inalis na ang diskwento",
+        "automatic_discount_tooltip": "Hindi maaaring alisin ang mga diskuwentong awtomatikong inilapat.",
+        "gift_card_has_been_applied": "Nagamit na ang gift card",
+        "gift_card_has_been_removed": "Tinanggal na ang gift card",
+        "gift_card_subscriptions_notice": "Ang mga gift card ay ilalapat lamang sa iyong unang bayad.",
+        "discount_already_applied": "Nailapat na ang diskwento sa order na ito. Hindi ka na maaaring magdagdag ng isa pang diskwento.",
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay hindi balido para sa mga item sa iyong cart",
+        "discount_requires_customer_notice": "Ilagay ang iyong impormasyon sa pagpapadala upang magamit ang <strong style=\"text-transform:uppercase\">%{code}</strong> discount code",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay hindi available para sa iyo sa ngayon",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay nangangailangan ng karapat-dapat na customer",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay hindi magagamit para sa iyong shipping address",
+        "customer_already_used_once_per_customer_discount_notice": "Ang <strong style=\"text-transform:uppercase\">%{code}</strong> discount code ay nagamit na",
+        "subtotal_label": "Kabuuan (Subtotal)",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal · %{count} na aytem",
+          "other": "Subtotal · %{count} na aytem"
+        },
+        "shipping_label": "Pagpapadala",
+        "pickup_label": "Kunin sa tindahan",
+        "no_pickup_location": "Walang available na pickup location.",
+        "pickup_unavailable_banner_title": {
+          "one": "Walang tindahang makikita para sa iyong item",
+          "other": "Walang available na tindahan para sa iyong mga item"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Walang available na tindahan sa %{country} para sa iyong item",
+          "other": "Walang tindahang makikita sa %{country} para sa iyong mga item"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Ipadala sa address",
+          "ship_to_address_instead_html": "%{link} sa halip"
+        },
+        "tip_label": "Tip",
+        "unconfirmed_label": "Hindi kumpirmado",
+        "calculating_shipping": "Nagkakalkula…",
+        "calculating": "Nagkakalkula…",
+        "shipping_default_value": "Kakalkulahin sa susunod na hakbang",
+        "shipping_discount_title": "Diskwento sa Pagpapadala",
+        "shipping_pending_message": "Hindi pa magagamit",
+        "shipping_policy_link": "Gastos sa pagpapadala",
+        "taxes_label": "Buwis",
+        "tax_label": "Buwis",
+        "tax_line": {
+          "hst": "HST",
+          "gst": "Buwis sa mga Kalakal at Serbisyo",
+          "pst": "PST",
+          "rst": "RST",
+          "qst": "QST",
+          "vpt": "VPT"
+        },
+        "estimated_taxes_label": "Tinatayang buwis",
+        "estimated_taxes_label_short": "Tinataya",
+        "information_estimated_taxes_label": "Mga buwis (tinantya)",
+        "estimated_taxes_finalization_tooltip_content": "Ang huling buwis at kabuuang halaga ay kumpirmahin sa pamamagitan ng email o text pagkatapos mong ilagay ang iyong order.",
+        "estimated_taxes_finalization_tooltip_content_short": "Natapos na ang buwis matapos ang bayad",
+        "order_total_label": "Kabuuan ng Order",
+        "price_before_discount_aria_text": "Orihinal na presyo",
+        "price_after_discount_aria_text": "May diskwentong presyo",
+        "discount_code_aria_text": "Discount code",
+        "total_savings": "Kabuuang ipon"
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -1198,6 +1318,162 @@
       "bad_domain": "naglalaman ng maling domain name",
       "taken": "ay nakuha na",
       "contains_html_tags": "hindi maaaring maglaman ng mga HTML tag"
+    },
+    "notices": {
+      "cart": {
+        "too_many_items_in_cart": "Hindi ka na makakapagdagdag ng higit pang %{name} sa cart.",
+        "only_one_added_to_cart": "Isang item lamang ang naidagdag sa iyong cart dahil sa availability.",
+        "only_n_added_to_cart": "%{quantity} na item lamang ang naidagdag sa iyong cart dahil sa limitadong availability.",
+        "maximum_available_quantity_reached": "Ang maximum na dami ng item na ito ay nasa cart mo na.",
+        "less_than_minimum": "Ang aytem na ito ay may minimum na %{min}.",
+        "more_than_maximum": "Ang aytem na ito ay may maximum na %{max}.",
+        "not_respect_step": "Maaari mo lamang idagdag ang item na ito nang pa-increments na %{step}.",
+        "all_items_in_cart": "Ang lahat ng %{count} %{name} ay nasa iyong cart.",
+        "empty_update": "hindi ma-update ang bakanteng cart",
+        "missing_parameters": "walang balidong id o line parameter",
+        "generic_error": "Maling Cart",
+        "invalid_input": "Ang %{parameter} parameter ay hindi wasto.",
+        "product_not_available": "Hindi available ang produkto",
+        "too_many_line_items_error": "Hindi maaaring lumampas sa %{max} na aytem ang iyong cart.",
+        "link_expired": "Nag-expire na ang link",
+        "link_no_longer_exists": "Wala na ang link.",
+        "stock_problems_html": "Ang isa o higit pang mga item ay hindi na available. Naglaan kami ng <a href=\"%{link}\">na-update na cart</a>.",
+        "changed": "Nabago ang cart",
+        "items_changed": "May isa o higit pang aytem na nagbago.",
+        "product_sold_out": "Ang produktong '%{name}' ay sold out na.",
+        "variant_not_found": "Hindi mahanap ang variant",
+        "variant_requires_selling_plan": "Maaari lamang mabili ang variant gamit ang isang selling plan.",
+        "selling_plan_not_available_for_company_locations": "Ang one-time purchase lamang ang available para sa mga B2B order.",
+        "digital_product_not_available_for_company_locations": "Hindi maaaring idagdag ang item na ito sa isang B2B order",
+        "buyer_cannot_purchase_for_company_locations": "Hindi ka maaaring bumili para sa lokasyong ito",
+        "selling_plan_not_applicable": "Hindi mailapat ang selling plan sa variant",
+        "shipping_address_not_required": "Hindi na kailangan ng shipping para sa cart na ito.",
+        "shipping_address_invalid": "Nagkaroon ng problema sa pag-calculate ng iyong shipping rates. Magpatuloy sa checkout para makapili ng shipping rate bago mo tapusin ang iyong order.",
+        "bundle_requires_components": "Hindi maaaring idagdag sa cart ang bundle product na '%{name}'.",
+        "gift_card_with_components_not_supported": "Hindi maaaring idagdag sa cart ang bundle product na '%{name}'.",
+        "gift_card_price_must_be_greater_than_zero": "Hindi maaaring idagdag sa cart ang bundle product na '%{name}'.",
+        "gift_card_recipient_validation_error": "Hindi balido ang tinukoy na tatanggap ng gift card",
+        "view_lines_limit_reached": "Ang mga linya ay dapat na mas mababa sa o katumbas ng %{limit}",
+        "cart_too_large": "Masyadong malaki ang cart.",
+        "cart_attributes_error": "Naglalaman ng maling data ang mga attribute ng cart.",
+        "merchandise_line_transformers": {
+          "run_error": "Nagkaroon ng error sa iyong cart."
+        },
+        "merchandise_not_applicable": "Hindi maaaring bilhin ang item sa kasalukuyang configuration nito."
+      },
+      "storefront": {
+        "invalid_password": "Mali ang password, pakisubukan muli."
+      },
+      "tags": {
+        "add_articles": "Limitahan ang paghahanap sa mga artikulong may tag din na %{tag}",
+        "add_products": "Limitahan ang seleksyon sa mga produktong tumutugma sa tag na %{tag}",
+        "remove_articles": "Palawakin ang paghahanap sa mga artikulong walang tag na %{tag}",
+        "remove_products": "Alisin ang tag %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Salamat sa pag-subscribe sa aming mailing list.",
+        "disclaimer": "Maaari kang mag-unsubscribe anumang oras.",
+        "unsubscribe": "Mag-unsubscribe"
+      },
+      "unsubscribed": {
+        "confirmation": "Nag-unsubscribe ka na sa aming mailing list.",
+        "disclaimer": "Hindi ka na makakatanggap ng anumang marketing update mula sa amin. Maaari kang mag-subscribe muli anumang oras.",
+        "preview": "Inilalantad mo ang makikita ng mga customer kapag nag-unsubscribe sila."
+      },
+      "sms_unsubscribe_confirm": {
+        "message": "Sigurado ka bang gusto mong mag-unsubscribe sa SMS marketing?",
+        "button": "Mag-unsubscribe"
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Nag-opt in ka na para sa email open tracking.</b>",
+          "visibility": "Ang mga open rate ng email ay iuulat nang anonymous. Makikita lang namin kung binuksan mo ang isang email bilang bahagi ng pinagsama-samang open rate ng email.",
+          "opt_out_html": "Maaari kang <a style=\"text-decoration:underline;\" href=\"%{link}\">mag-opt out</a> sa email open tracking kung ayaw mong ibahagi ang impormasyong ito.",
+          "preview_bar": "Ipinapakita mo ang preview kung ano ang makikita ng mga customer kapag nag-opt in sila sa email open tracking."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Nag-opt out ka na sa pag-track kung binubuksan ang email.</b>",
+          "visibility": "Hindi namin malalaman kung binuksan mo ang aming mga email.",
+          "opt_in_html": "<a style=\"text-decoration:underline;\" href=\"%{link}\">Mag-opt in</a> para sa pag-track ng pagbukas ng email.",
+          "preview_bar": "Ipinapakita mo ang preview ng makikita ng mga customer kapag pinili nilang mag-opt out sa email open tracking."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Hindi na namin sinusubaybayan ang anumang pagbukas ng email.</b>",
+          "privacy_policy": "Matapos maipadala ang email na ito, na-update namin ang aming patakaran sa privacy at hindi na namin sinusubaybayan ang mga open."
+        },
+        "track": {
+          "status_html": "<b>Naka-report ang pag-track sa pagbukas ng email.</b>",
+          "visibility": "Makikita lang namin kung nabuksan mo ang email, bilang bahagi ng kabuuang email open rate."
+        },
+        "updated_policy": {
+          "status_html": "<b>Naka-report ang pag-track sa pagbukas ng email.</b>",
+          "visibility": "Na-update na namin ang aming patakaran, at sinusubaybayan na namin ngayon kung binubuksan ang mga email. Ang mga email open rate ay iuulat nang anonymous. Makikita lang namin kung binuksan mo ang isang email bilang bahagi ng kabuuang email open rate.",
+          "opt_out_html": "Kung hindi mo nais ibahagi ang impormasyong ito, maaari kang <a style=\"text-decoration:underline;\" href=\"%{link}\">mag-unsubscribe.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "May stock",
+          "out_of_stock": "Walang stock"
+        }
+      },
+      "boolean": {
+        "true_label": "Oo",
+        "false_label": "Hindi"
+      }
+    },
+    "search": {
+      "error": "Nagkaroon ng problema sa pag-load ng iyong mga resulta ng paghahanap. Paki-refresh ang page o subukan muli mamaya.",
+      "sorting": {
+        "relevance": "Kahalagahan",
+        "price_ascending": "Presyo, mababa hanggang mataas",
+        "price_descending": "Presyo, mataas hanggang mababa"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Mali - %{title}",
+      "products": "Mga Produkto",
+      "shopping_cart": "Ang Iyong Shopping Cart",
+      "account": "Account",
+      "create_account": "Gumawa ng Account",
+      "reset_account": "I-reset ang Account",
+      "addresses": "Mga address",
+      "order": "Umorder ng %{name}",
+      "search": "Maghanap",
+      "search_results": {
+        "one": "Paghahanap: %{count} resulta ang nahanap para sa \"%{terms}\"",
+        "other": "Paghahanap: %{count} resulta ang nahanap para sa \"%{terms}\""
+      },
+      "collections": "Paniningil",
+      "not_found": "404 Hindi Nahanap",
+      "challenge": "Hamon",
+      "checkpoint": "Tsekpoint"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} na diskwento ang naipataw"
+    },
+    "challenge": {
+      "message": "Para magpatuloy, pakikumpirma na hindi ka isang robot.",
+      "error": "Mali ang iyong sagot, pakisubukang muli.",
+      "submit_button_text": "Isumite"
+    },
+    "checkpoint": {
+      "message": "Sagutan ang Captcha para magpatuloy",
+      "error": "Nabigo ang pagpapatunay ng captcha",
+      "submit_button_text": "Isumite"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Kadalasan ay handa na sa loob ng 1 oras",
+        "two_hours": "Kadalasan ay handa na sa loob ng 2 oras",
+        "four_hours": "Karaniwang handa sa loob ng 4 na oras",
+        "twenty_four_hours": "Karaniwang handa sa loob ng 24 oras",
+        "two_to_four_days": "Karaniwang handa sa loob ng 2-4 na araw"
+      }
     }
   },
   "customer": {
@@ -1572,6 +1848,150 @@
     },
     "privacy_banner": {
       "cookie_preferences_link": "Mga kagustuhan sa cookie"
+    }
+  },
+  "general": {
+    "social": {
+      "links": {
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Magpatuloy sa pamimili",
+    "pagination": {
+      "label": "Pagpapahina",
+      "page": "Pahina {{ number }}",
+      "next": "Susunod na pahina",
+      "previous": "Sinundang pahina"
+    },
+    "search": {
+      "search": "Maghanap",
+      "reset": "I-clear ang search term"
+    },
+    "cart": {
+      "view": "Tingnan ang cart ({{ count }})",
+      "view_empty_cart": "Tingnan ang cart",
+      "item_added": "Naidagdag na ang item sa iyong cart"
+    },
+    "share": {
+      "close": "Isara ang share",
+      "copy_to_clipboard": "Kopyahin ang link",
+      "share_url": "Link",
+      "success_message": "Na-copy na ang link sa clipboard"
+    },
+    "slider": {
+      "of": "ng",
+      "next_slide": "I-slide pakanan",
+      "previous_slide": "I-slide pakaliwa",
+      "name": "Slider"
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Salamat sa pag-subscribe",
+    "button_label": "Mag-subscribe"
+  },
+  "accessibility": {
+    "skip_to_text": "Laktawan ang nilalaman",
+    "skip_to_product_info": "Lumaktaw sa impormasyon ng produkto",
+    "close": "Isara",
+    "unit_price_separator": "bawat",
+    "vendor": "Nagtitinda:",
+    "error": "Mali",
+    "refresh_page": "Ang pagpili ng opsyon ay magdudulot ng pag-refresh ng buong pahina.",
+    "link_messages": {
+      "new_window": "Nagbubukas sa bagong window.",
+      "external": "Nagbubukas ng panlabas na website."
+    },
+    "loading": "Naglo-load...",
+    "total_reviews": "kabuuang mga review",
+    "star_reviews_info": "{{ rating_value }} sa {{ rating_max }} bituin",
+    "collapsible_content_title": "Natititiklop na nilalaman",
+    "complementary_products": "Mga produktong pantulong"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Basahin pa: {{ title }}",
+      "comments": {
+        "one": "{{ count }} komento",
+        "other": "{{ count }} komento"
+      },
+      "moderated": "Pakitandaan, kailangang aprubahan ang mga komento bago ang mga ito mai-publish.",
+      "comment_form_title": "Mag-iwan ng komento",
+      "name": "Pangalan",
+      "email": "Email",
+      "message": "Mag-komento",
+      "post": "I-post ang komento",
+      "back_to_blog": "Balik sa blog",
+      "share": "Ibahagi ang artikulong ito",
+      "success": "Matagumpay na na-post ang iyong komento! Salamat!",
+      "success_moderated": "Matagumpay na na-post ang iyong komento. I-a-publish namin ito sa loob ng ilang sandali dahil moderated ang aming blog."
+    }
+  },
+  "onboarding": {
+    "product_title": "Pamagat ng halimbawang produkto",
+    "collection_title": "Pangalan ng iyong koleksyon"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Idagdag sa cart",
+      "choose_options": "Pumili ng mga opsyon",
+      "choose_product_options": "Pumili ng mga opsyon para sa {{ product_name }}",
+      "description": "Paglalarawan",
+      "inventory_in_stock": "May stock",
+      "inventory_in_stock_show_count": "{{ quantity }} nasa stock",
+      "inventory_low_stock": "Kulang na ang stock",
+      "inventory_low_stock_show_count": "Mababang stock: {{ quantity }} na lang",
+      "inventory_out_of_stock": "Malapit nang dumating ang stock",
+      "inventory_out_of_stock_continue_selling": "May stock",
+      "sku": "Stock Keeping Unit",
+      "on_sale": "Sale",
+      "product_variants": "Mga baryasyon ng produkto",
+      "media": {
+        "gallery_viewer": "Taga-tingin ng Gallery",
+        "load_image": "I-load ang larawan {{ index }} sa view ng gallery",
+        "load_model": "I-load ang 3D Model {{ index }} sa gallery view",
+        "load_video": "I-play ang video {{ index }} sa gallery view",
+        "image_available": "Larawan {{ index }} ay available na sa gallery view",
+        "open_media": "Buksan ang media {{ index }} sa modal",
+        "play_model": "I-play ang 3D Viewer",
+        "play_video": "I-play ang video"
+      },
+      "quantity": {
+        "label": "Dami",
+        "input_label": "Dami para sa {{ product }}",
+        "increase": "Dagdagan ang dami para sa {{ product }}",
+        "decrease": "Bawasan ang dami para sa {{ product }}",
+        "minimum_of": "Minimum ng {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Mga Dagdag ng {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Pinakamataas na {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> nasa cart",
+        "in_cart_aria_label": "Dami ({{ quantity }} sa cart)",
+        "note": "Tingnan ang mga panuntunan sa dami"
+      },
+      "volume_pricing": {
+        "title": "Presyong Bulto",
+        "note": "Available ang volume pricing",
+        "minimum": "{{ quantity }}+",
+        "price_at_each_html": "sa {{ price }}/bawat isa"
+      },
+      "pickup_availability": {
+        "view_store_info": "Tingnan ang impormasyon ng tindahan",
+        "check_other_stores": "Suriin ang availability sa ibang mga tindahan",
+        "pick_up_available": "Maaari nang kunin",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Kasalukuyang hindi available ang pickup sa <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Hindi ma-load ang availability ng pickup",
+        "refresh": "I-refresh"
+      },
+      "price": {
+        "from_price_html": "Mula {{ price }}"
+      }
     }
   }
 }
