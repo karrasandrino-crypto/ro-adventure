@@ -2528,7 +2528,67 @@
         "address_generic_invalid": "Maling entry",
         "address_generic_error": "Maling field",
         "credit_card_name_blank": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card",
-        "credit_card_name_invalid": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card"
+        "credit_card_name_invalid": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card",
+        "credit_card_name_billing_invalid": "Ilagay muna ang iyong pangalan sa billing address",
+        "credit_card_number_invalid": "Maglagay ng wastong numero ng card",
+        "credit_card_expiry_invalid": "Maglagay ng wastong petsa ng pag-expire",
+        "credit_card_month_invalid": "Maglagay ng wastong buwan ng pag-expire",
+        "credit_card_year_invalid": "Maglagay ng wastong taon ng pag-expire",
+        "credit_card_start_invalid": "Maglagay ng valid na petsa ng simula ng card",
+        "credit_card_start_month_invalid": "Maglagay ng valid na buwan ng simula ng card",
+        "credit_card_start_year_invalid": "Maglagay ng valid na taon ng pagsisimula ng card",
+        "credit_card_number_blank": "Ipasok ang numero ng card",
+        "credit_card_verification_value_blank": "Ilagay ang CVV o security code sa iyong card",
+        "delivery_line_detail_changed": "Maaaring may nagbago sa ilang detalye ng delivery. I-verify ang iyong shipping method at subukan muli.",
+        "delivery_zone_not_found": "Hindi nahanap ang tinukoy na zone sa tinukoy na bansa.",
+        "reduction_code_code_not_found": "Maglagay ng valid na discount code o gift card",
+        "reduction_code_discount_not_found": "Maglagay ng valid na discount code",
+        "reduction_code_gift_card_code_invalid": "Maglagay ng valid na gift card",
+        "reduction_code_gift_card_unusable": "Hindi ka maaaring gumamit ng gift card para pambili ng isa pang gift card.",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Hindi suportado ang mga gift card sa mga opsyon ng ipinagpalibang pagbili (deferred purchase).",
+        "shipping_line_phone_blank": "Maglagay ng numero ng telepono para gamitin ang paraan ng paghahatid na ito",
+        "shipping_line_phone_invalid": "Maglagay ng wastong numero ng telepono",
+        "tips_invalid_tip_amount": "Maglagay ng tip na mas mababa sa %{amount}",
+        "gift_card_already_applied": "Ang gift card na ito ay naipapatupad na sa iyong order.",
+        "gift_card_disabled": "Hindi na magagamit ang gift card na ito.",
+        "gift_card_not_found": "Hindi nahanap ang gift card na ito",
+        "gift_card_expired": "Wala na itong bisa na gift card",
+        "gift_card_depleted": "Wala nang laman ang gift card na ito.",
+        "gift_card_currency_mismatch": "Ang mga gift card lamang na nasa %{checkout_currency} ang maaaring gamitin sa order na ito",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Hindi suportado ang mga gift card sa mga opsyon ng ipinagpalibang pagbili (deferred purchase).",
+        "gift_card_buying_gift_card": "Hindi ka maaaring gumamit ng gift card para pambili ng isa pang gift card.",
+        "payment_gateway_missing": "Pumili ng paraan ng pagbabayad.",
+        "payment_gateway_needs_paid_plan_error": "Hindi available ang paraan ng pagbabayad na ito sa store sa ngayon",
+        "payment_gateway_not_in_test_mode": "ay hindi naka-set up para sa pag-test ng mga order. Hindi makakatanggap ang tindahang ito ng mga totoong order o totoong bayad.",
+        "payment_gateway_incompatible_with_multi_currency": "Para makumpleto ang checkout na ito gamit ang iyong lokal na pera, kailangan mong magbayad gamit ang credit card.",
+        "payment_gateway_unsupported_for_subscriptions": "Hindi magagamit ang paraang ito ng pagbabayad para sa mga order ng subscription.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "Ang paraan ng pagbabayad na ito ay hindi magagamit para sa mga opsyon ng pagbiling may palugit.",
+        "payment_gateway_unsupported_for_country": "Hindi magagamit ang paraan ng pagbabayad na ito para sa iyong bansa ng pagpapadala.",
+        "payment_gateway_unsupported_for_development_store_html": "Para makapag-test order, kailangan mong gumamit ng test payment gateway. Matuto pa tungkol sa <a href=\"%{docs_link}\">pag-test ng mga order sa mga development store</a>.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Naabot mo na ang limitasyon para sa mga order sa development store gamit ang payment processor na ito. Para makapag-order muli, kakailanganin mong gumamit ng test payment gateway. Matuto pa tungkol sa <a href=\"%{docs_link}\">pag-test ng mga order sa mga development store</a>.",
+        "purchase_options_agreement_blank": "Upang ipagpatuloy ang iyong pagbili, sumang-ayon sa mga tuntunin ng deferred o paulit-ulit na pagbili.",
+        "physical_gift_card_invalid_quantity": "Ang mga physical gift card line item ay dapat may dami (quantity) na tumutugma sa bilang ng mga gift card code.",
+        "physical_gift_card_duplicate_code": "Ang line item ng physical gift card ay naglalaman ng duplicate na code.",
+        "physical_gift_card_invalid_code": "Hindi balido ang code ng physical gift card.",
+        "email_blank": "I-enter ang email",
+        "phone_blank": "Ilagay ang numero ng telepono",
+        "address_country_invalid": "Pumili ng bansa/rehiyon mula sa listahan",
+        "address_zip_invalid": "Maglagay ng valid na ZIP / postal code",
+        "gift_card_invalid": "Ang gift card na \"••••%{last_four_characters}\" ay hindi na balido",
+        "vaulting_agreement_blank": "Kailangang i-save ang iyong payment method dahil ang bayad para sa balanse ng order na ito ay kailangang bayaran sa susunod na panahon.",
+        "sms_marketing_phone_invalid": "Maglagay ng wastong numero ng telepono",
+        "shipping_method_invalid_phone_number": "I-update ang numero ng telepono sa iyong delivery address para makita ang mga available na paraan ng pagpapadala.",
+        "address_suggestion_did_you_mean_html": "Ang ibig mo bang sabihin ay %{html}?",
+        "split_cart_tax_engine_not_supported": "Dapat gamitin ng lahat ng item ang parehong paraan ng pagpapadala para sa tax engine na ginagamit ng lokasyon ng shop.",
+        "split_cart_international_shipping_not_supported": "Dapat gumamit ng parehong paraan ng pagpapadala ang lahat ng item kapag nagpapadala sa ibang bansa. I-update ang paraan ng pagpapadala o gumawa ng maraming order.",
+        "invalid_delivery_address_reference_handle": "Hindi mahanap ang reference handle ng delivery address sa alinman sa mga available na delivery address.",
+        "must_use_available_delivery_address": "Ang delivery address ay dapat piliin mula sa mga available na delivery address.",
+        "must_use_available_shipping_rate": "Dapat pumili ng shipping rate mula sa mga available na shipping rate.",
+        "split_by_delivery_method_not_allowed": "Hindi pinapayagan ang paghahati ayon sa paraan ng paghahatid para sa session o tindahang ito.",
+        "split_by_delivery_method_requires_merchandise_from_single_location": "Ang paghahati ayon sa paraan ng pagpapadala ay nangangailangan na ang bawat linya ng paninda ay matugunan mula sa iisang lokasyon.",
+        "split_by_delivery_method_unsupported_method_type": "Paghiwalayin ayon sa paraan ng pagpapadalang sinubukan gamit ang isang uri ng paraan ng pagpapadalang hindi suportado.",
+        "split_cart_not_allowed": "Hindi balido ang session o hindi naka-enable ang feature para sa tindahang ito.",
+        "split_quantity_per_delivery_line_not_allowed": "Hindi bababa sa isang linya ng paninda ang tinutukoy ng maraming linya ng paghahatid."
       },
       "order_errors": {
         "creation_failure": "Nagkaroon ng problema sa paggawa ng iyong order. Subukang muli, o makipag-ugnayan sa amin para sa karagdagang detalye.",
@@ -2734,7 +2794,38 @@
         "paypal_over_capture": "Na-update ang kabuuan ng iyong order. Magbayad gamit ang {{walletName}} upang makumpleto ang iyong order.",
         "captcha_required": "Ilagay ang impormasyon sa pagbabayad at sagutan ang captcha upang makumpleto ang iyong pagbili.",
         "captcha_required_without_payment_information": "Sagutan ang captcha upang tapusin ang iyong pagbili.",
-        "payment_credential_delegation_error": "Nagkaroon ng problema sa pagproseso ng iyong bayad. Pumili ng bagong paraan ng pagbabayad."
+        "payment_credential_delegation_error": "Nagkaroon ng problema sa pagproseso ng iyong bayad. Pumili ng bagong paraan ng pagbabayad.",
+        "currency": {
+          "no_longer_supported": "Hindi na sinusuportahan ang currency ng tindahan."
+        },
+        "installments": {
+          "retry_same_instrument": {
+            "heading": "I-check ang mga detalye ng iyong card",
+            "body": "I-update ang mga detalye ng iyong card o pumili ng ibang card"
+          },
+          "retry_different_instrument": {
+            "heading": "Tinanggihan ang iyong card",
+            "body": "Subukan muli o pumili ng ibang card"
+          },
+          "restart_payment_method": {
+            "heading": "Nag-timeout ang iyong session",
+            "body": "Pumili ng payment plan para mag-restart"
+          }
+        },
+        "amount_too_small": "Ang minimum na halaga ng bayad ay dapat higit sa $0.50 USD. Subukan muli gamit ang mas mataas na halaga.",
+        "method_not_available": "Hindi available ang hiniling na paraan ng pagbabayad. Pumili ng ibang paraan ng pagbabayad at subukan muli.",
+        "local_payment_method_amount_out_of_range": "Ang %{payment_method} ay magagamit lang para sa mga bayad na nasa pagitan ng %{minimum} at %{maximum}.",
+        "local_payment_method_unavailable": "Hindi magagamit ang %{payment_method}",
+        "available_methods_updated": "Na-update na ang mga available na paraan ng pagbabayad.",
+        "generic_error": "Mayroong isyu sa pagproseso ng iyong bayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+        "custom_redeemable_no_longer_available": "Hindi na available ang deal na ito.",
+        "rejected_transaction": "Hindi natanggap ang iyong bayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+        "credit_card_processing": "Hindi maproseso ang iyong bayad dahil sa mga teknikal na dahilan. Subukan muli pagkalipas ng ilang minuto o gumamit ng ibang paraan ng pagbabayad.",
+        "checkout_amount_changed": "Hindi naproseso ang iyong bayad dahil nagbago ang halagang dapat bayaran sa checkout. Suriin ang iyong order at subukan muli.",
+        "deferred_payment_not_allowed": "Hindi pinapayagan ang deferred payment. Suriin ang iyong order at subukan muli.",
+        "deferred_payment_required": "Ang order na ito ay nangangailangan ng deferred payment. Suriin ang iyong order at subukang muli.",
+        "deferred_amount_changed": "Hindi naproseso ang iyong pagbabayad dahil nagbago ang halaga ng deferred payment. Suriin ang iyong order at subukan muli.",
+        "deferred_date_changed": "Hindi naproseso ang iyong bayad dahil nagbago ang nakatakdang petsa ng pagbabayad. Suriin ang iyong order at subukan muli."
       },
       "shipping_errors": {
         "shipping_method": "Nagbago ang mga opsyon sa pagpapadala para sa iyong order. Suriin ang iyong pinili.",
@@ -3063,6 +3154,35 @@
       },
       "online_store_chat": {
         "title": "May mga tanong? Makipag-chat sa amin"
+      },
+      "store_credit_errors": {
+        "generic_error": "Nagkaroon ng problema sa iyong store credit. Subukan muli o i-reload ang pahina."
+      },
+      "redeemable_errors": {
+        "gift_card": {
+          "duplicate": "Nagamit na ang gift card para sa iyong order.",
+          "insufficient_funds": "Wala nang laman ang gift card na ito.",
+          "expired": "Wala na itong bisa na gift card",
+          "not_available": "Hindi na magagamit ang gift card na ito.",
+          "invalid": "Maglagay ng valid na gift card",
+          "currency_mismatch": "Ang mga gift card lamang na nasa %{shop_currency} ang tinatanggap",
+          "generic": "Hindi naidagdag ang gift card sa checkout.",
+          "throttle_limit_exceeded": "Lumampas ka na sa pinakamataas na bilang ng pagsubok. Subukan muli mamaya.",
+          "no_longer_available": "Hindi na maaaring gamitin ang gift card na ito sa pag-checkout na ito."
+        }
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "Ang instruction ng merchandise para sa %{position} %{name} ay naglalaman ng bakanteng stable ID.",
+        "invalid_stable_id_target": "Ang %{position} %{name} na instruction ng merchandise ay tumutukoy sa stable ID na %{stable_id}, ngunit ang stable ID na iyon ay wala sa mga linya ng merchandise.",
+        "duplicate_variant_id": "Ang %{position} %{name} merchandise instruction ay naglalaman ng duplicate na variant ID na %{variant_id}.",
+        "invalid_variant_id_target": "Ang instruction para sa merchandise na %{name} ay tumutukoy sa variant ID na %{variant_id}, ngunit ang variant na iyon ay wala sa mga linya ng merchandise.",
+        "invalid_price_override_target": "Ang instruction para sa price override ng merchandise sa line item %{stable_id} ay invalid dahil ito ay isang bundle component.",
+        "discount_not_supported": "Hindi suportado ng instruction sa merchant ang ganitong uri ng discount para sa apply merchandise discount."
+      },
+      "hsa_qualification_errors": {
+        "ineligible": "Ang order na ito ay hindi eligible para sa HSA/FSA.",
+        "processing_error": "Nagkaroon ng problema sa pagproseso ng iyong HSA/FSA request. Subukan itong muli o mag-checkout nang wala ang HSA/FSA.",
+        "unsupported_checkout": "Hindi magagamit ang HSA/FSA para sa order na ito."
       }
     },
     "pagination": {
