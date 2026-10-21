@@ -1069,11 +1069,135 @@
               "lt": "Ang mga VAT number ng Lithuania ay naglalaman ng LT at 9-12 karakter.",
               "lu": "Ang mga VAT number ng Luxembourg ay binubuo ng LU at 8 karakter.",
               "mt": "Ang mga numero ng VAT sa Malta ay binubuo ng MT at 8 karakter.",
-              "nl": "Ang mga VAT number ng Netherlands ay binubuo ng NL at 12 karakter."
+              "nl": "Ang mga VAT number ng Netherlands ay binubuo ng NL at 12 karakter.",
+              "pl": "Ang mga VAT number ng Poland ay binubuo ng PL at 10 karakter.",
+              "pt": "Ang mga VAT number sa Portugal ay binubuo ng PT at 9 na karakter.",
+              "ro": "Ang mga VAT number ng Romania ay naglalaman ng RO at 10 karakter.",
+              "sk": "Ang mga VAT number ng Slovakia ay naglalaman ng SK at 10 karakter.",
+              "si": "Ang mga VAT number ng Slovenia ay binubuo ng SI at 8 karakter.",
+              "es": "Ang mga VAT number sa Espanya ay naglalaman ng ES at 9 na karakter.",
+              "se": "Ang mga numero ng VAT sa Sweden ay binubuo ng SE at 12 karakter.",
+              "gb": "Ang mga VAT number ng United Kingdom ay naglalaman ng GB o XI at 5-12 karakter."
+            },
+            "invalid_number": {
+              "at": "Maglagay ng wastong Austria VAT number",
+              "be": "Maglagay ng wastong Belgium VAT number",
+              "bg": "Maglagay ng wastong Bulgaria VAT number",
+              "hr": "Maglagay ng wastong Croatia VAT number",
+              "cy": "Maglagay ng wastong Cyprus VAT number",
+              "cz": "Maglagay ng wastong Czech VAT number",
+              "dk": "Maglagay ng wastong Denmark VAT number",
+              "ee": "Maglagay ng wastong Estonia VAT number",
+              "fi": "Maglagay ng valid na Finland VAT number",
+              "fr": "Maglagay ng valid na France VAT number",
+              "de": "Maglagay ng valid na Germany VAT number",
+              "gr": "Maglagay ng wastong Greece VAT number",
+              "hu": "Maglagay ng wastong Hungary VAT number",
+              "ie": "Maglagay ng wastong Ireland VAT number",
+              "it": "Maglagay ng valid na Italy VAT number",
+              "lv": "Maglagay ng wastong Latvia VAT number",
+              "lt": "Maglagay ng valid na Lithuania VAT number",
+              "lu": "Maglagay ng wastong numero ng VAT ng Luxembourg",
+              "mt": "Maglagay ng wastong Malta VAT number",
+              "nl": "Maglagay ng valid na Netherlands VAT number",
+              "pl": "Maglagay ng wastong Poland VAT number",
+              "pt": "Maglagay ng wastong Portugal VAT number",
+              "ro": "Maglagay ng wastong Romania VAT number",
+              "sk": "Maglagay ng wastong Slovakia VAT number",
+              "si": "Maglagay ng wastong Slovenia VAT number",
+              "es": "Maglagay ng wastong Spain VAT number",
+              "se": "Maglagay ng wastong Sweden VAT number",
+              "gb": "Maglagay ng valid na United Kingdom VAT number"
+            },
+            "service_unavailable": "Hindi magagamit ang serbisyo ng pagpapatunay",
+            "service_error": "Hindi magagamit ang serbisyo ng pagpapatunay"
+          },
+          "accessibility": {
+            "status": {
+              "validating": "Kasalukuyang pino-proseso ang pag-validate ng VAT number",
+              "valid": "Valid ang VAT number",
+              "applied": "Naipatupad na ang VAT exemption.",
+              "domestic": "Hindi nailapat ang exemption sa VAT",
+              "invalid_number": "Nabigo ang VAT exemption",
+              "service_unavailable": "Hindi ma-verify ang VAT exemption",
+              "service_error": "Hindi ma-verify ang VAT exemption"
             }
           }
         }
+      },
+      "address_management": {
+        "saved_with_store": "Naka-save sa tindahang ito"
       }
+    },
+    "pagination": {
+      "previous": "Nakaraan",
+      "next": "Susunod"
+    },
+    "links": {
+      "powered_by_shopify": "Pinapatakbo ng Shopify",
+      "learn_more": "Matuto pa"
+    },
+    "feed": {
+      "more": "Higit pa"
+    },
+    "attributes": {
+      "email": "email",
+      "password": "password",
+      "password_confirmation": "Ang kumpirmasyon ng password",
+      "first_name": "pangalan",
+      "last_name": "apelyido",
+      "body": "katawan",
+      "signature": "Tirahan"
+    },
+    "addresses": {
+      "zip_code": "ZIP code",
+      "postal_code": "Postal code",
+      "postcode": "Postal code",
+      "pincode": "PIN code",
+      "region": "Rehiyon",
+      "prefecture": "Prepektura",
+      "province": "Lalawigan",
+      "state": "Magpahayag",
+      "state_and_territory": "Estado/teritoryo",
+      "county": "Lalawigan",
+      "emirate": "Emirato",
+      "governorate": "Lalawigan",
+      "confirm": "Sigurado ka bang nais mong burahin ang address na ito?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Itinatampok",
+        "best_selling": "Pinakamabenta",
+        "az": "Paalpabeto, A-Z",
+        "za": "Paalpabeto, Z-A",
+        "price_ascending": "Presyo, mababa hanggang mataas",
+        "price_descending": "Presyo, mataas hanggang mababa",
+        "date_ascending": "Petsa, luma patungong bago",
+        "date_descending": "Petsa, bago hanggang luma",
+        "most_relevant": "Pinaka-relevante"
+      }
+    },
+    "errors": {
+      "blank": "hindi maaaring bakante",
+      "blocked_address": "Hindi suportado ang lokasyong ito",
+      "credit_card_session_expired": "Nag-expire na ang awtorisasyon ng iyong credit card, mangyaring ilagay muli ang impormasyon ng iyong pagbabayad. Hindi nabawasan ang iyong card.",
+      "empty": "hindi maaaring walang laman",
+      "invalid_email": "dapat ay isang valid na email address",
+      "discount_disabled": "Ang diskwentong ito ay na-disable na.",
+      "discount_expired": "Hindi na balido ang diskwentong ito.",
+      "discount_limit_reached": "Naabot na ng diskwentong ito ang limitasyon sa paggamit nito.",
+      "discount_not_found": "Hindi mahanap ang wastong diskwento na tumutugma sa ipinasok na code",
+      "customer_already_used_once_per_customer_discount_notice": "Naabot na ng diskwentong ito ang limitasyon sa paggamit nito.",
+      "gift_card_already_applied": "Nailapat na ang code sa iyong checkout",
+      "gift_card_code_invalid": "Hindi balido ang code",
+      "gift_card_currency_mismatch": "Hindi puwedeng gamitin ang gift card na ito para sa pagbiling ito. Makipag-ugnayan sa %{shop_name} para muling maibigay ito.",
+      "gift_card_depleted": "Wala nang laman ang gift card na ito.",
+      "gift_card_disabled": "Hindi na gumagana ang gift card",
+      "gift_card_expired": "Expired na ang gift card.",
+      "invalid": "ay hindi balido",
+      "bad_domain": "naglalaman ng maling domain name",
+      "taken": "ay nakuha na",
+      "contains_html_tags": "hindi maaaring maglaman ng mga HTML tag"
     }
   },
   "customer": {
@@ -1224,7 +1348,43 @@
       "removeChip": "Alisin ang item",
       "reviewItemHeaderChangeValue": "Baguhin ang halaga",
       "reviewItemHeaderSection": "Seksyon",
-      "reviewItemHeaderValue": "Halaga"
+      "reviewItemHeaderValue": "Halaga",
+      "clear": "Malinaw",
+      "clipboardCopied": "Kinopya",
+      "clipboardFailedToCopy": "Nabigong kopyahin",
+      "closeNotification": "Isara",
+      "expandNotification": "Tingnan ang higit pa",
+      "closeModal": "Isara",
+      "submit": "Isumite",
+      "processing": "Pinoproseso…",
+      "increase": "Dagdagan ang {{type}}",
+      "decrease": "Bawasan ang {{type}}",
+      "minimumReached": "Naabot ang pinakamababa na {{value}}",
+      "maximumReached": "Naabot ang maximum na {{value}}",
+      "january": "Enero",
+      "february": "Pebrero",
+      "march": "Marso",
+      "april": "Abril",
+      "may": "Mayo",
+      "june": "Hunyo",
+      "july": "Hulyo",
+      "august": "Agosto",
+      "september": "Setyembre",
+      "october": "Oktubre",
+      "november": "Nobyembre",
+      "december": "Disyembre",
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miyerkules",
+      "thursday": "Huwebes",
+      "friday": "Biyernes",
+      "saturday": "Sabado",
+      "sunday": "Linggo",
+      "mondayAbbreviation": "Mo",
+      "tuesdayAbbreviation": "Ikaw",
+      "wednesdayAbbreviation": "Kami",
+      "thursdayAbbreviation": "Ang",
+      "fridayAbbreviation": "Talaga"
     },
     "profile_preview_bar": {
       "badge_active": "Aktibo",
@@ -1326,6 +1486,92 @@
         "button": "Magpatuloy",
         "or": "o"
       }
+    },
+    "payment_methods": {
+      "add_payment_method": {
+        "title": "Magdagdag ng paraan ng pagbabayad",
+        "button_title": "Idagdag",
+        "payment_method_added_confirmation": "Naidagdag na ang paraan ng pagbabayad",
+        "missing_customer_error": "Mayroong naganap na problema. Pakisubukang muli o makipag-ugnayan sa support.",
+        "replace_mode_warning": "Ang pagbura sa paraan ng pagbabayad na ito ay makakaapekto sa mga subscription o pre-order. Palitan ito ng ibang paraan ng pagbabayad upang patuloy na makatanggap ng mga paparating na order.",
+        "choose_from_list": "Pumili mula sa listahan",
+        "add_new_button": "Magdagdag ng bago",
+        "billing_address": {
+          "title": "Address sa pagsingil",
+          "add_billing_address_button": "Magdagdag ng bago",
+          "add_billing_address_button_accessibility_label": "Magdagdag ng bagong billing address",
+          "choose_billing_address_from_list_button": "Pumili mula sa listahan",
+          "choose_billing_address_from_list_button_accessibility_label": "Pumili ng billing address mula sa listahan",
+          "missing_billing_address_error_message": "Pakilagay ang billing address.",
+          "default_checkbox": "Itakda bilang default na paraan ng pagbabayad"
+        },
+        "subscription_contracts": {
+          "title": "Gamitin ang paraan ng pagbabayad para sa mga paulit-ulit na order",
+          "more_items": {
+            "one": "{{count}} higit pang produkto",
+            "other": "{{count}} pang produkto"
+          },
+          "product_count": {
+            "one": "{{count}} produkto",
+            "other": "{{count}} (na) produkto"
+          },
+          "product_details": "Mga detalye ng produkto",
+          "load_more": "Ipakita ang higit pa"
+        },
+        "updating_contracts": {
+          "one": "Ina-update ang {{count}} na kontrata ng subscription...",
+          "other": "Ina-update ang {{count}} na kontrata ng subscription..."
+        },
+        "contracts_updated": {
+          "one": "Matagumpay na na-update ang {{count}} kontrata ng subscription",
+          "other": "Matagumpay na na-update ang {{count}} kontrata ng subscription"
+        },
+        "contracts_update_failed": "Hindi na-update ang ilang kontrata ng subscription",
+        "subscription_contracts_updated": "Na-update ang {{succeeded}} sa {{total}} subscription",
+        "invalid_wallet_type_error": "Maling uri ng wallet."
+      },
+      "three_d_secure": {
+        "title": "3D Secure",
+        "verification_failed": "Hindi na-verify ang iyong bayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad."
+      }
+    },
+    "payment_method_brands": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "americanexpress": "American Express",
+      "discover": "Tuklasin",
+      "dinersclub": "Diners Club",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "Visa Electron",
+      "maestro": "Guro",
+      "forbrugsforeningen": "Samahan ng mga Mamimili",
+      "dankort": "Dankort",
+      "hipercard": "Hipercard",
+      "unionpay": "UnionPay",
+      "laser": "Laser",
+      "shoppay": "Shop Pay",
+      "applepay": "Apple Pay",
+      "googlepay": "Google Pay",
+      "paypal": "PayPal",
+      "storecredit": "Credit sa tindahan",
+      "bogus": "Peke",
+      "klarna_pay_now": "Klarna",
+      "klarna_pay_later": "Klarna",
+      "klarna_slice_it": "Klarna",
+      "blik": "BLIK",
+      "ideal": "iDEAL",
+      "klarna": "Klarna",
+      "mobilepay": "MobilePay",
+      "paypay": "PayPay",
+      "przelewy24": "Przelewy24",
+      "swish": "Swish",
+      "twint": "TWINT",
+      "vipps": "Vipps",
+      "usdc": "Crypto: USDC"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Mga kagustuhan sa cookie"
     }
   }
 }
