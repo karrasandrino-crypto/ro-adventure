@@ -250,7 +250,153 @@
         "paypay_label": "PayPay",
         "scalapay_label": "Scalapay",
         "usdc_label": "USDC",
-        "usdc_cashback_title": "%{incentive_percentage}% cashback"
+        "usdc_cashback_title": "%{incentive_percentage}% cashback",
+        "pending_payment": {
+          "oxxo": {
+            "label": "OXXO",
+            "number": "Numero ng sanggunian",
+            "reference_number": "Numero ng sanggunian:",
+            "steps": {
+              "1": "I-scan ang barcode sa iyong pinakamalapit na OXXO.",
+              "2": "Bayaran ang eksaktong halaga sa cash sa kahera."
+            },
+            "pay": "Magbayad ng %{amount}",
+            "expiry_date_time": "%{date} nang %{time}",
+            "expires_at": "Mag-e-expire sa %{date}",
+            "expires_when_unknown": "Gamitin bago mag-expire ang voucher",
+            "days_left": {
+              "one": "%{count} araw",
+              "other": "%{count} na araw"
+            },
+            "print_voucher": "I-print ang voucher",
+            "print": {
+              "instructions_title": "Mga tagubilin para bayaran ang iyong OXXO:",
+              "important_details_title": "Mga mahalagang detalye:"
+            },
+            "important_details": {
+              "canceled_by_expiry": "Makakansela ang iyong order kung hindi matatanggap ang bayad bago ang %{date}.",
+              "canceled_when_expired": "Makakansela ang order mo kung hindi matatanggap ang bayad bago mag-expire ang voucher.",
+              "non_refundable": "Ang mga order ng OXXO ay hindi nare-refund.",
+              "tracking_after_payment": "Makakatanggap ka ng impormasyon sa pagsubaybay sa pagpapadala sa loob ng isang araw ng negosyo pagkatapos ng pagbabayad."
+            },
+            "barcode_alt": "OXXO voucher barcode para sa reference number na %{reference_number}"
+          }
+        },
+        "update_payment_method": "I-update ang paraan ng pagbabayad",
+        "order_covered_by_store_credit_notice": "Ang iyong order ay babayaran gamit ang iyong store credit.",
+        "order_covered_by_redeemables_notice": "Sagot na namin ang iyong order.",
+        "store_credit": {
+          "label": "Credit sa tindahan",
+          "apply_label": "Gamitin ang store credit",
+          "add_label": "Magdagdag ng store credit",
+          "manage_label": "Pamahalaan ang credit sa tindahan",
+          "buying_gift_card": "Hindi mo maaaring gamitin ang store credit para bumili ng gift card.",
+          "no_fixed_selling_plans": "Hindi mo maaaring gamitin ang store credit sa mga opsyon ng deferred purchase."
+        },
+        "clear": "Malinaw",
+        "billing_must_match_shipping_notice": "Ang billing address ng iyong paraan ng pagbabayad ay dapat tumugma sa shipping address.",
+        "same_billing_address_checkbox_label": "Gamitin ang shipping address bilang billing address",
+        "location_billing_address_label": "Lokasyon ng billing address",
+        "fact_billing_address_label": "Address sa pagsingil",
+        "location_shipping_address_label": "Address ng pagpapadala",
+        "use_order_billing_address_label": "Gamitin ang billing address ng order",
+        "use_location_billing_address_label": "Gamitin ang billing address ng lokasyon",
+        "use_location_shipping_address_label": "Gamitin ang shipping address ng lokasyon",
+        "no_working_method_error": "Hindi muna makatanggap ng bayad ang tindahang ito sa ngayon. I-refresh ang page na ito o bumalik na lamang mamaya.",
+        "brand_not_available": "Hindi tumatanggap ang tindahang ito ng {{brand}}. Gumamit ng ibang card para magbayad.",
+        "shipping_rate_updated": "Na-update na ang mga available na paraan ng pagpapadala. Kumpirmahin ang iyong pinili bago mag-checkout.",
+        "billing_address_invalid_phone": "I-update ang numero ng telepono sa iyong address sa pagsingil para sa {{label}} {{last_digits}} para magpatuloy.",
+        "billing_address_invalid_phone_no_card": "I-update ang numero ng telepono sa iyong billing address upang magpatuloy.",
+        "preview_not_available": {
+          "title": "Hindi available ang preview",
+          "content": "Huwag kang mag-alala, gagana ang express checkout na ito para sa iyong mga customer.",
+          "button": "Sige"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Maglagay ng wastong petsa ng pagkakailathala",
+              "issue_number": "Maglagay ng valid na issue number"
+            },
+            "invalid": {
+              "verification_value": "Maglagay ng wastong CVV o security code"
+            }
+          }
+        },
+        "simulated_checkout": "Malapit na ang preview",
+        "simulated_express_checkout": "Hindi available ang mga wallet sa preview ng editor dahil sa iyong rehiyon o browser",
+        "vaulting_agreement_label": "I-save ang impormasyon ng aking pagbabayad sa %{company} para sa mas mabilis na pag-checkout",
+        "business_customer_vaulting_payment_label": "I-save ang paraan ng pagbabayad na ito sa checkout at pahintulutan ang %{company} na i-charge ito para sa mga susunod na pagbili para sa lokasyong ito. Ang lahat ng contact na nakatalaga sa lokasyong ito ay maaaring gumamit ng paraan ng pagbabayad na ito.",
+        "business_customer_with_bank_account_vaulting_payment_label": "I-save ang paraan ng pagbabayad na ito sa checkout at pahintulutan ang %{company} na mag-debit sa iyong account para sa mga susunod na pagbiling inaprubahan mo para sa lokasyong ito, hanggang sa kanselahin mo ito. Ang lahat ng contact na nakatalaga sa lokasyong ito ay maaaring gumamit ng paraan ng pagbabayad na ito.",
+        "purchase_options_and_vaulting_agreement_label": "Ang isa o higit pang item sa iyong cart ay isang deferred o subscription purchase. Sa pagpapatuloy ng iyong pagbabayad, sumasang-ayon ka na ang iyong paraan ng pagbabayad ay awtomatikong sisingilin sa presyo at dalas na nakalista sa pahinang ito hanggang sa matapos ito o ikaw ay magkansela. Ang lahat ng pagkansela ay napapailalim sa %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "patakaran sa pagkansela",
+        "use_different_credit_card_label": "Gumamit ng ibang card",
+        "saved_credit_card": "Ang iyong naka-save na credit card",
+        "saved_credit_card_info": "Huling apat na digit",
+        "saved_credit_card_cvv_verification": "Para sa layuning beripikasyon, ilagay ang security code ng iyong card.",
+        "saved_credit_card_actions": {
+          "edit": "I-edit",
+          "delete": "Burahin"
+        },
+        "saved_credit_cards_modal": {
+          "view_all_label": "Tingnan ang lahat ng naka-save na card",
+          "done": "Tapos na",
+          "cancel": "Kanselahin"
+        },
+        "add_credit_card_modal": {
+          "title": "Magdagdag ng card",
+          "save": "I-save",
+          "cancel": "Kanselahin"
+        },
+        "delete_credit_card_modal": {
+          "title": "Burahin ang card",
+          "confirmation": "Sigurado ka bang gusto mong tanggalin ang {{brandName}} na nagtatapos sa {{lastDigits}}?",
+          "cancel": "Kanselahin",
+          "delete": "Burahin"
+        },
+        "edit_credit_card_modal": {
+          "title": "I-edit ang card",
+          "done": "Tapos na",
+          "cancel": "Kanselahin",
+          "description": "Maaari mo lamang baguhin ang billing address ng iyong card.",
+          "fields": {
+            "default": "Itakda bilang default",
+            "card_number": "Numero ng card",
+            "expiry": "Petsa ng pagkapaso",
+            "security_code": "Security code",
+            "name": "Pangalan sa card",
+            "billing": "Singilin ang"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Mayroong %{count} expired na card, na maaari mong tingnan at i-edit sa iyong account.",
+          "other": "Mayroong %{count} na nag-expire na card, na maaari mong tingnan at i-edit sa iyong account."
+        },
+        "local_payment_method_receiver_notice": "Pagkatapos mong mag-order, makakatanggap ka ng mga detalye ng pagbabayad. Gawin ang pagbabayad sa isang ATM o online sa loob ng {{dueDays}} araw.",
+        "order_edit_banner_title": "Kailangan ang bayad na {{amount_owed}}",
+        "order_edit_banner_subtitle": "Ang iyong order na {{order_number}} ay na-update. Suriin ang mga pagbabagong ito, pagkatapos ay magbayad upang kumpirmahin ang iyong order.",
+        "order_edit_banner_items_added": {
+          "one": "Idinagdag",
+          "other": "Nagdagdag ng %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Inalis",
+          "with_quantities": "Inalis ang {{delta}} ng {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Ibinabalik ang {{quantity}}",
+          "with_quantities": "Naibalik {{delta}} sa {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Inalis sa return",
+          "with_quantities": "Inalis ang {{delta}} mula sa pagbalik"
+        },
+        "order_edit_banner_single_item_added": "Idinagdag",
+        "order_edit_banner_multiple_items_added": "Dinagdag na {{amount}}",
+        "order_edit_banner_single_item_removed": "Inalis",
+        "order_edit_banner_multiple_items_removed": "Inalis ang {{amount}}",
+        "order_edit_banner_single_item_returned": "Ibinalik",
+        "order_edit_banner_multiple_items_returned": "Isinoli ang {{amount}}"
       },
       "processing": {
         "wait": {
@@ -1693,6 +1839,108 @@
           },
           "label": "Walang delivery"
         }
+      },
+      "field_errors": {
+        "address_street_name_blank": "Ilagay ang pangalan ng kalsada",
+        "address_street_name_too_long": "Ang kalye ay masyadong mahaba (ang pinakamahaba ay {{count}} na character)",
+        "address_street_name_contains_emojis": "Ang kalye ay hindi maaaring maglaman ng mga emoji.",
+        "address_street_name_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang kalye",
+        "address_street_name_contains_mathematical_symbols": "Hindi puwedeng maglaman ang kalye ng mga simbolo sa matematika",
+        "address_street_number_blank": "Ilagay ang numero ng gusali",
+        "address_street_number_too_long": "Masyadong mahaba ang numero ng gusali (maximum ay {{count}} na karakter)",
+        "address_street_number_contains_emojis": "Hindi maaaring maglaman ng emojis ang numero ng gusali",
+        "address_street_number_contains_html_tags": "Ang numero ng gusali ay hindi maaaring maglaman ng mga HTML tag",
+        "address_street_number_contains_mathematical_symbols": "Ang numero ng gusali ay hindi maaaring maglaman ng mga simbolo ng matematika.",
+        "address_line2_blank": "Pumasok sa isang apartment, suite, atbp.",
+        "address_line2_too_long": "Ang ikalawang address line ay masyadong mahaba (maximum ay {{count}} na karakter)",
+        "address_line2_contains_emojis": "Ang pangalawang linya ng address ay hindi pwedeng maglaman ng mga emoji",
+        "address_line2_contains_html_tags": "Ang ikalawang linya ng address ay hindi maaaring maglaman ng mga HTML tag",
+        "address_line2_contains_mathematical_symbols": "Ang ikalawang linya ng address ay hindi maaaring maglaman ng mga simbolong matematikal.",
+        "address_address2_blank": "Pumasok sa isang apartment, suite, atbp.",
+        "address_address2_too_long": "Masyadong mahaba ang ikalawang linya ng address (ang maximum ay 255 na karakter)",
+        "address_address2_contains_emojis": "Hindi maaaring maglaman ng emoji ang Address2",
+        "address_address2_contains_html_tags": "Ang Address2 ay hindi maaaring maglaman ng mga HTML tag",
+        "address_address2_contains_mathematical_symbols": "Ang ikalawang linya ng address ay hindi maaaring maglaman ng mga simbolong matematikal.",
+        "address_neighborhood_blank": "Pumili ng isang kapitbahayan",
+        "address_neighborhood_too_long": "Masyadong mahaba ang pangalan ng Neighborhood (maximum ay {{count}} na karakter)",
+        "address_neighborhood_contains_emojis": "Ang pangalan ng neighborhood ay hindi pwedeng magkaroon ng emojis",
+        "address_neighborhood_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang neighborhood",
+        "address_neighborhood_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolo ng matematika ang Neighborhood",
+        "address_barangay_blank": "Ilagay ang barangay",
+        "address_barangay_too_long": "Barangay is too long (maximum is {{count}} characters)",
+        "address_barangay_contains_emojis": "Hindi maaaring maglaman ng mga emoji ang barangay.",
+        "address_barangay_contains_html_tags": "Ang barangay ay hindi maaaring maglaman ng mga HTML tag",
+        "address_barangay_contains_mathematical_symbols": "Ang barangay ay hindi maaaring maglaman ng mga simbolo ng matematika",
+        "address_colony_blank": "Pumasok sa isang kolonya",
+        "address_colony_too_long": "Masyadong mahaba ang Colony (maximum ay {{count}} character)",
+        "address_colony_contains_emojis": "Hindi maaaring maglaman ng emojis ang kolonya.",
+        "address_colony_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang colony",
+        "address_colony_contains_mathematical_symbols": "Hindi maaaring maglaman ang kolonya ng mga simbolong pangmatematika",
+        "address_commune_blank": "Pumasok sa komunidad",
+        "address_commune_too_long": "Napakahaba ng komun (pinakamataas ay {{count}} character)",
+        "address_commune_contains_emojis": "Hindi maaaring maglaman ng emoji ang commune",
+        "address_commune_contains_html_tags": "Ang commune ay hindi maaaring maglaman ng mga HTML tag",
+        "address_commune_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolo ng matematika ang komyuta",
+        "address_district_blank": "Maglagay ng distrito",
+        "address_district_too_long": "Masyadong mahaba ang Distrito (pinakamarami ay {{count}} karakter)",
+        "address_district_contains_emojis": "Hindi maaaring maglaman ng emojis ang distrito",
+        "address_district_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang distrito",
+        "address_district_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolo ng matematika ang distrito",
+        "address_subdistrict_blank": "Ilagay ang subdistrito",
+        "address_subdistrict_too_long": "Masyadong mahaba ang Subdistrict (maximum ay {{count}} na karakter)",
+        "address_subdistrict_contains_emojis": "Hindi maaaring maglaman ng emojis ang subdistrito",
+        "address_subdistrict_contains_html_tags": "Ang subdistrict ay hindi maaaring maglaman ng mga HTML tag",
+        "address_subdistrict_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolo ng matematika ang subdistrict",
+        "delivery_address_code_too_long": "Masyadong mahaba ang code ng address (maximum ay %{count} na character)",
+        "delivery_address_code_contains_emojis": "Ang address code ay hindi maaaring maglaman ng mga emoji",
+        "delivery_address_code_contains_html_tags": "Ang address code ay hindi maaaring maglaman ng mga HTML tag.",
+        "delivery_address_code_contains_mathematical_symbols": "Ang address code ay hindi maaaring maglaman ng mga simbolo sa matematika.",
+        "address_ward_blank": "Pumasok sa ward",
+        "address_ward_too_long": "Masyadong mahaba ang Ward (maximum ay {{count}} character)",
+        "address_ward_contains_emojis": "Hindi maaaring maglaman ang Ward ng mga emoji",
+        "address_ward_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang Ward",
+        "address_ward_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolo ng matematika ang ward.",
+        "address_block_blank": "Maglagay ng bloke",
+        "address_block_too_long": "Masyadong mahaba ang block (maximum ay {{count}} na character)",
+        "address_block_contains_emojis": "Ang block ay hindi maaaring maglaman ng mga emoji",
+        "address_block_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang block",
+        "address_block_contains_mathematical_symbols": "Hindi maaaring maglaman ang block ng mga simbolo ng matematika",
+        "address_area_blank": "Maglagay ng lugar",
+        "address_area_too_long": "Masyadong mahaba ang lugar (maximum ay {{count}} character)",
+        "address_area_contains_emojis": "Hindi maaaring maglaman ng emojis ang area",
+        "address_area_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang area",
+        "address_area_contains_mathematical_symbols": "Ang lugar ay hindi maaaring maglaman ng mga simbolo ng matematika",
+        "address_city_blank": "Maglagay ng lungsod",
+        "address_city_too_long": "Masyadong mahaba ang lungsod (ang maximum ay 255 karakter)",
+        "address_city_contains_emojis": "Hindi maaaring maglaman ng mga emoji ang lungsod",
+        "address_city_contains_html_tags": "Hindi maaaring maglaman ng mga HTML tag ang lungsod",
+        "address_city_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga simbolong matematikal ang lungsod",
+        "address_country_blank": "Pumili ng bansa/rehiyon",
+        "address_country_not_supported": "Hindi kami nagpapadala sa bansang ito o rehiyong ito. Maglagay ng bagong shipping address at subukan muli.",
+        "address_province_blank": "Pumili ng estado / lalawigan",
+        "address_province_invalid": "Pumili ng wastong estado / lalawigan",
+        "address_company_blank": "Ilagay ang pangalan ng kumpanya",
+        "address_company_too_long": "Ang pangalan ng kumpanya ay masyadong mahaba (maximum ay 255 na character)",
+        "address_company_contains_emojis": "Ang pangalan ng kumpanya ay hindi maaaring maglaman ng mga emoji",
+        "address_company_contains_html_tags": "Ang kompanya ay hindi maaaring maglaman ng mga HTML tag",
+        "address_company_contains_mathematical_symbols": "Hindi maaaring maglaman ng mga matematikong simbolo ang kumpanya",
+        "address_phone_blank": "Maglagay ng wastong numero ng telepono",
+        "address_phone_contains_emojis": "Hindi maaaring maglaman ng mga emoji ang numero ng telepono",
+        "address_phone_invalid": "Maglagay ng wastong numero ng telepono",
+        "address_zip_blank": "Ilagay ang ZIP / postal code",
+        "address_zip_blocked_address": "Hindi suportado ang lokasyong ito",
+        "address_zip_too_long": "Ang ZIP / postal code ay masyadong mahaba (maximum na 255 character)",
+        "address_zip_not_supported": "Hindi suportado ang lokasyong ito",
+        "address_zip_invalid_for_country": "Maglagay ng valid na ZIP / postal code para sa %{country}",
+        "address_zip_invalid_for_province": "Maglagay ng wastong ZIP / postal code para sa %{province}",
+        "address_zip_invalid_for_country_and_province": "Maglagay ng valid na ZIP / postal code para sa %{province}, %{country}",
+        "address_zip_contains_emojis": "Ang ZIP / postal code ay hindi maaaring maglaman ng mga emoji",
+        "address_zip_contains_mathematical_symbols": "Ang ZIP / postal code ay hindi maaaring maglaman ng mga mathematical symbol",
+        "address_generic_blank": "Kinakailangang field",
+        "address_generic_invalid": "Maling entry",
+        "address_generic_error": "Maling field",
+        "credit_card_name_blank": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card",
+        "credit_card_name_invalid": "Ipasok ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card"
       }
     },
     "pagination": {
