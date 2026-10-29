@@ -71,12 +71,18 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
+    },
+    "blocks_xirTXx": {
+      "type": "_blocks",
+      "name": "Background image div",
+      "settings": {}
     }
   },
   "order": [
     "announcement_bar_HkK9aa",
     "header",
     "177323905288e19fc9",
-    "custom_liquid_FaNXEF"
+    "custom_liquid_FaNXEF",
+    "blocks_xirTXx"
   ]
 }
