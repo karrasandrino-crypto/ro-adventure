@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -537,6 +546,30 @@
       "send_on_label": "Spedisci il giorno (opzionale)",
       "expanded": "Modulo destinatario del buono regalo espanso",
       "collapsed": "Modulo destinatario del buono regalo compresso"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "local_pickup": {
+        "stock_details": {
+          "in_stock": "Disponibile"
+        }
+      },
+      "split_delivery": {
+        "delivery_updated_toast": {
+          "shipping_only": "La tua consegna è stata aggiornata. {{shipping}}",
+          "removal_only": "La tua consegna è stata aggiornata. {{removal}}",
+          "shipping_and_removal": "La tua consegna è stata aggiornata. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} articolo è stato spostato in spedizione.",
+            "other": "{{count}} articoli sono stati spostati in spedizione."
+          },
+          "removal": {
+            "one": "{{count}} elemento è stato rimosso.",
+            "other": "{{count}} elementi sono stati rimossi."
+          }
+        }
+      }
     }
   }
 }
