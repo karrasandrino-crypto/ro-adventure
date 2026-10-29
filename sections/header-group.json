@@ -38,11 +38,6 @@
         "enable_language_selector": false
       }
     },
-    "blocks_xirTXx": {
-      "type": "_blocks",
-      "name": "Background image div",
-      "settings": {}
-    },
     "header": {
       "type": "header",
       "custom_css": [],
@@ -62,6 +57,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "blocks_xirTXx": {
+      "type": "_blocks",
+      "name": "Background image div",
+      "settings": {}
     },
     "177323905288e19fc9": {
       "type": "_blocks",
@@ -86,8 +86,8 @@
   },
   "order": [
     "announcement_bar_HkK9aa",
-    "blocks_xirTXx",
     "header",
+    "blocks_xirTXx",
     "177323905288e19fc9",
     "custom_liquid_FaNXEF",
     "1793294509c13485ae"

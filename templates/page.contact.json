@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_banner_rDqUgB": {
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
@@ -34,13 +26,21 @@
         "show_text_below": false
       }
     },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "179329284072609542": {
       "type": "apps",
       "blocks": {
         "forms_inline_pJdt9c": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "",
+            "form_id": "1223945",
             "text_color": "#202020",
             "button_background_color": "#202020",
             "button_label_color": "#ffffff",
@@ -120,9 +120,9 @@
     }
   },
   "order": [
-    "main",
     "image_banner_rDqUgB",
     "179329284072609542",
+    "main",
     "1793292954d2f3941b",
     "179329482790680b61"
   ]
