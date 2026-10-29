@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -537,6 +546,30 @@
       "send_on_label": "Enviar el (opcional)",
       "expanded": "Formulario del destinatario de la tarjeta de regalo expandido",
       "collapsed": "Formulario del destinatario de tarjeta de regalo contraído"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "local_pickup": {
+        "stock_details": {
+          "in_stock": "En existencia"
+        }
+      },
+      "split_delivery": {
+        "delivery_updated_toast": {
+          "shipping_only": "Tu entrega se ha actualizado. {{shipping}}",
+          "removal_only": "Tu entrega se ha actualizado. {{removal}}",
+          "shipping_and_removal": "Tu entrega se ha actualizado. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} artículo se ha movido a envío.",
+            "other": "{{count}} artículos se han movido a envío."
+          },
+          "removal": {
+            "one": "Se ha eliminado {{count}} elemento.",
+            "other": "Se han eliminado {{count}} elementos."
+          }
+        }
+      }
     }
   }
 }
