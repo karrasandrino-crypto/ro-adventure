@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -525,6 +534,30 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "local_pickup": {
+        "stock_details": {
+          "in_stock": "Auf Lager"
+        }
+      },
+      "split_delivery": {
+        "delivery_updated_toast": {
+          "shipping_only": "Ihre Lieferung wurde aktualisiert. {{shipping}}",
+          "removal_only": "Ihre Lieferung wurde aktualisiert. {{removal}}",
+          "shipping_and_removal": "Ihre Lieferung wurde aktualisiert. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} Artikel wurde an den Versand übergeben.",
+            "other": "{{count}} Artikel wurden in den Versand verschoben."
+          },
+          "removal": {
+            "one": "{{count}} Element wurde entfernt.",
+            "other": "{{count}} Elemente wurden entfernt."
+          }
+        }
+      }
     }
   }
 }
