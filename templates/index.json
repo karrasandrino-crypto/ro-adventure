@@ -274,6 +274,37 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_6xiXAp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KJL89J": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;A SECOND ADVENTURE&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_QAdLpy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At RŌ Adventure, we believe it’s about more than the gear you take with you. It’s about the experiences it creates, the problems it solves, and the freedom to get outside and make memories.</p><p>Our products are designed with purpose — practical, versatile and made to help people maximise their time outdoors. Whether it’s a day on the water, a weekend camping, or an impromptu adventure with friends and family, RŌ gear makes it easier to get out there and enjoy it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KJL89J",
+        "text_QAdLpy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_YfBG4j": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -414,6 +445,7 @@
     "1778179396c0d7c756",
     "178094891129394b35",
     "custom_liquid_XC87jK",
+    "rich_text_6xiXAp",
     "featured_collection_YfBG4j",
     "custom_liquid_V67DEi",
     "image_banner_t8qP7X",
