@@ -93,11 +93,11 @@
         "ai_gen_block_0a36add_awanwt": {
           "type": "ai_gen_block_0a36add",
           "settings": {
-            "image_1": "shopify://shop_images/Drift_Towel_-_Available_now.png",
-            "link_1": "shopify://products/ro-drift-towel",
-            "image_2": "shopify://shop_images/ChatGPT_Image_Jun_8_2026_08_29_51_PM.png",
-            "link_2": "https://ro-adventure.com/blogs/community-hub",
-            "image_3": "shopify://shop_images/Beanies.png",
+            "image_1": "shopify://shop_images/Hikers_Sharing_Adventure_by_the_Lake_1.png",
+            "link_1": "shopify://pages/community-hub",
+            "image_2": "shopify://shop_images/RO_Bag_Range__Second_Adventure.png",
+            "link_2": "shopify://pages/ro-adventure-bags",
+            "image_3": "shopify://shop_images/Get_Winter_Ready_RO_Beanie_Range.png",
             "link_3": "shopify://pages/ro-beanie-collection",
             "desktop_width_percent": 100,
             "columns_mobile": "3",
