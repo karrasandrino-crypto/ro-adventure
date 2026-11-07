@@ -874,7 +874,8 @@
           "wechat_instructions": "I-scan ang QR code na ito gamit ang WeChat app sa iyong telepono para makumpleto ang iyong pagbili",
           "wechat_instructions_mobile": "I-scan ang QR code na ito gamit ang WeChat app sa isa pang device para makumpleto ang iyong pagbili",
           "paynow_instructions": "I-scan ang QR code na ito gamit ang iyong bank o payment app upang tapusin ang iyong pagbabayad. I-scan ang code sa halip na direktang magbayad sa UEN, dahil hindi maaaring itugma ang mga manual transfer sa iyong order.",
-          "paynow_instructions_mobile": "I-save ang QR code na ito, pagkatapos ay i-scan ito mula sa iyong mga litrato sa iyong bank o payment app. I-scan ang code sa halip na bayaran nang direkta ang UEN, dahil hindi maitutugma ang mga manual transfer sa iyong order."
+          "paynow_instructions_mobile": "I-save ang QR code na ito, pagkatapos ay i-scan ito mula sa iyong mga litrato sa iyong bank o payment app. I-scan ang code sa halip na bayaran nang direkta ang UEN, dahil hindi maitutugma ang mga manual transfer sa iyong order.",
+          "save_qr_code": "I-save ang QR code"
         },
         "external": {
           "instructions": "I-confirm ang bayad sa iyong app upang makumpleto ang pagbiling ito"
@@ -920,7 +921,8 @@
         "draft_order_payment_due_later_terms": "Makakatanggap ka ng {{translatedName}} kapag nakumpirma na ang iyong order.",
         "draft_order_payment_due_on_fulfillment": "Magiging due ang iyong bayad kapag nakumpirma at naipadala na ang iyong order.",
         "draft_order_deposit_due_later": "{{depositAmount}} ang magiging bayad kapag nakumpirma ang iyong order. Ang balanse ay nasa {{translatedName}} na mga termino.",
-        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} ang kailangang bayaran kapag nakumpirma na ang iyong order. Ang balanse ay babayaran kapag natapos na ang iyong order."
+        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} ang kailangang bayaran kapag nakumpirma na ang iyong order. Ang balanse ay babayaran kapag natapos na ang iyong order.",
+        "credit_or_debit_card_option_label": "Credit o debit card"
       },
       "thank_you": {
         "title": "Salamat sa iyong pagbili!",
@@ -1251,7 +1253,11 @@
           "contact_us": "Makipag-ugnayan sa amin"
         },
         "first_payment_complete": "Tapos na ang unang bayad",
-        "in_store_purchase": "Pagbili sa tindahan"
+        "in_store_purchase": "Pagbili sa tindahan",
+        "hsa_qualification": {
+          "review_pending": "Sinusuri namin ang iyong health survey. Makukuha ang iyong bayad kapag na-isyu na ang iyong Letter of Medical Necessity. Makakatanggap ka ng email ng kumpirmasyon sa lalong madaling panahon.",
+          "review_pending_pickup": "Sinusuri namin ang iyong health survey. Makukuha ang iyong bayad kapag naisyu na ang iyong Letter of Medical Necessity."
+        }
       },
       "vaulted": {
         "change_button": "Palitan",
@@ -1495,6 +1501,38 @@
         "pickup_unavailable_banner_title_with_country": {
           "one": "Walang lokasyon sa %{country} para sa iyong item",
           "other": "Walang lokasyon sa %{country} para sa iyong mga item"
+        },
+        "only_fully_stocked_locations": "Ipakita lamang ang mga lokasyon na may lahat ng item sa stock",
+        "stock_details_modal": {
+          "unavailable_title": "Hindi available para sa pagkuha",
+          "location": "Sa %{location}",
+          "can_ship_description": {
+            "one": "Ubos na ang stock ng item na ito sa napili mong lokasyon ng pagkuha.",
+            "other": "Ubos na ang mga item na ito sa napili mong lokasyon ng pagkuha."
+          },
+          "cannot_ship_description": {
+            "one": "Ubos na ang stock ng item na ito sa iyong napiling lokasyon ng pagkuha at hindi ito maaaring ipadala.",
+            "other": "Ubos na ang mga item na ito sa iyong napiling lokasyon ng pagkuha at hindi maaaring ipadala."
+          },
+          "cannot_ship_bundle_description": {
+            "one": "Ubos na ang stock ng item na ito sa iyong napiling lokasyon ng pagkuha at hindi ito maaaring ipadala. Tatanggalin din ang mga naka-bundle na item.",
+            "other": "Ubos na ang mga item na ito sa iyong napiling lokasyon ng pagkuha at hindi maipadala. Tatanggalin din ang mga item na naka-bundle."
+          },
+          "ship_separately": "Ihiwalay ang pagpapadala",
+          "choose_different_location": "Pumili ng ibang lokasyon"
+        },
+        "stock_details_banner": {
+          "heading": {
+            "one": "Ang %{count} item ay hindi available para kunin sa %{location}",
+            "other": "May %{count} item na hindi available para kunin sa %{location}"
+          },
+          "closest_location": "Ang pinakamalapit na lokasyon ng pagkuha na may lahat ng item sa stock ay %{distance} ang layo",
+          "change_location_or_ship_separately": "%{change_location_link} o %{ship_separately_link}",
+          "change_location_or_remove_items": "%{change_location_link} o %{remove_items_link}",
+          "ship_separately": {
+            "one": "ipadala ito nang hiwalay",
+            "other": "ipadala sila nang magkahiwalay"
+          }
         }
       },
       "split_delivery": {
@@ -1566,13 +1604,28 @@
             "change_country": "Baguhin ang bansa"
           },
           "banner": "Na-update ang paraan ng paghahatid mo"
+        },
+        "delivery_updated_toast": {
+          "shipping_only": "Na-update na ang iyong delivery. {{shipping}}",
+          "removal_only": "Na-update na ang iyong delivery. {{removal}}",
+          "shipping_and_removal": "Na-update na ang iyong delivery. {{shipping}} {{removal}}",
+          "shipping": {
+            "one": "{{count}} item ang nailipat sa pagpapadala.",
+            "other": "{{count}} na item ang nailipat na sa pagpapadala."
+          },
+          "removal": {
+            "one": "{{count}} item ang natanggal.",
+            "other": "{{count}} na item ang natanggal."
+          }
         }
       },
       "captcha": {
         "title": "Kumpletuhin ang CAPTCHA upang magpatuloy",
         "errors": {
-          "not_solved": "Kumpletuhin ang CAPTCHA upang magpatuloy"
-        }
+          "not_solved": "Kumpletuhin ang CAPTCHA upang magpatuloy",
+          "load_failed": "Hindi ma-load ang CAPTCHA. Subukan muli."
+        },
+        "retry": "Subukan muli ang CAPTCHA"
       },
       "clipboard": {
         "copied": "Kinopya",
@@ -1607,7 +1660,9 @@
         "payment_in_progress_body": "Pinoproseso na ang iyong bayad. Malapit nang matapos ang iyong order.",
         "deceleration": {
           "one_more_step_to_complete_order": "Isang hakbang na lang para makumpleto ang iyong order",
-          "one_more_step": "Isa na lang hakbang..."
+          "one_more_step": "Isa na lang hakbang...",
+          "split_delivery_notice": "Ang iyong order ay may mga item para sa pagpapadala at pagkuha. Suriin ang iyong mga detalye sa paghahatid, pagkatapos ay tapusin ang iyong order.",
+          "pickup_only_notice": "Suriin ang lokasyon ng pagkuha, pagkatapos ay tapusin ang iyong order."
         },
         "continue_with": "Magpatuloy gamit ang {{walletName}}",
         "call_to_action": "Bayaran gamit ang {{walletName}}",
@@ -1634,7 +1689,8 @@
             "stock_problems": "Ilang item ay hindi na available. Isara ang {{walletName}} at subukan ulit.",
             "price_change": "<p>May pagbabago sa presyo ng ilang item. Isara ang {{walletName}} para suriin ang iyong order at subukang muli.</p>",
             "queue": "Ikaw ay inilagay sa pila para mag-checkout. Isara ang {{walletName}} upang magpatuloy.",
-            "currency_change": "Hindi ka maaaring gumamit ng ibang address sa {{walletName}}. Gamitin ang orihinal na address, o subukan ang ibang paraan ng pagbabayad."
+            "currency_change": "Hindi ka maaaring gumamit ng ibang address sa {{walletName}}. Gamitin ang orihinal na address, o subukan ang ibang paraan ng pagbabayad.",
+            "currency_change_with_country": "Hindi magagamit ang {{walletName}} dahil nagbago ang pera. Gumamit ng address sa {{countryName}} o subukan ang ibang paraan ng pagbabayad."
           },
           "unsupported": {
             "address": "Hindi makapag-deliver ang merchant sa address na ito.",
@@ -2790,7 +2846,21 @@
         "split_by_delivery_method_requires_merchandise_from_single_location": "Ang paghahati ayon sa paraan ng pagpapadala ay nangangailangan na ang bawat linya ng paninda ay matugunan mula sa iisang lokasyon.",
         "split_by_delivery_method_unsupported_method_type": "Paghiwalayin ayon sa paraan ng pagpapadalang sinubukan gamit ang isang uri ng paraan ng pagpapadalang hindi suportado.",
         "split_cart_not_allowed": "Hindi balido ang session o hindi naka-enable ang feature para sa tindahang ito.",
-        "split_quantity_per_delivery_line_not_allowed": "Hindi bababa sa isang linya ng paninda ang tinutukoy ng maraming linya ng paghahatid."
+        "split_quantity_per_delivery_line_not_allowed": "Hindi bababa sa isang linya ng paninda ang tinutukoy ng maraming linya ng paghahatid.",
+        "address_first_name_contains_html_tags": "Ang unang pangalan ay hindi maaaring maglaman ng mga HTML tag",
+        "address_first_name_contains_url": "Ang unang pangalan ay hindi maaaring maglaman ng URL",
+        "address_first_name_contains_mathematical_symbols": "Ang unang pangalan ay hindi maaaring maglaman ng mga simbolong matematikal",
+        "address_last_name_blank": "Ilagay ang apelyido",
+        "address_last_name_too_long": "Masyadong mahaba ang apelyido (ang maximum ay 255 na karakter)",
+        "address_last_name_contains_emojis": "Ang apelyido ay hindi maaaring maglaman ng mga emoji",
+        "address_last_name_contains_html_tags": "Ang apelyido ay hindi maaaring maglaman ng mga HTML tag",
+        "address_last_name_contains_url": "Hindi maaaring maglaman ng URL ang apelyido",
+        "address_last_name_contains_mathematical_symbols": "Ang apelyido ay hindi maaaring maglaman ng mga simbolong matematikal",
+        "address_address1_blank": "Maglagay ng address",
+        "address_address1_too_long": "Masyadong mahaba ang unang linya ng address (ang maximum ay 255 na mga karakter)",
+        "address_address1_contains_emojis": "Ang Address1 ay hindi maaaring maglaman ng mga emoji",
+        "address_address1_contains_html_tags": "Ang Address1 ay hindi maaaring maglaman ng mga HTML tag",
+        "address_address1_contains_mathematical_symbols": "Ang unang linya ng address ay hindi maaaring maglaman ng mga mathematical symbol"
       },
       "order_errors": {
         "creation_failure": "Nagkaroon ng problema sa paggawa ng iyong order. Subukang muli, o makipag-ugnayan sa amin para sa karagdagang detalye.",
@@ -3027,7 +3097,10 @@
         "deferred_payment_not_allowed": "Hindi pinapayagan ang deferred payment. Suriin ang iyong order at subukan muli.",
         "deferred_payment_required": "Ang order na ito ay nangangailangan ng deferred payment. Suriin ang iyong order at subukang muli.",
         "deferred_amount_changed": "Hindi naproseso ang iyong pagbabayad dahil nagbago ang halaga ng deferred payment. Suriin ang iyong order at subukan muli.",
-        "deferred_date_changed": "Hindi naproseso ang iyong bayad dahil nagbago ang nakatakdang petsa ng pagbabayad. Suriin ang iyong order at subukan muli."
+        "deferred_date_changed": "Hindi naproseso ang iyong bayad dahil nagbago ang nakatakdang petsa ng pagbabayad. Suriin ang iyong order at subukan muli.",
+        "invalid_customer_account": "Hindi namin ma-charge ang iyong account. Maaari kang sumubok muli matapos ayusin ang problema sa iyong account, o gumamit ng ibang paraan ng pagbabayad.",
+        "code_expired": "Nag-expire na ang iyong payment code o nagamit na ito. Kumuha ng bagong code sa iyong banking app at subukan muli.",
+        "code_invalid": "Hindi valid ang iyong payment code. Suriin ang code at subukan muli, o kumuha ng bagong code mula sa iyong banking app."
       },
       "shipping_errors": {
         "shipping_method": "Nagbago ang mga opsyon sa pagpapadala para sa iyong order. Suriin ang iyong pinili.",
@@ -3722,6 +3795,11 @@
           "visibility": "Na-update na namin ang aming patakaran, at sinusubaybayan na namin ngayon kung binubuksan ang mga email. Ang mga email open rate ay iuulat nang anonymous. Makikita lang namin kung binuksan mo ang isang email bilang bahagi ng kabuuang email open rate.",
           "opt_out_html": "Kung hindi mo nais ibahagi ang impormasyong ito, maaari kang <a style=\"text-decoration:underline;\" href=\"%{link}\">mag-unsubscribe.</a>"
         }
+      },
+      "unsubscribe_confirm": {
+        "title": "Mag-unsubscribe mula sa mga email?",
+        "description": "Hindi ka na makakatanggap ng mga email marketing mula sa %{shop_name}",
+        "button": "Mag-unsubscribe"
       }
     },
     "filters": {
@@ -4877,8 +4955,28 @@
         },
         "show_order_actions_accessibility_label": "Ipakita ang mga aksyon para sa order na {{name}}",
         "view_order": "Tingnan ang order",
-        "view_order_accessibility_label": "Tingnan ang order {{orderName}}"
-      }
+        "view_order_accessibility_label": "Tingnan ang order {{orderName}}",
+        "empty_state_redesign_cta": "Mamili na",
+        "empty_state_redesign_subtitle": "Handa ka na bang mamili?",
+        "empty_state_redesign_welcome": "Maligayang pagdating",
+        "empty_state_redesign_welcome_with_name": "Maligayang pagdating, {{firstName}}",
+        "empty_state_title": "Wala pang mga order",
+        "empty_state_with_location_title": "Walang order para sa {{locationName}}",
+        "empty_state_title_for_pending_orders": "Walang nakabinbing order",
+        "no_order_banner": "Upang masubok ang iyong extension sa pahina ng status ng Order, gumawa ng order.",
+        "one_images_accessibility_label": "Kasama sa order ang {{lineItemName1}}",
+        "two_images_accessibility_label": "Ang order ay may kasamang {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "Kasama sa order ang {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "Kasama sa order ang {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "Ang order ay may kasamang {{lineItemName1}}, {{lineItemName2}}, at {{numberOfAdditionalProducts}} pang produkto",
+        "more_than_four_products_accessibility_label": "Kasama sa order ang {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, at {{numberOfAdditionalProducts}} pang produkto",
+        "plus_more": "+{{numberOfAdditionalProducts}}"
+      },
+      "list_title": "Mga Order",
+      "list_title_confirmed_orders_accessibility_label": "Mga order: kumpirmado",
+      "list_title_pending_orders_accessibility_label": "Mga order: nakabinbin",
+      "switch_order_type_pending_orders_accessibility_label": "Palitan ang uri ng order, kasalukuyang tinitingnan ang mga pending na order",
+      "switch_order_type_confirmed_orders_accessibility_label": "Palitan ang uri ng order, kasalukuyang tinitingnan ang mga kumpirmadong order"
     },
     "callback": {
       "try_again": "Subukan muli"
@@ -4996,8 +5094,44 @@
       },
       "verify_new_email_modal": {
         "title": "I-verify ang iyong bagong email",
-        "description": "Ngayon, ilagay ang 6-digit na code na ipinadala sa iyong bagong email:"
-      }
+        "description": "Ngayon, ilagay ang 6-digit na code na ipinadala sa iyong bagong email:",
+        "one_time_password_label": "6-digit na code",
+        "email_resend_button": "Ipadala muli ang code",
+        "email_resend_button_accessibility_label": "Ipadala muli ang verification code",
+        "verify_button": "Patunayan",
+        "verify_button_accessibility_label": "I-verify ang one-time password",
+        "cancel_button": "Kanselahin",
+        "cancel_button_accessibility_label": "Kanselahin ang pag-edit ng profile",
+        "email_resend_button_success_toast_message": "Naipadala na ang verification code",
+        "email_resend_button_failure_banner_message": "Hindi maipadala ang verification code"
+      },
+      "marketing_preferences": {
+        "email_label": "Email",
+        "pending_confirmation": "I-click ang link sa iyong email upang kumpirmahin.",
+        "resend_email": "Ipadala muli ang email",
+        "resend_email_success": "Naipadala na ang link",
+        "title": "Mga kagustuhan sa marketing",
+        "unsubscribe_confirmation": {
+          "cancel": "Kanselahin",
+          "description": "Hindi ka na makatatanggap ng email marketing mula sa {{shopName}}",
+          "title": "Mag-unsubscribe mula sa mga email?",
+          "unsubscribe": "Mag-unsubscribe"
+        },
+        "update_error": {
+          "description": "Nagkaroon ng problema sa pag-update ng iyong mga kagustuhan sa marketing. Subukang i-refresh ang pahinang ito o tingnan ang iyong koneksyon sa internet."
+        },
+        "update_success": "Na-update ang mga kagustuhan sa marketing"
+      },
+      "profile_update_confirmation_message": "Na-update na ang profile",
+      "title": "Propayl",
+      "people": {
+        "pagination": {
+          "load_more": "Ipakita ang higit pa",
+          "load_more_accessibility_label": "Ipakita sa mas maraming tao",
+          "loading_accessibility_label": "Naglo-load ng mga tao"
+        }
+      },
+      "add_button": "Idagdag"
     }
   },
   "general": {
