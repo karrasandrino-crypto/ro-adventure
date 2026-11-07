@@ -695,7 +695,8 @@
                 "familymart": "FamilyMart",
                 "lawson": "Lawson",
                 "ministop": "Ministop",
-                "seicomart": "Seicomart"
+                "seicomart": "Seicomart",
+                "seven_eleven": "7-Eleven"
               },
               "codes": {
                 "reference_number": "Payment code",
@@ -730,7 +731,10 @@
                   "4": "Suriin ang mga detalye at piliin ang OK",
                   "5": "Magbayad nang cash"
                 },
-                "1": "Dalhin ang payment code at confirmation code sa terminal o register ng tindahan at magbayad ng cash bago ma-expire ang voucher."
+                "1": "Dalhin ang payment code at confirmation code sa terminal o register ng tindahan at magbayad ng cash bago ma-expire ang voucher.",
+                "seven_eleven": {
+                  "1": "Sa cashier, pindutin ang Show barcode para ma-scan ng cashier"
+                }
               },
               "pay": "Magbayad ng %{amount}",
               "choose_outlet": "Pumili ng Konbini para makita ang iyong mga code at kung paano magbayad",
@@ -742,7 +746,8 @@
               "code_copied": "Kinopya",
               "keep_receipt": "Itago ang iyong resibo bilang patunay ng pagbabayad",
               "view_instructions": "Tingnan ang mga tagubilin sa pagbabayad",
-              "view_instructions_accessibility_label": "Tingnan ang mga instruksyon sa pagbabayad (bubukas sa bagong tab)"
+              "view_instructions_accessibility_label": "Tingnan ang mga instruksyon sa pagbabayad (bubukas sa bagong tab)",
+              "show_barcode": "Ipakita ang barcode"
             }
           },
           "oxxo": {
@@ -830,7 +835,89 @@
         "delete_customer_mandate_modal_confirm": "Alisin ang card",
         "delete_customer_mandate_modal_cancel": "Kanselahin",
         "card_verification_value_label": "Security code",
-        "card_verification_value_placeholder": "Security code"
+        "card_verification_value_placeholder": "Security code",
+        "card_verification_confirm": "Para sa layuning beripikasyon, ilagay ang security code ng iyong card.",
+        "card_expiry_date_explanation": "Petsa ng pagkapaso ng card sa format na: buwan, buwan, taon, taon",
+        "card_expiration_month_label": "Buwan ng pagkapaso",
+        "card_expiration_year_label": "Taon ng pag-expire",
+        "card_verification_value_explanation": "3-digit security code na karaniwang makikita sa likod ng iyong card. Ang mga American Express card ay may 4-digit code na matatagpuan sa harap.",
+        "card_verification_value_explanation_amex": "4-digit security code sa harap ng iyong card",
+        "card_verification_value_explanation_other": "3-digit security code sa likod ng iyong card",
+        "card_start_label": "Petsa ng paglabas (MM / YY)",
+        "card_start_placeholder": "Petsa ng paglabas (MM / YY)",
+        "card_issue_number_label": "Bilang ng isyu",
+        "pay_with_credit_or_debit_card": "Magbayad gamit ang credit o debit card",
+        "order_edit_banner_single_item_return_line_item_removed": "Inalis sa return",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Inalis ang {{amount}} mula sa return",
+        "order_edit_banner_single_item_updated": "Na-update",
+        "order_edit_banner_updated_order_label": "Na-update na order",
+        "order_edit_banner_previous_taxes_label": "Mga nakaraang buwis:",
+        "order_edit_banner_new_taxes_label": "Mga bagong buwis:",
+        "order_edit_banner_no_taxes_label": "Wala",
+        "gift_card_wrapper": {
+          "heading": "Gift card",
+          "apply_gift_card_label": "Gamitin ang gift card",
+          "apply_another_gift_card_label": "Mag-apply ng isa pang gift card",
+          "gift_card_label": "Gift card %{identifier}",
+          "payment_tag": "Gift card",
+          "add_label": "Magdagdag ng gift card",
+          "manage_label": "Pamahalaan ang mga gift card"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Magdagdag ng gift card o store credit",
+          "manage_label": "Pamahalaan ang mga gift card o store credit"
+        },
+        "gift_card_checkbox_label": "Gamitin ang gift card",
+        "custom_onsite_payment_method_modal": {
+          "title": "Kumpirmasyon ng Pagbabayad sa Onsite (Custom)"
+        },
+        "markets_pro_disclaimer_label": "Sa paglalagay ng iyong order, sumasang-ayon kang bumili mula sa Global-e bilang merchant of record, na napapailalim sa %{markets_pro_terms} at %{privacy_policy} ng Global-e, at ibahagi ang iyong impormasyon sa %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Mga Tuntunin at Kundisyon",
+        "markets_pro_disclaimer_privacy_policy": "Patakaran sa Pagkapribado",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Mga Tuntunin at Kundisyon ng Merchant of Record",
+        "markets_pro_disclaimer_privacy_policy_title": "Patakaran sa Privacy ng Merchant of Record",
+        "purchase_order_number": {
+          "title": "Bilang ng PO",
+          "label": "PO number (opsyonal)"
+        },
+        "alternative_payment_currency_total_notice": "Paalala: sisingilin ka ng %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Paalala: ang kabuuang na-convert ay %{amount_due}.",
+        "waiting_on_taxes_message": "Kung hindi mag-compute ang iyong tax sa loob ng susunod na ilang segundo, i-refresh ang pahina.",
+        "waiting_on_taxes_notice": "Pagkalkula ng buwis",
+        "payment_method": "Paraan ng pagbabayad",
+        "payment_method_rollup_accessibility_label": "Mga pagpipiliang paraan ng pagbabayad",
+        "expired_payment_method": "Nawalang-bisa na ang napiling paraan ng pagbabayad",
+        "payment_method_update_failed": "Nabigo ang pag-update ng paraan ng pagbabayad.",
+        "payment_method_incompatible_with_payment_terms": "Hindi tugma ang paraan ng pagbabayad sa mga tuntunin ng pagbabayad.",
+        "proposed_gateway_unavailable": "Hindi magagamit ang iminumungkahing payment gateway.",
+        "pay_in_installments_split_pay_short": "4 na bayad na %{amount}",
+        "gift_cards_unavailable": "Hindi na maaaring gamitin ang iyong gift card sa order na ito kaya inalis na ito.",
+        "payment_flexibility_terms_id_mismatch": "Hindi tugma ang ID ng mga tuntunin sa kakayahang magbayad (payment flexibility terms)",
+        "payment_option": {
+          "accessibility_label": "Pumili ng paraan ng pagbabayad"
+        },
+        "bank_account_type": {
+          "checking": "Nagsusuri",
+          "savings": "Ipon"
+        },
+        "new_bank_account_disclaimer": "Sa pamamagitan ng pagkumpleto ng iyong order, binibigyan mo ng pahintulot ang %{shop_name} na i-debit ang account sa ibaba sa pamamagitan ng ACH para sa halaga, at sa oras, na ipinapakita.",
+        "bank_account_disclaimer": "Maaaring abutin ng hanggang 4 na araw ng trabaho ang pag-proseso ng mga bayad sa pamamagitan ng ACH.",
+        "bank_account_choose": "Pumili ng account upang ligtas na makumpleto ang iyong pagbili",
+        "bank_account_connect_another": "Magkonek ng isa pang bank account",
+        "bank_account_connect": "I-konek ang bank account",
+        "bank_account_missing": "Kailangang ikonekta ang bank account",
+        "bank_account_generic_error": "Hindi naidagdag ang bank account. Subukan muli mamaya.",
+        "separate_payments_label": "Ang iyong mga item ay mula sa higit sa isang tindahan. Sisingilin ka sa %{separate_payments_link}.",
+        "separate_payments_text": "magkahiwalay na bayad",
+        "payments": "Mga Bayad",
+        "add_payment_method": "Magdagdag ng paraan ng pagbabayad",
+        "add_new_payment_method": "Magdagdag ng bagong paraan ng pagbabayad",
+        "choose_new_payment_method": "Pumili ng bagong paraan ng pagbabayad",
+        "multiple_primary_payment_not_allowed": "Di-wastong paraan ng pagbabayad",
+        "vault_for_payment_later": {
+          "pay_button_label": "Mag-order",
+          "notice": "Hindi ka sisingilin ngayon. Sa pagpapatuloy sa iyong pagbabayad, sumasang-ayon ka na sisingilin ang iyong paraan ng pagbabayad kapag na-proseso ang iyong order."
+        }
       },
       "processing": {
         "wait": {
@@ -2860,7 +2947,15 @@
         "address_address1_too_long": "Masyadong mahaba ang unang linya ng address (ang maximum ay 255 na mga karakter)",
         "address_address1_contains_emojis": "Ang Address1 ay hindi maaaring maglaman ng mga emoji",
         "address_address1_contains_html_tags": "Ang Address1 ay hindi maaaring maglaman ng mga HTML tag",
-        "address_address1_contains_mathematical_symbols": "Ang unang linya ng address ay hindi maaaring maglaman ng mga mathematical symbol"
+        "address_address1_contains_mathematical_symbols": "Ang unang linya ng address ay hindi maaaring maglaman ng mga mathematical symbol",
+        "handle_phone_invalid": "Maglagay ng wastong numero ng telepono",
+        "handle_email_invalid": "Maglagay ng valid na email",
+        "email_invalid": "Maglagay ng valid na email",
+        "email_or_phone_blank": "Maglagay ng email o numero ng telepono",
+        "email_or_phone_invalid": "Maglagay ng wastong email o numero ng mobile phone",
+        "address_first_name_blank": "Ilagay ang unang pangalan",
+        "address_first_name_too_long": "Masyadong mahaba ang pangalan (hanggang 255 karakter lamang)",
+        "address_first_name_contains_emojis": "Ang unang pangalan ay hindi maaaring maglaman ng mga emoji"
       },
       "order_errors": {
         "creation_failure": "Nagkaroon ng problema sa paggawa ng iyong order. Subukang muli, o makipag-ugnayan sa amin para sa karagdagang detalye.",
@@ -3490,6 +3585,35 @@
       },
       "datepicker": {
         "choose_date": "Pumili ng petsa"
+      },
+      "billing": {
+        "billing_address_title": "Singilin ang",
+        "billing_address_rollup_accessibility_label": "Mga opsyon sa pagbabayad",
+        "same_as_shipping": "Katulad ng shipping address",
+        "add_address": "Gumamit ng ibang address",
+        "edit": "I-edit",
+        "delete": "Burahin",
+        "address_more": "Higit pang mga aksyon para sa address na ito",
+        "address_edit": "I-edit ang address",
+        "address_delete": "Burahin ang address",
+        "address_confirm": "Sigurado ka bang gusto mong burahin ang address na ito mula sa iyong account?",
+        "address_form": {
+          "add_address": "Idagdag ang address",
+          "save": "I-save",
+          "cancel": "Kanselahin"
+        }
+      },
+      "company_location": {
+        "location_title": "Lokasyon ng kumpanya",
+        "location_rollup_accessibility_label": "Mga opsyon sa lokasyon ng kompanya"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Kasalukuyang balanse %{amount}",
+        "credit_card_expires_on_notice": "Magtatapos sa %{month}/%{year}",
+        "express_payment_gateway_label": "Ipahayag",
+        "manual_payment_gateway_label": "Manwal",
+        "billing_address_title": "Address sa pagsingil",
+        "free_label": "Libre"
       }
     },
     "pagination": {
