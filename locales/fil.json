@@ -4216,7 +4216,8 @@
       "tuesdayAbbreviation": "Ikaw",
       "wednesdayAbbreviation": "Kami",
       "thursdayAbbreviation": "Ang",
-      "fridayAbbreviation": "Talaga"
+      "fridayAbbreviation": "Talaga",
+      "chooseDate": "Pumili ng petsa"
     },
     "profile_preview_bar": {
       "badge_active": "Aktibo",
@@ -4517,7 +4518,51 @@
         "card_number_placeholder": "Numero ng card",
         "name_on_card_label": "Pangalan sa card",
         "name_on_card_placeholder": "Pangalan sa card",
-        "card_expiry_label": "Petsa ng pagkapaso (MM / YY)"
+        "card_expiry_label": "Petsa ng pagkapaso (MM / YY)",
+        "card_expiry_placeholder": "Petsa ng pagkapaso (MM / YY)",
+        "card_verification_value_label": "Security code",
+        "card_verification_value_placeholder": "Security code",
+        "tooltip": {
+          "tooltip_accessibility_label": "Karagdagang impormasyon",
+          "card_verification_value_explanation_amex": "4-digit security code sa harap ng iyong card",
+          "card_verification_value_explanation_other": "3-digit security code sa likod ng iyong card",
+          "card_verification_value_explanation": "3-digit security code na karaniwang makikita sa likod ng iyong card. Ang mga American Express card ay may 4-digit code na matatagpuan sa harap.",
+          "card_security_notice": "Ang lahat ng transaksyon ay ligtas at naka-encrypt."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Ilagay ang iyong pangalan nang eksakto kung paano ito nakasulat sa iyong card",
+          "credit_card_number_invalid": "Maglagay ng wastong numero ng card",
+          "credit_card_expiry_invalid": "Maglagay ng valid na petsa ng pag-expire ng card",
+          "credit_card_verification_value_blank": "Ilagay ang CVV o security code sa iyong card"
+        },
+        "unavailable": {
+          "text": "Hindi muna magagamit ang pagbabayad gamit ang credit at debit card sa ngayon.",
+          "link_text": "I-refresh ang pahinang ito",
+          "suffix": "o subukan muli mamaya."
+        }
+      },
+      "payment_delete": {
+        "title": "Alisin ang paraan ng pagbabayad",
+        "description_without_replacement": "Hindi na magiging available ang paraan ng pagbabayad na ito para sa mga susunod na transaksyon.",
+        "description_with_replacement": "Ang pagbura sa paraan ng pagbabayad na ito ay makakaapekto sa mga preauthorized na bayad. Maaari mo itong palitan ng ibang paraan ng pagbabayad upang patuloy na makatanggap ng mga susunod na order.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Ang pagbura sa paraan ng pagbabayad na ito ay makakaapekto sa mga preauthorized na bayad. Maliban kung pipili ka ng ibang paraan ng pagbabayad, ang paraan ng pagbabayad na ito ay sisingilin pa rin para sa anumang natitirang balanse sa mga kasalukuyang order. Ang pagpili ng ibang paraan ng pagbabayad ay magbibigay-daan sa iyo na matanggap ang mga susunod na subscription order nang walang aberya.",
+          "with_pending_orders": "Ang pagbura sa paraan ng pagbabayad na ito ay magtatanggal nito sa iyong account at hindi na ito magagamit para sa mga susunod na pagbili. Maliban na lamang kung pipili ka ng alternatibong paraan ng pagbabayad, sisingilin pa rin ito para sa anumang natitirang balanse sa mga kasalukuyang order.",
+          "with_subscriptions": "Ang pagbura sa paraan ng pagbabayarang ito ay makakaapekto sa mga preauthorized na bayad. Palitan ito ng alternatibong paraan ng pagbabayad upang patuloy na makatanggap ng mga paparating na order."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Ang pagbura sa paraan ng pagbabayad na ito ay makakaapekto sa mga preauthorized na bayad. Patuloy pa ring sisingilin ang paraan ng pagbabayad na ito para sa anumang natitirang balanse sa mga kasalukuyang order, ngunit hindi mo matatanggap ang mga susunod na subscription order. Magdagdag ng alternatibong paraan ng pagbabayad upang patuloy na makatanggap ng mga subscription order.",
+          "with_pending_orders": "Ang pagbura sa paraan ng pagbabayad na ito ay magtatanggal nito sa iyong account at hindi na ito magagamit para sa mga susunod na pagbili. Sisingilin pa rin ito para sa anumang natitirang balanse sa mga kasalukuyang order.",
+          "with_subscriptions": "Ang pagbura sa paraan ng pagbabayad na ito ay makakaapekto sa mga preauthorized na bayad. Magdagdag ng alternatibong paraan ng pagbabayad upang patuloy na makatanggap ng mga paparating na order."
+        },
+        "payment_method_selector_placeholder": "Pumili ng pamalit na paraan ng pagbabayad (opsyonal)",
+        "payment_method_selector_no_alternative_payment": "Walang paraan ng pagpapalit",
+        "replace_method_with_new_method_description": "Ang iyong {{currentPaymentMethodName}} ay tatanggalin at papalitan ng iyong {{newPaymentMethodName}}.",
+        "error_when_deleting": "Humihingi kami ng paumanhin ngunit may naganap na error at hindi namin maalis ang paraan ng pagbabayad na ito. Pakisubukang muli mamaya o i-refresh ang pahina.",
+        "delete_and_replace_button": "Burahin at palitan",
+        "delete_and_replace_button_accessibility_label": "Tanggalin ang {{currentPaymentMethodName}} at palitan ng {{newPaymentMethodName}}.",
+        "deleted_successfully": "Matagumpay na na-delete ang paraan ng pagbabayad.",
+        "loading_available_payment_methods_accessibility_label": "Naglo-load ng mga available na paraan ng pagbabayad"
       }
     },
     "payment_method_brands": {
@@ -4553,7 +4598,9 @@
       "swish": "Swish",
       "twint": "TWINT",
       "vipps": "Vipps",
-      "usdc": "Crypto: USDC"
+      "usdc": "Crypto: USDC",
+      "konbini": "Tindahan",
+      "oxxo": "OXXO"
     },
     "privacy_banner": {
       "cookie_preferences_link": "Mga kagustuhan sa cookie"
@@ -5548,6 +5595,24 @@
         "return_items_accessibility_label": "Magbalik ng mga item para sa order na {{orderName}}",
         "cancel_or_return_accessibility_label": "I-cancel o isauli ang mga item para sa order na {{orderName}}"
       }
+    },
+    "order_receipt": {
+      "back_to_order_accessibility_label": "Balik sa order",
+      "document_accessibility_label": "Dokumento ng resibo",
+      "exchange_subtitle": "Palitang {{name}} · {{date}}",
+      "heading": "Resibo",
+      "loading": "Pinapasan ang resibo…",
+      "receipt_types": {
+        "exchange": "Palitawin",
+        "return": "Bumalik",
+        "sale": "Sale"
+      },
+      "return_subtitle": "Ibalik ang {{name}} · {{date}}",
+      "select_receipt_accessibility_label": "{{date}}, piliin ang resibo",
+      "subtitle_with_type": "Order {{name}} · {{type}}",
+      "unavailable": "Subukan muli, o bumalik sa iyong order at buksan ang resibo mamaya.",
+      "unavailable_title": "Hindi ma-load ang resibo",
+      "view_receipt": "Tingnan ang resibo"
     }
   },
   "general": {
