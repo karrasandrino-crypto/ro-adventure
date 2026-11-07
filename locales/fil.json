@@ -4964,7 +4964,38 @@
           "hide_all_accessibility_label": "Itago ang lahat ng order na nasa review",
           "show_all_accessibility_label": "Ipakita ang lahat ng order na nasa review",
           "show_all_orders_in_review": "Ipakita ang lahat ng order na nasa review",
-          "show_less_orders_in_review": "Ipakita ang mas kaunting mga order na nasa pagsusuri"
+          "show_less_orders_in_review": "Ipakita ang mas kaunting mga order na nasa pagsusuri",
+          "title": "Nakabinbin",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Wala kang nakabinbing order.",
+            "pending_orders": {
+              "one": "Mayroon kang {{count}} nakabinbing order",
+              "other": "Mayroon kang {{count}} nakabinbing order"
+            },
+            "more_than_pagination_length": "Mayroon kang higit sa {{count}} nakabinbing order"
+          }
+        }
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Nakumpirma noong {{date}} mula sa order na {{draftOrderName}}",
+        "loading": "Inilulunsad ang mga detalye ng order",
+        "loading_finished_accessibility_message": "Na-load na ang mga detalye ng order",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Ang bayad mo ay {{count}} araw na lampas sa takdang petsa",
+              "other": "Ang iyong bayad ay {{count}} araw nang overdue"
+            },
+            "banner_due": {
+              "one": "Ang iyong bayad ay takdang-araw sa loob ng {{count}} araw",
+              "other": "Ang iyong bayad ay takdang-araw na sa loob ng {{count}} araw"
+            },
+            "banner_due_today": "Ang bayad mo ay dapat bayaran ngayong araw.",
+            "banner_due_today_for_multiple_fulfillments": "Bayad na dapat bayaran ngayon para sa {{count}} fulfillments",
+            "banner_overdue_for_multiple_fulfillments": "Bayad na dapat sa {{count}} pagpupuno",
+            "title": "Dapat nang bayaran",
+            "title_with_date": "Babayaran sa {{date}}"
+          }
         }
       }
     },
@@ -5392,6 +5423,131 @@
         }
       },
       "add_button": "Idagdag"
+    },
+    "returns_and_cancellations": {
+      "request_withdrawal_page": {
+        "review_changes_modal": {
+          "email_label": "Email address",
+          "invalid_email_error": "Maglagay ng wastong email address"
+        },
+        "select_all_action": "Piliin ang lahat",
+        "unselect_all_action": "Alisin ang pagpili sa lahat",
+        "line_items": {
+          "return_reason_label": "Dahilan",
+          "bundle_group_title_label": "Bahagi ng: {{groupTitle}}",
+          "nested_line_item_parent_title_label": "Para sa: {{groupTitle}} - {{parentVariantTitle}}",
+          "return_reason_default_label": "Pumili ng dahilan",
+          "quantity_label": "Dami",
+          "note_label": "Paunawa (opsyonal)",
+          "ineligible_items": {
+            "one": "{{count}} hindi kwalipikadong item",
+            "other": "{{count}} hindi kwalipikadong item"
+          },
+          "ineligible_reason": {
+            "final_sale": "Pinal na benta",
+            "not_yet_shipped": "Hindi pa naipadala",
+            "already_shipped": "Naipadala na",
+            "cancellation_window_closed": "Sarado na ang palugit ng pagkansela",
+            "cancellation_pending": "Pinapawalang-bisa na nakabinbin",
+            "not_eligible_for_cancellation": "Hindi maaaring kanselahin",
+            "return_window_closed": "Sarado na ang palugit ng pagbabalik",
+            "already_returned": "Na-return na",
+            "not_eligible_for_return": "Hindi maaaring isauli",
+            "not_eligible": "Hindi karapat-dapat"
+          },
+          "quantity_less_than_or_equal_to_error": "Maglagay ng dami na mas mababa o katumbas ng {{maxQuantity}}",
+          "quantity_greater_than_or_equal_to_error": "Maglagay ng dami na higit sa o katumbas ng 1",
+          "whole_number_quantity_error": "Maglagay ng buong numero",
+          "missing_quantity_error": "Kinakailangan ang dami"
+        },
+        "view_all_line_items": "Tingnan ang lahat ng item",
+        "return_policy_heading": "Patakaran sa pagbabalik ng bayad"
+      },
+      "banner": {
+        "cannot_request_return_title": "Hindi makahiling ng pagbabalik",
+        "cannot_request_return_banner": "Dahil sa mga bayarin sa pagbabalik, negatibo ang tinatayang magiging halaga ng iyong refund para sa mga item na ito. {{contactUsLink}} kung mayroon kang mga katanungan.",
+        "contact_us": "Makipag-ugnayan sa amin",
+        "selection_limit_title": "Naabot mo na ang limitasyon sa pagbabalik",
+        "selection_limit_content": "Kung kailangan mong magbalik ng iba pang mga item, gumawa ng ikalawang kahilingan sa pagbabalik",
+        "cancellation_selection_limit_title": "Naabot mo na ang limitasyon sa pagkakansela",
+        "cancellation_selection_limit_content": "Kung kailangan mong kanselahin ang iba pang mga item, gumawa ng ikalawang kahilingan sa pagkansela"
+      },
+      "customer_mismatch_banner": {
+        "title": {
+          "full_name": "Humihiling ka ng pagbabalik sa ngalan ni {{firstName}} {{lastName}} na naglagay ng order na ito",
+          "first_name": "Humihiling ka ng pagbabalik sa ngalan ni {{firstName}} na naglagay ng order na ito",
+          "last_name": "Humihiling ka ng pagbabalik sa ngalan ni {{lastName}} na naglagay ng order na ito",
+          "no_name": "Humihiling ka ng pagbabalik sa ngalan ng customer na naglagay ng order na ito"
+        },
+        "cancellation_title": {
+          "full_name": "Humihiling ka ng pagkansela para kay {{firstName}} {{lastName}} na naglagay ng order na ito",
+          "first_name": "Humihiling ka ng kanselasyon para kay {{firstName}} na naglagay ng order na ito",
+          "last_name": "Humihiling ka ng kanselasyon sa ngalan ni {{lastName}} na naglagay ng order na ito",
+          "no_name": "Humihiling ka ng kanselasyon sa ngalan ng customer na naglagay ng order na ito"
+        },
+        "cancellation_or_return_title": {
+          "full_name": "Humihiling ka ng kanselasyon o pagbabalik sa ngalan ni {{firstName}} {{lastName}} na naglagay ng order na ito",
+          "first_name": "Humihiling ka ng pagkansela o pag-uli para kay {{firstName}} na naglagay ng order na ito",
+          "last_name": "Humihiling ka ng kanselasyon o pagbabalik sa ngalan ni {{lastName}} na naglagay ng order na ito",
+          "no_name": "Humihiling ka ng kanselasyon o pagbabalik sa ngalan ng customer na naglagay ng order na ito"
+        },
+        "description": {
+          "with_email": "Ang anumang abiso tungkol sa kahilingang ito sa pagbabalik ay ipapadala sa {{email}}",
+          "without_email": "Hindi ipadadala ang mga abiso tungkol sa kahilingang ito sa pagbabalik dahil walang nakalakip na email address sa order na ito"
+        },
+        "cancellation_description": {
+          "with_email": "Ang anumang abiso tungkol sa kahilingang ito sa pagkansela ay ipapadala sa {{email}}",
+          "without_email": "Hindi ipadadala ang mga abiso tungkol sa kahilingang ito sa pagkansela dahil walang nakalakip na email address sa order na ito"
+        },
+        "cancellation_or_return_description": {
+          "with_email": "Ang anumang abiso tungkol sa kahilingang ito ay ipapadala sa {{email}}",
+          "without_email": "Hindi ipadadala ang mga abiso tungkol sa kahilingang ito dahil walang nakalakip na email address sa order na ito"
+        }
+      },
+      "errors": {
+        "submit_error": "Nagkaroon ng problema sa pagproseso ng iyong kahilingan. Pakisubukang muli.",
+        "not_authorized_error": "Hindi namin mapoproseso ang iyong pagbabalik online. Mangyaring {{contactUs}} upang humiling ng pagbabalik.",
+        "not_authorized_cancellation_error": "Hindi namin mapoproseso ang iyong kanselasyon online. Mangyaring {{contactUs}} upang humiling ng kanselasyon.",
+        "contact_us": "makipag-ugnayan sa amin"
+      },
+      "not_found": {
+        "heading": "May problema sa pag-load ng page na ito",
+        "content": "Suriin ang URL o subukan muli pagkalipas ng ilang minuto"
+      },
+      "order_not_found": {
+        "heading": "Walang order sa address na ito",
+        "description": "Suriin ang URL at subukan muli"
+      },
+      "estimated_refund_summary_card": {
+        "return_label": "Nagbabalik",
+        "item_subtotal_label": "Subtotal ng item",
+        "subtotal_with_count": {
+          "one": "Subtotal · {{count}} item",
+          "other": "Kabuuang Presyo · {{count}} (na) item"
+        },
+        "discount_label": "Diskwento",
+        "taxes_label": "Buwis",
+        "estimated_total_label": "Tinatayang kabuuan",
+        "item_selected": {
+          "one": "{{count}} item",
+          "other": "{{count}} (na) aytem"
+        },
+        "refund_policy_notice": "Ang pagiging karapat-dapat sa pagbabalik at pag-refund ay ibabatay sa aming {{refundPolicy}}.",
+        "refund_policy": "patakaran sa pag-refund",
+        "no_policy_notice": "Ang pagiging karapat-dapat sa pagbabalik at pag-refund ay ibabatay sa aming patakaran sa pag-refund.",
+        "free": "Libre",
+        "restocking_fee_title": "Bayad sa pag-aayos muli ng paninda",
+        "return_shipping_fee_title": "Bayad sa pagpapadala"
+      },
+      "order_action": {
+        "request_return": "Humiling ng pagbabalik",
+        "cancel_items": "Kanselahin ang mga item",
+        "return_items": "Ibalik ang mga item",
+        "cancel_or_return": "I-cancel o ibalik",
+        "cancel_items_accessibility_label": "I-cancel ang mga item para sa order na {{orderName}}",
+        "return_items_accessibility_label": "Magbalik ng mga item para sa order na {{orderName}}",
+        "cancel_or_return_accessibility_label": "I-cancel o isauli ang mga item para sa order na {{orderName}}"
+      }
     }
   },
   "general": {
