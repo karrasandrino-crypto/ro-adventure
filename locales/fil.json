@@ -4614,7 +4614,20 @@
         "real_time_delivery_updates": "Magpapadala ang shop ng real-time delivery updates sa iyo kapag naipadala na ang iyong order.",
         "real_time_delivery_updates_with_gift": "Makakuha ng real-time na update sa paghahatid at ng {{promoAmount}} regalo na gagastusin sa Shop app.",
         "shop_app_promo_amount_off": "Makakuha ng {{promoAmount}} regalo",
-        "shop_app_promo_text": "{{amountOff}} na gagastusin sa Shop app"
+        "shop_app_promo_text": "{{amountOff}} na gagastusin sa Shop app",
+        "animated_intro_value_props": "Kumuha ng mga real-time na update",
+        "leave_review_with_shop": "Mag-iwan ng review sa {{shop}}",
+        "popover_description_pickup_updates": "Makatanggap ng mga real-time na update sa pagkuha sa Shop app",
+        "popover_description_review": "Magbahagi ng feedback tungkol sa iyong order sa Shop app",
+        "popover_description_tracking_updates": "Makatanggap ng mga real-time na update sa pagsubaybay sa Shop app",
+        "popover_qr_iframe_title": "QR code ng tindahan",
+        "popover_title_leave_review": "Mag-iwan ng review sa Shop",
+        "popover_title_track_all_orders": "Subaybayan ang lahat ng iyong order sa Shop",
+        "popover_title_track_order": "Subaybayan ang iyong order sa Shop",
+        "popover_title_track_pickup_order": "Subaybayan ang iyong pickup order sa Shop",
+        "shop_brand_name": "Mamili",
+        "track_all_your_orders_with_shop": "Subaybayan ang lahat ng iyong order sa {{shop}}",
+        "track_pickup_with_shop": "Subaybayan ang pagkuha kasama ang {{shop}}"
       },
       "edit_summary": {
         "added": "Idinagdag",
@@ -4626,7 +4639,20 @@
         "returned_with_quantities": "Binalik {{delta}} ng {{total}}",
         "removed_with_quantities": "Tinanggal ang {{delta}} ng {{total}}",
         "return_line_item_removed": "Inalis sa return",
-        "return_line_item_removed_with_quantities": "Inalis ang {{delta}} mula sa pagbalik"
+        "return_line_item_removed_with_quantities": "Inalis ang {{delta}} mula sa pagbalik",
+        "custom_discount": "Ipinagkasalukuyang diskwento ({{value}})",
+        "custom_line_discount_added": "Nakatadagdag na custom na diskwento ({{value}})",
+        "custom_line_discount_removed": "Inalis ang custom na diskwento ({{value}})",
+        "code_discount": "Kuwpon ng diskwento ({{value}})",
+        "discount": "Diskwento",
+        "shipping_address": "Address sa pagpapadala",
+        "shipping_address_taxes": "Mga dating buwis: {{previousTaxes}} → Mga bagong buwis: {{newTaxes}}",
+        "taxes_none": "Wala",
+        "updated": "Na-update",
+        "updated_count": {
+          "one": "Ang order ay na-update nang isang beses",
+          "other": "Ang order ay na-update ng {{count}} beses"
+        }
       },
       "shop_pay": {
         "order_completed_with": "Nakumpleto ang order gamit ang",
@@ -4655,7 +4681,8 @@
       "log_in_to_a_different_account": "Mag-sign in sa ibang account",
       "fees": {
         "restocking_fee": "Bayad sa pag-aayos muli ng paninda",
-        "return_shipping_fee": "Pagbabalik ng padala"
+        "return_shipping_fee": "Pagbabalik ng padala",
+        "fees": "Mga bayarin"
       },
       "vat_invoices": {
         "label": "VAT"
@@ -4713,6 +4740,10 @@
         "load_more_items": {
           "one": "Ipakita ang {{count}} pang item",
           "other": "Ipakita ang {{count}} pang item"
+        },
+        "additional_items": {
+          "one": "+ {{count}} karagdagang item",
+          "other": "+ {{count}} pang karagdagang item"
         }
       },
       "mobile_summary_toggle_button": {
@@ -4756,6 +4787,22 @@
           "auth": "PAGPAPATOTOO:",
           "aid": "TULONG:",
           "source": "PINAGMULAN:"
+        },
+        "voucher": {
+          "apple_wallet_badge_alt": "Idagdag sa Apple Wallet",
+          "code_copied": "Kinopya",
+          "copy_code": "Kopyahin ang {{label}}",
+          "expired": "Nag-expire na noong {{date}}",
+          "expired_title": "Eksperiyensado na ang barcode",
+          "expires": "Mag-e-expire sa {{date}}",
+          "konbini_choose_outlet": "Pumili ng Konbini para makita ang iyong mga code at kung paano magbayad",
+          "konbini_expired_title": "Nag-expire na ang payment code",
+          "konbini_keep_receipt": "Itago ang iyong resibo bilang patunay ng pagbabayad",
+          "multibanco_expired_title": "Nag-expire na ang reference ng bayad",
+          "oxxo_already_paid": "Bayad na? Maaaring abutin ng 1–3 araw ang pagproseso",
+          "pay": "Magbayad ng {{amount}}",
+          "reference_number": "Numero ng sanggunian:",
+          "section_title": "Mga tagubilin sa pagbabayad"
         }
       },
       "paid_with_shop_pay_installments_card": {
@@ -4826,7 +4873,31 @@
       "summary_list_title_accessibility_label": "I-order ang mga item",
       "summary_title": "Buod ng order",
       "summary_totals_title_accessibility_label": "Kabuuan ng order",
-      "shop_marketplace_attribution": "Mga order na nabenta sa pamamagitan ng Shop marketplace"
+      "shop_marketplace_attribution": "Mga order na nabenta sa pamamagitan ng Shop marketplace",
+      "timeline_images": {
+        "return_accessibility_label": "Mga item sa pagbabalik na ito",
+        "requested_edit_accessibility_label": "Mga item sa kahilingang ito sa pag-edit"
+      },
+      "line_item_status": {
+        "cancel_requested": "Hininging kanselahin",
+        "return_in_progress": "Isinasagawa ang pagbabalik",
+        "return_requested": "Hiniling ang pagbabalik"
+      },
+      "order_actions": {
+        "show_more": "Higit pa",
+        "show_more_accessibility_label": "Ipakita ang iba pang mga aksyon sa order"
+      },
+      "waived": "Ipinawalang-bisa",
+      "readonly_custom_fields": {
+        "boolean_true": "Oo"
+      },
+      "shop_promise_badging": {
+        "free_returns": "Libreng pagbalik",
+        "free_returns_on_eligible_items": "Libreng pagbabalik sa mga kwalipikadong item",
+        "returns_accepted": "Tinatanggap ang mga return",
+        "returns_on_eligible_items": "Pagbabalik ng mga kwalipikadong item",
+        "trusted_delivery": "Mapagkakatiwalaang paghahatid"
+      }
     },
     "addresses": {
       "add_button": "Idagdag ang address",
@@ -5102,7 +5173,8 @@
             "learn_more_button_label": "Matuto pa",
             "claim_shop_cash_button_label": "Kunin ang Shop Cash",
             "view_balance_in_shop_button_label": "Tingnan ang balanse sa Shop",
-            "scan_to_claim_shop_cash_label": "I-scan para i-claim ang {{amount}} Shop Cash"
+            "scan_to_claim_shop_cash_label": "I-scan para i-claim ang {{amount}} Shop Cash",
+            "buyer_trust_description": "I-highlight ng Shop Promise ang mga tindahang may mabilis at maaasahang paghahatid at mapagkakatiwalaang pagbabalik ng produkto, para makapamili ka nang may tiwala."
           }
         },
         "delivery_promise": {
@@ -5230,7 +5302,8 @@
         },
         "status_timestamp": "Na-update noong {{date}}",
         "estimated_delivery": "Inaasahan {{date}}",
-        "was_expected_by": "Inaasahan sa {{date}}"
+        "was_expected_by": "Inaasahan sa {{date}}",
+        "confirmed_description_awaiting_payment": "Ihahanda namin ang mga item na ito kapag natanggap na namin ang iyong bayad."
       },
       "status_mark_as_delivered": "Markahan bilang naipadala",
       "fulfillment_status_title": "Katayuan ng pagkumpleto: {{status}}",
@@ -5244,7 +5317,12 @@
         "payment_status": {
           "list_view": {
             "pay_to_confirm": "Magbayad para kumpirmahin",
-            "payment_not_due": "Hindi pa takdang panahon"
+            "payment_not_due": "Hindi pa takdang panahon",
+            "overdue": "Lalagpas na sa takdang panahon",
+            "due": "Takdang Petsa {{date}}",
+            "due_today": "Dapat ipasa ngayong araw",
+            "due_without_date": "Dapat",
+            "due_on_fulfillment": "Bayaran pagkatapos maipadala"
           }
         },
         "sort_by": "Ayusin ayon sa: {{option}}",
@@ -5308,7 +5386,20 @@
         "four_images_accessibility_label": "Kasama sa order ang {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
         "more_than_three_products_accessibility_label": "Ang order ay may kasamang {{lineItemName1}}, {{lineItemName2}}, at {{numberOfAdditionalProducts}} pang produkto",
         "more_than_four_products_accessibility_label": "Kasama sa order ang {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, at {{numberOfAdditionalProducts}} pang produkto",
-        "plus_more": "+{{numberOfAdditionalProducts}}"
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "no_filtered_results_description": "Alisin o i-adjust ang mga filter upang makita ang iyong mga order",
+        "no_filtered_results_title": "Walang mga resultang na-filter",
+        "order_link": "Tingnan ang order na {{name}}, {{status}}, {{total}}",
+        "order_number": "Mag-order ng {{name}}",
+        "orders_title": "Kinumpirma",
+        "pagination": {
+          "load_more": "Ipakita ang higit pa",
+          "load_more_accessibility_label": "Ipakita ang higit pang mga order"
+        },
+        "empty_state_product_navigation_accessibility_label": "Mga inirerekomendang produkto",
+        "empty_state_product_navigation_instructions": "Gamitin ang mga Left at Right Arrow key para mag-browse ng mga produkto. Pindutin ang Enter o Space para buksan.",
+        "filters_title": "Mga filter",
+        "sort_by_title": "I-sort ayon sa"
       },
       "list_title": "Mga Order",
       "list_title_confirmed_orders_accessibility_label": "Mga order: kumpirmado",
@@ -5475,7 +5566,21 @@
       "request_withdrawal_page": {
         "review_changes_modal": {
           "email_label": "Email address",
-          "invalid_email_error": "Maglagay ng wastong email address"
+          "invalid_email_error": "Maglagay ng wastong email address",
+          "title": "Suriin ang mga pagbabago",
+          "items_to_cancel": {
+            "one": "{{count}} item na kakanselahin",
+            "other": "{{count}} item ang kakanselahin"
+          },
+          "items_to_return": {
+            "one": "{{count}} item na ibabalik",
+            "other": "{{count}} item ang ibabalik"
+          },
+          "confirm_action": "Ipadala ang hiling",
+          "back_action": "Bumalik",
+          "confirmation_email": "Magpapadala kami ng email ng kumpirmasyon sa {{email}}",
+          "confirmation_unknown_email": "Padadalhan ka namin ng email ng kumpirmasyon",
+          "confirmation_email_hint": "Magpapadala kami ng email ng kumpirmasyon sa address na ito"
         },
         "select_all_action": "Piliin ang lahat",
         "unselect_all_action": "Alisin ang pagpili sa lahat",
@@ -5508,7 +5613,28 @@
           "missing_quantity_error": "Kinakailangan ang dami"
         },
         "view_all_line_items": "Tingnan ang lahat ng item",
-        "return_policy_heading": "Patakaran sa pagbabalik ng bayad"
+        "return_policy_heading": "Patakaran sa pagbabalik ng bayad",
+        "heading": {
+          "return": "Ibalik ang mga item",
+          "cancel": "Kanselahin ang mga item",
+          "cancel_or_return": "I-cancel o ibalik"
+        },
+        "back_to_order_accessibility_label": "Balik sa order",
+        "select_item_to_return_heading": "Pumili ng mga item na ibabalik",
+        "select_item_to_cancel_heading": "Pumili ng mga item na kakanselahin",
+        "item_return_heading": "Mga item na ibabalik",
+        "item_cancel_heading": "Mga item na kakanselahin",
+        "apply_return_reason_to_all_items": "Magdagdag ng dahilan para sa lahat",
+        "bulk_apply_return_reason_modal": {
+          "title": "Maglagay ng dahilan ng pagbabalik",
+          "description": "Ang dahilan ng pagbabalik na ito ay ilalapat sa lahat ng napiling item",
+          "shared_return_reasons": "Tanging mga dahilan na naaangkop sa lahat ng napiling item lamang ang ipinapakita",
+          "apply": "Mag-apply",
+          "apply_accessibility_label": "I-apply ang dahilan ng pagbabalik sa mga napiling item",
+          "cancel": "Kanselahin",
+          "cancel_accessibility_label": "I-cancel ang paglalapat ng dahilan ng pagbabalik"
+        },
+        "review_changes_action": "Suriin ang mga pagbabago"
       },
       "banner": {
         "cannot_request_return_title": "Hindi makahiling ng pagbabalik",
