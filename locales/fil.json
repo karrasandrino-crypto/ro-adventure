@@ -4563,7 +4563,36 @@
         "delete_and_replace_button_accessibility_label": "Tanggalin ang {{currentPaymentMethodName}} at palitan ng {{newPaymentMethodName}}.",
         "deleted_successfully": "Matagumpay na na-delete ang paraan ng pagbabayad.",
         "loading_available_payment_methods_accessibility_label": "Naglo-load ng mga available na paraan ng pagbabayad"
-      }
+      },
+      "replacement_payment_method_title": "Pamalit na paraan ng pagbabayad",
+      "title": "Mga paraan ng pagbabayad",
+      "add_payment_method_button": "Magdagdag ng paraan ng pagbabayad",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "Sa pagdaragdag ng paraan ng pagbabayad, binibigyan mo ng pahintulot na ma-charge ang iyong card o ma-debit ang iyong bank account para sa mga susunod na pagbiling aaprubahan mo, hanggang sa ikaw ay magkansela."
+      },
+      "bank_account": {
+        "iframe_title_accessibility_label": "Pag-aayos ng bank account",
+        "display_name": "Bank account",
+        "generic_error": "Hindi naidagdag ang bank account. Subukan muli mamaya."
+      },
+      "no_payment_methods_banner": "Walang idinagdag na paraan ng pagbabayad",
+      "edit_payment_method_button_accessibility_label": "I-edit ang {{paymentMethodName}} na nagtatapos sa {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "I-edit ang {{paymentMethodName}}",
+      "delete_payment_method_button": "Burahin",
+      "delete_payment_method_button_accessibility_label": "Burahin {{paymentMethodName}}",
+      "back_button": "Bumalik",
+      "back_button_accessibility_label": "Balik sa {{paymentMethodStepTitle}}",
+      "default": "Default",
+      "generic_card": "Kard",
+      "expires_soon": "Malapit nang mag-expire ang card na ito",
+      "expired": "Expired na ang card na ito.",
+      "expired_badge_label": "Nag-expire na",
+      "expiring_badge_label": "Mag-e-expire na",
+      "card_update_consent": "Ang paraan ng pagbabayad na ito ay ise-save para sa mga susunod na transaksyon.",
+      "card_update_consent_subscriptions": "Ang paraan ng pagbabayad na ito ay ise-save para sa mga susunod na transaksyon at maaaring gamitin para sa anumang paulit-ulit o naka-schedule na pagbabayad.",
+      "digital_wallet_title": "Digital wallet",
+      "credit_or_debit_card_title": "Credit o debit card",
+      "credit_card_title": "Credit card"
     },
     "payment_method_brands": {
       "visa": "Visa",
@@ -5112,9 +5141,74 @@
             "banner_due_today_for_multiple_fulfillments": "Bayad na dapat bayaran ngayon para sa {{count}} fulfillments",
             "banner_overdue_for_multiple_fulfillments": "Bayad na dapat sa {{count}} pagpupuno",
             "title": "Dapat nang bayaran",
-            "title_with_date": "Babayaran sa {{date}}"
-          }
+            "title_with_date": "Babayaran sa {{date}}",
+            "title_due_on_receipt": "Hindi pa kailangang magbayad",
+            "title_due_on_fulfillment": "Babayaran sa oras ng pagtupad",
+            "description_partially_paid": "Ang order na ito ay partial na nabayaran. Mayroon kang natitirang balanse.",
+            "description_waiting_for_manual_payment": "Ang order na ito ay may nakabinbing bayad. Ang balanse ay maa-update kapag natanggap na ang bayad.",
+            "description_due_on_receipt": "Makakatanggap ka ng invoice pagdating ng takdang panahon ng pagbabayad.",
+            "description_due_on_receipt_partially_paid": "Bahagyang nabayaran ang order na ito. Mayroon kang natitirang balanse. Makakatanggap ka ng invoice kapag sumapit na ang takdang panahon ng pagbabayad."
+          },
+          "draft": {
+            "in_review": {
+              "description": "Ang mga detalye ng pagbabayad ay magpapasya sa oras na kumpirmahin ang order.",
+              "title": "Hindi pa bayad ang kailangang bayaran"
+            },
+            "submitted": {
+              "description": "Magbayad para kumpirmahin ang order na ito.",
+              "title": "Magbayad para kumpirmahin",
+              "deposit": {
+                "title": "Kailangan na ang bayad",
+                "due_later": "Ang balanse ay batay sa mga tuntunin ng {{translatedName}} at dapat bayaran sa {{dueDate}}.",
+                "due_on_fulfillment": "Ang balanse ay dapat bayaran kapag naisakatuparan na ang lahat ng items sa order na ito.",
+                "due_on_receipt": "Makakatanggap ka ng invoice para sa natitirang balanse.",
+                "due_on_date": "Ang balanse ay dapat bayaran sa {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} ang magiging bayad kapag nakumpirma ang iyong order. Ang balanse ay nasa {{translatedName}} na mga termino.",
+              "due_on_fulfillment": "{{depositAmount}} ang kailangang bayaran kapag nakumpirma ang iyong order. Ang balanse ay babayaran kapag natapos na ang order.",
+              "due_on_receipt": "{{depositAmount}} ang kailangang bayaran kapag nakumpirma na ang iyong order. Ang balanse ay babayaran sa ibang pagkakataon.",
+              "due_on_date": "{{depositAmount}} ang kakailanganin kapag nakumpirma na ang iyong order. Ang balanse ay dapat bayaran sa {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Bayad",
+            "title_with_date": "Nababayaran {{date}}",
+            "description": "Ganap nang bayad ang iyong order."
+          },
+          "refund": {
+            "title": "Naibalik na ang bayad",
+            "title_with_date": "Naibalik ang bayad noong {{date}}",
+            "description_full_refund": "Nakatanggap ka ng buong refund para sa order na ito.",
+            "description_single_refund": "Nakatanggap ka ng bahagyang refund para sa order na ito.",
+            "description_multiple_refunds": "Nakatanggap ka ng mga bahagyang refund para sa order na ito."
+          },
+          "canceled": {
+            "title": "Kinansela ang bayad",
+            "description": "Hindi ka sinisingil."
+          },
+          "due_date": "Takdang Petsa {{date}}",
+          "total_balance": "Kabuuan ng balanse",
+          "pay_now": "Magbayad na",
+          "pay_now_accessibility_label": "Magbayad na ngayon para sa order na {{orderName}}",
+          "title": "Katayuan ng pagbabayad"
+        },
+        "subtitle": "Naipadala {{date}}",
+        "title": "Mag-order ng {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Hindi na magagamit ang paraan ng pagbabayad na ito para sa mga susunod na pagbili mula sa lokasyong ito.",
+          "description_with_replacement": "Ang pagbura sa paraan ng pagbabayarang ito ay makakaapekto sa mga preauthorized na bayad para sa lokasyong ito. Palitan ito ng alternatibong paraan ng pagbabayad upang patuloy na makatanggap ng mga paparating na order."
+        },
+        "payment_details": {
+          "order_label": "Mag-order ng {{name}}",
+          "draft_label": "Draft order {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "title": "PO #{{poNumber}}"
       }
     },
     "orders": {
@@ -5739,6 +5833,78 @@
       "unavailable": "Subukan muli, o bumalik sa iyong order at buksan ang resibo mamaya.",
       "unavailable_title": "Hindi ma-load ang resibo",
       "view_receipt": "Tingnan ang resibo"
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Nagkaroon ng problema sa pagbura ng address na ito. Subukan muli o i-refresh ang page."
+      },
+      "addresses_loading_issue": {
+        "description": "Mali sa koneksyon. Suriin ang iyong koneksyon sa internet at subukan muli."
+      },
+      "banner_title": {
+        "one": "Mayroong {{count}} error",
+        "other": "Mayroong {{count}} error"
+      },
+      "failed_address_creation": {
+        "description": "Nagkaroon ng problema sa paggawa ng iyong address. Subukang i-refresh ang pahinang ito o suriin ang iyong koneksyon sa internet."
+      },
+      "failed_address_update": {
+        "description": "Nagkaroon ng problema sa pag-update ng iyong address. Subukang i-refresh ang pahinang ito o suriin ang iyong koneksyon sa internet."
+      },
+      "load_address_form_error": {
+        "title": "Hindi ma-load ang address form",
+        "description": "Hindi ma-load ang address form.",
+        "refresh_button": "I-refresh ang pahina"
+      },
+      "load_orders_error": {
+        "title": "Hindi maikarga ang mga order",
+        "description": "Subukan muli o bumalik na lang mamaya.",
+        "retry_button": "Subukan muli"
+      },
+      "load_paypal_error": {
+        "description": "May problema sa pag-load ng PayPal. Pakisubukang muli."
+      },
+      "logout_everywhere": {
+        "description": "May naganap na problema habang nag-sa-sign out. Pakisubukan muli."
+      },
+      "no_access_to_locations": {
+        "description": "Wala kang access sa anumang lokasyon"
+      },
+      "not_found": {
+        "description": "Suriin ang URL o subukan muli pagkalipas ng ilang minuto.",
+        "title": "May problema sa pag-load ng page na ito"
+      },
+      "order_not_found": {
+        "description": "Ang order na ito ay hindi umiiral o wala kang pahintulot na tingnan ito.",
+        "title": "Hindi nahanap ang order"
+      },
+      "profile_update_error": {
+        "description": "Nagkaroon ng problema sa pag-update ng iyong profile. Subukang i-refresh ang pahinang ito o suriin ang iyong koneksyon sa internet."
+      },
+      "profile_name_update_error": {
+        "description": "Nagkaroon ng problema sa pag-update ng iyong pangalan. Subukang i-refresh ang pahinang ito o suriin ang iyong koneksyon sa internet."
+      },
+      "retry_action_label": "Subukan muli",
+      "resend_link": {
+        "too_many_requests": "Masyadong maraming request. Subukan muli mamaya.",
+        "generic": "Nabigong kahilingan"
+      },
+      "load_extension_error": {
+        "title": "Mali",
+        "description": "I-refresh ang pahinang ito o subukan muli pagkalipas ng ilang minuto.",
+        "refresh_button": "I-refresh ang pahina"
+      },
+      "already_upgraded": "Ang mga account ng mga customer ay na-upgrade na.",
+      "failed_to_upgrade": "Hindi na-upgrade ang mga setting ng account ng customer.",
+      "not_upgraded": "Hindi na-upgrade ang mga account ng customer.",
+      "failed_to_revert": "Hindi naibalik ang mga setting ng account ng customer.",
+      "revert_window_expired": "Lumipas na ang panahon para sa pagbawi."
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Masyado nang maraming pagsubok",
+        "description": "Pakisubukang muli pagkalipas ng ilang minuto"
+      }
     }
   },
   "general": {
