@@ -755,7 +755,82 @@
               "barcode_alt": "OXXO voucher barcode para sa reference number na %{reference_number}"
             }
           }
-        }
+        },
+        "shop_pay_hsa": {
+          "eligible_product": "Kwalipikado para sa HSA/FSA",
+          "mixed_cart_description": "Maaari lamang maglaman ang iyong cart ng mga produktong kwalipikado sa HSA/FSA",
+          "label": "Gusto kong gamitin ang HSA/FSA funds para sa pagbiling ito.",
+          "description": "Magbayad nang direkta gamit ang iyong benefits card, o gumamit ng personal na card at humiling ng reimbursement para sa kwalipikadong halaga.",
+          "eligibility_disclaimer_html": "Ang pagiging kwalipikado para sa HSA/FSA ay tinutukoy ng Truemed. %{terms_link}",
+          "truemed": "Truemed",
+          "view_terms": "Tingnan ang mga tuntunin",
+          "login_message": "Mag-log in sa Shop para magamit ang iyong HSA/FSA funds"
+        },
+        "network_card_payment_options": "Pumili ng card network",
+        "network_card_persistence_description": "Ang napiling network ay ise-save kasama ng iyong paraan ng pagbabayad para sa mga susunod na transaksyon.",
+        "amazon_payments_label": "Amazon Pay",
+        "amazon_payments_login_hint": "Hihilingin sa iyong mag-sign in gamit ang Amazon.",
+        "amazon_payments_logout": "Mag-sign out sa Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "Hindi magamit ang napiling paraan ng pagbabayad. Pumili ng ibang paraan o makipag-ugnayan sa iyong bangko o issuer ng card.",
+        "amazon_payments_abandoned_mfa_challenge": "Hindi natuloy ang iyong pagbabayad. Subukan ang ibang paraan ng pagbabayad o makipag-ugnayan sa iyong bangko o nag-isyu ng card.",
+        "amazon_payments_could_not_enqueue_authorize": "Mayroong isyu sa pagproseso ng iyong bayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+        "title": "Pagbabayad",
+        "amount_left_to_pay_label": "Takdang petsa ng bayad:",
+        "discount_button_action_label": "Ilapat ang Discount Code",
+        "discount_codes_removed_summary": {
+          "one": "Inalis ang %{count} discount code",
+          "other": "%{count} na discount code ang tinanggal"
+        },
+        "discount_codes_modified_summary": {
+          "one": "%{count} discount code ang binago",
+          "other": "%{count} discount code ang binago"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} na discount code ang inalis o binago",
+          "other": "%{count} na discount code ang tinanggal o binago"
+        },
+        "discount_show_more_warnings": {
+          "one": "Ipakita ang %{count} pa",
+          "other": "Ipakita ang %{count} pa"
+        },
+        "gift_card_code_label": "Code ng gift card",
+        "apply_gift_card_button_label": "Mag-apply",
+        "gift_card_balance_label": "Balanse:",
+        "supported_card_brands_more_label": "at iba pa…",
+        "detected_card_brand": "Natukoy na tatak ng card: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "I-save ang iyong credit card",
+        "credit_card_vaulting_sign_in_banner_info": "Mag-log in o gumawa ng account upang i-save ang iyong credit card para sa mga susunod na pagbili.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Mag-log in",
+        "ftd_vault_credit_card_label": "I-save ang credit card na ito sa aking account para sa mas mabilis na pag-checkout",
+        "card_number_label": "Numero ng card",
+        "card_number_placeholder": "Numero ng card",
+        "bogus_test_checkout": {
+          "title": "Tagubilin sa pagsubok",
+          "intro": "Gamitin ang mga value na ito para masubukan ang iyong pag-checkout:",
+          "approved_transaction": "{{card_number}} para gayahin ang isang naaprubahang transaksyon",
+          "declined_transaction": "{{card_number}} upang gayahin ang isang tinanggihang transaksyon",
+          "gateway_failure": "{{card_number}} para gayahin ang pagkabigo ng gateway",
+          "additional_instructions": "Gumamit ng anumang petsa ng pag-expire sa hinaharap at anumang 3-digit na security code.",
+          "support_link": "Kumuha ng suporta"
+        },
+        "card_pay_with": "Magbayad gamit ang:",
+        "card_security_notice": "Ang lahat ng transaksyon ay ligtas at naka-encrypt.",
+        "card_security_vault_notice": "Kailangan namin ang iyong mga detalye para sa mga susunod na bayad. Ang lahat ng transaksyon ay ligtas at naka-encrypt.",
+        "card_information_notice": "Ang lahat ng transaksyon ay ligtas at naka-encrypt. Hindi kailanman itinatago ang impormasyon ng credit card.",
+        "name_on_card_label": "Pangalan sa card",
+        "name_on_card_placeholder": "Pangalan sa card",
+        "card_nickname_label": "Palayaw (opsyonal)",
+        "card_expired": "Nag-expire na",
+        "card_expiry_label": "Petsa ng pagkapaso (MM / YY)",
+        "card_expiry_placeholder": "Petsa ng pagkapaso (MM / YY)",
+        "credit_card_start_month": "Buwan ng pagsisimula",
+        "credit_card_start_year": "Taon ng pagsisimula",
+        "delete_customer_mandate_modal_title": "Alisin ang payment card na ito?",
+        "delete_customer_mandate_modal_body": "Kung aalisin mo ang card na ito, kakailanganin mo itong idagdag muli bago mo ito magamit para sa mga pagbabayad.",
+        "delete_customer_mandate_modal_confirm": "Alisin ang card",
+        "delete_customer_mandate_modal_cancel": "Kanselahin",
+        "card_verification_value_label": "Security code",
+        "card_verification_value_placeholder": "Security code"
       },
       "processing": {
         "wait": {
@@ -2026,7 +2101,13 @@
           }
         },
         "pay_merchant_label": "Magbayad sa %{merchant_name}",
-        "discount_applies_to_subscription_items_only": "Ang diskwentong ito ay para lamang sa mga naka-subscribe na item."
+        "discount_applies_to_subscription_items_only": "Ang diskwentong ito ay para lamang sa mga naka-subscribe na item.",
+        "final_sale": "Pinal na benta",
+        "waived_label": "Ipinawalang-bisa",
+        "recurring_total_tooltip_taxes_included": "Hindi kasama ang shipping, mga buwis, o anumang naaangkop na diskwento",
+        "recurring_total_tooltip_duties_included": "Hindi kasama ang shipping, buwis, o anumang naaangkop na diskwento",
+        "recurring_total_tooltip_taxes_and_duties_included": "Hindi kasama ang pagpapadala o anumang naaangkop na diskwento",
+        "shipping_total_updated_label_with_price": "Na-update na kabuuang bayad sa pagpapadala: %{totalPrice}"
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -2499,7 +2580,8 @@
             "mixed_issues_title": "Ang ilang item ay wala na."
           }
         },
-        "out_of_stock_in_context_label": "Ang produktong ito ay hindi available sa iyong bansa/rehiyon."
+        "out_of_stock_in_context_label": "Ang produktong ito ay hindi available sa iyong bansa/rehiyon.",
+        "unavailable_at_pickup_location_label": "Ang item na ito ay hindi maaaring kunin sa napiling lokasyon."
       },
       "contextual_availability": {
         "title": {
@@ -3237,7 +3319,9 @@
         "local_delivery": "Lokal na paghahatid",
         "prime_not_available": {
           "default": "Hindi available ang Prime delivery para sa iyong order. Na-update na ang iyong mga shipping option."
-        }
+        },
+        "included_rate_label": "Kasama",
+        "included_rate_accessibility_label": "Kasama sa pinagsamang bayad sa pagpapadala"
       },
       "localized_fields": {
         "additional_information": {
@@ -3251,7 +3335,34 @@
           "tax_credential_cl": "RUT",
           "shipping_credential_cl": "RUT",
           "tax_credential_co": "Cedula/VAT",
-          "tax_credential_type_co": "Uri ng Sedula"
+          "tax_credential_type_co": "Uri ng Sedula",
+          "shipping_credential_co": "Cedula/VAT",
+          "shipping_credential_type_co": "Uri ng Sedula",
+          "tax_credential_cr": "Numero ng pagkakakilanlan/RUT",
+          "shipping_credential_cr": "Numero ng pagkakakilanlan/RUT",
+          "tax_credential_ec": "CI/RUC/IVA",
+          "shipping_credential_ec": "CI/RUC/IVA",
+          "tax_credential_gt": "NIT/IVA",
+          "shipping_credential_gt": "NIT/IVA",
+          "tax_credential_id": "NPWP",
+          "shipping_credential_id": "NPWP",
+          "tax_credential_my": "TIN/Numero ng Rehistrasyon",
+          "shipping_credential_my": "TIN/Numero ng Rehistrasyon",
+          "shipping_credential_mx": "Hiling para sa Komento",
+          "tax_credential_mx": "Hiling para sa Komento",
+          "tax_credential_type_mx": "Rehimeng Piskal",
+          "tax_credential_use_mx": "Paggamit ng CFDI",
+          "tax_credential_py": "CI/RUC/IVA",
+          "shipping_credential_py": "CI/RUC/IVA",
+          "tax_credential_pe": "DNI/RUC/CE",
+          "shipping_credential_pe": "DNI/RUC/CE",
+          "tax_credential_pt": "NIF/VAT",
+          "shipping_credential_pt": "NIF/VAT",
+          "tax_credential_es": "ID/NIF",
+          "shipping_credential_es": "ID/NIF",
+          "shipping_credential_tw": "Numero ng National ID/VAT",
+          "tax_credential_tr": "Republic of Turkey Identification Number/VAT",
+          "shipping_credential_tr": "Republic of Turkey Identification Number/VAT"
         }
       },
       "review_address_modal": {
@@ -3303,6 +3414,9 @@
         "ineligible": "Ang order na ito ay hindi eligible para sa HSA/FSA.",
         "processing_error": "Nagkaroon ng problema sa pagproseso ng iyong HSA/FSA request. Subukan itong muli o mag-checkout nang wala ang HSA/FSA.",
         "unsupported_checkout": "Hindi magagamit ang HSA/FSA para sa order na ito."
+      },
+      "datepicker": {
+        "choose_date": "Pumili ng petsa"
       }
     },
     "pagination": {
