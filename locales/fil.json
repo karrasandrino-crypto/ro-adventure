@@ -4258,6 +4258,142 @@
       "three_d_secure": {
         "title": "3D Secure",
         "verification_failed": "Hindi na-verify ang iyong bayad. Subukan muli o gumamit ng ibang paraan ng pagbabayad."
+      },
+      "additional_payment_methods": "Mga karagdagang paraan ng pagbabayad",
+      "or": "O",
+      "google_pay": {
+        "iframe_title_accessibility_label": "Magdagdag ng paraan ng pagbabayad sa Google Pay",
+        "loading_accessibility_message": "Ikinakarga ang Google Pay",
+        "errors": {
+          "generic": "Nagkaroon ng problema sa Google Pay. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+          "missing_billing_address": "Kinakailangan ng Google Pay ang isang billing address. Mangyaring magdagdag ng isa sa iyong account."
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "Idagdag ang paraan ng pagbabayad sa PayPal",
+        "loading_accessibility_message": "Naglo-load sa PayPal",
+        "errors": {
+          "generic": "Nagkaroon ng problema sa PayPal. Subukan muli o gumamit ng ibang paraan ng pagbabayad."
+        }
+      },
+      "apple_pay": {
+        "loading": "Naglo-load ang Apple Pay",
+        "errors": {
+          "generic": "Nagkaroon ng problema sa Apple Pay. Subukan muli o gumamit ng ibang paraan ng pagbabayad.",
+          "not_available": "Hindi available ang Apple Pay sa device na ito.",
+          "missing_billing_address": "Kailangan ng Apple Pay ng billing address. Pakidagdagan ang iyong account nito."
+        }
+      },
+      "store_credit": {
+        "label": "Credit sa tindahan",
+        "expirable_amounts_label": "Mga halagang may takdang panahon",
+        "details_modal": {
+          "load_error": "Hindi ma-load ang store credit.",
+          "events": {
+            "adjustment": "Pag-aayos",
+            "order_payment": "Pagbabayad ng order",
+            "order_refund": "Refund ng order",
+            "payment_failure": "Hindi natuloy ang bayad",
+            "payment_returned": "Ibinalik ang bayad",
+            "order_cancellation": "Pagkansela ng order",
+            "tax_finalization": "Pagtatapos ng buwis",
+            "recurring_payment": "Paulit-ulit na pagbabayad"
+          },
+          "expirable_amounts_info": "Ang mga halagang mas maagang magwawakas ay unang ibabawas sa checkout.",
+          "pagination": {
+            "expirable_transactions_loading": "Naglo-load ng karagdagang halaga na mag-e-expire na",
+            "transactions_loading": "Naglo-load pa ng mga transaksyon",
+            "load_more_label": "Ipakita ang higit pa",
+            "load_more_accessibility_label": "Ipakita ang higit pang dami ng malapit nang mag-expire",
+            "load_more_transactions_accessibility_label": "Ipakita pa ang ibang transaksyon",
+            "expirable_transactions_loaded": "Mas maraming mabuburang halaga ang na-load",
+            "transactions_loaded": "Mas marami pang transaksyon ang na-load"
+          },
+          "expirable_indicator": "{{formattedAmount}} ay mag-e-expire",
+          "expirable_indicator_accessibility_label": "{{formattedAmount}} ang mag-e-expire. Tingnan ang mga expirable na halaga.",
+          "expirable_indicator_with_date_accessibility_label": "{{formattedAmount}} mag-e-expire sa {{date}}. Tingnan ang mga halagang mag-e-expire.",
+          "expires_at": "Mag-e-expire sa {{date}}",
+          "expirable_transactions_list_accessibility_label": "Mga transaksyon sa store credit na may expiration date",
+          "loading_accessibility_message": "Naglo-load ng mga detalye ng store credit",
+          "transactions_list_accessibility_label": "Mga transaksyon sa store credit",
+          "transaction_types": {
+            "credit": "Idinagdag",
+            "debit": "Ginugol",
+            "debit_revert": "Naibalik na ang bayad",
+            "expiration": "Nag-expire na"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "Mga detalye ng paraan ng pagbabayad",
+        "credit_card_details_accessibility_label": "nagtatapos sa {{lastDigits}}",
+        "billing_title": "Address sa pagsingil",
+        "card_info_title": "Impormasyon ng card",
+        "payment_method_expiring_on": "Mag-e-expire sa {{expiryDate}}",
+        "payment_method_expired_on": "Nag-expire noong {{expiryDate}}",
+        "close_payment_modal": "Isara",
+        "close_payment_modal_accessibility_label": "Isara ang modal ng mga detalye ng paraan ng pagbabayad",
+        "payment_method_not_found_error": "Hindi mahanap ang paraan ng pagbabayad",
+        "payment_details_loading": "Inililipat ang mga detalye ng paraan ng pagbabayad",
+        "pre_authorized_payments": "Mga bayad na may paunang pahintulot",
+        "total_amount_of_subscription_line_items_left": "at {{total}} pa",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} kabuuang item, ipinapakita ang {{totalItemsToDisplay}} item.",
+        "next_payment_due": "Susunod na bayad sa {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "I-edit",
+        "edit_payment_method_button_accessibility_label": "I-edit ang paraan ng pagbabayad na nagtatapos sa {{lastDigits}}",
+        "loading_shop_pay": "Inililipat ang Shop Pay",
+        "invalid_payment_method": "Maling paraan ng pagbabayad",
+        "invalid_payment_method_message": "Gumamit ng bagong credit card para patuloy na makatanggap ng mga susunod na order.",
+        "replace_payment_method": "Palitan ang paraan ng pagbabayad",
+        "checkout_card_banner": "Ang paraan ng pagbabayad na ito ay magagamit lamang para sa mga pre-authorized na bayad. Hindi ito lalabas sa checkout kung ikaw ay naka-sign in sa tindahang ito.",
+        "default_checkbox": "Itakda bilang default",
+        "default_checkbox_accessibility_label": "Gawing default na paraan ng pagbabayad ito",
+        "replace_payment_method_button": "Palitan"
+      },
+      "edit_payment_method": {
+        "title": "Baguhin ang paraan ng pagbabayad",
+        "save_payment_method_button": "I-save",
+        "cancel_edit_payment_method_button": "Kanselahin",
+        "payment_method_updated_toast": "Na-update na ang paraan ng pagbabayad",
+        "generic_error": "Nagkaroon ng problema sa pag-update. Pakisubok muli."
+      },
+      "update_payment_method": {
+        "title": "I-update ang paraan ng pagbabayad",
+        "button_title": "I-update",
+        "billing_address": "Address sa pagsingil",
+        "disclaimer": "Ang paraan ng pagbabayad na ito ay ise-save para sa mga susunod na transaksyon at maaaring gamitin para sa anumang paulit-ulit o naka-schedule na pagbabayad.",
+        "error_message": "Hindi ma-update ang paraan ng pagbabayad",
+        "subscriptions_title": "Mga subscription",
+        "pre_orders_title": "Paparating",
+        "resources_list_accessibility_label": "Mga produktong may subscription at mga produktong nakabinbin ang order gamit ang paraang ito ng pagbabayad",
+        "resources_card_scroll": "Mag-scroll para sa iba pang mga item",
+        "resources_card_show_more": "Ipakita ang higit pa",
+        "resources_card_show_less": "Ipakita nang mas kaunti",
+        "loading_form_accessibility_message": "Naglo-load ng form para sa pag-update ng paraan ng pagbabayad",
+        "loading_current_payment_method": "Ikinakarga ang kasalukuyang paraan ng pagbabayad",
+        "loading_digital_wallets": "Naglo-load ng mga opsyon sa digital wallet",
+        "loading_card_fields": "Naglo-load ng mga field ng credit card",
+        "loading_resources": "Inilulula ang mga subscription at paparating na mga order"
+      },
+      "link_expired": {
+        "update_message": "Ang link na ito para i-update ang iyong paraan ng pagbabayad ay paso na.",
+        "add_message": "Nag-expire na ang link na ito para idagdag ang iyong payment method.",
+        "return_home_button": "Bumalik sa home page"
+      },
+      "update_success": {
+        "title": "Na-update na ang paraan ng pagbabayad",
+        "done_button": "Magpatuloy sa pamimili"
+      },
+      "add_success": {
+        "title": "Naidagdag na ang paraan ng pagbabayad",
+        "done_button": "Magpatuloy sa pamimili"
+      },
+      "card_fields": {
+        "card_number_label": "Numero ng card",
+        "card_number_placeholder": "Numero ng card",
+        "name_on_card_label": "Pangalan sa card",
+        "name_on_card_placeholder": "Pangalan sa card",
+        "card_expiry_label": "Petsa ng pagkapaso (MM / YY)"
       }
     },
     "payment_method_brands": {
