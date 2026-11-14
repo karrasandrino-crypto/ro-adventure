@@ -367,7 +367,8 @@
           "cashback_descriptor": {
             "one": "Matatanggap mo ang iyong cashback pagkalipas ng %{count} araw",
             "other": "Matatanggap mo ang iyong cashback pagkalipas ng %{count} na araw"
-          }
+          },
+          "usdc_label": "Crypto: USDC"
         },
         "crypto_modal": {
           "header": "Magbayad ng %{total_price} USDC sa %{shop_name}",
@@ -769,7 +770,11 @@
           "eligibility_disclaimer_html": "Ang pagiging kwalipikado para sa HSA/FSA ay tinutukoy ng Truemed. %{terms_link}",
           "truemed": "Truemed",
           "view_terms": "Tingnan ang mga tuntunin",
-          "login_message": "Mag-log in sa Shop para magamit ang iyong HSA/FSA funds"
+          "login_message": "Mag-log in sa Shop para magamit ang iyong HSA/FSA funds",
+          "powered_by_truemed": "Mga pagbabayad ng HSA/FSA na pinatatakbo ng Truemed",
+          "truemed_terms_disclaimer_html": "Sa pagbili, sumasang-ayon ka sa %{terms_link} ng Truemed at kinikilala mo ang %{privacy_link} ng Truemed",
+          "terms_of_service": "Mga Tuntunin ng Serbisyo",
+          "privacy_policy": "Patakaran sa Pagkapribado"
         },
         "network_card_payment_options": "Pumili ng card network",
         "network_card_persistence_description": "Ang napiling network ay ise-save kasama ng iyong paraan ng pagbabayad para sa mga susunod na transaksyon.",
@@ -962,7 +967,12 @@
           "wechat_instructions_mobile": "I-scan ang QR code na ito gamit ang WeChat app sa isa pang device para makumpleto ang iyong pagbili",
           "paynow_instructions": "I-scan ang QR code na ito gamit ang iyong bank o payment app upang tapusin ang iyong pagbabayad. I-scan ang code sa halip na direktang magbayad sa UEN, dahil hindi maaaring itugma ang mga manual transfer sa iyong order.",
           "paynow_instructions_mobile": "I-save ang QR code na ito, pagkatapos ay i-scan ito mula sa iyong mga litrato sa iyong bank o payment app. I-scan ang code sa halip na bayaran nang direkta ang UEN, dahil hindi maitutugma ang mga manual transfer sa iyong order.",
-          "save_qr_code": "I-save ang QR code"
+          "save_qr_code": "I-save ang QR code",
+          "paynow_mobile_steps": {
+            "save": "I-save ang QR code",
+            "upload": "Sa iyong bangko o payment app, i-upload ito mula sa iyong mga larawan",
+            "come_back": "Bumalik sa pahinang ito kapag nakapagbayad na."
+          }
         },
         "external": {
           "instructions": "I-confirm ang bayad sa iyong app upang makumpleto ang pagbiling ito"
@@ -1009,7 +1019,8 @@
         "draft_order_payment_due_on_fulfillment": "Magiging due ang iyong bayad kapag nakumpirma at naipadala na ang iyong order.",
         "draft_order_deposit_due_later": "{{depositAmount}} ang magiging bayad kapag nakumpirma ang iyong order. Ang balanse ay nasa {{translatedName}} na mga termino.",
         "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} ang kailangang bayaran kapag nakumpirma na ang iyong order. Ang balanse ay babayaran kapag natapos na ang iyong order.",
-        "credit_or_debit_card_option_label": "Credit o debit card"
+        "credit_or_debit_card_option_label": "Credit o debit card",
+        "credit_or_debit_tile_label": "Kredito o debito"
       },
       "thank_you": {
         "title": "Salamat sa iyong pagbili!",
@@ -1344,6 +1355,9 @@
         "hsa_qualification": {
           "review_pending": "Sinusuri namin ang iyong health survey. Makukuha ang iyong bayad kapag na-isyu na ang iyong Letter of Medical Necessity. Makakatanggap ka ng email ng kumpirmasyon sa lalong madaling panahon.",
           "review_pending_pickup": "Sinusuri namin ang iyong health survey. Makukuha ang iyong bayad kapag naisyu na ang iyong Letter of Medical Necessity."
+        },
+        "recommendations": {
+          "title": "Baka magustuhan mo rin"
         }
       },
       "vaulted": {
@@ -2250,7 +2264,8 @@
         "recurring_total_tooltip_taxes_included": "Hindi kasama ang shipping, mga buwis, o anumang naaangkop na diskwento",
         "recurring_total_tooltip_duties_included": "Hindi kasama ang shipping, buwis, o anumang naaangkop na diskwento",
         "recurring_total_tooltip_taxes_and_duties_included": "Hindi kasama ang pagpapadala o anumang naaangkop na diskwento",
-        "shipping_total_updated_label_with_price": "Na-update na kabuuang bayad sa pagpapadala: %{totalPrice}"
+        "shipping_total_updated_label_with_price": "Na-update na kabuuang bayad sa pagpapadala: %{totalPrice}",
+        "discount_code_client_error": "Nagkaroon ng problema sa paglalapat ng %{code}. Subukan muli."
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -2955,7 +2970,8 @@
         "email_or_phone_invalid": "Maglagay ng wastong email o numero ng mobile phone",
         "address_first_name_blank": "Ilagay ang unang pangalan",
         "address_first_name_too_long": "Masyadong mahaba ang pangalan (hanggang 255 karakter lamang)",
-        "address_first_name_contains_emojis": "Ang unang pangalan ay hindi maaaring maglaman ng mga emoji"
+        "address_first_name_contains_emojis": "Ang unang pangalan ay hindi maaaring maglaman ng mga emoji",
+        "shop_pay_mobile_phone_blank": "Maglagay ng numero ng mobile phone"
       },
       "order_errors": {
         "creation_failure": "Nagkaroon ng problema sa paggawa ng iyong order. Subukang muli, o makipag-ugnayan sa amin para sa karagdagang detalye.",
@@ -3195,7 +3211,17 @@
         "deferred_date_changed": "Hindi naproseso ang iyong bayad dahil nagbago ang nakatakdang petsa ng pagbabayad. Suriin ang iyong order at subukan muli.",
         "invalid_customer_account": "Hindi namin ma-charge ang iyong account. Maaari kang sumubok muli matapos ayusin ang problema sa iyong account, o gumamit ng ibang paraan ng pagbabayad.",
         "code_expired": "Nag-expire na ang iyong payment code o nagamit na ito. Kumuha ng bagong code sa iyong banking app at subukan muli.",
-        "code_invalid": "Hindi valid ang iyong payment code. Suriin ang code at subukan muli, o kumuha ng bagong code mula sa iyong banking app."
+        "code_invalid": "Hindi valid ang iyong payment code. Suriin ang code at subukan muli, o kumuha ng bagong code mula sa iyong banking app.",
+        "payment_approval_not_verified": "Hindi namin ma-verify ang pag-apruba sa pagbabayad. Pakiapprubahan muli ang pagbili o gumamit ng ibang paraan ng pagbabayad.",
+        "payment_approval_expired": "Nag-expire na ang pag-apruba sa pagbabayad na ito. Aprubahan muli ang pagbili upang magpatuloy.",
+        "payment_approval_terms_mismatch": "Hindi tumutugma ang pag-apruba ng pagbabayad na ito sa kabuuan, pera, address ng pagpapadala, o paraan ng pagbabayad ng checkout na ito. Aprubahan ang na-update na pagbili upang magpatuloy.",
+        "spend_permission_not_covered": "Hindi sakop ng pahintulot sa paggastos ng mamimili ang pagbiling ito. Maaaring tapusin ng mamimili ang pagbili sa checkout.",
+        "spend_permission_over_purchase_limit": "Ang pagbiling ito ay lumampas sa limitasyon para sa isang pagbili sa pahintulot sa paggastos ng mamimili.",
+        "spend_permission_not_enough_left": "Higit ang halaga ng pagbiling ito sa natitirang pahintulot sa paggastos ng mamimili.",
+        "spend_permission_card_not_covered": "Hindi sakop ng pahintulot sa paggastos ng mamimili ang kard na ito.",
+        "spend_permission_paused": "Sinuspinde ng mamimili ang pahintulot na ito sa paggastos.",
+        "spend_permission_missing": "Walang aktibong pahintulot sa paggastos ang mamimili para sa ahenteng ito.",
+        "spend_permission_unavailable": "Hindi masuri ang pahintulot sa paggastos ng mamimili. Subukan muli mamaya."
       },
       "shipping_errors": {
         "shipping_method": "Nagbago ang mga opsyon sa pagpapadala para sa iyong order. Suriin ang iyong pinili.",
@@ -3489,7 +3515,8 @@
           "default": "Hindi available ang Prime delivery para sa iyong order. Na-update na ang iyong mga shipping option."
         },
         "included_rate_label": "Kasama",
-        "included_rate_accessibility_label": "Kasama sa pinagsamang bayad sa pagpapadala"
+        "included_rate_accessibility_label": "Kasama sa pinagsamang bayad sa pagpapadala",
+        "protected_destination_notice": "Direktang ipapadala ang iyong order kay {{firstName}}."
       },
       "localized_fields": {
         "additional_information": {
@@ -3759,7 +3786,8 @@
             "shopify_support_link_text": "Suporta ng Shopify"
           }
         }
-      }
+      },
+      "verify_email_sent": "Nagpadala kami ng email sa iyo, mangyaring i-click ang nakalakip na link upang i-verify ang iyong email address."
     },
     "notices": {
       "cart": {
@@ -4681,7 +4709,10 @@
         "updated_count": {
           "one": "Ang order ay na-update nang isang beses",
           "other": "Ang order ay na-update ng {{count}} beses"
-        }
+        },
+        "discount_added": "Idinagdag na diskwento",
+        "discount_removed": "Inalis ang diskwento",
+        "discount_updated": "Na-update na ang diskwento"
       },
       "shop_pay": {
         "order_completed_with": "Nakumpleto ang order gamit ang",
@@ -4831,8 +4862,11 @@
           "oxxo_already_paid": "Bayad na? Maaaring abutin ng 1–3 araw ang pagproseso",
           "pay": "Magbayad ng {{amount}}",
           "reference_number": "Numero ng sanggunian:",
-          "section_title": "Mga tagubilin sa pagbabayad"
-        }
+          "section_title": "Mga tagubilin sa pagbabayad",
+          "show_barcode": "Ipakita ang barcode",
+          "show_barcode_accessibility_label": "Ipakita ang barcode (magbubukas ng bagong window)"
+        },
+        "paid_at_store_chain": "Binayaran sa {{storeChain}}"
       },
       "paid_with_shop_pay_installments_card": {
         "title": "Mga paalala sa pagbabayad para sa Shop Pay Installments",
@@ -5499,7 +5533,90 @@
       "list_title_confirmed_orders_accessibility_label": "Mga order: kumpirmado",
       "list_title_pending_orders_accessibility_label": "Mga order: nakabinbin",
       "switch_order_type_pending_orders_accessibility_label": "Palitan ang uri ng order, kasalukuyang tinitingnan ang mga pending na order",
-      "switch_order_type_confirmed_orders_accessibility_label": "Palitan ang uri ng order, kasalukuyang tinitingnan ang mga kumpirmadong order"
+      "switch_order_type_confirmed_orders_accessibility_label": "Palitan ang uri ng order, kasalukuyang tinitingnan ang mga kumpirmadong order",
+      "buy_again_review": {
+        "quantity_update": {
+          "heading": "Pagbabago ng dami",
+          "body": "Nagbago ang dami ng mga item na ito at na-update na ang mga ito sa iyong cart."
+        },
+        "out_of_stock": {
+          "heading": "Walang stock",
+          "body": "May ilang item na hindi na available at hindi naisama sa iyong cart.",
+          "none_body": "Ang mga item na ito ay hindi na available."
+        },
+        "unavailable_in_market": {
+          "heading": {
+            "one": "Produktong hindi magagamit",
+            "other": "Mga produktong hindi available"
+          },
+          "body": {
+            "one": "Hindi naidagdag ang produktong ito sa iyong cart dahil hindi ito available sa iyong bansa/rehiyon.",
+            "other": "Hindi naidagdag ang mga produktong ito sa iyong cart dahil hindi sila available sa iyong bansa/rehiyon."
+          },
+          "none_body": {
+            "one": "Ang produktong ito ay hindi available sa iyong bansa/rehiyon.",
+            "other": "Ang mga produktong ito ay hindi available sa iyong bansa/rehiyon."
+          }
+        },
+        "gift_card_sent": {
+          "heading": "Hindi naidagdag ang gift card",
+          "body": "Nasa cart mo na ang natitirang bahagi ng order na ito. Hindi naisama ang mga gift card na ipinadala sa iba. Idagdag muli ang mga ito para pumili ng makakatanggap, mensahe, at petsa ng pagpapadala.",
+          "none_body": "Hindi na-add ang mga gift card na ipinadala sa isang tao. I-add muli ang mga ito para pumili ng makakatanggap, mensahe, at petsa ng pagpapadala."
+        },
+        "no_longer_available": {
+          "heading": "Ang ilang item ay wala na."
+        },
+        "changed": {
+          "heading": "May ilang item na hindi maidadagdag",
+          "body": "Nasa iyong cart ang natitirang bahagi ng order na ito."
+        },
+        "none": {
+          "heading": "Hindi maidadagdag ang mga item",
+          "body": "Hindi available ang mga item na ito."
+        },
+        "not_added": {
+          "body": "Walang sinuman sa mga item na ito ang idinagdag sa iyong cart."
+        },
+        "error": {
+          "heading": "Hindi ma-add ang mga item sa iyong cart",
+          "body": "Nagkaroon ng problema sa pagdaragdag ng mga item mula sa order na ito. Subukan muli o kontakin kami."
+        },
+        "list_title": "Mga item mula sa order na ito",
+        "columns": {
+          "image": "Larawan ng produkto",
+          "description": "Paglalarawan",
+          "status": "Katayuan"
+        },
+        "labels": {
+          "not_added": "Hindi naidagdag",
+          "sold_out": "Wala na pong stock",
+          "unavailable": "Hindi available"
+        },
+        "item_count": {
+          "one": "{{count}} item",
+          "other": "{{count}} (na) aytem"
+        },
+        "quantity_added": {
+          "one": "{{added}} sa {{count}} item ang idinagdag",
+          "other": "{{added}} sa {{count}} na item ang idinagdag"
+        },
+        "reasons": {
+          "cart_too_large": "Puno na ang iyong cart",
+          "gift_card_recipient_invalid": "Kailangang i-update ang mga detalye ng tatanggap. Muling idagdag ito mula sa pahina ng produkto nito.",
+          "gift_card_sent_to_recipient": "Ipinadala sa isang tao",
+          "not_for_sale": "Hindi na muling mabibili",
+          "parent_unavailable": "Ang item na kapareho nito ay wala sa iyong cart",
+          "selling_plan_unavailable": "Ang subscription ay hindi na available",
+          "unavailable_in_market": "Hindi available sa iyong bansa/rehiyon"
+        },
+        "add_from_product_page": "Idagdag ito mula sa pahina ng produkto nito",
+        "continue_to_cart": "Magpatuloy sa cart",
+        "return_to": {
+          "order_details": "Bumalik sa order",
+          "order_list": "Bumalik sa mga order",
+          "store": "Ibalik sa tindahan"
+        }
+      }
     },
     "callback": {
       "try_again": "Subukan muli"
@@ -5832,7 +5949,16 @@
       "subtitle_with_type": "Order {{name}} · {{type}}",
       "unavailable": "Subukan muli, o bumalik sa iyong order at buksan ang resibo mamaya.",
       "unavailable_title": "Hindi ma-load ang resibo",
-      "view_receipt": "Tingnan ang resibo"
+      "view_receipt": "Tingnan ang resibo",
+      "confirmation": {
+        "document_accessibility_label": "Dokumento ng kumpirmasyon",
+        "heading": "Kumpirmasyon",
+        "loading": "Kinukumpirma ang pag-load…",
+        "select_confirmation_accessibility_label": "{{date}}, piliin ang kumpirmasyon",
+        "unavailable": "Subukan muli, o bumalik sa iyong order at buksan ang kumpirmasyon mamaya.",
+        "unavailable_title": "Hindi ma-load ang kumpirmasyon",
+        "view_confirmation": "Tingnan ang kumpirmasyon"
+      }
     },
     "errors": {
       "address_deletion_error": {
