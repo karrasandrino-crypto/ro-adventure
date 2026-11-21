@@ -774,7 +774,9 @@
           "powered_by_truemed": "Mga pagbabayad ng HSA/FSA na pinatatakbo ng Truemed",
           "truemed_terms_disclaimer_html": "Sa pagbili, sumasang-ayon ka sa %{terms_link} ng Truemed at kinikilala mo ang %{privacy_link} ng Truemed",
           "terms_of_service": "Mga Tuntunin ng Serbisyo",
-          "privacy_policy": "Patakaran sa Pagkapribado"
+          "privacy_policy": "Patakaran sa Pagkapribado",
+          "partially_eligible_product": "Bahagyang kwalipikado sa HSA/FSA",
+          "mixed_cart_lmn_description": "Gumamit ng personal na card at humiling ng pag-refund para sa kwalipikadong halaga. Tatanggihan ang mga benefits card dahil hindi ganap na kwalipikado sa HSA/FSA ang pagbili."
         },
         "network_card_payment_options": "Pumili ng card network",
         "network_card_persistence_description": "Ang napiling network ay ise-save kasama ng iyong paraan ng pagbabayad para sa mga susunod na transaksyon.",
@@ -922,6 +924,17 @@
         "vault_for_payment_later": {
           "pay_button_label": "Mag-order",
           "notice": "Hindi ka sisingilin ngayon. Sa pagpapatuloy sa iyong pagbabayad, sumasang-ayon ka na sisingilin ang iyong paraan ng pagbabayad kapag na-proseso ang iyong order."
+        },
+        "order_edit_banner_discount_title": "Diskwento",
+        "order_edit_banner_line_discount_added": "Idinagdag na diskwento",
+        "order_edit_banner_line_discount_updated": "Na-update na ang diskwento",
+        "order_edit_banner_line_discount_removed": "Inalis ang diskwento",
+        "redeemable_row": {
+          "gift_card_label": "Gamitin ang gift card na %{identifier}",
+          "gift_card_spoken_label": "Gamitin ang gift card na nagtatapos sa %{last_characters}",
+          "gift_card_switch_label": "Gamitin ang gift card na nagtatapos sa %{last_characters}, mayroong %{amount} na magagamit",
+          "store_credit_switch_label": "Gamitin ang store credit, %{amount} ang magagamit",
+          "disabled_switch_label": "%{label}, %{reason}"
         }
       },
       "processing": {
@@ -1002,6 +1015,14 @@
           "no_access": {
             "message": "{{logIn}} sa isang account na may access sa lokasyong ito upang magdagdag o gumamit ng mga naka-save na paraan ng pagbabayad.",
             "link": "Mag-log in"
+          },
+          "not_signed_in": {
+            "message": "{{signIn}} para gamitin ang mga naitabing paraan ng pagbabayad.",
+            "link": "Mag-sign in"
+          },
+          "different_account": {
+            "message": "Naka-sign in ka sa ibang account. {{switchAccount}} para magamit ang mga naka-save na paraan ng pagbabayad.",
+            "link": "Magpalit ng account"
           }
         },
         "direct_payment_terms": "Nakasaad sa {{translatedName}} ang iyong mga tuntunin. Sasabihin sa iyong card sa {{dueDate}}.",
@@ -1634,6 +1655,12 @@
             "one": "ipadala ito nang hiwalay",
             "other": "ipadala sila nang magkahiwalay"
           }
+        },
+        "bundle_removal_modal": {
+          "message": {
+            "one": "Ang {{items}} ay bahagi ng {{bundle}}. Tatanggalin din ang mga item na kasama sa bundle.",
+            "other": "Ang {{items}} ay bahagi ng {{bundle}}. Tatanggalin din ang mga bundled na item."
+          }
         }
       },
       "split_delivery": {
@@ -1739,7 +1766,12 @@
         "lost_b2b_purchasing_permissions": "Wala ka nang pahintulot na mag-place ng mga B2B order. %{logout_url} para mag-place ng personal na order sa halip.",
         "log_out_link_text": "Mag-sign out",
         "lost_permissions_subtitle": "Wala ka nang pahintulot na gumawa ng mga B2B order. Mag-sign out para makagawa ng personal na order.",
-        "lost_permissions_title": "Walang pahintulot sa lokasyon"
+        "lost_permissions_title": "Walang pahintulot sa lokasyon",
+        "company_location_required": {
+          "title": "Pumili ng paraan ng pag-check out",
+          "description": "Mag-sign in at pumili ng lokasyon ng kumpanya para maglagay ng business order, o mag-check out bilang panauhin.",
+          "continue_button": "Magpatuloy sa pag-sign in sa negosyo"
+        }
       },
       "shop_pay_external": {
         "title": "Pag-checkout gamit ang Shop Pay",
@@ -2265,7 +2297,8 @@
         "recurring_total_tooltip_duties_included": "Hindi kasama ang shipping, buwis, o anumang naaangkop na diskwento",
         "recurring_total_tooltip_taxes_and_duties_included": "Hindi kasama ang pagpapadala o anumang naaangkop na diskwento",
         "shipping_total_updated_label_with_price": "Na-update na kabuuang bayad sa pagpapadala: %{totalPrice}",
-        "discount_code_client_error": "Nagkaroon ng problema sa paglalapat ng %{code}. Subukan muli."
+        "discount_code_client_error": "Nagkaroon ng problema sa paglalapat ng %{code}. Subukan muli.",
+        "secondary_aside_label": "Karagdagang impormasyon sa pag-checkout"
       },
       "note": {
         "length_exceeds_maximum": "Paliitin ang laki ng note sa 5000 karakter o mas mababa pa."
@@ -3221,7 +3254,8 @@
         "spend_permission_card_not_covered": "Hindi sakop ng pahintulot sa paggastos ng mamimili ang kard na ito.",
         "spend_permission_paused": "Sinuspinde ng mamimili ang pahintulot na ito sa paggastos.",
         "spend_permission_missing": "Walang aktibong pahintulot sa paggastos ang mamimili para sa ahenteng ito.",
-        "spend_permission_unavailable": "Hindi masuri ang pahintulot sa paggastos ng mamimili. Subukan muli mamaya."
+        "spend_permission_unavailable": "Hindi masuri ang pahintulot sa paggastos ng mamimili. Subukan muli mamaya.",
+        "payment_method_unavailable": "Nagkaroon ng problema sa pagproseso ng iyong pagbabayad. Subukan muli gamit ang ibang paraan ng pagbabayad."
       },
       "shipping_errors": {
         "shipping_method": "Nagbago ang mga opsyon sa pagpapadala para sa iyong order. Suriin ang iyong pinili.",
@@ -3243,7 +3277,8 @@
         "unavailable_addresses_only_countries": "Ang iyong order ay maaari lang ipadala sa {{countriesList}}. Magdagdag ng bagong address para makapagpatuloy.",
         "unavailable_address_country": "Hindi available ang pagpapadala sa bansang pinili mo. Gumamit ng ibang address para magpatuloy.",
         "unavailable_selected_address": "Hindi available ang pag-ship sa napiling address",
-        "unavailable_selected_address_for_region": "Hindi available ang pagpapadala sa {{region}}. Pumili ng ibang address para magpatuloy"
+        "unavailable_selected_address_for_region": "Hindi available ang pagpapadala sa {{region}}. Pumili ng ibang address para magpatuloy",
+        "no_delivery_strategy_available": "Hindi maipadala ang iyong order sa napiling address. Suriin ang iyong address upang matiyak na tama ito at subukan muli, o gumamit ng ibang address."
       },
       "alternative_payment_method_banner": {
         "express_checkout": "Mabilisang pagbabayad",
@@ -3641,6 +3676,10 @@
         "manual_payment_gateway_label": "Manwal",
         "billing_address_title": "Address sa pagsingil",
         "free_label": "Libre"
+      },
+      "shop_wallet_button": {
+        "label": "Bumili gamit ang Shop Pay",
+        "buy_with": "Bilhin"
       }
     },
     "pagination": {
@@ -4332,7 +4371,16 @@
         "invalid_subscription_contract": "Hindi mahanap ang subscription",
         "expiry_date": "Bisa hanggang {{expiryDate}}",
         "edit_current_payment_method": "I-edit ang kasalukuyang paraan ng pagbabayad",
-        "edit_selected_payment_method": "I-edit ang napiling paraan ng pagbabayad"
+        "edit_selected_payment_method": "I-edit ang napiling paraan ng pagbabayad",
+        "errors": {
+          "contract_stale": "Nagbago ang subscription na ito habang ine-edit mo ito. Isara ang window na ito at subukan muli.",
+          "has_future_edits": "May mga pagbabago sa susunod na order ang subscription na ito. Makipag-ugnayan sa tindahan upang baguhin ang paraan ng pagbabayad dito."
+        },
+        "store_credit": {
+          "label": "Gamitin ang store credit para sa mga susunod na bayarin sa subscription",
+          "turned_off": "Napatay ang store credit",
+          "turned_on": "Na-on na ang store credit"
+        }
       }
     },
     "sign_in": {
@@ -4501,7 +4549,8 @@
         "checkout_card_banner": "Ang paraan ng pagbabayad na ito ay magagamit lamang para sa mga pre-authorized na bayad. Hindi ito lalabas sa checkout kung ikaw ay naka-sign in sa tindahang ito.",
         "default_checkbox": "Itakda bilang default",
         "default_checkbox_accessibility_label": "Gawing default na paraan ng pagbabayad ito",
-        "replace_payment_method_button": "Palitan"
+        "replace_payment_method_button": "Palitan",
+        "edit_in_wallet_helper": "Para i-update ang paraang ito ng pagbabayad, i-edit sa {{paymentMethodName}}"
       },
       "edit_payment_method": {
         "title": "Baguhin ang paraan ng pagbabayad",
@@ -4657,7 +4706,11 @@
       "vipps": "Vipps",
       "usdc": "Crypto: USDC",
       "konbini": "Tindahan",
-      "oxxo": "OXXO"
+      "oxxo": "OXXO",
+      "grabpay": "GrabPay",
+      "multibanco": "Multibanco",
+      "paynow": "Magbayad Ngayon",
+      "scalapay": "Scalapay"
     },
     "privacy_banner": {
       "cookie_preferences_link": "Mga kagustuhan sa cookie"
@@ -4866,7 +4919,11 @@
           "show_barcode": "Ipakita ang barcode",
           "show_barcode_accessibility_label": "Ipakita ang barcode (magbubukas ng bagong window)"
         },
-        "paid_at_store_chain": "Binayaran sa {{storeChain}}"
+        "paid_at_store_chain": "Binayaran sa {{storeChain}}",
+        "status": {
+          "paid": "Bayad",
+          "unpaid": "Hindi bayad"
+        }
       },
       "paid_with_shop_pay_installments_card": {
         "title": "Mga paalala sa pagbabayad para sa Shop Pay Installments",
@@ -4960,7 +5017,8 @@
         "returns_accepted": "Tinatanggap ang mga return",
         "returns_on_eligible_items": "Pagbabalik ng mga kwalipikadong item",
         "trusted_delivery": "Mapagkakatiwalaang paghahatid"
-      }
+      },
+      "return_deadline_details_accessibility_label": "Mga detalye ng palugit ng pagbabalik"
     },
     "addresses": {
       "add_button": "Idagdag ang address",
